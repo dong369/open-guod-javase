@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.hacz.edu</groupId>
+    <artifactId>open-guod-javase</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>open-guod-javase</name>
+    <description>JavaSE-基础+提升</description>
+
+    <!-- 功能模块 -->
+    <modules>
+        <!-- JavaSE+基础知识（《Java核心技术》+《Java编程思想》） -->
+        <module>base-01</module>
+        <!-- JavaSE+时间处理+金钱处理+格式化处理+常用实用类 -->
+        <module>base-02</module>
+        <!-- JavaSE+正则表达 -->
+        <module>base-03</module>
+        <!-- JavaSE+数据结构算法 -->
+        <module>base-04</module>
+        <!-- JavaSE+设计模式 -->
+        <module>base-05</module>
+        <!-- JavaSE+书籍《Effective Java》+ -->
+        <module>base-06</module>
+        <!-- JavaSE+Java虚拟机 -->
+        <module>base-07</module>
+        <!-- 框架源码（JDK、Spring） -->
+        <module>base-08</module>
+        <!-- 脚本语言（shell、cmd脚本） -->
+        <module>base-09</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.1.21</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

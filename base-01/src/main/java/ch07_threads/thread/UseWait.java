@@ -1,0 +1,46 @@
+package ch07_threads.thread;
+
+/**
+ * project - wait
+ *
+ * @author guodd
+ * @version 1.0
+ * @date 日期:2018/11/27 时间:12:52
+ * @JDK 1.8
+ * @Description 功能模块：wait让持有该对象锁的线程等待；wait方法则必须放在synchronized块里面；
+ * wait 还需要额外的方法 notify/notifyAll 进行唤醒，它们同样需要放在synchronized 块里面，且获取对象的锁。
+ */
+public class UseWait {
+    public static void main(String[] args) {
+        Object lock = new Object();
+        // 线程01
+        Thread t1 = new Thread(() -> {
+            synchronized (lock) {
+                for (int i = 0; i < 20; i++) {
+                    System.out.println(i);
+                    if (i == 10) {
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        });
+        // 线程02
+        Thread t2 = new Thread(() -> {
+            synchronized (lock) {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                lock.notifyAll();
+                System.out.println("notify/notifyAll进行唤醒");
+            }
+        });
+        t1.start();
+        t2.start();
+    }
+}
