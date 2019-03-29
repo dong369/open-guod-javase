@@ -15,6 +15,6 @@ public class Car implements Movable {
 
     @Override
     public void run() {
-        System.out.println("车");
+        System.out.println("小汽车");
     }
 }

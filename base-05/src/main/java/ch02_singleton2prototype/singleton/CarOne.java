@@ -10,7 +10,7 @@ package ch02_singleton2prototype.singleton;
  * @Description 功能模块：饿汉式单例（类创建时创建静态的对象，天生是线程安全）
  */
 public class CarOne {
-    // 01构造器私有
+    // 01构造器私有，限制产生多个对象
     private CarOne() {
     }
 

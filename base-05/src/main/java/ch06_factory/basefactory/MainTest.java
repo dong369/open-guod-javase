@@ -11,8 +11,11 @@ package ch06_factory.basefactory;
  */
 public class MainTest {
     public static void main(String[] args) {
-        VehicleFactory v = new CarFactory();
-        Movable m = v.create();
-        m.run();
+        VehicleFactory carFactory = new CarFactory();
+        VehicleFactory plainFactory = new PlainFactory();
+        Movable c = carFactory.create();
+        Movable p = plainFactory.create();
+        c.run();
+        p.run();
     }
 }

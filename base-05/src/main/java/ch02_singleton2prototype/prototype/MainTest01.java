@@ -10,4 +10,9 @@ package ch02_singleton2prototype.prototype;
  * @Description 功能模块：原型模式
  */
 public class MainTest01 {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Emperor.getInstance().say());
+        }
+    }
 }
