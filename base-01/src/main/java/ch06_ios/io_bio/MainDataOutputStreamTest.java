@@ -16,7 +16,7 @@ import java.io.IOException;
 public class MainDataOutputStreamTest {
     public static void main(String[] args) {
         try {
-            DataOutputStream dos = new DataOutputStream(new FileOutputStream(System.getProperty("user.dir")+"/base-01/src/main/java/ch06_ios/io_bio/data.txt"));
+            DataOutputStream dos = new DataOutputStream(new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/testData.txt"));
             dos.writeLong(455L);
         } catch (IOException e) {
             e.printStackTrace();

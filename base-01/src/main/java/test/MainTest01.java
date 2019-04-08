@@ -12,4 +12,9 @@ package test;
 public class MainTest01 {
     public static void main(String[] args) {
     }
+
+    public static <T> T test(T t) {
+        return t;
+    }
+
 }

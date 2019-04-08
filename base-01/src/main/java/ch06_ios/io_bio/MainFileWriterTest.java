@@ -17,8 +17,8 @@ public class MainFileWriterTest {
         Reader reader;
         Writer writer;
         try {
-            reader = new FileReader(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/test01.txt"));
-            writer = new FileWriter(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/test02.txt"));
+            reader = new FileReader(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test01.txt"));
+            writer = new FileWriter(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test02.txt"));
             while ((c = reader.read()) != -1) {
                 writer.write(c);
             }

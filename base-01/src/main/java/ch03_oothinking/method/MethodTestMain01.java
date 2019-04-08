@@ -11,14 +11,12 @@ package ch03_oothinking.method;
  */
 public abstract class MethodTestMain01 {
     public static void main(String[] args) {
-
     }
 
     /**
      * Static Methods：静态方法
      */
     public static void fun01() {
-
     }
 
     /**

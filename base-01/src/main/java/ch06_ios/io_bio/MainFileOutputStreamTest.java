@@ -17,8 +17,8 @@ public class MainFileOutputStreamTest {
         InputStream in;
         OutputStream out;
         try {
-            in = new FileInputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/test01.txt");
-            out = new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/test02.txt");
+            in = new FileInputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test01.txt");
+            out = new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test02.txt");
             while ((b = in.read()) != -1) {
                 out.write(b);
             }

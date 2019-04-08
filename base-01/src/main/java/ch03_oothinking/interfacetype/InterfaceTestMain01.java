@@ -20,4 +20,8 @@ public interface InterfaceTestMain01 {
      */
     public abstract void move();
 
+    default void test() {
+        System.out.println("default 方法");
+    }
+
 }

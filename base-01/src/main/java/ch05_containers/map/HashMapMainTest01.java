@@ -22,7 +22,7 @@ public class HashMapMainTest01 {
 
         // 1，增强的for循环（Entry集合）
         for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry);
+            System.out.println(entry.getKey() + " = " + entry.getValue());
         }
 
         // 2，增强的for循环（Key集合）

@@ -1,5 +1,7 @@
 package ch02_data.bitoperation;
 
+import javax.xml.bind.DatatypeConverter;
+
 /**
  * project -
  *
@@ -17,5 +19,8 @@ public class UseBit {
         System.out.println(8 >> 2);
         // 无符号右移，忽略符号位，空位都以0补齐
         System.out.println(8 >>> 2);
+        // 打印字节数组
+        byte[] bytes = new byte[12];
+        System.out.println(DatatypeConverter.printHexBinary(bytes));
     }
 }

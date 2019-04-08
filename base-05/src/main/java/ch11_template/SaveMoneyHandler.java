@@ -1,7 +1,7 @@
 package ch11_template;
 
 /**
- * project - 中原金控后台管理服务
+ * project - Github开源项目
  *
  * @author guod
  * @version 1.0

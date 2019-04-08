@@ -3,6 +3,7 @@ package ch03_oothinking.createobject;
 import ch02_data.serialversionuid.SerialVersionUID;
 import org.springframework.util.SerializationUtils;
 
+import javax.xml.bind.DatatypeConverter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -17,16 +18,16 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class CreateObject {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
-        // 使用new关键字
+        // 01使用new关键字
         SerialVersionUID serialVersionUID = new SerialVersionUID();
-        // 使用Class类的newInstance方法
+        // 02使用Class类的newInstance方法
         SerialVersionUID o = (SerialVersionUID) Class.forName("ch02_data.serialversionuid.SerialVersionUID").newInstance();
-        // 使用Constructor类的newInstance方法
+        // 03使用Constructor类的newInstance方法
         Constructor<SerialVersionUID> constructor = SerialVersionUID.class.getConstructor();
         SerialVersionUID serialVersion = constructor.newInstance();
-        // 使用clone方法
+        // 04使用clone方法
         SerialVersionUID cloneObject = (SerialVersionUID) serialVersionUID.clone();
-        // 使用序列号/反序列化
+        // 05使用序列号/反序列化
         byte[] serialize = SerializationUtils.serialize(new SerialVersionUID());
         SerialVersionUID deserialize = (SerialVersionUID) SerializationUtils.deserialize(serialize);
         System.out.println(deserialize);

@@ -16,7 +16,7 @@ public class MainFileReaderTest {
         int c;
         Reader reader;
         try {
-            reader = new FileReader(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/test01.txt"));
+            reader = new FileReader(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test01.txt"));
             while ((c = reader.read()) != -1) {
                 System.out.print((char) c);
             }
