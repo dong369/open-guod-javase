@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ArraysMainTest01 {
     public static void main(String[] args) {
-        List<String> strings = Arrays.asList("1", "2", "3");
-
+        List<String> strings = Arrays.asList("a", "b", "c");
+        // removeIf
     }
 }
