@@ -1,4 +1,4 @@
-package datastructure.ch02_stacks.ch03_a_stack_problem_in_leetcode;
+package datastructure.ch02_stacks.ch04_stack_problem_in_leetcode;
 
 import java.util.Stack;
 

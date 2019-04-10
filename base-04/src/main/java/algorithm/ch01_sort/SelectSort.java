@@ -11,8 +11,8 @@ package algorithm.ch01_sort;
  */
 public class SelectSort {
     public static void sort(long[] arr) {
-        int k = 0;
-        long tmp = 0;
+        int k;
+        long tmp;
         // 比较趟数
         for (int i = 0; i < arr.length - 1; i++) {
             k = i;

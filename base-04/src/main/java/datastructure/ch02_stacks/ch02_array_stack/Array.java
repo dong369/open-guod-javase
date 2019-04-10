@@ -70,12 +70,8 @@ public class Array<E> {
         add(size, e);
     }
 
-    public E removeFirst() {
-        return remove(0);
-    }
-
     public E removeLast() {
-        return remove(size);
+        return remove(size - 1);
     }
 
     public E getLast() {

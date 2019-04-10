@@ -10,18 +10,38 @@ package datastructure.ch02_stacks.ch02_array_stack;
  * @Description 功能模块：栈（stack）：先进后出，后进先出
  */
 public interface Stack<E> {
-    // 添加元素（入栈）
+    /**
+     * 添加元素（入栈）
+     *
+     * @param e
+     */
     void push(E e);
 
-    // 删除元素（出栈）
+    /**
+     * 删除元素（出栈）
+     *
+     * @return
+     */
     E pop();
 
-    // 获取栈顶元素（top）
+    /**
+     * 获取栈顶元素（top）
+     *
+     * @return
+     */
     E peek();
 
-    // 栈是否为空
+    /**
+     * 栈是否为空
+     *
+     * @return
+     */
     boolean isEmpty();
 
-    // 获取栈中元素个数
+    /**
+     * 获取栈中元素个数
+     *
+     * @return
+     */
     int getSize();
 }

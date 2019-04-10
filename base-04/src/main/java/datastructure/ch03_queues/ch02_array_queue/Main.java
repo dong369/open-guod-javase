@@ -12,7 +12,7 @@ package datastructure.ch03_queues.ch02_array_queue;
 public class Main {
     public static void main(String[] args) {
         ArrayQueue<Integer> queue = new ArrayQueue<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             queue.enqueue(i);
             System.out.println(queue);
             if (i % 3 == 2) {

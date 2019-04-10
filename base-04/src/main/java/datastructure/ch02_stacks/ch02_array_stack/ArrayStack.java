@@ -7,7 +7,7 @@ package datastructure.ch02_stacks.ch02_array_stack;
  * @version 1.0
  * @date 日期:2019/1/24 时间:16:25
  * @JDK 1.8
- * @Description 功能模块：后进先出
+ * @Description 功能模块：顺序栈的实现
  */
 public class ArrayStack<E> implements Stack<E> {
     // 自己封装的动态数组
@@ -22,6 +22,11 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     @Override
+    public void push(E e) {
+        array.addLast(e);
+    }
+
+    @Override
     public E pop() {
         return array.removeLast();
     }
@@ -29,11 +34,6 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E peek() {
         return array.getLast();
-    }
-
-    @Override
-    public void push(E e) {
-        array.addLast(e);
     }
 
     @Override
