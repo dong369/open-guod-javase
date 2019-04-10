@@ -20,6 +20,7 @@ public class Main {
         // 赋值
         for (int i = 0; i < arr.length; i++)
             arr[i] = i;
+
         // 声明+初始化+赋值
         int[] scores = new int[]{1, 2, 3, 4};
         int[] data = {4, 3, 2, 1};
@@ -27,9 +28,9 @@ public class Main {
         for (int score : scores) {
             System.out.print(score);
         }
+
         for (int datum : data) {
             System.out.print(datum);
         }
     }
-
 }

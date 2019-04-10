@@ -13,5 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Array array = new Array(30);
         System.out.println(array.isEmpty());
+        System.out.println(array.getCapacity());
+        System.out.println(array.getSize());
     }
 }

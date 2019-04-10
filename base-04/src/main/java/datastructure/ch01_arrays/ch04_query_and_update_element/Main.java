@@ -11,6 +11,10 @@ package datastructure.ch01_arrays.ch04_query_and_update_element;
  */
 public class Main {
     public static void main(String[] args) {
-
+        Array array = new Array();
+        array.addFirst(12);
+        array.addLast(66);
+        array.set(0, 66);
+        System.out.println(array);
     }
 }

@@ -11,7 +11,7 @@ package datastructure.ch02_stacks.ch02_array_stack;
  */
 public class Main {
     public static void main(String[] args) {
-        ArrayStack<Integer> arrayStack = new ArrayStack<>();
+        ArrayStack<Integer> arrayStack = new ArrayStack<>(10);
         arrayStack.push(1);
         arrayStack.push(2);
         arrayStack.push(3);

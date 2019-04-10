@@ -7,7 +7,7 @@ package datastructure.ch01_arrays.ch02_create_our_own_array;
  * @version 1.0
  * @date 日期:2019/1/23 时间:9:13
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：存储数据、数据容量、已经占用的数据容量
  */
 public class Array {
     // 存储数据的数组

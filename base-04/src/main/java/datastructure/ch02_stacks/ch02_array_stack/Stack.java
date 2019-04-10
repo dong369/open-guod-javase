@@ -7,7 +7,7 @@ package datastructure.ch02_stacks.ch02_array_stack;
  * @version 1.0
  * @date 日期:2019/1/24 时间:16:23
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：栈（stack）：先进后出，后进先出
  */
 public interface Stack<E> {
     // 添加元素（入栈）
