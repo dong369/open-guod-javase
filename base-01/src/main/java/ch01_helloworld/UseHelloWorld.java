@@ -11,7 +11,7 @@ package ch01_helloworld;
  * 编译命令：javac UseHelloWorld.java
  * 执行命令：java UseHelloWorld
  * <p>
- * 一：window环境配置
+ * 一：window环境配置（JDK的根目录、可执行文件bin、类文件）
  * JAVA_HOME=C:\Program Files\Java\jdk1.8.0_91
  * PATH=%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;%PATH%;
  * CLASSPATH=.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
