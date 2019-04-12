@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  * @version 1.0
  * @date 日期:2018/12/2 时间:21:02
  * @JDK 1.8
- * @Description 功能模块：对于任意一个类，都能够知道这个类的所有属性和方法；
+ * @Description 功能模块：反射是获取类的对象；对于任意一个类，都能够知道这个类的所有属性和方法；
  */
 public class ReflectTestMain01 {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException {

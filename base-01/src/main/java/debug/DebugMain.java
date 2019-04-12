@@ -1,4 +1,4 @@
-package degug;
+package debug;
 
 /**
  * project -
@@ -14,5 +14,13 @@ public class DebugMain {
         for (int i = 0; i < 10; i++) {
             System.out.println("当前下标" + i);
         }
+        MyThread myRunnable = new MyThread();
+        Thread thread1 = new Thread(myRunnable, "线程1");
+        Thread thread2 = new Thread(myRunnable, "线程2");
+        Thread thread3 = new Thread(myRunnable, "线程3");
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
     }
 }

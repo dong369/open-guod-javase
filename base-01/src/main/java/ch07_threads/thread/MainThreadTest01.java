@@ -12,6 +12,7 @@ package ch07_threads.thread;
 public class MainThreadTest01 {
     public static void main(String[] args) {
         T01 t01 = new T01();
+        // t01.run(); 该方法启动线程是方法的调用
         t01.start();
         for (int i = 0; i < 10000; i++) {
             System.out.println("主线程：" + i);

@@ -13,6 +13,7 @@ import ch11_reflections.method.User;
  * 对于任意一个类，都能够知道这个类的所有属性和方法；
  * 对于任意一个对象，都能够调用它的任意一个方法；
  * 这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。
+ * 注意：反射可以调用没有暴露出来的API
  */
 public class GetClass {
     public static void main(String[] args) throws Exception {
