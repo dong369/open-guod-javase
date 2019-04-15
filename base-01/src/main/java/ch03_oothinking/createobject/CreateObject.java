@@ -27,7 +27,7 @@ public class CreateObject {
         SerialVersionUID serialVersion = constructor.newInstance();
         // 04使用clone方法
         SerialVersionUID cloneObject = (SerialVersionUID) serialVersionUID.clone();
-        // 05使用序列号/反序列化
+        // 05使用序列化/反序列化
         byte[] serialize = SerializationUtils.serialize(new SerialVersionUID());
         SerialVersionUID deserialize = (SerialVersionUID) SerializationUtils.deserialize(serialize);
         System.out.println(deserialize);
