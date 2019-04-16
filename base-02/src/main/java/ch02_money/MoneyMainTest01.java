@@ -22,7 +22,8 @@ public class MoneyMainTest01 {
 
         double aa = 0.001;
 
-        // BigDecimal(double val)构造，但是这个构造不太靠谱；推荐使用静态方法valueOf(double)，这个方法跟new Decimal(Double.toString(double))效果
+        // BigDecimal(double val)构造，但是这个构造不太靠谱；
+        // 推荐使用静态方法valueOf(double)，这个方法跟new Decimal(Double.toString(double))效果
         System.out.println(new BigDecimal(aa));
         System.out.println(BigDecimal.valueOf(aa));
 
