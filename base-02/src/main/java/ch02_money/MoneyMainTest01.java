@@ -51,5 +51,24 @@ public class MoneyMainTest01 {
         double f = 111231.5585;
         BigDecimal b = new BigDecimal(f);
         double f1 = b.setScale(2, RoundingMode.HALF_UP).doubleValue();
+
+        // 数据库中的金钱使用Long类型存储，并且单位是分，
+        long a = 100;
+        BigDecimal bigDecimalFen = new BigDecimal(a);
+        BigDecimal divide = bigDecimalFen.multiply(new BigDecimal("0.333"));
+        System.out.println(divide);
+        System.out.println(divide.longValue());
+        long intValue = divide.longValue();
+        long intValuePay = divide.longValue();
+        // 进行客户的扣款（宁愿多扣，不能少扣）
+        if (divide.compareTo(new BigDecimal(intValue)) > 0) {
+            intValue++;
+        }
+        // 进行客户的支付（人不为己，天诛地灭）
+        if (divide.compareTo(new BigDecimal(intValue)) > 0) {
+            intValuePay--;
+        }
+        System.out.println("实际扣款的钱数：" + intValue);
+        System.out.println("实际支付的钱数：" + intValuePay);
     }
 }
