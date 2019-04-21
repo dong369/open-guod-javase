@@ -24,7 +24,7 @@
         <module>base-04</module>
         <!-- JavaSE+设计模式 -->
         <module>base-05</module>
-        <!-- JavaSE+书籍《Effective Java》+ -->
+        <!-- JavaSE+书籍《Effective Java》 -->
         <module>base-06</module>
         <!-- JavaSE+Java虚拟机 -->
         <module>base-07</module>
