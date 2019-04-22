@@ -3,7 +3,7 @@ package ch03_oothinking.nestedclass;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/3/12 时间:20:16
  * @JDK 1.8

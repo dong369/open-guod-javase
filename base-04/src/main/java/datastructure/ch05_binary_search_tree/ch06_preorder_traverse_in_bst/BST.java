@@ -3,7 +3,7 @@ package datastructure.ch05_binary_search_tree.ch06_preorder_traverse_in_bst;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/2/4 时间:11:30
  * @JDK 1.8

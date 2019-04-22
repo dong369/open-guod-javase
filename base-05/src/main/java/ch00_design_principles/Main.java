@@ -3,7 +3,7 @@ package ch00_design_principles;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/2/4 时间:10:38
  * @JDK 1.8

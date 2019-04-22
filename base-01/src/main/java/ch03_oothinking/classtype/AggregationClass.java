@@ -16,6 +16,7 @@ package ch03_oothinking.classtype;
 public class AggregationClass {
     public static void main(String[] args) {
         Classes classes = new Classes(new Students());
+        System.out.println(classes);
     }
 }
 

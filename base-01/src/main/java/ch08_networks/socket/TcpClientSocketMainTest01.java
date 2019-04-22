@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @date 日期:2019年1月6日 时间:上午11:58:21
  * @JDK 1.8
  * @version 1.0

@@ -3,7 +3,7 @@ package datastructure.ch04_linked_list.ch05_query_and_update_in_linkedlist;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/1/30 时间:21:44
  * @JDK 1.8

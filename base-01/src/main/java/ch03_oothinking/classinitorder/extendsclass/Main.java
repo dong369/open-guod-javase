@@ -3,7 +3,7 @@ package ch03_oothinking.classinitorder.extendsclass;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/2/6 时间:16:38
  * @JDK 1.8

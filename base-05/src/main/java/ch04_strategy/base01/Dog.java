@@ -3,7 +3,7 @@ package ch04_strategy.base01;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @date 日期:2019年1月12日 时间:下午5:30:32
  * @JDK 1.8
  * @version 1.0

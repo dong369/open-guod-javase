@@ -3,7 +3,7 @@ package ch03_oothinking.usethis;
 /**
  * project -
  *
- * @author Administrator
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/3/2 时间:17:02
  * @JDK 1.8
