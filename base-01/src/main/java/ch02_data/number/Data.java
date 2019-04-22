@@ -71,7 +71,7 @@ public class Data {
         map.put("b", 2);
         Integer a1 = Integer.valueOf((String) map.get("a"));
         Integer a2 = Integer.parseInt((String) map.get("a"));
-        System.out.println(a1);
+        System.out.println(a1 + "," + a2);
         Integer b1 = (Integer) map.get("b");
         System.out.println(b1);
     }
