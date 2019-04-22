@@ -1,4 +1,4 @@
-package ch02_data.classinitorder;
+package ch03_oothinking.classinitorder;
 
 /**
  * project -

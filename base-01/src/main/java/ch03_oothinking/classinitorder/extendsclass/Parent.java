@@ -1,4 +1,4 @@
-package ch02_data.classinitorder.extendsclass;
+package ch03_oothinking.classinitorder.extendsclass;
 
 /**
  * project -
