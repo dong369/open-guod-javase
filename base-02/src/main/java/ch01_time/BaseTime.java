@@ -2,10 +2,7 @@ package ch01_time;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Clock;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,6 +67,17 @@ public class BaseTime {
         // LocalDateTime - Date
         Date from = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
         System.out.println("LocalDateTime - Date：" + from);
+
+        // LocalDateTime - Long
+        ZoneId zone01 = ZoneId.systemDefault();
+        Instant instant01 = localDateTime.atZone(zone01).toInstant();
+        long l = instant01.toEpochMilli();
+
+        // Long - LocalDateTime
+        Instant instant02 = Instant.ofEpochMilli(l);
+        ZoneId zone02 = ZoneId.systemDefault();
+        LocalDateTime localDateTimeLong = LocalDateTime.ofInstant(instant02, zone02);
+        System.out.println(localDateTimeLong);
 
         // Date - String
         Date date = new Date();
