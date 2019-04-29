@@ -20,7 +20,7 @@ import java.net.URLClassLoader;
  * @version 1.0
  * @date 日期:2018/9/11 时间:21:58
  * @JDK 1.8
- * @Description 功能模块：如何编译：jdk1.6 JavaCompiler API；CGLib；ASM
+ * @Description 功能模块：如何编译：jdk1.6 JavaCompiler API；CGLib；Java ASM
  */
 public class TestMain01 {
     public static void main(String[] args) throws Exception {
