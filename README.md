@@ -2596,8 +2596,8 @@ Java中的String类提供了支持正则表达式操作的方法，包括：matc
 > **面试题：** - 如果要从字符串中截取第一个英文左括号之前的字符串，例如：北京市(朝阳区)(西城区)(海淀区)，截取结果为：北京市，那么正则表达式怎么写？
 
 ```java
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regexbase.Matcher;
+import java.util.regexbase.Pattern;
 
 class RegExpTest {
 

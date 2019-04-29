@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class RandomTest01 {
     public static void main(String[] args) {
-        int i = new Random().nextInt(2);
+        int i = new Random().nextInt(90);
         System.out.println(i);
     }
 }

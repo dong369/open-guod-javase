@@ -13,7 +13,9 @@ public class ExceptionMainTest {
     public static void main(String[] args) {
         System.out.println(test1());
         System.out.println(test2());
-
+        System.out.println(test3());
+        System.out.println(test4());
+        System.out.println(test5());
     }
 
     private static int test1() {
@@ -30,14 +32,50 @@ public class ExceptionMainTest {
 
     private static int test2() {
         int i = 1;
+        try {
+            return i;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            i = 0;
+            return i;
+        }
+    }
+
+    private static User test3() {
+        User user = new User("u1");
+        try {
+            return user;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            user = new User("u2");
+        }
+        return null;
+    }
+
+
+    private static User test4() {
+        User user = new User("u1");
+        try {
+            return user;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            user.setName("u2");
+        }
+        return null;
+    }
+
+    private static int test5() {
+        int i = 1;
         for (int j = 0; j < 12; j++) {
             try {
                 return i / 0;
-                // } catch (ArrayIndexOutOfBoundsException e) {
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                i = 0;
+                i = 10;
             }
         }
         return i;

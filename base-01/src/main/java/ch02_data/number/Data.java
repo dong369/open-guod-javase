@@ -15,31 +15,41 @@ import java.util.Map;
 public class Data {
 
     public static void main(String[] args) {
+        // 8bits
         byte a = 1;
         Byte aa = 1;
 
+        // 16bits
         short b = 2;
         Short bb = 2;
 
+        // 32bits
         int c = 3;
         Integer cc = 3;
 
+        // 64bits
         long d = 4;
         Long dd = 4L;
 
+        // 32bits
         float e = 5;
         Float ee = 5F;
 
+        // 64bits
         double f = 6;
         Double ff = 6D;
 
+        // 16bits
         char g = 7;
         Character gg = 7;
 
+        // 1bit
         boolean h = true;
         Boolean hh = false;
 
-        // 01 自动类型转换/强制类型转换/类型提升，自动转换也要小心数据溢出问题
+        // 01自动类型转换是指：数字表示范围小的数据类型可以自动转换成范围大的数据类型；自动转换也要小心数据溢出问题，看下面的例子。
+        // 02强制类型转换是指：强制显示的把一个数据类型转换为另外一种数据类型。
+        // 03所谓类型提升是指：就是指在多种不同数据类型的表达式中，类型会自动向范围表示大的值的数据类型提升。
         System.out.println((long) (Double.valueOf("0.02") * 100));
         System.out.println(0.05 + 0.01);
         int aaa = a + a;
