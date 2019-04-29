@@ -10,7 +10,7 @@ import sun.misc.BASE64Encoder;
  * @version 1.0
  * @date 日期:2018/11/5 时间:15:33
  * @JDK 1.8
- * @Description 功能模块：早期作法会使用到JDK里sun.misc套件
+ * @Description 功能模块：早期作法会使用到JDK里sun.misc套件，Java11中已经废除了
  */
 public class Base64TestMain01 {
     private static final BASE64Encoder encoder = new BASE64Encoder();

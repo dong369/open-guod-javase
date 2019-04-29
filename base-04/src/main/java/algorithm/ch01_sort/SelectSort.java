@@ -1,5 +1,7 @@
 package algorithm.ch01_sort;
 
+import java.util.Arrays;
+
 /**
  * project -
  *
@@ -11,10 +13,11 @@ package algorithm.ch01_sort;
  */
 public class SelectSort {
     public static void sort(long[] arr) {
+        int length = arr.length;
         int k;
         long tmp;
         // 比较趟数
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             k = i;
             for (int j = i; j < arr.length; j++) {
                 if (arr[j] < arr[k]) {
@@ -25,5 +28,11 @@ public class SelectSort {
             arr[i] = arr[k];
             arr[k] = tmp;
         }
+    }
+
+    public static void main(String[] args) {
+        long[] arr = new long[]{4, 1, 0, 5, 8, 2, 7};
+        SelectSort.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
