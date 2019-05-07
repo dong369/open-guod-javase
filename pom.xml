@@ -8,7 +8,6 @@
     <artifactId>open-guod-javase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
     <name>open-guod-javase</name>
     <description>JavaSE-基础+提升</description>
 
