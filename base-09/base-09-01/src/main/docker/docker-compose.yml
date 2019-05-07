@@ -23,7 +23,7 @@ services:
     container_name: nginx_container
     image: nginx
     ports:
-      - "80:80"
+      - "98:80"
     restart: unless-stopped
     volumes:
       - /home/service/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
@@ -41,13 +41,13 @@ services:
       - /home/service/nginx/data:/data
       - /home/service/nginx/conf/redis.conf:/usr/local/etc/redis/redis.conf
 
-  gitlab:
+  web:
     image: 'gitlab/gitlab-ce:latest'
     restart: always
-    hostname: '192.168.100.13'
+    hostname: '192.168.100.15'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://192.168.100.13'
+        external_url 'http://192.168.100.15'
         gitlab_rails['gitlab_shell_ssh_port'] = 8022
         gitlab_rails['lfs_enabled'] = true
     ports:
@@ -55,6 +55,6 @@ services:
       - '443:443'
       - '8022:22'
     volumes:
-      - '/home/service/gitlab/config:/etc/gitlab'
-      - '/home/service/gitlab/logs:/var/log/gitlab'
-      - '/home/service/gitlab/data:/var/opt/gitlab'
+      - '/opt/gitlab/config:/etc/gitlab'
+      - '/opt/gitlab/logs:/var/log/gitlab'
+      - '/opt/gitlab/data:/var/opt/gitlab'
