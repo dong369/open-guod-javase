@@ -43,7 +43,7 @@ import java.util.Set;
  * 编码：字符串 -->字节数组
  * 解码：字节数组 -->字符串
  *
- * @author yanfa07
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/4/9 时间:11:57
  * @JDK 1.8

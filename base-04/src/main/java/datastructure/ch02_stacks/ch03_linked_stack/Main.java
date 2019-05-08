@@ -3,7 +3,7 @@ package datastructure.ch02_stacks.ch03_linked_stack;
 /**
  * project -
  *
- * @author yanfa07
+ * @author guodd
  * @version 1.0
  * @date 日期:2019/4/10 时间:16:05
  * @JDK 1.8
