@@ -11,5 +11,6 @@
     </parent>
 
     <artifactId>base-09-01</artifactId>
+    <packaging>jar</packaging>
 
 </project>
