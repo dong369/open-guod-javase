@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class MainFileTest01 {
     public static void main(String[] args) throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/testFile.txt");
+        File file = new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/testFile.txt");
         // 判断是否有文件，如果没有创建
         if (file.exists()) {
             // 删除文件
