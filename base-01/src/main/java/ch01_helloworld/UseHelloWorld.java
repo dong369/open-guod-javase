@@ -2,37 +2,40 @@ package ch01_helloworld;
 
 /**
  * project - 第一个hello world程序（硬件+软件+图灵+冯诺依曼体系结构）
- *
+ * <p>
+ * 创始人：Java之父——詹姆斯·高斯林出生于加拿大，是一位计算机编程天才。
+ * 创建日期：1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。
+ * <p>
  * IT定律之计算机行业发展规律
  * 摩尔定律( Moore's Law)
  * 安迪比尔定律( Andy and Bill's Law
  * 反摩尔定律( Reverse Moore's law
- *
+ * <p>
  * CPU：运行时首先会去自身的缓存中寻找，如果没有再去内存中找。
  * 内存：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
  * 缓存：会记录一些常用的数据等信息，以免每次都要到内存中，节省了时间，提高了效率。
  * 硬盘：中的数据会先写入内存才能被CPU使用。
  * 内存（memory）+缓存（cache） -> 内存储空间
  * 硬盘 -> 外存储空间
- *
+ * <p>
  * 8比特（bit）=1字节（byte）
  * 比特：是计算机最小的存储单位
  * 字节：计算机最基本的存储单位
- *
+ * <p>
  * 千字节=1024B
  * 兆字节=1024KB
  * 千兆字节=1024MB
  * 万亿字节=1024GB
  * PB/EB/ZB/YB
- *
+ * <p>
  * 万维网<因特网<互联网
- *
+ * <p>
  * 第一层次：看得懂(依赖于视频、书、贴子)
  * 第二层次：练的熟(每天代码必须实现2-3遄)
  * 总结：三分看,七分练
- *
+ * <p>
  * 思考/总结/笔记
- *
+ * <p>
  * 代码虐我百遍，我视代码如初恋。
  *
  * @author guod
@@ -56,7 +59,7 @@ package ch01_helloworld;
  * PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
  * export PATH JAVA_HOME CLASSPATH
  * <p>
- * 区分：JDK/JRE/JVM
+ * 三：区分：JDK/JRE/JVM
  * java -version
  * javac -version
  */
