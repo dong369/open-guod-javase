@@ -10,6 +10,19 @@ package jdk.jdk8.functioninterface;
  * @Description 功能模块：
  */
 public class FunctionInterfaceMain {
+
+    private static String joinStr(String str, FunctionInterfaceTest01 functionTest) {
+        return functionTest.getInfo(str);
+    }
+
+    private static String getInstance(String item) {
+        return item + "！世界";
+    }
+
+    private static String getMessage(String massage) {
+        return "世界," + massage + "!";
+    }
+
     public static void main(String[] args) {
         /**
          * 1、lambda表达式
@@ -17,6 +30,7 @@ public class FunctionInterfaceMain {
          * 完全符合函数式接口FunctionInterfaceTest的定义
          */
         FunctionInterfaceTest01 functionInterfaceTest1 = item -> item + 1;
+        System.out.println(functionInterfaceTest1);
         /**
          * 2、方法引用
          * Main方法当中的getInstance和getMessage方法接收一个参数，返回一个结果。符合函数式接口FunctionInterfaceTest*的定义。
@@ -37,14 +51,15 @@ public class FunctionInterfaceMain {
          */
         FunctionInterfaceTest01 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
 
-
         String msg1 = joinStr("你好", functionInterfaceTest2);
         String msg2 = joinStr("你好", functionInterfaceTest3);
         System.out.println(msg1);
         System.out.println(msg2);
 
-        String msg3 = joinStr("你好", item -> item + "！世界"); //输出：你好！世界
-        String msg4 = joinStr("你好", item -> "世界," + item + "!"); //输出：世界，你好！
+        //输出：你好！世界
+        String msg3 = joinStr("你好", item -> item + "！世界");
+        //输出：世界，你好！
+        String msg4 = joinStr("你好", item -> "世界," + item + "!");
         System.out.println(msg3);
         System.out.println(msg4);
 
@@ -52,17 +67,4 @@ public class FunctionInterfaceMain {
         System.out.println(functionInterfaceTest4);
 
     }
-
-    private static String joinStr(String str, FunctionInterfaceTest01 functionTest) {
-        return functionTest.getInfo(str);
-    }
-
-    private static String getInstance(String item) {
-        return item + "！世界";
-    }
-
-    private static String getMessage(String massage) {
-        return "世界," + massage + "!";
-    }
-
 }

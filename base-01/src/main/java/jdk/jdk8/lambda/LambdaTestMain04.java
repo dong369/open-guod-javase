@@ -20,7 +20,7 @@ public class LambdaTestMain04 {
         System.out.println(i);
     }
 
-    public static int fun04(Movable04 movable04, int a, int b) {
+    private static int fun04(Movable04 movable04, int a, int b) {
         int move = movable04.move(a, b);
         return move;
     }

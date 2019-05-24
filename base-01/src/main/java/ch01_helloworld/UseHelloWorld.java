@@ -7,14 +7,14 @@ package ch01_helloworld;
  * 创建日期：1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。
  * <p>
  * IT定律之计算机行业发展规律
- * 摩尔定律( Moore's Law)
- * 安迪比尔定律( Andy and Bill's Law
- * 反摩尔定律( Reverse Moore's law
+ * 摩尔定律( Moore's Law)：意指集成电路上可容纳的元器件的数量每隔18至24个月就会增加一倍，性能也将提升一倍。
+ * 安迪比尔定律( Andy and Bill's Law）：硬件提高的性能，很快被软件消耗掉了。
+ * 反摩尔定律( Reverse Moore's law）：如果你反过来看摩尔定律，一个IT公司如果今天和18个月前卖掉同样多的、同样的产品，它的营业额就要降一半。
  * <p>
  * CPU：运行时首先会去自身的缓存中寻找，如果没有再去内存中找。
- * 内存：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
  * 缓存：会记录一些常用的数据等信息，以免每次都要到内存中，节省了时间，提高了效率。
- * 硬盘：中的数据会先写入内存才能被CPU使用。
+ * 内存：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
+ * 硬盘：数据会先写入内存才能被CPU使用。
  * 内存（memory）+缓存（cache） -> 内存储空间
  * 硬盘 -> 外存储空间
  * <p>
@@ -22,10 +22,10 @@ package ch01_helloworld;
  * 比特：是计算机最小的存储单位
  * 字节：计算机最基本的存储单位
  * <p>
- * 千字节=1024B
- * 兆字节=1024KB
- * 千兆字节=1024MB
- * 万亿字节=1024GB
+ * 1千字节=1024B
+ * 1兆字节=1024KB
+ * 1千兆字节=1024MB
+ * 1万亿字节=1024GB
  * PB/EB/ZB/YB
  * <p>
  * 万维网<因特网<互联网
@@ -49,7 +49,7 @@ package ch01_helloworld;
  * 一：window环境配置（JDK的根目录、可执行文件bin、类文件）
  * JAVA_HOME=C:\Program Files\Java\jdk1.8.0_91
  * PATH=%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;%PATH%;
- * CLASSPATH=.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+ * CLASSPATH=.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar
  * Java11以后：java UseHelloWorld.java
  * <p>
  * 二：Linux环境配置

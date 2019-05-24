@@ -24,6 +24,7 @@ public class LambdaMethodTestMain01 {
  * @param <P>引用方法的参数类型
  * @param <R>引用方法的返回类型
  */
+@FunctionalInterface
 interface Method01<P, R> {
     R zhuanHuan(P p);
 }

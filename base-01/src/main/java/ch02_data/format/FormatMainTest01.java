@@ -1,4 +1,4 @@
-package ch02_data.formmatter;
+package ch02_data.format;
 
 /**
  * project -
@@ -9,7 +9,7 @@ package ch02_data.formmatter;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class FormateMainTest01 {
+public class FormatMainTest01 {
     public static void main(String[] args) {
         // 字符串格式
         String format = String.format("%.2f", 2.1495926);

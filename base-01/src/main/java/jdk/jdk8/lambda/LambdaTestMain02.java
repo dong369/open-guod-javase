@@ -14,7 +14,7 @@ public class LambdaTestMain02 {
         LambdaTestMain02.fun(() -> System.out.println("lambda表达式"));
     }
 
-    public static void fun(Movable02 movable02) {
+    private static void fun(Movable02 movable02) {
         movable02.move();
     }
 }

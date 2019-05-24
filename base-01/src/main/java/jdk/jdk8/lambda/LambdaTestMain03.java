@@ -17,7 +17,7 @@ public class LambdaTestMain03 {
         });
     }
 
-    public static void fun03(Movable03 movable03) {
+    private static void fun03(Movable03 movable03) {
         movable03.move("hello world!");
     }
 }

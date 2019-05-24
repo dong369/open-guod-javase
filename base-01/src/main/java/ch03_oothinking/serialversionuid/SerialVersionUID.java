@@ -1,4 +1,4 @@
-package ch02_data.serialversionuid;
+package ch03_oothinking.serialversionuid;
 
 import lombok.Getter;
 import lombok.Setter;

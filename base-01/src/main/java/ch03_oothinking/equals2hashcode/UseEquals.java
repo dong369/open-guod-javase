@@ -1,4 +1,4 @@
-package ch02_data.object;
+package ch03_oothinking.equals2hashcode;
 
 /**
  * project -

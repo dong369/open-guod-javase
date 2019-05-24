@@ -12,7 +12,6 @@ import java.util.function.BiConsumer;
  * @Description 功能模块：
  */
 public class DefaultOrStaticInterface {
-
     /**
      * @param args
      * @return void
@@ -23,5 +22,6 @@ public class DefaultOrStaticInterface {
     public static void main(String[] args) {
         BiConsumer a = (b, c) -> {
         };
+        System.out.println(a);
     }
 }

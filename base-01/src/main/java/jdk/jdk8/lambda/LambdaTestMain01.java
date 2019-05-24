@@ -19,7 +19,7 @@ public class LambdaTestMain01 {
         });
     }
 
-    public static void fun01(Movable01 movable01) {
+    private static void fun01(Movable01 movable01) {
         movable01.move();
     }
 }

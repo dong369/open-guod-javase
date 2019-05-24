@@ -10,9 +10,9 @@ package ch03_oothinking.abstracts;
  * @Description 功能模块：事物作为抽象类，事物的特性行为作为接口，抽象的意义：对代码的维护和重用。
  */
 public abstract class AbstractClass {
-    abstract void say();
+    public abstract void say();
 
     void test() {
-
+        System.out.println("test方法");
     }
 }

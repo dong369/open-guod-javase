@@ -12,5 +12,7 @@ package jdk.jdk8.functioninterface;
  * 2. 在接口中覆写Object类中的public方法，不算是函数式接口的方法。
  */
 public interface FunctionInterfaceTest03 {
+
     String getInfo(String input);
+
 }

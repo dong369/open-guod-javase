@@ -12,5 +12,6 @@ package ch03_oothinking.accesstype;
 public class Main {
     public static void main(String[] args) {
         AccessTypeMain accessTypeMain = new AccessTypeMain();
+        System.out.println(accessTypeMain);
     }
 }
