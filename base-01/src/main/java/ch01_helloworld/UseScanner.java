@@ -1,5 +1,8 @@
 package ch01_helloworld;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -12,9 +15,13 @@ import java.util.Scanner;
  * @Description 功能模块：
  */
 public class UseScanner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // 方法1：通过 Scanner
         Scanner scanner = new Scanner(System.in);
         String i = scanner.next();
         System.out.println(i);
+        // 方法2：通过 BufferedReader
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(input.readLine());
     }
 }
