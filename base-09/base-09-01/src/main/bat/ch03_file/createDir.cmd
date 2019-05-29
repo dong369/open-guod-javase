@@ -47,6 +47,7 @@ goto:eof
 :mdFile2020
     cd %Pan%
     if exist %Pan% (
+        rem 解决windows下cd无法切换盘符目录：01cd /d d: 在 cd 和盘符之间加上 /d；02e: 不用cd指令 直接用 盘符
         cd /d %Pan%%PanDir%dev2020
         for  %%I in (01_System,02_Java,03_Soft,04_Service,05_Maven,06_Gradle,07_Code) do md %%I
         echo 2020文件夹创建成功！！！

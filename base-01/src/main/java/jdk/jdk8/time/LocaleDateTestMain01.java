@@ -17,7 +17,6 @@ public class LocaleDateTestMain01 {
         System.out.println(System.currentTimeMillis());
         System.out.println(Clock.systemUTC().instant());
         System.out.println(Clock.systemUTC().millis());
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(now);
+        System.out.println(LocalDateTime.now());
     }
 }

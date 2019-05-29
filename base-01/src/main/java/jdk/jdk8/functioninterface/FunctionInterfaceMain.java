@@ -11,8 +11,8 @@ package jdk.jdk8.functioninterface;
  */
 public class FunctionInterfaceMain {
 
-    private static String joinStr(String str, FunctionInterfaceTest01 functionTest) {
-        return functionTest.getInfo(str);
+    private static String joinStr(FunctionInterfaceTest01 functionTest) {
+        return functionTest.getInfo("你好");
     }
 
     private static String getInstance(String item) {
@@ -44,27 +44,26 @@ public class FunctionInterfaceMain {
          * 3、构造方法引用
          * 构造函数的结构：接收输入参数，然后返回一个对象。这种约束跟函数式接口的约束很像。
          * 所以只要“输入参数类型”与“输出参数类型”跟FunctionInterfaceTest中的方法约束相同，
-         * 就可以创建出FunctionInterfaceTest接口的实例，如下，String的构造方法中有
-         * new String(str)的构造方法，所以可以得到实例。
+         * 就可以创建出FunctionInterfaceTest接口的实例，如下，String的构造方法中有new String(str)的构造方法，所以可以得到实例。
          * 这里存在一个类型推断的问题，JDK的编译器已经帮我们自动找到了只有一个参数，且是String类型的构造方法。
          * 这就是我们直接String::new，没有指定使用哪一个构造方法，却可以创建实例的原因
          */
         FunctionInterfaceTest01 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
 
-        String msg1 = joinStr("你好", functionInterfaceTest2);
-        String msg2 = joinStr("你好", functionInterfaceTest3);
+        String msg1 = joinStr(functionInterfaceTest2);
+        String msg2 = joinStr(functionInterfaceTest3);
         System.out.println(msg1);
         System.out.println(msg2);
 
         //输出：你好！世界
-        String msg3 = joinStr("你好", item -> item + "！世界");
+        String msg3 = joinStr(item -> item + "！世界");
         //输出：世界，你好！
-        String msg4 = joinStr("你好", item -> "世界," + item + "!");
+        String msg4 = joinStr(item -> "世界," + item + "!");
         System.out.println(msg3);
         System.out.println(msg4);
 
-        FunctionInterfaceTest01 functionInterfaceTest4 = String::new; //方法引用
-        System.out.println(functionInterfaceTest4);
-
+        //方法引用
+        FunctionInterfaceTest01 functionInterfaceTest4 = String::new;
+        System.out.println(functionInterfaceTest4.getInfo("test"));
     }
 }
