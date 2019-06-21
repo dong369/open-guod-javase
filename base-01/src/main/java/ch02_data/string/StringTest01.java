@@ -18,10 +18,10 @@ public class StringTest01 {
         System.out.println(str.substring(0, str.length() - 2));
         // 字符串是否包含
         int i = str.indexOf(2);
+        System.out.println("indexOf：" + i);
         char c = str.charAt(9);
-        System.out.println(c);
-        System.out.println(i);
-        System.out.println(str.contains("41011637220"));
+        System.out.println("charAt：" + c);
+        System.out.println("contains：" + str.contains("41011637220"));
         // 拼接字符串
         System.out.println(str.concat("java"));
         // 用于字符串中子串的查找

@@ -120,13 +120,15 @@ public class Array<E> {
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
         // 记录删除的数据
         E ret = data[index];
-        for (int i = index + 1; i < size; i++)
-            data[i - 1] = data[i];
+        for (int i = index; i < size; i++)
+            data[i] = data[i + 1];
         size--;
-        // loitering objects != memory leak
+        // loitering objects != memory leak（内存泄漏）
         data[size] = null;
-        // 进行扩容
-        if (size == data.length / 4 && data.length / 2 != 0)
+        // 进行缩容操作
+        // size=10     capacity=40
+        // 10==10*（40/4）
+        if (size == getCapacity() / 4 && getCapacity() / 2 != 0)
             reSize(data.length / 2);
         return ret;
     }
@@ -149,8 +151,9 @@ public class Array<E> {
     }
 
     // 动态扩容数组
-    public void reSize(int newCapacity) {
+    private void reSize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
+        // 进行值的copy操作
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
         }

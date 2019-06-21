@@ -1,4 +1,4 @@
-package datastructure.ch05_binary_search_tree.ch06_preorder_traverse_in_bst;
+package datastructure.ch05_binary_search_tree.ch06_traverse_in_bst;
 
 /**
  * project -
@@ -7,7 +7,7 @@ package datastructure.ch05_binary_search_tree.ch06_preorder_traverse_in_bst;
  * @version 1.0
  * @date 日期:2019/2/4 时间:11:30
  * @JDK 1.8
- * @Description 功能模块：二分搜索树基础
+ * @Description 功能模块：二分搜索树基础遍历
  */
 public class BST<E extends Comparable<E>> {
     private class Node {
@@ -91,6 +91,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     // 前序遍历以node为根的二分搜索树, 递归算法
+    //
     private void preOrder(Node node) {
         if (node == null)
             return;

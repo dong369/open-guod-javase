@@ -8,12 +8,12 @@ done
 
 # for——C语言风格
 sum=0
-for (( i=0;i<=100;i++ ));
-do
+for (( i=0;i<=100;i++ )); do
     sum=$((sum+i))
 done
     echo ${sum}
 
+# for——C语言风格
 while ((i<=100))
 do
     sum=$((sum+i))

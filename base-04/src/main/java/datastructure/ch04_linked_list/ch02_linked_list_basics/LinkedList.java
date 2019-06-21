@@ -13,20 +13,21 @@ public class LinkedList<E> {
     private class Node {
         // 数据域
         private E e;
+
         // 指针域（节点域），指向下一个节点（对象）
         public Node next;
 
-        public Node(E e, Node next) {
-            this.e = e;
-            this.next = next;
+        public Node() {
+            this(null, null);
         }
 
         public Node(E e) {
             this(e, null);
         }
 
-        public Node() {
-            this(null, null);
+        private Node(E e, Node next) {
+            this.e = e;
+            this.next = next;
         }
 
         @Override

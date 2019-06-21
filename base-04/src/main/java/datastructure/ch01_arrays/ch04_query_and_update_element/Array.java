@@ -41,10 +41,7 @@ public class Array {
 
     // 向所有元素后添加一个新元素
     public void addLast(int e) {
-        if (size == data.length)
-            throw new IllegalArgumentException("AddLast failed. Array is full.");
-        data[size] = e;
-        size++;
+        add(size, e);
     }
 
     // 在所有元素前添加一个新元素
@@ -55,9 +52,9 @@ public class Array {
     // 在index索引的位置插入一个新元素e
     public void add(int index, int e) {
         if (size == data.length)
-            throw new IllegalArgumentException("Add failed. Array is full.");
+            throw new IllegalArgumentException("ch04 Add failed. Array is full.");
         if (index < 0 || index > size)
-            throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+            throw new IllegalArgumentException("ch04 Add failed. Require index >= 0 and index <= size.");
         for (int i = size - 1; i >= index; i--)
             data[i + 1] = data[i];
         data[index] = e;

@@ -7,7 +7,7 @@ package datastructure.ch01_arrays.ch06_generic_data_structures;
  * @version 1.0
  * @date 日期:2019/1/23 时间:9:13
  * @JDK 1.8
- * @Description 功能模块：泛型数组
+ * @Description 功能模块：泛型（任意数据类型，但不能是基本数据类型）数组
  */
 public class Array<E> {
     // 数据

@@ -9,7 +9,7 @@ import java.util.Stack;
  * @version 1.0
  * @date 日期:2019/1/25 时间:8:47
  * @JDK 1.8
- * @Description 功能模块：案例匹配成对的括号（undo操作/系统栈）
+ * @Description 功能模块：案例匹配成对的括号（undo操作/程序调用系统栈/括号匹配）
  */
 public class Solution {
     public boolean isValid(String s) {

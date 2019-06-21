@@ -1,4 +1,4 @@
-package datastructure.ch04_linked_list.ch07_implement_stackn_linkedlist;
+package datastructure.ch04_linked_list.ch07_implement_stack_linkedlist;
 
 /**
  * project -

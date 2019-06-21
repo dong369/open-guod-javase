@@ -9,7 +9,7 @@ import datastructure.ch03_queues.ch02_array_queue.Queue;
  * @version 1.0
  * @date 日期:2019/1/29 时间:8:12
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：循环队列
  */
 public class LoopQueue<E> implements Queue<E> {
     // 队数据

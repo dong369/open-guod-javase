@@ -11,7 +11,7 @@ package datastructure.ch02_stacks.ch02_array_stack;
  */
 public interface Stack<E> {
     /**
-     * 添加元素（入栈）
+     * 添加元素（入栈-压栈）
      *
      * @param e
      */
@@ -32,16 +32,17 @@ public interface Stack<E> {
     E peek();
 
     /**
+     * 获取栈中元素个数
+     *
+     * @return
+     */
+    int getSize();
+
+    /**
      * 栈是否为空
      *
      * @return
      */
     boolean isEmpty();
 
-    /**
-     * 获取栈中元素个数
-     *
-     * @return
-     */
-    int getSize();
 }

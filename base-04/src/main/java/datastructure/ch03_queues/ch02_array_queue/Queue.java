@@ -25,6 +25,13 @@ public interface Queue<E> {
     E dequeue();
 
     /**
+     * 获取队首元素
+     *
+     * @return
+     */
+    E getFront();
+
+    /**
      * 获取队列中元素的个数
      *
      * @return
@@ -38,10 +45,4 @@ public interface Queue<E> {
      */
     boolean isEmpty();
 
-    /**
-     * 获取队首元素
-     *
-     * @return
-     */
-    E getFront();
 }

@@ -41,13 +41,14 @@ public class Array {
 
     // 在index索引的位置插入一个新元素e
     public void add(int index, int e) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("Add failed. Array is full.");
+        if (size == getCapacity()) {
+            throw new IllegalArgumentException("ch03 Add failed. Array is full.");
         }
+        // index最大可以取到size，就是在最后添加元素，如果比size大就是不连续的
         if (index < 0 || index > size) {
-            throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+            throw new IllegalArgumentException("ch03 Add failed. Require index >= 0 and index <= size.");
         }
-        // index+1=size
+        // 进行数组的拷贝，可以使用JDK自带的方法。
         for (int i = size - 1; i >= index; i--) {
             // 目标位置之后(包括目标位置)的元素后移
             data[i + 1] = data[i];
@@ -72,8 +73,8 @@ public class Array {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
-        res.append("[");
+        res.append(String.format("ch03 Array: size = %d , capacity = %d\n", size, data.length));
+        res.append("ch03 array：[");
         for (int i = 0; i < size; i++) {
             res.append(data[i]);
             if (i != size - 1)

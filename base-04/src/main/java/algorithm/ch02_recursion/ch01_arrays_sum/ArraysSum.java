@@ -13,15 +13,13 @@ public class ArraysSum {
     public static void main(String[] args) {
         int[] a = {1, 3, 4, 4};
         System.out.println(sum(a));
-
     }
 
-    public static int sum(int[] arr) {
+    private static int sum(int[] arr) {
         return sum(arr, 0);
-
     }
 
-    public static int sum(int[] arr, int l) {
+    private static int sum(int[] arr, int l) {
         if (arr.length == l) {
             return 0;
         }

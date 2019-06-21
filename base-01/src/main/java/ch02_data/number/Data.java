@@ -15,19 +15,19 @@ import java.util.Map;
 public class Data {
 
     public static void main(String[] args) {
-        // 8bits
+        // 1byte=8bits
         byte a = 1;
         Byte aa = 1;
 
-        // 16bits
+        // 2byte=16bits
         short b = 2;
         Short bb = 2;
 
-        // 32bits
+        // 4byte=32bits
         int c = 3;
         Integer cc = 3;
 
-        // 64bits
+        // 8byte=64bits
         long d = 4;
         Long dd = 4L;
 

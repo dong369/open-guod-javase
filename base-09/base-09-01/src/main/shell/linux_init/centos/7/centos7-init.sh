@@ -17,7 +17,7 @@ VAR_PATH02="/usr/local/"
 VAR_ARR=(8001 8002 8003 8004 8005 8006)
 
 # 输入指令
-echo -n "请输入命令（mainAll|yumAliyun|yumUpdate|serviceBase|zoneTime|langConfig|historyConfig|serviceConfig|vimConfig）："
+echo -n "请输入命令（mainAll|systemInfo|yumAliYun|yumUpdate|serviceBase|zoneTime|langConfig|historyConfig|serviceConfig|vimConfig）："
 read var
 
 # 01系统配置信息检查
@@ -50,12 +50,11 @@ cat << EOF
 |           start optimizing            |
 +---------------------------------------+
 EOF
-
-    sleep 1
+    sleep 5
 }
 
 # 01配置阿里YUM源
-yum_aliyun(){
+yum_aliYun(){
     mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
     curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
     yum makecache
@@ -92,7 +91,7 @@ EOF
 
 # 05设置UTF-8   LANG="zh_CN.UTF-8"
 lang_config(){
-    echo "LANG=\"en_US.UTF-8\"">/etc/locale.conf
+    echo "LANG=\"en_US.UTF-8\"" > /etc/locale.conf
     source  /etc/locale.conf
 }
 
@@ -106,31 +105,8 @@ ssh_config(){
         cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
     fi
 
-cat >/etc/ssh/sshd_config<<EOF
-Port 22
-AddressFamily inet
-ListenAddress 0.0.0.0
-Protocol 2
-HostKey /etc/ssh/ssh_host_rsa_key
-HostKey /etc/ssh/ssh_host_ecdsa_key
-HostKey /etc/ssh/ssh_host_ed25519_key
-SyslogFacility AUTHPRIV
-PermitRootLogin yes
-MaxAuthTries 6
-RSAAuthentication yes
-PubkeyAuthentication yes
-AuthorizedKeysFile	.ssh/authorized_keys
-PasswordAuthentication yes
-ChallengeResponseAuthentication no
-UsePAM yes
-UseDNS no
-X11Forwarding yes
-UsePrivilegeSeparation sandbox
-AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
-AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
-AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
-AcceptEnv XMODIFIERS
-Subsystem       sftp    /usr/libexec/openssh/sftp-server
+cat > /etc/ssh/sshd_config << EOF
+
 EOF
     /sbin/service sshd restart
 }
@@ -199,8 +175,8 @@ case ${var} in
    main_all;;
 "systemInfo")
    system_info;;
-"yumAliyun")
-   yum_aliyun;;
+"yumAliYun")
+   yum_aliYun;;
 "yumUpdate")
    yum_update;;
 "serviceBase")

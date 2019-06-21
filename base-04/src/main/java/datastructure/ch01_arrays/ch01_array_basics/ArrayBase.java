@@ -1,4 +1,4 @@
-package datastructure.ch01_arrays.ch00_array_base;
+package datastructure.ch01_arrays.ch01_array_basics;
 
 import java.util.Arrays;
 

@@ -16,7 +16,7 @@ public class LinkedList<E> {
         // 指针域（节点域），指向下一个节点（对象）
         public Node next;
 
-        public Node(E e, Node next) {
+        private Node(E e, Node next) {
             this.e = e;
             this.next = next;
         }
@@ -37,6 +37,7 @@ public class LinkedList<E> {
 
     // 链表的头
     private Node head;
+
     // 链表中的元素个数
     private int size;
 
@@ -74,10 +75,11 @@ public class LinkedList<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Illegal index.");
         }
+        // 在链表头添加元素
         if (index == 0) {
             addFirst(e);
         } else {
-            // 添加节点index的前一个节点
+            // 添加节点index的前一个节点prev
             Node prev = head;
             for (int i = 0; i < index - 1; i++) {
                 prev = prev.next;

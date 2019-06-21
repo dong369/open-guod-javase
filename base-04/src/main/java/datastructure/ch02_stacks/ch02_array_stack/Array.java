@@ -45,7 +45,7 @@ public class Array<E> {
 
     public E remove(int index) {
         E ret = data[index];
-        if (index < 0 || index > data.length)
+        if (index < 0 || index >= data.length)
             throw new IllegalArgumentException("Remove fail");
         for (int i = index + 1; i < size; i++) {
             data[i - 1] = data[i];

@@ -7,23 +7,23 @@ b=2
 
 c=3
 
-# if-fi查询
-if [[ ${a} < ${b} ]]; then
+# if-fi查询，a>b
+if [[ ${a} -gt ${b} ]]; then
     echo "a>b"
 fi
 
-# if-else-fi
-if [[ ${a} > ${c} ]];then
-    echo "a>c"
-else
+# if-else-fi,a<b
+if [[ ${a} -lt ${c} ]];then
     echo "a<c"
+else
+    echo "a>c"
 fi
 
 # if-elif-else-fi
-if [[ ${a} = ${b} ]];then
-    echo ""
-elif [[ ${a} = ${b} ]];then
-e   cho ""
+if [[ ${a} -eq ${b} ]];then
+    echo "a==b"
+elif [[ ${a} -gt ${b} ]];then
+    echo "a>b"
 else
-    echo ""
+    echo "a<b"
 fi

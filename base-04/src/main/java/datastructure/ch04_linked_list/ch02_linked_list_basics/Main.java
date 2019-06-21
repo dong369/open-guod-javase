@@ -11,6 +11,6 @@ package datastructure.ch04_linked_list.ch02_linked_list_basics;
  */
 public class Main {
     public static void main(String[] args) {
-
+        LinkedList<String> linkedList = new LinkedList<>();
     }
 }

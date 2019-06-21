@@ -1,4 +1,4 @@
-package algorithm.ch02_recursion;
+package algorithm.ch02_recursion.ch02_fib;
 
 /**
  * project -
@@ -17,7 +17,7 @@ public class Fib02 {
 		System.out.println(number);
 	}
 
-	public static int getNumber(int n) {
+	private static int getNumber(int n) {
 		if (n == 1 || n == 2) {
 			return 1;
 		} else {

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cat ./awk.sh | xargs -n3
+cat ./xargs.sh | xargs -n3
