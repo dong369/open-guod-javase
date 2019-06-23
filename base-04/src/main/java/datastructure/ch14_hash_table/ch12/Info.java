@@ -1,4 +1,4 @@
-package datastructure.ch13;
+package datastructure.ch14_hash_table.ch12;
 
 /**
  * project -
@@ -10,22 +10,22 @@ package datastructure.ch13;
  * @Description 功能模块：
  */
 public class Info {
-    private String key;
+    private int key;
     private String name;
 
     public Info() {
     }
 
-    public Info(String key, String name) {
+    public Info(int key, String name) {
         this.key = key;
         this.name = name;
     }
 
-    public String getKey() {
+    public int getKey() {
         return key;
     }
 
-    public void setKey(String key) {
+    public void setKey(int key) {
         this.key = key;
     }
 

@@ -1,4 +1,4 @@
-package datastructure.ch12;
+package datastructure.ch14_hash_table.ch12;
 
 
 /**

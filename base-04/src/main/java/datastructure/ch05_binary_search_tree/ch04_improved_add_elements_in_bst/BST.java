@@ -11,11 +11,11 @@ package datastructure.ch05_binary_search_tree.ch04_improved_add_elements_in_bst;
  */
 public class BST<E extends Comparable<E>> {
     private class Node {
-        public E e;
-        public Node left;
-        public Node right;
+        private E e;
+        private Node left;
+        private Node right;
 
-        public Node(E e) {
+        private Node(E e) {
             this.e = e;
             this.left = null;
             this.right = null;
@@ -45,7 +45,7 @@ public class BST<E extends Comparable<E>> {
 
     // 向以node为根的二分搜索树中插入元素e，递归算法
     // 返回插入新节点后二叉搜索树的根
-    public Node add(Node node, E e) {
+    private Node add(Node node, E e) {
         if (node == null) {
             size++;
             return new Node(e);

@@ -48,7 +48,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     // 向以node为根的二分搜索树中插入元素e，递归算法
-    public void add(Node node, E e) {
+    private void add(Node node, E e) {
         if (e.equals(node.e))
             return;
         else if (e.compareTo(node.e) < 0 && node.left == null) {
