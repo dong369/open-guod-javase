@@ -58,7 +58,7 @@ public class LinkedList<E> {
     // 在链表的index(0-based)位置添加新的元素e，在链表中不是一个常用的操作，练习用
     public void add(int index, E e) {
         if (index < 0 || index > size) {
-            throw new IllegalArgumentException("Add failed. Illegal index.");
+            throw new IllegalArgumentException("ch04 Add failed. Illegal index.");
         }
         Node prev = dummyHead;
         for (int i = 0; i < index; i++) {

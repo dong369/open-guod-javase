@@ -36,16 +36,6 @@ public class Array<E> {
         return size;
     }
 
-    // 获取第一个元素
-    public E getFirst() {
-        return get(0);
-    }
-
-    // 获取最后一个元素
-    public E getLast() {
-        return get(size);
-    }
-
     // 返回数组是否为空
     public boolean isEmpty() {
         return size == 0;
@@ -84,6 +74,16 @@ public class Array<E> {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
+    }
+
+    // 获取第一个元素
+    public E getFirst() {
+        return get(0);
+    }
+
+    // 获取最后一个元素
+    public E getLast() {
+        return get(size);
     }
 
     // 修改index索引位置的元素为e
@@ -164,7 +164,7 @@ public class Array<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
+        res.append(String.format("ch07 Array: size = %d , capacity = %d\n", size, data.length));
         res.append("[");
         for (int i = 0; i < size; i++) {
             res.append(data[i]);

@@ -15,11 +15,14 @@ public class ArraysSum {
         System.out.println(sum(a));
     }
 
+    // 从用户的角度出发，用户只需要传入一个数组，然后得到数组的和
     private static int sum(int[] arr) {
         return sum(arr, 0);
     }
 
+    // 计算[l,n)这个区间内的所有值
     private static int sum(int[] arr, int l) {
+        // 最基本的问题
         if (arr.length == l) {
             return 0;
         }

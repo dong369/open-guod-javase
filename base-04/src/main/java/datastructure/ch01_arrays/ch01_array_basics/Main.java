@@ -13,10 +13,8 @@ package datastructure.ch01_arrays.ch01_array_basics;
  */
 public class Main {
     public static void main(String[] args) {
-        // 声明
-        int[] arr;
-        // 初始化
-        arr = new int[10];
+        // 声明+初始化
+        int[] arr = new int[10];
         // 赋值
         for (int i = 0; i < arr.length; i++)
             arr[i] = i;

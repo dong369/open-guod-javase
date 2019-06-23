@@ -9,7 +9,7 @@ package datastructure.ch04_linked_list.ch09_leetcode_203_linked;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
 

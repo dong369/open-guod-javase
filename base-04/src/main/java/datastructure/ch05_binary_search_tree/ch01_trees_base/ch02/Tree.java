@@ -202,9 +202,9 @@ public class Tree {
     public void afterOrder(Node localNode) {
         if (localNode != null) {
             // 后序遍历左子树
-            inOrder(localNode.leftChild);
+            afterOrder(localNode.leftChild);
             // 后序遍历右子树
-            inOrder(localNode.rightChild);
+            afterOrder(localNode.rightChild);
             // 访问根节点
             System.out.println(localNode.data);
         }

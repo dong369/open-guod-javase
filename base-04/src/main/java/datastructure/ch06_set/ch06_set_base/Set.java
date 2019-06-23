@@ -7,7 +7,7 @@ package datastructure.ch06_set.ch06_set_base;
  * @version 1.0
  * @date 日期:2019/6/21 时间:18:02
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：集合结构
  */
 public interface Set<E> {
     // 进行元素的添加

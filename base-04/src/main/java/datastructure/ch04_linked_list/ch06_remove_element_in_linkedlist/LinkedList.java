@@ -81,7 +81,7 @@ public class LinkedList<E> {
     // 获取指定索引位置的元素e
     public E get(int index) {
         if (index < 0 || index > size) {
-            throw new IllegalArgumentException("Get fail");
+            throw new IllegalArgumentException("ch06 Get fail");
         }
         Node cur = dummyHead.next;
         for (int i = 0; i < index; i++) {
