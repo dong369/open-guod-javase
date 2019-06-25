@@ -1,4 +1,4 @@
-package ch03_oothinking.nestedclass;
+package ch03_oothinking.innerclass;
 
 /**
  * project -

@@ -21,7 +21,7 @@ public class StringTest01 {
         System.out.println("indexOf：" + i);
         char c = str.charAt(9);
         System.out.println("charAt：" + c);
-        System.out.println("contains：" + str.contains("41011637220"));
+        System.out.println("contains：" + str.contains("0102"));
         // 拼接字符串
         System.out.println(str.concat("java"));
         // 用于字符串中子串的查找
