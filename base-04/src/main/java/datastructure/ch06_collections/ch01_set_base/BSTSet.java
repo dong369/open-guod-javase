@@ -1,4 +1,4 @@
-package datastructure.ch06_collections.ch06_set_base;
+package datastructure.ch06_collections.ch01_set_base;
 
 /**
  * project -

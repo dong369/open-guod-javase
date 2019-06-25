@@ -1,4 +1,4 @@
-package datastructure.ch07_map.ch07_map_base;
+package datastructure.ch07_map.ch01_map_base;
 
 /**
  * project -
