@@ -43,10 +43,7 @@ public class Array<E> {
 
     // 向所有元素后添加一个新元素
     public void addLast(E e) {
-        if (size == data.length)
-            throw new IllegalArgumentException("AddLast failed. Array is full.");
-        data[size] = e;
-        size++;
+        add(size, e);
     }
 
     // 在所有元素前添加一个新元素

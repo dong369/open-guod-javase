@@ -1,4 +1,4 @@
-package datastructure.ch08_heap.ch02_heap_sift;
+package datastructure.ch08_heap.ch03_heap_replace;
 
 import datastructure.ch01_arrays.ch07_dynamic_array.Array;
 
