@@ -1,4 +1,4 @@
-package datastructure.ch08_heap.ch03_heap_replace;
+package datastructure.ch08_heap.ch04_priority_queue;
 
 import datastructure.ch01_arrays.ch07_dynamic_array.Array;
 
@@ -95,7 +95,4 @@ public class MaxHeap<E extends Comparable<E>> {
             throw new IllegalArgumentException("Can not findMax when heap is empty.");
         return data.get(0);
     }
-
-    // 进行元素值的替换
-
 }
