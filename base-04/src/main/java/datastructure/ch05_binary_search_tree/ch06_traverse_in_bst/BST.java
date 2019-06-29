@@ -1,5 +1,9 @@
 package datastructure.ch05_binary_search_tree.ch06_traverse_in_bst;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * project -
  *
@@ -85,19 +89,61 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
-    // 二分搜索树的前序遍历
+    // 二分搜索树的前序遍历递归书写（深度优先遍历）
     public void preOrder() {
         preOrder(root);
     }
 
-    // 前序遍历以node为根的二分搜索树, 递归算法
-    //
+    // 前序遍历以node为根的二分搜索树, 递归算法（深度优先遍历）
     private void preOrder(Node node) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         System.out.println(node.e);
         preOrder(node.left);
         preOrder(node.right);
+    }
+
+    // 二分搜索树的前序遍历非递归书写，通过stack（深度优先遍历）
+    private void preOrderNR() {
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node cur = stack.peek();
+            System.out.println(cur);
+            if (cur.right != null) {
+                stack.push(cur.right);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+        }
+    }
+
+    // 中序遍历（深度优先遍历）
+    private void inOrder() {
+    }
+
+    // 后序遍历（深度优先遍历）
+    private void lateOrder() {
+    }
+
+
+    // 层序遍历（广度优先遍历）
+    public void levelOrder() {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node cur = queue.remove();
+            System.out.println(cur.e);
+            if (cur.left != null) {
+                queue.add(cur.left);
+            }
+            if (cur.right != null) {
+                queue.add(cur.right);
+            }
+        }
+
     }
 
     @Override
@@ -124,5 +170,4 @@ public class BST<E extends Comparable<E>> {
             res.append("--");
         return res.toString();
     }
-
 }
