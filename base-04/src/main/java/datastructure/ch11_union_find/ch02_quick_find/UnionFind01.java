@@ -9,7 +9,7 @@ import datastructure.ch11_union_find.ch01_union_find_base.UF;
  * @version 1.0
  * @date 日期:2019/6/28 时间:20:39
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：Quick Find
  */
 public class UnionFind01 implements UF {
     // 集合的编号
@@ -27,6 +27,10 @@ public class UnionFind01 implements UF {
         return id[p];
     }
 
+    @Override
+    public int getSize() {
+        return id.length;
+    }
 
     @Override
     public boolean isConnected(int p, int q) {
@@ -47,8 +51,4 @@ public class UnionFind01 implements UF {
         }
     }
 
-    @Override
-    public int getSize() {
-        return id.length;
-    }
 }

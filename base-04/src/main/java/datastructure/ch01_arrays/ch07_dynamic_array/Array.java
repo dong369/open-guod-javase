@@ -83,34 +83,6 @@ public class Array<E> {
         return get(size);
     }
 
-    // 修改index索引位置的元素为e
-    public void set(int index, E e) {
-        if (size < 0 || size > data.length) {
-            throw new IllegalArgumentException("Set failed. Index is illegal.");
-        }
-        data[index] = e;
-    }
-
-    // 查找数组中是否有元素e
-    public boolean contains(E e) {
-        for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
-    public int find(E e) {
-        for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
     // 从数组中删除index位置的元素, 返回删除的元素
     public E remove(int index) {
         if (index < 0 || index >= size)
@@ -145,6 +117,34 @@ public class Array<E> {
         int index = find(e);
         if (index != -1)
             remove(index);
+    }
+
+    // 修改index索引位置的元素为e
+    public void set(int index, E e) {
+        if (size < 0 || size > data.length) {
+            throw new IllegalArgumentException("Set failed. Index is illegal.");
+        }
+        data[index] = e;
+    }
+
+    // 查找数组中是否有元素e
+    public boolean contains(E e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
+    public int find(E e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     // 动态扩容数组

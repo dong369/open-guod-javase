@@ -11,7 +11,7 @@ import java.util.Random;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class MainHeap {
+public class Main {
     public static void main(String[] args) {
         int n = 10000;
         MaxHeap<Integer> maxHeap = new MaxHeap<>();
