@@ -32,17 +32,17 @@ public class MaxHeap<E extends Comparable<E>> {
         return data.isEmpty();
     }
 
-    // 堆的父亲索引
+    // 堆的父亲索引=(index-1)/2
     private int getParent(int index) {
         return (index - 1) / 2;
     }
 
-    // 堆的左索引
+    // 堆的左索引=(index*2)+1
     private int getLeftChile(int index) {
         return index * 2 + 1;
     }
 
-    // 堆的右索引
+    // 堆的右索引(index*2)+2
     private int getRightChile(int index) {
         return index * 2 + 2;
     }
