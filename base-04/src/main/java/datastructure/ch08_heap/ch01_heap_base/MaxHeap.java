@@ -9,7 +9,9 @@ import datastructure.ch01_arrays.ch07_dynamic_array.Array;
  * @version 1.0
  * @date 日期:2019/6/23 时间:21:03
  * @JDK 1.8
- * @Description 功能模块：最大堆，可以使用数组表示。
+ * @Description 功能模块：二叉堆、最大堆，可以使用数组表示。
+ * 01、完全二叉树。
+ * 02、堆中某个节点的值总是大于其孩子节点的值。
  */
 public class MaxHeap<E extends Comparable<E>> {
     private Array<E> data;

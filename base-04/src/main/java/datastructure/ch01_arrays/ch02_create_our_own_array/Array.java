@@ -8,6 +8,8 @@ package datastructure.ch01_arrays.ch02_create_our_own_array;
  * @date 日期:2019/1/23 时间:9:13
  * @JDK 1.8
  * @Description 功能模块：data存储数据、capacity数据容量、size已经占用的数据容量
+ * 01、线性表
+ * 02、索引有语意
  */
 public class Array {
     // data属性表示存放数组的元素，

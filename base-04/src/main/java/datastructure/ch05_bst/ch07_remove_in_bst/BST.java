@@ -51,9 +51,9 @@ public class BST<E extends Comparable<E>> {
     private Node add(Node node, E e) {
         if (node == null) {
             size++;
-            return new Node(e);
+            Node nodeRet = new Node(e);
+            return nodeRet;
         }
-
         if (e.compareTo(node.e) < 0)
             node.left = add(node.left, e);
         else if (e.compareTo(node.e) > 0)
@@ -75,9 +75,8 @@ public class BST<E extends Comparable<E>> {
             return true;
         } else if (e.compareTo(node.e) < 0) {
             return contains(node.left, e);
-        } else {
+        } else  // e.compareTo(node.e) > 0
             return contains(node.right, e);
-        }
     }
 
     // 二分搜索树的前序遍历递归书写（深度优先遍历）
@@ -113,12 +112,27 @@ public class BST<E extends Comparable<E>> {
 
     // 中序遍历（深度优先遍历）
     private void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (root == null) return;
+        inOrder(node.left);
+        System.out.println(node.e);
+        inOrder(node.right);
     }
 
     // 后序遍历（深度优先遍历）
     private void lateOrder() {
+        lateOrder(root);
     }
 
+    private void lateOrder(Node node) {
+        if (root == null) return;
+        lateOrder(node.left);
+        lateOrder(node.right);
+        System.out.println(node.e);
+    }
 
     // 层序遍历（广度优先遍历）
     public void levelOrder() {
@@ -138,6 +152,9 @@ public class BST<E extends Comparable<E>> {
 
     // 树中的最大值
     public E findMax() {
+        if (size == 0) {
+            throw new IllegalArgumentException("BST is empty!");
+        }
         return findMax(root).e;
     }
 
@@ -150,6 +167,9 @@ public class BST<E extends Comparable<E>> {
 
     // 树中的最小值
     public E findMin() {
+        if (size == 0) {
+            throw new IllegalArgumentException("BST is empty!");
+        }
         return findMin(root).e;
     }
 
@@ -160,12 +180,14 @@ public class BST<E extends Comparable<E>> {
         return findMin(node.left);
     }
 
+    // 删除最大值
     public E removeMax() {
         E ret = findMax();
         removeMax(root);
         return ret;
     }
 
+    // 删除最小值
     private Node removeMax(Node node) {
         if (node.right == null) {
             Node nodeRight = node.left;
@@ -224,7 +246,6 @@ public class BST<E extends Comparable<E>> {
                 size--;
                 return nodeLeft;
             }
-
             // 03都不是空
             Node successor = findMin(node.right);
             successor.right = removeMin(node.right);

@@ -1,4 +1,4 @@
-package datastructure.ch05_bst.ch02_binary_search_tree_basics;
+package datastructure.ch05_bst.ch02_bst_base;
 
 /**
  * project -
