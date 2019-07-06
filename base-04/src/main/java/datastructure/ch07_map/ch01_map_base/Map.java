@@ -17,9 +17,9 @@ public interface Map<K, V> {
 
     V remove(K k);
 
-    boolean contains(K k);
-
     void set(K k, V v);
+
+    boolean contains(K k);
 
     V get(K k);
 

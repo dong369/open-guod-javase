@@ -10,6 +10,7 @@ import java.util.TreeMap;
  * @date 日期:2019/6/28 时间:13:29
  * @JDK 1.8
  * @Description 功能模块：字典树、前缀树（垂翼）
+ * 01、多叉树
  */
 public class Trie {
     private class Node {

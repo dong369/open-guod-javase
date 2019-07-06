@@ -257,6 +257,29 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    // （3）求树的节点数；
+    // （4）求树的叶子数；
+
+    // 树的深度
+    public int getDepth(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        int leftDepth = getDepth(node.left) + 1;
+        int rightDepth = getDepth(node.left) + 1;
+        return leftDepth > rightDepth ? leftDepth : rightDepth;
+    }
+
+    // 求二叉树第k层的节点个数
+    public int getKLevel(Node node, int k) {
+        if (node == null || k <= 0) {
+            return 0;
+        }
+        if (k == 1)
+            return 1;
+        return getKLevel(node.left, k - 1) + getKLevel(node.right, k - 1);
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();

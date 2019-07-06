@@ -1,4 +1,4 @@
-package datastructure.ch08_heap.ch04_priority_queue;
+package datastructure.ch08_heap.ch05_priority_queue;
 
 import datastructure.ch04_queues.ch02_array_queue.Queue;
 

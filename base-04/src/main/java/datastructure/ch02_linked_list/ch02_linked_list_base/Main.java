@@ -1,4 +1,4 @@
-package datastructure.ch02_linked_list.ch02_linked_list_basics;
+package datastructure.ch02_linked_list.ch02_linked_list_base;
 
 /**
  * project -

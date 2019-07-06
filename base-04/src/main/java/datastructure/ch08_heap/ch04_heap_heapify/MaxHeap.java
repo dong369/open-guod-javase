@@ -1,4 +1,4 @@
-package datastructure.ch08_heap.ch03_heap_replace;
+package datastructure.ch08_heap.ch04_heap_heapify;
 
 import datastructure.ch01_arrays.ch07_dynamic_array.Array;
 
@@ -9,7 +9,8 @@ import datastructure.ch01_arrays.ch07_dynamic_array.Array;
  * @version 1.0
  * @date 日期:2019/6/23 时间:21:03
  * @JDK 1.8
- * @Description 功能模块：最大堆，可以使用数组表示。
+ * @Description 功能模块：将任意数组整理成堆的形状
+ * 01、o(N)
  */
 public class MaxHeap<E extends Comparable<E>> {
     private Array<E> data;
@@ -20,6 +21,14 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public MaxHeap() {
         data = new Array<>();
+    }
+
+    // 将任意数组整理成堆的形状
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+        for (int i = getParent(arr.length - 1); i >= 0; i--) {
+            siftDown(i);
+        }
     }
 
     // 堆中的元素个数，size
@@ -53,6 +62,13 @@ public class MaxHeap<E extends Comparable<E>> {
         siftUp(data.getSize() - 1);
     }
 
+    // 看堆中的最大元素
+    private E findMax() {
+        if (data.getSize() == 0)
+            throw new IllegalArgumentException("Can not findMax when heap is empty.");
+        return data.get(0);
+    }
+
     // 取出堆中最大元素
     public E extractMax() {
         E ret = findMax();
@@ -77,6 +93,7 @@ public class MaxHeap<E extends Comparable<E>> {
             int j = getLeftChile(k);
             // 同时右孩子也不越界
             if (k + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) >= 0) {
+                // j++;
                 j = getRightChile(k);
             }
             // 当前k的值和子节点中最大的值进行比较
@@ -85,15 +102,9 @@ public class MaxHeap<E extends Comparable<E>> {
             }
             // 进行交换
             data.swap(k, j);
+            // 进行下一轮的循环操作
             k = j;
         }
-    }
-
-    // 看堆中的最大元素
-    private E findMax() {
-        if (data.getSize() == 0)
-            throw new IllegalArgumentException("Can not findMax when heap is empty.");
-        return data.get(0);
     }
 
     // replace：取出最大元素后,放入一个新元素e
