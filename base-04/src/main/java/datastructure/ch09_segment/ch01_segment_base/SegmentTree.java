@@ -1,5 +1,7 @@
 package datastructure.ch09_segment.ch01_segment_base;
 
+import java.util.Objects;
+
 /**
  * project -
  *
@@ -13,4 +15,55 @@ package datastructure.ch09_segment.ch01_segment_base;
  * m次操作后，我们可以在，j区间内看见多少种颜色?
  */
 public class SegmentTree<E> {
+    private E[] data;
+    private E[] tree;
+    private Merger<E> merger;
+
+    public SegmentTree(E[] arr) {
+        data = (E[]) new Objects[arr.length];
+        // 数组的初始化
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        // 线段树的初始化+构建
+        tree = (E[]) new Object[arr.length * 4];
+        buildSegmentTree(0, 0, arr.length - 1);
+    }
+
+    // 在treeIndex的位置创建表示区间[l...r]的线段树
+    private void buildSegmentTree(int treeIndex, int l, int r) {
+        if (l == r) {
+            tree[treeIndex] = data[l];
+            return;
+        }
+        int leftTreeIndex = leftChild(treeIndex);
+        int rightTreeIndex = rightChild(treeIndex);
+        // int mid = (l + r) / 2;
+        int mid = l + (r - l) / 2;
+        buildSegmentTree(leftTreeIndex, l, mid);
+        buildSegmentTree(rightTreeIndex, mid + 1, r);
+        // 进行求和
+        tree[treeIndex] = merger.merge(tree[leftTreeIndex], tree[rightTreeIndex]);
+    }
+
+    public int getSize() {
+        return data.length;
+    }
+
+    public E get(int index) {
+        if (index < 0 || index >= data.length)
+            throw new IllegalArgumentException("Index is illegal.");
+        return data[index];
+    }
+
+    // 返回完全二叉树的数组表示中，一个索引所表示的元素的左孩子节点的索引
+    private int leftChild(int index) {
+        return 2 * index + 1;
+    }
+
+    // 返回完全二叉树的数组表示中，一个索引所表示的元素的右孩子节点的索引
+    private int rightChild(int index) {
+        return 2 * index + 2;
+    }
+
 }
