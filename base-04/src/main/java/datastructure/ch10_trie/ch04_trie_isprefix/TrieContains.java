@@ -72,7 +72,7 @@ public class TrieContains {
         return current.isWord;
     }
 
-    // 前缀查询
+    // 查询是否在Trie中有单词以prefix为前缀
     public boolean isPrefix(String prefix) {
         Node cur = root;
         for (int i = 0; i < prefix.length(); i++) {

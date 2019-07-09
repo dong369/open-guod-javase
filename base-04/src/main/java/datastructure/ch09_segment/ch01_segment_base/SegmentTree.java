@@ -1,7 +1,5 @@
 package datastructure.ch09_segment.ch01_segment_base;
 
-import java.util.Objects;
-
 /**
  * project -
  *
@@ -13,14 +11,19 @@ import java.util.Objects;
  * 有一面墙，长度为n，每次选择一段儿墙进行染色？
  * m次操作后，我们可以看见多少种颜色?
  * m次操作后，我们可以在，j区间内看见多少种颜色?
+ * <p>
+ * 对于给定区间
+ * 更新:更新区间中一个元素或者一个区间的值
+ * 查询一个区间[,j的最大值,最小值,或者区间数字和
  */
 public class SegmentTree<E> {
     private E[] data;
     private E[] tree;
     private Merger<E> merger;
 
-    public SegmentTree(E[] arr) {
-        data = (E[]) new Objects[arr.length];
+    public SegmentTree(E[] arr, Merger<E> merger) {
+        this.merger = merger;
+        data = (E[]) new Object[arr.length];
         // 数组的初始化
         for (int i = 0; i < arr.length; i++) {
             data[i] = arr[i];

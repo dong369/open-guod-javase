@@ -40,7 +40,7 @@ public class TrieAdd {
         return size;
     }
 
-    // 添加单词元素
+    // 添加单词元素（递归写法）
     public void add(String word) {
         // 当前节点
         Node current = root;
