@@ -17,8 +17,8 @@ package datastructure.ch14_hash_table.ch01_hash_base;
  * 转成整型处理并不是唯一的方法!
  * 原则
  * 1.一致性:如果a=b,则hash(a)==hash(b)
- * 2.高效性:计算高效简便
- * 3.均匀性:哈希值均匀分布
+ * 2.高效性：计算高效简便
+ * 3.均匀性：哈希值均匀分布
  */
 public class Hash {
 }
