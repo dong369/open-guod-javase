@@ -1,4 +1,4 @@
-package datastructure.ch14_hash_table.leetcode_387;
+package datastructure.ch15_hash_table.leetcode_387;
 
 /**
  * project -

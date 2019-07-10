@@ -1,4 +1,4 @@
-package datastructure.ch14_hash_table.ch01_hash_base;
+package datastructure.ch15_hash_table.ch01_hash_base;
 
 /**
  * project - 数据结构+算法

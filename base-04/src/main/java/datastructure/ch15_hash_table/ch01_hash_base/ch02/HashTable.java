@@ -1,4 +1,4 @@
-package datastructure.ch14_hash_table.ch01_hash_base.ch02;
+package datastructure.ch15_hash_table.ch01_hash_base.ch02;
 
 import java.math.BigInteger;
 
