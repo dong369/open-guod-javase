@@ -21,4 +21,17 @@ package ch03_oothinking.equals2hashcode;
  * 如果两个对象的哈希值相同，但他们未必相等(equal)。
  */
 public class UserEquals {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+        return true;
+    }
 }

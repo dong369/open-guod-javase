@@ -10,4 +10,11 @@ package datastructure.ch15_hash_table.leetcode_387;
  * @Description 功能模块：
  */
 public class Solution {
+    public static void main(String[] args) {
+        String s = "hello";
+        for (int i = 0; i < s.length(); i++) {
+            System.out.println('b' - 'a');
+        }
+    }
+
 }

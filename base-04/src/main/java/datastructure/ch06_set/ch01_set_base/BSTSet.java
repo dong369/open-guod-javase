@@ -16,6 +16,10 @@ import datastructure.ch05_bst.ch07_remove_in_bst.BST;
 public class BSTSet<E extends Comparable<E>> implements Set<E> {
     private BST<E> bst;
 
+    public BSTSet() {
+        bst = new BST<>();
+    }
+
     @Override
     public void add(E e) {
         bst.add(e);

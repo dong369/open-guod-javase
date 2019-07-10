@@ -11,4 +11,8 @@ package ch03_oothinking.equals2hashcode;
  * 如果两个对象相等(equal)，那么他们一定有相同的哈希值；如果两个对象的哈希值相同，但他们未必相等(equal)。
  */
 public class UseHashCode {
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }
