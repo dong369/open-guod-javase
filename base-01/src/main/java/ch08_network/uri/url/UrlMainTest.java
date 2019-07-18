@@ -1,4 +1,4 @@
-package ch08_network.url;
+package ch08_network.uri.url;
 
 import java.io.BufferedReader;
 import java.io.IOException;

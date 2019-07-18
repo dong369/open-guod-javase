@@ -1,4 +1,4 @@
-package ch03_oothinking.finalize;
+package ch03_oothinking.usefinalize;
 
 /**
  * project -

@@ -16,5 +16,6 @@ public class FormatMainTest01 {
         System.out.println(format);
         String format1 = String.format("%08d", 12);
         System.out.println(format1);
+        System.out.println(String.format("java %s", "world"));
     }
 }

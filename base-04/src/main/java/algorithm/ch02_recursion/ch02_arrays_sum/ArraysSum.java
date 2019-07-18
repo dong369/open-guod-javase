@@ -20,13 +20,15 @@ public class ArraysSum {
         return sum(arr, 0);
     }
 
-    // 计算[l,n)这个区间内的所有值
+    // 宏观语意，计算[l,n)这个区间内的所有值
     private static int sum(int[] arr, int l) {
         // 最基本的问题
-        if (arr.length == l) {
-            return 0;
-        }
-        return arr[l] + sum(arr, l + 1);
+        if (arr.length == l) return 0;
+        // 子逻辑，计算arr从l到n的值
+        // 简写：arr[l] + sum(arr, l + 1)
+        int x = sum(arr, l + 1);
+        int res = arr[l] + x;
+        return res;
     }
 }
 

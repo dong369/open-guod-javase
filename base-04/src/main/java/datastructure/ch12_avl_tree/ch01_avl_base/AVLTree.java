@@ -15,4 +15,43 @@ package datastructure.ch12_avl_tree.ch01_avl_base;
  * 02、符合二分搜索树。
  */
 public class AVLTree<K extends Comparable<K>, V> {
+    public class Node {
+        public K k;
+        public V v;
+        private Node left;
+        private Node right;
+
+        public Node(K k, V v) {
+            this.k = k;
+            this.v = v;
+        }
+    }
+
+    private Node root;
+    private int size;
+
+    public void add(K k, V v) {
+        add(root, k, v);
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    private Node add(Node node, K k, V v) {
+        if (node == null) {
+            size++;
+            return new Node(k, v);
+        }
+        if (k.compareTo(node.k) < 0) {
+            node.left = add(node.left, k, v);
+        } else if (k.compareTo(node.k) > 0) {
+            node.right = add(node.right, k, v);
+        } else node.v = v;
+        return node;
+    }
 }

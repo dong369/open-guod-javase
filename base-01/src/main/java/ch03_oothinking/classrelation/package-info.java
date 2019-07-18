@@ -11,7 +11,7 @@
  */
 @NonNullApi
 @NonNullFields
-package ch03_oothinking.classtype;
+package ch03_oothinking.classrelation;
 
 import org.springframework.lang.NonNullApi;
 import org.springframework.lang.NonNullFields;

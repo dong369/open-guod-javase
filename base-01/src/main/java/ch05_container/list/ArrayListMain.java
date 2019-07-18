@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toList;
  * @version 1.0
  * @date 日期:2018/10/15 时间:16:24
  * @JDK 1.8
- * @Description 功能模块：有序，可重复
+ * @Description 功能模块：有序，可重复（顺序有两个概念：一是按添加的顺序排列，二是按自然顺序a-z排列。）
  */
 public class ArrayListMain {
     public static void main(String[] args) {

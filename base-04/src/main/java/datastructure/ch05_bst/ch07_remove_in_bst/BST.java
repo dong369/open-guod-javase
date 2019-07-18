@@ -14,6 +14,12 @@ import java.util.Stack;
  * @Description 功能模块：二分搜索树基删除元素
  */
 public class BST<E extends Comparable<E>> {
+    public static void main(String[] args) {
+        BST<Integer> bst = new BST<>();
+        bst.add(12);
+        bst.add(52);
+    }
+
     private class Node {
         public E e;
         public Node left;

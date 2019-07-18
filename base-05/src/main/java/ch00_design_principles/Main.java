@@ -7,7 +7,7 @@ package ch00_design_principles;
  * @version 1.0
  * @date 日期:2019/2/4 时间:10:38
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：六大设计原则，合称 SOLID。
  * 开闭原则
  * 依赖倒置
  * 单一职责
@@ -17,4 +17,6 @@ package ch00_design_principles;
  * 合成复用
  */
 public class Main {
+    public static void main(String args[]) {
+    }
 }

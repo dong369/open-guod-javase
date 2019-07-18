@@ -13,6 +13,36 @@ public abstract class AbstractClass {
     public abstract void say();
 
     void test() {
-        System.out.println("test方法");
+        say();
+    }
+
+    void test(AbstractClass abstractClass) {
+        abstractClass.say();
+    }
+
+    static class Abstract01 extends AbstractClass {
+        @Override
+        public void say() {
+            System.out.println("Abstract01");
+        }
+    }
+
+    static class Abstract02 extends AbstractClass {
+        @Override
+        public void say() {
+            System.out.println("Abstract02");
+        }
+    }
+
+    public static void main(String[] args) {
+        Abstract01 abstract01 = new Abstract01();
+        abstract01.test();
+        abstract01.test(new Abstract02());
+        abstract01.test(new AbstractClass() {
+            @Override
+            public void say() {
+                System.out.println("n");
+            }
+        });
     }
 }

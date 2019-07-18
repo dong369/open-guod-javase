@@ -15,8 +15,8 @@ public class MainTest {
         Driver driver = new Driver();
         driver.setCar(new Car());
         driver.setName("老张");
-        // doDriver(Traffic traffic)依赖倒置原则，不依赖具体而是依赖抽象，依赖倒置的实质上是面向抽象接口编程的体现。
-        // new Bus()控制反转IOC,就是对于控制权的反转。
+        // doDriver(Traffic traffic)依赖倒置原则，不依赖具体而是依赖抽象（接口或者抽象类），依赖倒置的实质上是面向抽象接口编程的体现。
+        // new Bus()控制反转IOC，就是对于控制权的反转。
         driver.doDriver(new Bus());
     }
 }

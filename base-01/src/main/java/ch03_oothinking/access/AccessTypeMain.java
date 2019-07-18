@@ -1,4 +1,4 @@
-package ch03_oothinking.accesstype;
+package ch03_oothinking.access;
 
 /**
  * project -

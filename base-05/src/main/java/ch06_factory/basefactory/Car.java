@@ -10,9 +10,6 @@ package ch06_factory.basefactory;
  * @Description 功能模块：
  */
 public class Car implements Movable {
-    public Car() {
-    }
-
     @Override
     public void run() {
         System.out.println("小汽车");

@@ -1,4 +1,4 @@
-package ch03_oothinking.classtype;
+package ch03_oothinking.classrelation;
 
 /**
  * project -

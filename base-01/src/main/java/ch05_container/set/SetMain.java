@@ -11,15 +11,19 @@ import java.util.Set;
  * @version 1.0
  * @date 日期:2018/10/15 时间:16:24
  * @JDK 1.8
- * @Description 功能模块：无序，不可重复
+ * @Description 功能模块：无序，不可重复（顺序有两个概念：一是按添加的顺序排列，二是按自然顺序a-z排列。）
+ * 保证元素无序的顺序：HashSet
+ * 保证元素自然的顺序：TreeSet
+ * 保证元素添加的顺序：LinkedHashSet
  */
 public class SetMain {
     public static void main(String[] args) {
         // 遍历Set：
         Set<String> set = new HashSet<>();
-        set.add("dd");
-        set.add("ee");
-        set.add("ff");
+        set.add("s1");
+        set.add("s2");
+        set.add("s5");
+        set.add("s3");
         // 1，增强的for循环
         for (String elt : set) {
             System.out.println(elt);
