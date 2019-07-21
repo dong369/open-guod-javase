@@ -1,0 +1,60 @@
+version: "3.6"
+services:
+  mysql:
+    container_name: mysql_container
+    image: mariadb:10.4.1
+    environment:
+      # 最好使用此设定时区，其它静像也可以使用
+      - TZ=CST-8
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=self_bridge
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=my_data
+      - MYSQL_USER=my_user
+      - MYSQL_PASSWORD=my_pw
+    # 可以加--default-time-zone='+8:00'设定时区
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      # 本地文件目录
+      - /opt/mysql/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  nginx:
+    container_name: nginx_container
+    image: nginx
+    ports:
+      - "98:80"
+    restart: unless-stopped
+    volumes:
+      - /home/service/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /home/service/nginx/static:/var/share/nginx/html/
+      - /home/service/nginx/log:/var/log/nginx/
+
+  redis:
+    image: redis
+    container_name: redis_container
+    # command: redis-server /usr/local/etc/redis/redis.conf
+    command: redis-server --requirepass yourpassword
+    ports:
+      - "6379:6379"
+    volumes:
+      - /home/service/nginx/data:/data
+      - /home/service/nginx/conf/redis.conf:/usr/local/etc/redis/redis.conf
+
+  web:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: '192.168.100.15'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://192.168.100.15'
+        gitlab_rails['gitlab_shell_ssh_port'] = 8022
+        gitlab_rails['lfs_enabled'] = true
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8022:22'
+    volumes:
+      - '/opt/gitlab/config:/etc/gitlab'
+      - '/opt/gitlab/logs:/var/log/gitlab'
+      - '/opt/gitlab/data:/var/opt/gitlab'

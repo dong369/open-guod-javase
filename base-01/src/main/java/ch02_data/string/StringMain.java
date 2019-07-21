@@ -7,7 +7,7 @@ package ch02_data.string;
  * @version 1.0
  * @date 日期:2018/11/2 时间:8:57
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：String、StringBuffer、StringBuilder
  */
 public class StringMain {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class StringMain {
         // 从0开始截取后两位
         System.out.println(str.substring(0, str.length() - 2));
         // 字符串是否包含
-        int i = str.indexOf(2);
+        int i = str.indexOf("163");
         System.out.println("indexOf：" + i);
         char c = str.charAt(9);
         System.out.println("charAt：" + c);
@@ -31,6 +31,8 @@ public class StringMain {
         String a = "aaa";
         String intern = a.intern();
         System.out.println(a.equals(intern));
+
+        System.out.println('a' - 'B');
 
     }
 }

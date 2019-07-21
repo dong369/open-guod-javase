@@ -13,7 +13,7 @@ package algorithm.ch02_recursion.ch03_fib;
  */
 public class Fib02 {
 	public static void main(String[] args) {
-		int number = getNumber(6);
+		int number = getNumber(5);
 		System.out.println(number);
 	}
 

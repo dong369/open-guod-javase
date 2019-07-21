@@ -15,7 +15,6 @@ public class TT03 implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
         TT03 tt = new TT03();
-        // 问题01：可以访问没有锁定的方法
         Thread t = new Thread(tt);
         t.start();
         tt.m02();
@@ -39,7 +38,7 @@ public class TT03 implements Runnable {
     }
 
     public synchronized void m02() throws InterruptedException {
-        Thread.sleep(2500);
+        Thread.sleep(2000);
         b = 2000;
     }
 

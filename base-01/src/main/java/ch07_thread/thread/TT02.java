@@ -13,7 +13,6 @@ package ch07_thread.thread;
 public class TT02 implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         TT02 tt = new TT02();
-        // 问题01：可以访问没有锁定的方法
         Thread t = new Thread(tt);
         t.start();
         tt.m02();

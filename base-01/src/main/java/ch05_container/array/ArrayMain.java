@@ -11,7 +11,7 @@ package ch05_container.array;
  */
 public class ArrayMain {
     public static void main(String[] args) {
-        // 遍历数组：
+        // 一维遍历数组：
         String[] arr02 = new String[]{"xx", "yy", "zz"};
         String[] arr03 = {"java", "c", "c++"};
 
@@ -24,5 +24,9 @@ public class ArrayMain {
         for (int i = 0; i < arr03.length; i++) {
             System.out.println(arr03[i]);
         }
+        // 静态初始化
+        int[][] a = {{1, 2}, {2}, {9}};
+        // 动态初始化
+        int[][] b = new int[2][];
     }
 }

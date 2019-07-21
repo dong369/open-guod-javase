@@ -8,6 +8,7 @@ package ch04_exception.exception;
  * @date 日期:2018/10/15 时间:16:24
  * @JDK 1.8
  * @Description 功能模块：运行时异常、非运行时异常
+ * 重写的方法，不能抛出比被重写方法不同的异常！
  */
 public class ExceptionMainTest {
     public static void main(String[] args) {

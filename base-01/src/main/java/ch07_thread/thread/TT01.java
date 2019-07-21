@@ -13,10 +13,10 @@ package ch07_thread.thread;
 public class TT01 implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         TT01 tt = new TT01();
-        // 问题01：可以访问没有锁定的方法
         Thread t = new Thread(tt);
         t.start();
         Thread.sleep(1000);
+        // 可以访问没有锁定的方法
         tt.m02();
     }
 

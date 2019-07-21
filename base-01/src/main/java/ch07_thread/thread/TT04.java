@@ -15,7 +15,6 @@ public class TT04 implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
         TT04 tt = new TT04();
-        // 问题01：可以访问没有锁定的方法
         Thread t = new Thread(tt);
         t.start();
         tt.m02();
