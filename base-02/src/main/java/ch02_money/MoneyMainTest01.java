@@ -55,7 +55,7 @@ public class MoneyMainTest01 {
         // 数据库中的金钱使用Long类型存储，并且单位是分，
         long a = 100;
         BigDecimal bigDecimalFen = new BigDecimal(a);
-        BigDecimal divide = bigDecimalFen.multiply(new BigDecimal("0.333"));
+        BigDecimal divide = bigDecimalFen.multiply(new BigDecimal("100.969"));
         System.out.println(divide);
         System.out.println(divide.longValue());
         long intValue = divide.longValue();

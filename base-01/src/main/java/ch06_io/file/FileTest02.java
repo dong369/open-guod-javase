@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class FileTest02 {
     public static void main(String[] args) throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/testFile.txt");
+        File file = new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/file/testFile.txt");
         // 判断是否有文件夹，如果没有创建
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();

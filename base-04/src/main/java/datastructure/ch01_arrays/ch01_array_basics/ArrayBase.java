@@ -47,5 +47,4 @@ public class ArrayBase {
         }
         System.out.println(Arrays.toString(delArray));
     }
-
 }

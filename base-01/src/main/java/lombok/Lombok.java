@@ -11,9 +11,9 @@ import lombok.experimental.Accessors;
  * @JDK 1.8
  * @Description 功能模块：
  */
-@Accessors(chain = true)
 @Setter
 @Getter
+@Accessors(chain = true)
 @RequiredArgsConstructor(staticName = "of")
 public class Lombok {
     /**

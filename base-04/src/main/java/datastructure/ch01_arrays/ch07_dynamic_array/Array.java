@@ -17,7 +17,8 @@ public class Array<E> {
 
     // 无参数的构造函数，默认数组的容量capacity=10
     public Array() {
-        data = (E[]) new Object[10];
+        // data = (E[]) new Object[10];
+        this(10);
     }
 
     // 构造函数，传入数组的容量capacity构造Array
@@ -26,6 +27,7 @@ public class Array<E> {
         size = 0;
     }
 
+    // 构造函数，直接传入一个数组对象
     public Array(E[] arr) {
         data = (E[]) new Object[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -177,7 +179,7 @@ public class Array<E> {
     public String toString() {
         StringBuilder res = new StringBuilder();
         res.append(String.format("ch07 Array: size = %d , capacity = %d\n", size, data.length));
-        res.append("[");
+        res.append("Arrays：[");
         for (int i = 0; i < size; i++) {
             res.append(data[i]);
             if (i != size - 1)

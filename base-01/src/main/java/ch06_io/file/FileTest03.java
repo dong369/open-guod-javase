@@ -1,7 +1,6 @@
 package ch06_io.file;
 
 import java.io.File;
-import java.io.IOException;
 
 /**
  * project -
@@ -13,7 +12,7 @@ import java.io.IOException;
  * @Description 功能模块：文件的目录遍历
  */
 public class FileTest03 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         File file = new File(System.getProperty("user.dir") + "/base-01/");
         System.out.println(file.getName());
         tree(file, 1);

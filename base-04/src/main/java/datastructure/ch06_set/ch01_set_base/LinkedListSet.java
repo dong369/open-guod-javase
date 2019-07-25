@@ -1,6 +1,6 @@
 package datastructure.ch06_set.ch01_set_base;
 
-import datastructure.ch02_linked_list.ch05_remove_element_in_linkedlist.LinkedList;
+import datastructure.ch02_linked.ch05_remove_element_in_linkedlist.LinkedList;
 
 /**
  * project -
@@ -15,6 +15,10 @@ import datastructure.ch02_linked_list.ch05_remove_element_in_linkedlist.LinkedLi
  */
 public class LinkedListSet<E> implements Set<E> {
     private LinkedList<E> linkedList;
+
+    public LinkedListSet() {
+        linkedList = new LinkedList<>();
+    }
 
     @Override
     public void add(E e) {

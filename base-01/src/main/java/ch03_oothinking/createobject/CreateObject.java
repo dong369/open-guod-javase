@@ -4,7 +4,6 @@ import ch03_oothinking.serialversionuid.SerialVersionUID;
 import org.springframework.util.SerializationUtils;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * project -
@@ -16,7 +15,7 @@ import java.lang.reflect.InvocationTargetException;
  * @Description 功能模块：创建对象的五种方式
  */
 public class CreateObject {
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+    public static void main(String[] args) throws Exception {
         // 01使用new关键字
         SerialVersionUID serialVersionUID = new SerialVersionUID();
         // 02使用Class类的newInstance方法

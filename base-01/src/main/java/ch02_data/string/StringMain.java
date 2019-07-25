@@ -11,6 +11,7 @@ package ch02_data.string;
  */
 public class StringMain {
     public static void main(String[] args) {
+        String s = new String("45678");
         String str = "41011637230102099080";
         // 从0开始截取3位
         System.out.println(str.substring(0, 3));
@@ -31,8 +32,24 @@ public class StringMain {
         String a = "aaa";
         String intern = a.intern();
         System.out.println(a.equals(intern));
-
         System.out.println('a' - 'B');
 
+        strBuffer("0");
+        strBuider("0");
+    }
+
+    /**
+     * 区别1：线程安全
+     * 区别2：缓冲区
+     * 区别3：性能
+     */
+    private static void strBuffer(String s) {
+        StringBuffer sb = new StringBuffer("123");
+        System.out.println(sb.append(456).toString());
+    }
+
+    private static void strBuider(String s) {
+        StringBuilder sb = new StringBuilder("123");
+        System.out.println(sb.append("456"));
     }
 }

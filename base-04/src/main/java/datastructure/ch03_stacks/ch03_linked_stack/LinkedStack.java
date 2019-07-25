@@ -1,5 +1,6 @@
 package datastructure.ch03_stacks.ch03_linked_stack;
 
+import datastructure.ch02_linked.ch06_query_and_update_in_linkedlist.LinkedList;
 import datastructure.ch03_stacks.ch02_array_stack.Stack;
 
 /**
@@ -12,9 +13,15 @@ import datastructure.ch03_stacks.ch02_array_stack.Stack;
  * @Description 功能模块：
  */
 public class LinkedStack<E> implements Stack<E> {
+    private LinkedList<E> linkedList;
+
+    public LinkedStack() {
+        linkedList = new LinkedList();
+    }
+
     @Override
     public void push(E e) {
-
+        linkedList.addFirst(e);
     }
 
     @Override
@@ -24,16 +31,16 @@ public class LinkedStack<E> implements Stack<E> {
 
     @Override
     public E peek() {
-        return null;
+        return linkedList.getFirst();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return linkedList.isEmpty();
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return linkedList.getSize();
     }
 }
