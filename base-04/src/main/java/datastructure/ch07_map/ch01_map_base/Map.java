@@ -15,13 +15,13 @@ package datastructure.ch07_map.ch01_map_base;
 public interface Map<K, V> {
     void add(K k, V v);
 
-    V remove(K k);
-
     void set(K k, V v);
+
+    V get(K k);
 
     boolean contains(K k);
 
-    V get(K k);
+    V remove(K k);
 
     boolean getEmpty();
 

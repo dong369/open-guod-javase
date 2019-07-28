@@ -10,7 +10,7 @@ package datastructure.ch06_set.ch01_set_base;
  * @Description 功能模块：集合结构
  */
 public interface Set<E> {
-    // 进行元素的添加
+    // 进行元素的添加，不能添加重复数据，特别注意！
     void add(E e);
 
     // 进行元素的删除

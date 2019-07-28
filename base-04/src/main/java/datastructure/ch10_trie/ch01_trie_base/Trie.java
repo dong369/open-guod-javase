@@ -15,8 +15,8 @@ import java.util.TreeMap;
 public class Trie {
     private class Node {
         // 是否值单词
-        private boolean isWord;
-        private TreeMap<Character, Node> next;
+        public boolean isWord;
+        public TreeMap<Character, Node> next;
 
         public Node() {
             this(false);

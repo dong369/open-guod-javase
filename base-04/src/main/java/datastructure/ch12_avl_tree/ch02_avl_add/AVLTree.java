@@ -1,4 +1,4 @@
-package datastructure.ch12_avl_tree.ch01_avl_base;
+package datastructure.ch12_avl_tree.ch02_avl_add;
 
 import java.util.ArrayList;
 
@@ -9,12 +9,7 @@ import java.util.ArrayList;
  * @version 1.0
  * @date 日期:2019/6/28 时间:14:38
  * @JDK 1.8
- * @Description 功能模块：平衡树，最早的自平衡二分搜索树的结构。平衡因子（左子树高度-右子树高度）+节点的高度。
- * 发明人：G.M. Adelson-Velsky NH E. M. Landis
- * 1962年的论文首次提出
- * 最早的自平衡二分搜索树结构
- * 01、对于任意一个节点，左子树和右子树的高度差不能为超过1。
- * 02、符合二分搜索树。
+ * @Description 功能模块：添加节点
  */
 public class AVLTree<K extends Comparable<K>, V> {
     public class Node {
@@ -95,6 +90,53 @@ public class AVLTree<K extends Comparable<K>, V> {
         return isAVL(node.left) && isAVL(node.right);
     }
 
+    // 对节点y进行向右旋转操作，返回旋转后新的根节点x
+    //        y                              x
+    //       / \                           /   \
+    //      x   T4     向右旋转 (y)        z     y
+    //     / \       - - - - - - - ->    / \   / \
+    //    z   T3                       T1  T2 T3 T4
+    //   / \
+    // T1   T2
+    // 右旋转封装
+    public Node rightRotate(Node y) {
+        Node x = y.left;
+        Node T3 = x.right;
+
+        // 向右旋转过程
+        x.right = y;
+        y.left = T3;
+
+        // 更新height
+        y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
+        x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;
+
+        return x;
+    }
+
+    // 对节点y进行向左旋转操作，返回旋转后新的根节点x
+    //    y                             x
+    //  /  \                          /   \
+    // T1   x      向左旋转 (y)       y     z
+    //     / \   - - - - - - - ->   / \   / \
+    //   T2  z                     T1 T2 T3 T4
+    //      / \
+    //     T3 T4
+    private Node leftRotate(Node y) {
+        Node x = y.right;
+        Node T2 = x.left;
+
+        // 向左旋转过程
+        x.left = y;
+        y.right = T2;
+
+        // 更新height
+        y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
+        x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;
+
+        return x;
+    }
+
     public void add(K k, V v) {
         root = add(root, k, v);
     }
@@ -113,8 +155,23 @@ public class AVLTree<K extends Comparable<K>, V> {
         node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
         // 计算平衡因子
         int balanceFactor = getBalance(node);
-        if (Math.abs(balanceFactor) > 1) {
-            System.out.println(balanceFactor);
+        // 进行右旋转
+        if (Math.abs(balanceFactor) > 1 && getBalance(node.left) >= 0) {
+            return rightRotate(node);
+        }
+        // 进行左旋转
+        if (Math.abs(balanceFactor) > 1 && getBalance(node.right) <= 0) {
+            return leftRotate(node);
+        }
+        //
+        if (balanceFactor > 1 && getBalance(node.left) < 0) {
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+
+        if (balanceFactor < -1 && getBalance(node.right) > 0) {
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
         }
         return node;
     }

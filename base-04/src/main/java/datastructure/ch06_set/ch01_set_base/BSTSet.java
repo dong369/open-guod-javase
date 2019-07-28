@@ -1,6 +1,6 @@
 package datastructure.ch06_set.ch01_set_base;
 
-import datastructure.ch05_bst_tree.ch07_remove_in_bst.BST;
+import datastructure.ch05_bst.ch07_remove_in_bst.BST;
 
 /**
  * project -

@@ -12,6 +12,21 @@ package datastructure.ch07_map.ch01_map_base;
  * 无序映射中的键没有顺序性←基于哈希表的实现
  */
 public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
+    private class Node {
+        public K k;
+        public V v;
+        public Node left, right;
+
+        public Node(K k, V v) {
+            this.k = k;
+            this.v = v;
+            this.left = this.right = null;
+        }
+    }
+
+    private Node root;
+    private int size;
+
     @Override
     public void add(K k, V v) {
 

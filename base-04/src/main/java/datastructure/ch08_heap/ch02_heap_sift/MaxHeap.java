@@ -53,15 +53,6 @@ public class MaxHeap<E extends Comparable<E>> {
         siftUp(data.getSize() - 1);
     }
 
-    // 取出堆中最大元素
-    public E extractMax() {
-        E ret = findMax();
-        data.swap(0, getSize() - 1);
-        data.removeLast();
-        siftDown(0);
-        return ret;
-    }
-
     private void siftUp(int k) {
         while (k > 0 && data.get(k).compareTo(data.get(getParent(k))) > 0) {
             data.swap(k, getParent(k));
@@ -94,5 +85,14 @@ public class MaxHeap<E extends Comparable<E>> {
         if (data.getSize() == 0)
             throw new IllegalArgumentException("Can not findMax when heap is empty.");
         return data.get(0);
+    }
+
+    // 取出堆中最大元素
+    public E extractMax() {
+        E ret = findMax();
+        data.swap(0, getSize() - 1);
+        data.removeLast();
+        siftDown(0);
+        return ret;
     }
 }
