@@ -40,4 +40,8 @@ public class Driver {
         // car.go(new Address("违反了高内聚、低耦合的原则"));
         traffic.go(new Address("东北"));
     }
+
+    public void doDriver(Traffic traffic, Address address) {
+        traffic.go(address);
+    }
 }

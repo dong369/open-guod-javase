@@ -1,6 +1,6 @@
 package ch01_oo.type;
 
-import ch07_proxy.base02.Moveable;
+import ch04_proxy.dynamicproxy.Movable;
 
 /**
  * project -
@@ -17,13 +17,13 @@ public class SetTypeMain {
 }
 
 class Person02 {
-    private Moveable movable;
+    private Movable movable;
 
-    public Moveable getMovable() {
+    public Movable getMovable() {
         return movable;
     }
 
-    public void setMovable(Moveable movable) {
+    public void setMovable(Movable movable) {
         this.movable = movable;
     }
 

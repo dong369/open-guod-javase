@@ -1,5 +1,7 @@
 package ch02_data.generic.usemethod;
 
+import java.io.Serializable;
+
 /**
  * project - 泛型方法
  *
@@ -27,7 +29,7 @@ public class GenericMethodTestMain01 {
         return obj;
     }
 
-    private static <T> T fun02(T t) {
+    private static <T extends Comparable & Serializable> T fun02(T t) {
         return t;
     }
 

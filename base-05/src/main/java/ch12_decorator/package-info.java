@@ -1,4 +1,4 @@
 /**
- * 设计模式 模版方法模式(TemplateMethod Pattern) 展现程序员的一天
+ * 设计模式 装饰器模式
  */
 package ch12_decorator;

@@ -10,13 +10,12 @@ package ch02_data.enums;
  * @Description 功能模块：用法二：向枚举中添加新方法
  */
 public enum EnumMainTest03 {
-    SMS{
+    SMS {
         @Override
         public String getParamNameOnValidate() {
             return null;
         }
-    }
-   ;
+    };
 
     public abstract String getParamNameOnValidate();
 }

@@ -10,7 +10,7 @@ package ch03_oothinking.classrelation;
  * @Description 功能模块：依赖(Dependency)
  * 举例：人依赖船过河，依赖关系仅仅描述了类与类之间的一种使用与被使用的关系。
  * 体现：在Java和C++中体现为局部变量、方法/函数的参数或者是对静态方法的调用。
- * UML：虚线 + 箭头（Person -----> Boat）
+ * UML：虚线 + 箭头（Person----->Boat）
  * 箭头方向：箭头指向被依赖的类的对象;
  */
 public class DependencyClass {

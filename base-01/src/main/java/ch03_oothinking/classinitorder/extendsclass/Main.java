@@ -17,6 +17,6 @@ public class Main {
         // isAssignableFrom()方法是从类继承的角度去判断，instanceof()方法是从实例继承的角度去判断。
         // isAssignableFrom()方法是判断是否为某个类的父类，instanceof()方法是判断是否某个类的子类。
         System.out.println(Parent.class.isAssignableFrom(Child.class));
-        System.out.println(child instanceof Parent);
+        System.out.println(true);
     }
 }

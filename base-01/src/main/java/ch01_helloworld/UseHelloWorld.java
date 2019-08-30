@@ -65,8 +65,8 @@ package ch01_helloworld;
  */
 public class UseHelloWorld {
     public static void main(String[] args) {
-        for (int i = 0; i < args.length; i++) {
-            System.out.println(args[i]);
+        for (String arg : args) {
+            System.out.println(arg);
         }
         System.out.println("Hello World!");
         System.out.printf("%d", 34);

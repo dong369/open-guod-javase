@@ -13,8 +13,8 @@ import java.util.List;
  * @Description 功能模块：过滤器链
  */
 public class FilterChain implements Filter {
-    List<Filter> filters = new ArrayList<Filter>();
-    int index = 0;
+    private List<Filter> filters = new ArrayList<>();
+    private int index = 0;
 
     public FilterChain add(Filter filter) {
         this.filters.add(filter);

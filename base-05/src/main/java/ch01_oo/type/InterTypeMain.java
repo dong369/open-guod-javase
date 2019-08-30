@@ -1,6 +1,6 @@
 package ch01_oo.type;
 
-import ch07_proxy.base02.Moveable;
+import ch04_proxy.dynamicproxy.Movable;
 
 /**
  * project -
@@ -18,18 +18,18 @@ public class InterTypeMain {
 }
 
 class Person03 implements Person {
-    private Moveable moveable;
+    private Movable movable;
 
     @Override
-    public void set(Moveable moveable) {
-        this.moveable = moveable;
+    public void set(Movable movable) {
+        this.movable = movable;
     }
 
     public void go() throws InterruptedException {
-        moveable.move();
+        movable.move();
     }
 }
 
 interface Person {
-    void set(Moveable moveable);
+    void set(Movable movable);
 }

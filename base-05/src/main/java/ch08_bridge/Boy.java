@@ -10,28 +10,21 @@ package ch08_bridge;
  * @Description 功能模块：
  */
 public class Boy {
-	private String name;
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * @Title pursue
-	 * @param girl
-	 * @date 日期:2019年1月12日 时间:下午6:25:21
-	 * @return void
-	 * @Description 功能：追女孩
-	 */
-	public void pursue(Girl girl) {
-		Gift gift = new WarmGift(new Flower());
-		give(girl, gift);
-	}
+    public void pursue(Girl girl) {
+        Gift gift = new WarmGift(new Flower());
+        give(girl, gift);
+    }
 
-	public void give(Girl girl, Gift gift) {
-	}
+    public void give(Girl girl, Gift gift) {
+    }
 }

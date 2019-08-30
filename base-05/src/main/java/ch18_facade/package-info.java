@@ -1,0 +1,4 @@
+/**
+ * 设计模式 外观模式(Facade Pattern) 一键电影模式
+ */
+package ch18_facade;

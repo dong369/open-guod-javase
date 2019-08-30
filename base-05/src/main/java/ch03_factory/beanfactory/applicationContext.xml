@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <bean id="V" class="ch03_factory.beanfactory.Car">
+
+    </bean>
+</beans>
