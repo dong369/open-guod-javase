@@ -14,7 +14,7 @@ public class JavaCourse implements Course {
     private String name;
     private Double Price;
 
-    public JavaCourse(Integer id, String name, Double price) {
+    JavaCourse(Integer id, String name, Double price) {
         this.id = id;
         this.name = name;
         Price = price;

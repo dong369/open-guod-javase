@@ -1,7 +1,7 @@
 package ch00_design_principles.openclose;
 
 /**
- * project -
+ * project - 开闭原则
  *
  * @author guodd
  * @version 1.0

@@ -20,6 +20,7 @@ public class GetClass {
         // 静态加载：在编译时期加载的类，叫静态加载
         // 动态加载：在运行时期加载的类，叫动态加载
         // 第一种：Class.forName（"类名"）
+        System.out.println(User.class.getName());
         Class<?> aClass1 = Class.forName("ch11_reflection.method.User");
         System.out.println("Class.forName()方式 ：" + aClass1);
         // 第二种：对象.getClass()方法
