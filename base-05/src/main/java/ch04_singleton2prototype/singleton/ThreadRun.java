@@ -9,7 +9,7 @@ package ch04_singleton2prototype.singleton;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class Run implements Runnable {
+public class ThreadRun implements Runnable {
     @Override
     public void run() {
         LazySingleton instance = LazySingleton.getInstance();

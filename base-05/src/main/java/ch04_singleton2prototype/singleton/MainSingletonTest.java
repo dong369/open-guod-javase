@@ -13,8 +13,8 @@ public class MainSingletonTest {
     public static void main(String[] args) {
         // System.out.println(CarOne.getInstance() == CarOne.getInstance());
         // System.out.println(LazySingleton.getInstance() == LazySingleton.getInstance());
-        Thread thread01 = new Thread(new Run());
-        Thread thread02 = new Thread(new Run());
+        Thread thread01 = new Thread(new ThreadRun());
+        Thread thread02 = new Thread(new ThreadRun());
         thread01.start();
         thread02.start();
         System.out.println("end thread");

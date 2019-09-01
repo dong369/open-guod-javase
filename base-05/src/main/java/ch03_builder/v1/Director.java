@@ -16,7 +16,7 @@ public class Director {
         this.concreteBuilder = concreteBuilder;
     }
 
-    public Product makeProduct(String courseName,String courseVideo,Double coursePrice){
+    public Product makeProduct(String courseName, String courseVideo, Double coursePrice) {
         this.concreteBuilder.builderCourseName(courseName);
         this.concreteBuilder.builderCourseVideo(courseVideo);
         this.concreteBuilder.builderCoursePrice(coursePrice);
