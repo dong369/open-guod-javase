@@ -14,7 +14,6 @@ public class MainTest01 {
         int i = 0;
         i = i++ + ++i;
         System.out.println(i);
-
     }
 
     public static <T> T test(T t) {
