@@ -1,7 +1,7 @@
 package ch00_design_principles.demeter.v1;
 
 /**
- * project -
+ * project - 迪米特法则
  *
  * @author guodd
  * @version 1.0

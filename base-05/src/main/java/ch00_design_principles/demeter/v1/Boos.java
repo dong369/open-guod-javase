@@ -12,8 +12,8 @@ import java.util.List;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class Boos {
-    public void commandCheckNumber(TeamLeader teamLeader) {
+class Boos {
+    void commandCheckNumber(TeamLeader teamLeader) {
         List<Course> courses = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             courses.add(new Course());
