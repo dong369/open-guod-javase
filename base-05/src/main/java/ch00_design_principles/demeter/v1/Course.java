@@ -9,6 +9,6 @@ package ch00_design_principles.demeter.v1;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class Course {
+class Course {
 
 }

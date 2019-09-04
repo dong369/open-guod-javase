@@ -1,7 +1,7 @@
 package ch00_design_principles.liskov;
 
 /**
- * project -
+ * project - 里氏替换原则
  *
  * @author guodd
  * @version 1.0
@@ -10,4 +10,7 @@ package ch00_design_principles.liskov;
  * @Description 功能模块：
  */
 public class MainTest {
+    public static void main(String[] args) {
+        
+    }
 }

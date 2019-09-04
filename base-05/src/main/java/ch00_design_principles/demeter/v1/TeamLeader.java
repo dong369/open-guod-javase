@@ -11,8 +11,8 @@ import java.util.List;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class TeamLeader {
-    public void checkNumberOfCourse(List<Course> courseList) {
+class TeamLeader {
+    void checkNumberOfCourse(List<Course> courseList) {
         System.out.println("课程数量：" + courseList.size());
     }
 }

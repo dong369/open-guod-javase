@@ -1,6 +1,6 @@
 package ch01_oo.type;
 
-import ch05_proxy.dynamicproxy.Movable;
+import ch45_proxy.dynamicproxy.Movable;
 
 /**
  * project -
