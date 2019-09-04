@@ -10,4 +10,7 @@ package jvm;
  * @Description 功能模块：JVM内存结构、Java内存模型和Java对象模型
  */
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }
