@@ -11,6 +11,10 @@ package ch06_decorator.v2;
  */
 public class MainTest {
     public static void main(String[] args) {
-
+        AbstractPancake pancake;
+        pancake = new Pancake();
+        pancake = new EggPancake(pancake);
+        pancake = new SausagePancake(pancake);
+        System.out.println(pancake.description() + pancake.price());
     }
 }

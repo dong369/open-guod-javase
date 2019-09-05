@@ -35,7 +35,7 @@ public class StringMain {
         System.out.println('a' - 'B');
 
         strBuffer("0");
-        strBuider("0");
+        strBuilder("0");
     }
 
     /**
@@ -48,7 +48,7 @@ public class StringMain {
         System.out.println(sb.append(456).toString());
     }
 
-    private static void strBuider(String s) {
+    private static void strBuilder(String s) {
         StringBuilder sb = new StringBuilder("123");
         System.out.println(sb.append("456"));
     }

@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class ClassTest01 {
     public static void main(String[] args) {
         try {
-            String str = "ch10_classloads.classload.T01";
+            String str = "ch10_classload.classload.T01";
             // 把名字叫XXX的类加载到内存中
             Class<?> c = Class.forName(str);
             Object o = c.newInstance();

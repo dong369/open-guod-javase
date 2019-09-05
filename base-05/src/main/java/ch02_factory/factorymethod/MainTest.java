@@ -13,7 +13,9 @@ public class MainTest {
     public static void main(String[] args) {
         VehicleFactory carFactory = new CarFactory();
         VehicleFactory plainFactory = new PlainFactory();
-        Movable c = carFactory.create();
-        c.run();
+        Movable car = carFactory.create();
+        Movable plain = plainFactory.create();
+        car.run();
+        plain.run();
     }
 }

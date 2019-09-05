@@ -1,5 +1,7 @@
 package ch02_data.number;
 
+import cn.hutool.core.convert.Convert;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,15 +33,15 @@ public class Data {
         long d = 4;
         Long dd = 4L;
 
-        // 32bits
+        // 4byte=32bits
         float e = 5;
         Float ee = 5F;
 
-        // 64bits
+        // 8byte=64bits
         double f = 6;
         Double ff = 6D;
 
-        // 16bits
+        // 1byte=16bits
         char g = 7;
         Character gg = 7;
 
@@ -59,7 +61,7 @@ public class Data {
         // 02 Java中的自动装箱和拆箱
         Integer valueOf = Integer.valueOf("3");
         int intValue = valueOf.intValue();
-        int parseInt = Integer.parseInt("3");
+        int parseInt = Integer.parseInt("1");
         double java = 1L / 1.00;
         System.out.println(java);
 
@@ -79,10 +81,14 @@ public class Data {
         Map<String, Object> map = new HashMap<>();
         map.put("a", "2");
         map.put("b", 2);
+        // Integer a3 = (Integer) map.get("a");
+        // String b2 = (String) map.get("b"); 错误写法
         Integer a1 = Integer.valueOf((String) map.get("a"));
-        Integer a2 = Integer.parseInt((String) map.get("a"));
+        int a2 = Integer.parseInt((String) map.get("a"));
         System.out.println(a1 + "," + a2);
         Integer b1 = (Integer) map.get("b");
         System.out.println(b1);
+        // hutool工具类
+        System.out.println(Convert.toInt(map.get("a")));
     }
 }

@@ -11,7 +11,7 @@ package ch02_factory.factorymethod;
  */
 public class CarFactory extends VehicleFactory {
     @Override
-    public Car create() {
+    public Movable create() {
         return new Car();
     }
 }

@@ -7,7 +7,7 @@ package ch04_singleton2prototype.singleton;
  * @version 1.0
  * @date 日期:2018/11/2 时间:15:50
  * @JDK 1.8
- * @Description 功能模块：懒汉式单例，线程不安全
+ * @Description 功能模块：懒汉式单例，双重检查，线程安全。
  */
 class LazyDoubleCheckSingleton {
 
