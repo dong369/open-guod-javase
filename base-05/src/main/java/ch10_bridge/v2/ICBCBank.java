@@ -17,6 +17,7 @@ public class ICBCBank extends Bank {
     @Override
     Account openAccount() {
         System.out.println("打开中国工商银行");
+        // 委托
         account.openAccount();
         return account;
     }

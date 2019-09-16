@@ -10,9 +10,9 @@ package ch03_oothinking.innerclass;
  * @Description 功能模块：静态嵌套类(Static Nested Class)
  */
 public class StaticNestedClass {
-    private String Oname;
+    private String OName;
 
     static class NestedClass {
-        private String Iname;
+        private String IName;
     }
 }

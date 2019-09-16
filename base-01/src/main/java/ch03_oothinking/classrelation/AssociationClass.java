@@ -21,11 +21,11 @@ public class AssociationClass {
 }
 
 class Client {
+    private Order order;
+
     public Client(Order order) {
         this.order = order;
     }
-
-    private Order order;
 
     public Order getOrder() {
         return order;

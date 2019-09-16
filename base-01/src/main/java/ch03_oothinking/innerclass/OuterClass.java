@@ -16,22 +16,22 @@ package ch03_oothinking.innerclass;
  * 内部类（Inner Class）、匿名内部类、静态内部类
  * 内部类方法可以访问该类定义所在作用域中的数据，包括被 private 修饰的私有数据
  * 内部类可以对同一包中的其他类隐藏起来
- * 内部类可以实现 java 单继承的缺陷
+ * 内部类可以实现java单继承的缺陷
  * 当我们想要定义一个回调函数却不想写大量代码的时候我们可以选择使用匿名内部类来实现
  */
 public class OuterClass {
-    public void bar() {
+    private void bar() {
         new InnerClass01();
         new InnerClass03();
     }
 
-    public static void foo() {
+    private static void foo() {
         new InnerClass03();
     }
 
     // 1、成员内部类，非静态内部类。
     private class InnerClass01 {
-        public void innerTest() {
+        void innerTest() {
             foo();
             bar();
         }
