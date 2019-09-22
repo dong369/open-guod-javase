@@ -30,5 +30,30 @@ CREATE TABLE t_student
   AUTO_INCREMENT = 1000001
   DEFAULT CHARSET = utf8mb4;
 
--- 04
+-- 04查看所有表及结构
 show tables;
+desc user;
+
+# 05、CURL常用操作
+insert into user(name, age)
+values ('java', 44);
+
+delete
+from user
+where uid = 1;
+
+update user
+set name='java'
+where uid = 2;
+
+select *
+from user
+where 0;
+
+
+select goods_id, cat_id, goods_name, shop_price
+from goods
+where goods_name like '诺基亚%';
+
+
+insert into t2 values ('11');

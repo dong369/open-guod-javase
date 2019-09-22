@@ -117,8 +117,6 @@ values ('b', 5),
        ('d', 20),
        ('e', 99);
 
-
-
 create table m
 (
     mid    int,
@@ -136,20 +134,16 @@ create table t
 ) engine myisam
   charset utf8;
 
-
 insert into m
 values (1, 1, 2, '2:0', '2006-05-21'),
        (2, 2, 3, '1:2', '2006-06-21'),
        (3, 3, 1, '2:5', '2006-06-25'),
        (4, 2, 1, '3:2', '2006-07-21');
 
-
 insert into t
 values (1, '国安'),
        (2, '申花'),
        (3, '布尔联队');
-
-
 
 create table mian
 (
@@ -165,7 +159,6 @@ values (3),
        (34),
        (37),
        (32);
-
 
 create table user
 (
@@ -203,3 +196,102 @@ insert into girl(gname, hid)
 values ('小龙女', 'B'),
        ('张柏芝', 'C'),
        ('死宅女', 'D');
+
+
+DROP TABLE IF EXISTS `kc`;
+CREATE TABLE `kc`
+(
+    `课程号`  char(3)    NOT NULL,
+    `课程名`  char(16)   NOT NULL,
+    `开课学期` tinyint(1) NOT NULL,
+    `学时`   tinyint(1) NOT NULL,
+    `学分`   tinyint(1) DEFAULT NULL,
+    PRIMARY KEY (`课程号`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+-- ----------------------------
+-- Records of kc
+-- ----------------------------
+INSERT INTO `kc`
+VALUES ('102', '程序设计与语言', '2', '68', '4');
+INSERT INTO `kc`
+VALUES ('206', '离散数学', '4', '68', '4');
+INSERT INTO `kc`
+VALUES ('209', '操作系统', '6', '68', '4');
+INSERT INTO `kc`
+VALUES ('212', '数据库原理', '7', '68', '4');
+INSERT INTO `kc`
+VALUES ('302', '软件工程', '7', '51', '3');
+
+-- ----------------------------
+-- Table structure for `xs`
+-- ----------------------------
+DROP TABLE IF EXISTS `xs`;
+CREATE TABLE `xs`
+(
+    `学号`   char(6)    NOT NULL,
+    `姓名`   char(8)    NOT NULL,
+    `专业名`  char(10)   DEFAULT NULL,
+    `性别`   tinyint(1) NOT NULL,
+    `出生日期` date       NOT NULL,
+    `总学分`  tinyint(1) DEFAULT NULL,
+    `照片`   blob,
+    `备注`   text,
+    PRIMARY KEY (`学号`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+-- ----------------------------
+-- Records of xs
+-- ----------------------------
+INSERT INTO `xs`
+VALUES ('081101', '王林', '计算机', '1', '1990-02-10', '50', null, null);
+INSERT INTO `xs`
+VALUES ('081102', '程明', '计算机', '1', '1991-02-01', '50', null, null);
+INSERT INTO `xs`
+VALUES ('081103', '王燕', '计算机', '0', '1989-10-06', '50', null, null);
+INSERT INTO `xs`
+VALUES ('081201', '王敏', '通信工程', '1', '1989-06-10', '50', null, null);
+INSERT INTO `xs`
+VALUES ('081202', '王林', '通信工程', '1', '1989-01-29', '40', null, null);
+INSERT INTO `xs`
+VALUES ('081204', '马琳琳', '通信工程', '0', '1989-01-29', '40', null, null);
+INSERT INTO `xs`
+VALUES ('081206', '李济', '通信工程', '1', '1989-01-29', '40', null, null);
+
+-- ----------------------------
+-- Table structure for `xs_kc`
+-- ----------------------------
+DROP TABLE IF EXISTS `xs_kc`;
+CREATE TABLE `xs_kc`
+(
+    `学号`  char(6) NOT NULL,
+    `课程号` char(3) NOT NULL,
+    `成绩`  tinyint(1) DEFAULT NULL,
+    `学分`  tinyint(1) DEFAULT NULL,
+    PRIMARY KEY (`学号`, `课程号`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+-- ----------------------------
+-- Records of xs_kc
+-- ----------------------------
+INSERT INTO `xs_kc`
+VALUES ('081101', '101', '80', null);
+INSERT INTO `xs_kc`
+VALUES ('081102', '102', '78', null);
+INSERT INTO `xs_kc`
+VALUES ('081102', '206', '78', null);
+INSERT INTO `xs_kc`
+VALUES ('081103', '102', '70', null);
+INSERT INTO `xs_kc`
+VALUES ('081103', '206', '81', null);
+INSERT INTO `xs_kc`
+VALUES ('081104', '102', '84', null);
+INSERT INTO `xs_kc`
+VALUES ('081104', '206', '65', null);
+INSERT INTO `xs_kc`
+VALUES ('081106', '101', '65', null);
+INSERT INTO `xs_kc`
+VALUES ('081106', '102', '78', null);

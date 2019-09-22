@@ -81,7 +81,7 @@ truncate tableName;
 
 4:列类型讲解
 列类型:
-        整型：tinyint (0~255/-128~127) smallint (0~65535/-32768~32767) mediumint int bigint (参考手册11.2)
+        整型:tinyint (0~255/-128~127) smallint (0~65535/-32768~32767) mediumint int bigint (参考手册11.2)
         参数解释:
         unsigned 无符号(不能为负)  zerofill 0填充  M 填充后的宽度
         举例:tinyint unsigned;
@@ -162,7 +162,7 @@ varchar(M)    0<=i<=M          i+1,2             i/i+1/2<100%
 左右连接都是以在左边的表的数据为准,沿着左表查右表.
 内连接是以两张表都有的共同部分数据为准,也就是左右连接的数据之交集.
 
-7：子查询
+7	子查询
   where 型子查询:内层sql的返回值在where后作为条件表达式的一部分
   例句: select * from tableA where colA = (select colB from tableB where ...);
   
@@ -170,7 +170,7 @@ varchar(M)    0<=i<=M          i+1,2             i/i+1/2<100%
   例句:select * from (select * from ...) as tableName where ....
 
   
-8：字符集
+8: 字符集
   客服端sql编码 character_set_client
   服务器转化后的sql编码 character_set_connection
   服务器返回给客户端的结果集编码     character_set_results
