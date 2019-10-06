@@ -41,6 +41,7 @@ public class Array {
 
     // 在index索引的位置插入一个新元素e
     public void add(int index, int e) {
+        // 数组中元素的个数是否已经等于容积数
         if (size == getCapacity()) {
             throw new IllegalArgumentException("ch03 Add failed. Array is full.");
         }

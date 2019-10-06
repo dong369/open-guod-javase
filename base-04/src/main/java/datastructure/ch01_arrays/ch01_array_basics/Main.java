@@ -26,7 +26,6 @@ public class Main {
         for (int score : scores) {
             System.out.print(score);
         }
-
         for (int datum : data) {
             System.out.print(datum);
         }

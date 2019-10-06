@@ -9,7 +9,7 @@ package datastructure.ch01_arrays.ch01_array_basics;
  * @JDK 1.8
  * @Description 功能模块：MyArray测试主类
  */
-public class MyArrayTest01 {
+public class Test {
     public static void main(String[] args) {
         MyArray arr = new MyArray();
         arr.insertLast(66);

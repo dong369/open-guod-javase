@@ -56,6 +56,7 @@ public class Array<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
         }
+        // 进行扩容操作
         if (size == data.length) {
             reSize(getCapacity() * 2);
         }
@@ -89,6 +90,8 @@ public class Array<E> {
         // 进行缩容操作
         // size=10     capacity=40
         // 10==10*（40/4）
+        // if (size == data.length / 2)
+        // 考虑容积是data.length / 2为0的情况
         if (size == getCapacity() / 4 && getCapacity() / 2 != 0)
             reSize(data.length / 2);
         return ret;
@@ -107,7 +110,7 @@ public class Array<E> {
     // 查找数组中元素e所在的索引，如果不存在元素e，则返回-1
     public int find(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return i;
             }
         }
@@ -123,7 +126,7 @@ public class Array<E> {
 
     // 修改index索引位置的元素为e
     public void set(int index, E e) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         }
         data[index] = e;
@@ -131,7 +134,7 @@ public class Array<E> {
 
     // 获取index索引位置的元素
     public E get(int index) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index > size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
@@ -150,7 +153,7 @@ public class Array<E> {
     // 查找数组中是否有元素e
     public boolean contains(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return true;
             }
         }
@@ -161,7 +164,10 @@ public class Array<E> {
     private void reSize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
         // 进行值的copy操作
-        if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
+        // if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
         data = newData;
     }
 

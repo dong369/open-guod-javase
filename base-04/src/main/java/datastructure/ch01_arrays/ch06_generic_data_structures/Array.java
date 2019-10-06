@@ -78,7 +78,7 @@ public class Array<E> {
 
     // 获取index索引位置的元素
     public E get(int index) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
@@ -86,7 +86,7 @@ public class Array<E> {
 
     // 修改index索引位置的元素为e
     public void set(int index, E e) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         }
         data[index] = e;

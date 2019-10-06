@@ -35,7 +35,7 @@ public class LinkedList<E> {
         }
     }
 
-    // 链表的头
+    // 链表的虚拟头节点
     private Node dummyHead;
     // 链表中的元素个数
     private int size;

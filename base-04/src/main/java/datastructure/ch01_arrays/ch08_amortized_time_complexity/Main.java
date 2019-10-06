@@ -1,5 +1,7 @@
 package datastructure.ch01_arrays.ch08_amortized_time_complexity;
 
+import datastructure.ch01_arrays.ch07_dynamic_array.Array;
+
 /**
  * project -
  *
@@ -11,6 +13,9 @@ package datastructure.ch01_arrays.ch08_amortized_time_complexity;
  */
 public class Main {
     public static void main(String[] args) {
-
+        Array<Integer> array = new Array<>();
+        array.add(0, 3);
+        array.addFirst(1);
+        System.out.println(array);
     }
 }

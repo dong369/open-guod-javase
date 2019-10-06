@@ -55,23 +55,22 @@ public class Array {
             throw new IllegalArgumentException("ch04 Add failed. Array is full.");
         if (index < 0 || index > size)
             throw new IllegalArgumentException("ch04 Add failed. Require index >= 0 and index <= size.");
-        for (int i = size - 1; i >= index; i--)
-            data[i + 1] = data[i];
+        System.arraycopy(data, index, data, index + 1, size - index);
         data[index] = e;
         size++;
     }
 
-    // 获取index索引位置的元素
+    // 获取index索引位置的元素，可以屏蔽掉没有使用的数组空间
     public int get(int index) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
     }
 
-    // 修改index索引位置的元素为e
+    // 修改index索引位置的元素为e，可以屏蔽掉没有使用的数组空间
     public void set(int index, int e) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         }
         data[index] = e;

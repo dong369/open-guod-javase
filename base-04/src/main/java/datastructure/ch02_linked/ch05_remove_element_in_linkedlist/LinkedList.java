@@ -131,10 +131,12 @@ public class LinkedList<E> {
             prev = prev.next;
         Node retNode = prev.next;
         prev.next = retNode.next;
+        // 脱离关系
         retNode.next = null;
         size--;
         return retNode.e;
     }
+
 
     // 从链表中删除第一个元素, 返回删除的元素
     public E removeFirst() {

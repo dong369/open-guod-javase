@@ -51,22 +51,9 @@ public class Array {
         return size == 0;
     }
 
-    // 向所有元素后添加一个新元素
-    public void addLast(int e) {
-        if (size == data.length)
-            throw new IllegalArgumentException("AddLast failed. Array is full.");
-        data[size] = e;
-        size++;
-    }
-
-    // 在所有元素前添加一个新元素
-    public void addFirst(int e) {
-        add(0, e);
-    }
-
     // 在index索引的位置插入一个新元素e
     public void add(int index, int e) {
-        if (size == data.length)
+        if (size == getCapacity())
             throw new IllegalArgumentException("Add failed. Array is full.");
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
@@ -76,9 +63,22 @@ public class Array {
         size++;
     }
 
+    // 在所有元素前添加一个新元素
+    public void addFirst(int e) {
+        add(0, e);
+    }
+
+    // 向所有元素后添加一个新元素
+    public void addLast(int e) {
+        if (size == data.length)
+            throw new IllegalArgumentException("AddLast failed. Array is full.");
+        data[size] = e;
+        size++;
+    }
+
     // 获取index索引位置的元素
     public int get(int index) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
@@ -86,7 +86,7 @@ public class Array {
 
     // 修改index索引位置的元素为e
     public void set(int index, int e) {
-        if (size < 0 || size > data.length) {
+        if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Set failed. Index is illegal.");
         }
         data[index] = e;
@@ -118,6 +118,7 @@ public class Array {
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
         // 记录删除的数据
         int ret = data[index];
+        // index之后的元素都向前移动一个位置
         for (int i = index + 1; i < size; i++)
             data[i - 1] = data[i];
         size--;

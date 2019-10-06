@@ -7,7 +7,7 @@ package datastructure.ch01_arrays.ch02_create_our_own_array;
  * @version 1.0
  * @date 日期:2019/1/23 时间:9:13
  * @JDK 1.8
- * @Description 功能模块：data存储数据、size已经占用的数据容量、capacity数据容量
+ * @Description 功能模块：data存储数据、size已经占用的数据容量、capacity数据容量、位序从1开始、数组下标0开始
  * 01、线性表（相同类型、有限序列）
  * 02、索引有语意
  */
@@ -15,7 +15,7 @@ public class Array {
     // data属性表示存放数组的元素
     private int[] data;
 
-    // 数组中元素的个数（特别注意不是索引，size=index+1）
+    // 数组中实际元素的个数（特别注意不是索引，size=index+1）
     private int size;
 
     // 无参数的构造函数，默认数组的容量capacity=10
