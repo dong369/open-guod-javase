@@ -1,0 +1,125 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 1,
+    "analysis": {
+      "analyzer": {
+        "pinyin_analyzer": {
+          "tokenizer": "my_pinyin"
+        }
+      },
+      "tokenizer": {
+        "my_pinyin": {
+          "type": "pinyin",
+          "keep_separate_first_letter": false,
+          "keep_full_pinyin": true,
+          "keep_original": true,
+          "limit_first_letter_length": 16,
+          "lowercase": true,
+          "remove_duplicated_term": true
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": "false",
+    "numeric_detection": true,
+    "properties": {
+      "address": {
+        "type": "keyword"
+      },
+      "card_no": {
+        "type": "keyword"
+      },
+      "date_time_of_birth": {
+        "type": "date"
+      },
+      "desensitize_birthday": {
+        "type": "keyword"
+      },
+      "desensitize_company": {
+        "type": "keyword"
+      },
+      "desensitize_company_phone": {
+        "type": "keyword"
+      },
+      "desensitize_contact_name": {
+        "type": "keyword"
+      },
+      "desensitize_contact_phone": {
+        "type": "keyword"
+      },
+      "desensitize_contact_relationship": {
+        "type": "keyword"
+      },
+      "desensitize_hospital_patient_id": {
+        "type": "keyword"
+      },
+      "desensitize_patient_name": {
+        "type": "keyword"
+      },
+      "desensitize_phone": {
+        "type": "keyword"
+      },
+      "desensitize_sn": {
+        "type": "keyword"
+      },
+      "hospital_id": {
+        "type": "keyword"
+      },
+      "marital_status": {
+        "type": "keyword"
+      },
+      "message_race": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "mrn": {
+        "type": "keyword"
+      },
+      "nationality": {
+        "type": "keyword"
+      },
+      "patient_id": {
+        "type": "keyword"
+      },
+      "postcode": {
+        "type": "keyword"
+      },
+      "sex": {
+        "type": "keyword"
+      },
+      "uuid": {
+        "type": "keyword"
+      },
+      "clinic_info": {
+        "type": "nested",
+        "properties": {
+          "username": {
+            "type": "keyword",
+            "ignore_above": 100
+          },
+          "date": {
+            "type": "date"
+          },
+          "content": {
+            "type": "text"
+          }
+        },
+        "diagnosis_info": {
+          "type": "nested"
+        },
+        "medication_info": {
+          "type": "nested"
+        },
+        "pacs_report": {
+          "type": "nested"
+        },
+        "lis_report": {
+          "type": "nested"
+        }
+      }
+    }
+  }
+}

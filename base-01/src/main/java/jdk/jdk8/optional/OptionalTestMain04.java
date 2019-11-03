@@ -15,14 +15,13 @@ import java.util.Optional;
  */
 public class OptionalTestMain04 {
     public static void main(String[] args) {
-        User user = new User();
-        User user1 = new User("guod", 12);
+        User user = new User("guod", 12);
         Optional.of(user).ifPresent(u -> {
             System.out.println(u.getName());
         });
 
-        Assert.notNull(user1, "");
-        Optional.ofNullable(user1).ifPresent(u -> {
+        Assert.notNull(user, "111");
+        Optional.ofNullable(user).ifPresent(u -> {
             System.out.println(u.getName());
         });
     }

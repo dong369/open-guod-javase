@@ -3,6 +3,8 @@ package jdk.jdk8.base64;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * project -
  *
@@ -18,11 +20,11 @@ public class Base64Test01 {
     private static final String text = "user";
 
     public static void main(String[] args) throws Exception {
-        byte[] textByte = text.getBytes("UTF-8");
+        byte[] textByte = text.getBytes(StandardCharsets.UTF_8);
         // 编码
         String encodeText = encoder.encode(textByte);
         System.out.println(encodeText);
         // 解码
-        System.out.println(new String(decoder.decodeBuffer(encodeText), "UTF-8"));
+        System.out.println(new String(decoder.decodeBuffer(encodeText), StandardCharsets.UTF_8));
     }
 }

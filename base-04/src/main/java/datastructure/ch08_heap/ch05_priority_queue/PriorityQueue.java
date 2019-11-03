@@ -1,6 +1,6 @@
 package datastructure.ch08_heap.ch05_priority_queue;
 
-import datastructure.ch04_queues.ch02_array_queue.Queue;
+import datastructure.ch05_queues.ch02_array_queue.Queue;
 
 /**
  * project -

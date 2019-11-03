@@ -1,7 +1,7 @@
 package datastructure.ch02_linked.ch07_implement_stack_linkedlist;
 
 import datastructure.ch02_linked.ch06_query_and_update_in_linkedlist.LinkedList;
-import datastructure.ch05_stacks.ch02_array_stack.Stack;
+import datastructure.ch04_stacks.ch02_array_stack.Stack;
 
 /**
  * project -

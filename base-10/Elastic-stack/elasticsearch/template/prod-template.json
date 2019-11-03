@@ -1,0 +1,105 @@
+{
+  "index_patterns": "prod_*",
+  "order": 0,
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 1
+    },
+    "analysis": {
+      "analyzer": {
+        "pinyin_analyzer": {
+          "tokenizer": "my_pinyin"
+        }
+      },
+      "tokenizer": {
+        "my_pinyin": {
+          "type": "pinyin",
+          "keep_separate_first_letter": false,
+          "keep_full_pinyin": true,
+          "keep_original": true,
+          "limit_first_letter_length": 16,
+          "lowercase": true,
+          "remove_duplicated_term": true
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": true,
+    "numeric_detection": true,
+    "dynamic_date_formats": [
+      "yyyy-MM-dd HH:mm:ss",
+      "yyyy-MM-dd"
+    ],
+    "dynamic_templates": [
+      {
+        "strings-pinyin": {
+          "match_mapping_type": "string",
+          "match": "messagePinyin*",
+          "mapping": {
+            "type": "keyword",
+            "fields": {
+              "pinyin": {
+                "type": "text",
+                "store": false,
+                "term_vector": "with_offsets",
+                "analyzer": "pinyin_analyzer",
+                "boost": 10
+              }
+            }
+          }
+        }
+      },
+      {
+        "strings-ik-text": {
+          "match_mapping_type": "string",
+          "match": "message*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      {
+        "strings-ik-pinyin": {
+          "match_mapping_type": "string",
+          "match": "describe*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart",
+            "fields": {
+              "pinyin": {
+                "type": "text",
+                "store": false,
+                "term_vector": "with_offsets",
+                "analyzer": "pinyin_analyzer",
+                "boost": 10
+              }
+            }
+          }
+        }
+      },
+      {
+        "strings-keyword": {
+          "match_mapping_type": "string",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "strings-date": {
+          "match_mapping_type": "string",
+          "match": "dateTime*",
+          "mapping": {
+            "type": "date",
+            "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "filter_title": "信息筛选保存名称",
+  "filter_num": "筛选编号（没有保存的传空）",
+  "option_type": "1-筛选；2-保存",
+  "filter": [
+    {
+      "query_type": "筛选类型（排除）",
+      "filter_detail": [
+        {
+          "es_index_name": "索引名称",
+          "es_field": "字段名称",
+          "data_type": "数据类型",
+          "logic": "逻辑运算",
+          "value_info": "对应筛选值",
+          "remark": "备注"
+        }
+      ]
+    },
+    {
+      "query_type": "筛选类型（并列）",
+      "filter_detail": [
+        {
+          "es_index_name": "索引名称",
+          "es_field": "字段名称",
+          "data_type": "数据类型",
+          "logic": "逻辑运算",
+          "value_info": "对应筛选值",
+          "remark": "备注"
+        }
+      ]
+    }
+  ]
+}

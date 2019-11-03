@@ -14,7 +14,9 @@ import java.util.Optional;
 public class OptionalTestMain05 {
     public static void main(String[] args) {
         int[][] aInt = {{1, 2}, {3, 4}};
-        Optional<String> s = Optional.of(new User("guod", 22)).flatMap(user -> Optional.ofNullable(user.getName()));
+        Optional<String> s = Optional
+                .of(new User("guod", 22))
+                .flatMap(user -> Optional.ofNullable(user.getName()));
         Optional<Integer> integer = Optional.of(aInt).flatMap(ints -> Optional.of(ints.length));
         System.out.println(integer.get());
         System.out.println(s.get());

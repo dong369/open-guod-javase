@@ -25,8 +25,11 @@ public class Solution01 {
         ListNode prev = head;
         while (prev.next != null) {
             if (prev.next.val == val) {
+                // 要删除的元素
                 ListNode delNode = prev.next;
+                // 绕开要删除的元素
                 prev.next = delNode.next;
+                // 断掉联系
                 delNode.next = null;
             } else {
                 prev = prev.next;

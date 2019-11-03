@@ -1,6 +1,6 @@
 package datastructure.ch02_linked.ch08_implement_queue_in_linkedlist;
 
-import datastructure.ch04_queues.ch02_array_queue.Queue;
+import datastructure.ch05_queues.ch02_array_queue.Queue;
 
 /**
  * project -

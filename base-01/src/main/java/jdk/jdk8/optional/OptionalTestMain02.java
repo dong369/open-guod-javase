@@ -15,6 +15,7 @@ public class OptionalTestMain02 {
     public static void main(String[] args) {
         System.out.println(getUserName(new User("guod", 22)));
         System.out.println(getUserNameOptional(null));
+        System.out.println(getUserOptional(new User("guod", 24)).getName());
     }
 
     /**

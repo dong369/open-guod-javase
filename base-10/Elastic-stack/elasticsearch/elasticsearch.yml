@@ -1,0 +1,154 @@
+# ======================== Elasticsearch Configuration =========================
+#
+# NOTE: Elasticsearch comes with reasonable defaults for most settings.
+#       Before you set out to tweak and tune the configuration, make sure you
+#       understand what are you trying to accomplish and the consequences.
+#
+# The primary way of configuring a node is via this file. This template lists
+# the most important settings you may want to configure for a production cluster.
+#
+# Please consult the documentation for further information on configuration options:
+# https://www.elastic.co/guide/en/elasticsearch/reference/index.html
+#
+# ---------------------------------- Cluster -----------------------------------
+#
+# Use a descriptive name for your cluster:
+#
+#cluster.name: my-application
+#
+# ------------------------------------ Node ------------------------------------
+#
+# Use a descriptive name for the node:
+#
+#node.name: node-1
+#
+# Add custom attributes to the node:
+#
+#node.attr.rack: r1
+#
+# ----------------------------------- Paths ------------------------------------
+#
+# Path to directory where to store the data (separate multiple locations by comma):
+#
+#path.data: /path/to/data
+#
+# Path to log files:
+#
+#path.logs: /path/to/logs
+#
+# ----------------------------------- Memory -----------------------------------
+#
+# Lock the memory on startup:
+#
+#bootstrap.memory_lock: true
+#
+# Make sure that the heap size is set to about half the memory available
+# on the system and that the owner of the process is allowed to use this
+# limit.
+#
+# Elasticsearch performs poorly when the system is swapping the memory.
+#
+# ---------------------------------- Network -----------------------------------
+#
+# Set the bind address to a specific IP (IPv4 or IPv6):
+#
+#network.host: 192.168.0.1
+#
+# Set a custom port for HTTP:
+#
+#http.port: 9200
+#
+# For more information, consult the network module documentation.
+#
+# --------------------------------- Discovery ----------------------------------
+#
+# Pass an initial list of hosts to perform discovery when this node is started:
+# The default list of hosts is ["127.0.0.1", "[::1]"]
+#
+#discovery.seed_hosts: ["host1", "host2"]
+#
+# Bootstrap the cluster using an initial set of master-eligible nodes:
+#
+#cluster.initial_master_nodes: ["node-1", "node-2"]
+#
+# For more information, consult the discovery and cluster formation module documentation.
+#
+# ---------------------------------- Gateway -----------------------------------
+#
+# Block initial recovery after a full cluster restart until N nodes are started:
+#
+#gateway.recover_after_nodes: 3
+#
+# For more information, consult the gateway module documentation.
+#
+# ---------------------------------- Various -----------------------------------
+#
+# Require explicit names when deleting indices:
+#
+#action.destructive_requires_name: true
+
+
+# 如下是每个节点的配置文件内容
+# node-master
+cluster.name: es-prod-tj
+node.name: node-master
+
+# 主节点
+node.master: true
+# 数据节点
+node.data: true
+
+network.host: 0.0.0.0
+http.port: 9200
+transport.port: 9300
+
+discovery.seed_hosts: ["192.168.7.217:9300","192.168.7.218:9300","192.168.7.219:9300"]
+cluster.initial_master_nodes: ["node-master"] # 确保当前节点是主节点
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+# 脑裂配置
+discovery.zen.minimum_master_nodes: 2
+
+# 开启x-pack安全验证
+xpack.security.enabled: true
+xpack.security.audit.enabled: true
+xpack.license.self_generated.type: basic
+# 如果是basic license的话需要加入下面这一行，不然的话restart elasticsearch之后会报错。
+xpack.security.transport.ssl.enabled: true
+
+# node-slave01
+#cluster.name: es-prod-tj
+#node.name: node-slave01
+#
+#node.master: false
+#node.data: true
+#
+#network.host: 192.168.0.160
+#http.port: 9201
+#transport.port: 9301
+#
+#discovery.seed_hosts: ["192.168.7.217:9300","192.168.7.218:9300","192.168.7.219:9300"]
+#cluster.initial_master_nodes: ["node-master", "node-slave01","node-slave02"]
+#
+#http.cors.enabled: true
+#http.cors.allow-origin: "*"
+#discovery.zen.minimum_master_nodes: 2
+
+# node-slave02
+#cluster.name: es-prod-tj
+#node.name: node-slave02
+#
+#node.master: false
+#node.data: true
+#
+#network.host: 192.168.0.160
+#http.port: 9202
+#transport.port: 9302
+#
+#discovery.seed_hosts: ["192.168.7.217:9300","192.168.7.218:9300","192.168.7.219:9300"]
+#cluster.initial_master_nodes: ["node-master", "node-slave01","node-slave02"]
+#
+#http.cors.enabled: true
+#http.cors.allow-origin: "*"
+#discovery.zen.minimum_master_nodes: 2

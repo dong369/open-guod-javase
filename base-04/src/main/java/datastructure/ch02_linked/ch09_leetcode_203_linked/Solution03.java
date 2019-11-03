@@ -14,6 +14,7 @@ public class Solution03 {
         if (head == null) {
             return null;
         }
+        // 子过程的宏观语义是：删除值为val的节点
         ListNode node = removeElements(head.next, val);
         if (head.val == val) {
             return node;
