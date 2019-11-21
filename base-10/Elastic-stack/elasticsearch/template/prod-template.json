@@ -34,9 +34,9 @@
     ],
     "dynamic_templates": [
       {
-        "strings-pinyin": {
+        "strings-pinyin-text": {
           "match_mapping_type": "string",
-          "match": "messagePinyin*",
+          "match": "pinyin*",
           "mapping": {
             "type": "keyword",
             "fields": {
@@ -63,7 +63,7 @@
         }
       },
       {
-        "strings-ik-pinyin": {
+        "strings-ik-pinyin-text": {
           "match_mapping_type": "string",
           "match": "describe*",
           "mapping": {
@@ -79,6 +79,15 @@
                 "boost": 10
               }
             }
+          }
+        }
+      },
+      {
+        "strings-nested": {
+          "match_mapping_type": "string",
+          "match": "nested*",
+          "mapping": {
+            "type": "nested"
           }
         }
       },

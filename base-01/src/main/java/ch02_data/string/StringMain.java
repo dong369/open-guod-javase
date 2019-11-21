@@ -45,11 +45,11 @@ public class StringMain {
      */
     private static void strBuffer(String s) {
         StringBuffer sb = new StringBuffer("123");
-        System.out.println(sb.append(456).toString());
+        System.out.println(sb.append(s).toString());
     }
 
     private static void strBuilder(String s) {
         StringBuilder sb = new StringBuilder("123");
-        System.out.println(sb.append("456"));
+        System.out.println(sb.append(s));
     }
 }

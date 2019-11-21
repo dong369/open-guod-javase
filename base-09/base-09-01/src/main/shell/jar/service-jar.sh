@@ -3,10 +3,10 @@
 # Java ENV
 
 # 应用存放地址
-APP_HOME=/usr/local/rms/main
+APP_HOME=/opt/soft/jar/drug-platform-8088
 
 # 应用名称
-APP_NAME=rms_main-1.0.0.jar
+APP_NAME=drug-admin.jar
 
 # 应用环境
 APP_ENV=prod
@@ -37,7 +37,7 @@ start(){
     if [[ $? -eq "0" ]]; then
             echo "${APP_NAME} 正在运行中..., PID=${PID}"
     else
-            nohup java -Dloader.path=./lib,resources -jar ${APP_HOME}/${APP_NAME} --spring.profiles.active=${APP_ENV} >/dev/null 2>&1	PID=$(echo $!)
+            nohup java -Dloader.path=./lib -jar ${APP_HOME}/${APP_NAME} --spring.profiles.active=${APP_ENV} >/dev/null 2>&1	& PID=$(echo $!)
             echo "${APP_NAME} 启动成功^_^, PID=$!"
     fi
 }
