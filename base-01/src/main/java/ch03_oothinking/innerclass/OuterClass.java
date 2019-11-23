@@ -52,7 +52,7 @@ public class OuterClass {
 
     // 5、内部类的继承
 
-    // 静态方法中没有this
+    // 注意：静态方法中没有this
     public static void main(String[] args) {
         // 内部类的创建依赖外部类的实例对象，在没有外部类实例之前是无法创建内部类的。
         new OuterClass().new InnerClass01().innerTest();

@@ -1,5 +1,9 @@
 package ch02_data.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 /**
  * project - 枚举类型
  *
@@ -9,20 +13,18 @@ package ch02_data.enums;
  * @JDK 1.8
  * @Description 功能模块：用法二：向枚举中添加新方法
  */
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public enum EnumMainTest02 {
     RED("红色", 1),
     GREEN("绿色", 2),
     BLANK("白色", 3),
     YELLOW("黄色", 4);
+    
     // 成员变量
     private String name;
     private int index;
-
-    // 构造方法
-    EnumMainTest02(String name, int index) {
-        this.name = name;
-        this.index = index;
-    }
 
     public static String getName(int index) {
         for (EnumMainTest02 c : EnumMainTest02.values()) {
@@ -33,15 +35,9 @@ public enum EnumMainTest02 {
         return null;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
     public static void main(String[] args) {
+        System.out.println(EnumMainTest02.RED.getName());
+        System.out.println(EnumMainTest02.RED.getIndex());
         System.out.println(EnumMainTest02.getName(1));
     }
 

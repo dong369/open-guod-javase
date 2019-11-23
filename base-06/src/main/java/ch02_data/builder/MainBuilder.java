@@ -9,7 +9,7 @@ package ch02_data.builder;
  * @JDK 1.8
  * @Description 功能模块：多重构造器+JavaBean+构建器
  */
-public class MainBuilderTest {
+public class MainBuilder {
     public static void main(String[] args) {
         Person.Builder builder = new Person.Builder();
         Person person = builder.age(12).name("guo").builder();

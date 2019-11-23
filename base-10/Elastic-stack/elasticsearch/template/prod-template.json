@@ -84,7 +84,7 @@
       },
       {
         "strings-nested": {
-          "match_mapping_type": "string",
+          "match_mapping_type": "object",
           "match": "nested*",
           "mapping": {
             "type": "nested"

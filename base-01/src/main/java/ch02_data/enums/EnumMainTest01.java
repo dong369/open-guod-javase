@@ -13,5 +13,9 @@ public enum EnumMainTest01 {
     RED,
     GREEN,
     BLANK,
-    YELLOW
+    YELLOW;
+
+    public static void main(String[] args) {
+        System.out.println(EnumMainTest01.RED);
+    }
 }

@@ -9,10 +9,11 @@ package ch02_data.generic.usewildcard;
  * @JDK 1.8
  * @Description 功能模块：通配符和边界
  */
-public class MainTest01 {
+public class Main01 {
     public static void main(String[] args) {
-        // 01 现定义一个“水果盘”，逻辑上水果盘当然可以装苹果
+        // 01 现定义一个水果盘，逻辑上水果盘当然可以装苹果
         // Plate<Fruit> p = new Plate<Apple>(new Apple());
+        Plate<?> pp = new Plate<>(new Apple());
         Plate<Fruit> fruitPlate = new Plate<>(new Fruit());
         Fruit fruit = fruitPlate.get();
         // 苹果 IS-A 水果

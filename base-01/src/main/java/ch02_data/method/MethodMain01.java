@@ -1,4 +1,4 @@
-package ch03_oothinking.method;
+package ch02_data.method;
 
 /**
  * project - 方法类型
@@ -9,7 +9,7 @@ package ch03_oothinking.method;
  * @JDK 1.8
  * @Description 功能模块：五种方法类型的区分
  */
-public abstract class MethodTestMain01 {
+public abstract class MethodMain01 {
     public static void main(String[] args) {
     }
 

@@ -9,7 +9,7 @@ package ch03_oothinking.classinitorder;
  * @JDK 1.8
  * @Description 功能模块：测试单类的初始化顺序（静态变量 > 静态初始块 > 成员变量 > 非静态初始块 > 构造器）
  */
-public class ClassInitOrderTest {
+public class ClassInitOrder {
     static {
         System.out.println("静态代码块");
     }
@@ -18,12 +18,12 @@ public class ClassInitOrderTest {
         System.out.println("游离块");
     }
 
-    private ClassInitOrderTest() {
-        System.out.println("构造器");
+    private ClassInitOrder() {
+        System.out.println("构造块");
     }
 
     public static void main(String[] args) {
-        new ClassInitOrderTest();
-        new ClassInitOrderTest();
+        new ClassInitOrder();
+        new ClassInitOrder();
     }
 }

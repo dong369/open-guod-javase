@@ -9,7 +9,7 @@ package ch03_oothinking.interfacetype;
  * @JDK 1.8
  * @Description 功能模块：事物作为抽象类，事物的特性行为作为接口
  */
-public interface InterfaceTestMain01 {
+public interface InterfaceMain01 {
     /**
      * 全局常量
      */
