@@ -11,7 +11,7 @@ import java.util.List;
  * @date 日期:2018/11/6 时间:13:01
  * @JDK 1.8
  * @Description 功能模块：使用泛型类，创建对象的时候需要指定具体的类型
- * 语法格式：访问控制  类、方法和变量修饰符 class 类、方法名称<泛型标识：可以随便写任意标识号（T、E、K、V） , 标识指定的泛型的类型> { 程序控制语句 }
+ * 语法格式：访问控制  类、方法和变量修饰符 类、方法名称<泛型标识：可以随便写任意标识号（T、E、K、V） , 标识指定的泛型的类型> { 程序控制语句 }
  */
 public class GenericClassMain01<T> {
     public static void main(String[] args) {

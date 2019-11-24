@@ -17,8 +17,12 @@ public class DataInputStreamTest {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         DataOutputStream dataOutputStream = new DataOutputStream(byteArrayOutputStream);
         try {
+            // 8 byte
             dataOutputStream.writeDouble(Math.random());
+            // 1 byte
             dataOutputStream.writeBoolean(true);
+            // 8 byte
+            dataOutputStream.writeLong(111);
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             // byteArrayInputStream可以读的字节个数
             System.out.println(byteArrayInputStream.available());
@@ -27,6 +31,7 @@ public class DataInputStreamTest {
             // 读出的顺序（马士兵讲的是先写入的要先读）
             System.out.println(dataInputStream.readDouble());
             System.out.println(dataInputStream.readBoolean());
+            System.out.println(dataInputStream.readLong());
             dataInputStream.close();
             dataOutputStream.close();
         } catch (IOException e) {

@@ -19,9 +19,9 @@ public class FileTest03 {
     }
 
     private static void tree(File file, int level) {
-        String preStr = "";
+        StringBuilder preStr = new StringBuilder();
         for (int i = 0; i < level; i++) {
-            preStr += "   ";
+            preStr.append("---");
         }
         File[] files = file.listFiles();
         for (File file1 : files) {

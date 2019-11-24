@@ -21,11 +21,15 @@ package ch03_oothinking.innerclass;
  */
 public class OuterClass {
     private void bar() {
+        // 非静态方法可以直接调用静态成员
+        foo();
         new InnerClass01();
         new InnerClass03();
     }
 
     private static void foo() {
+        // 静态方法只能访问静态成员，因为非静态方法的调用要先创建对象
+        // bar();
         new InnerClass03();
     }
 
@@ -40,23 +44,42 @@ public class OuterClass {
     // 2、局部内部类，内部类定义在方法和作用域内。
     public void inner() {
         class Local {
-
         }
     }
 
-    // 3、成员内部类，静态内部类「嵌套类」，静态内部类的创建的确不依赖与外部类的创建，因为static并不依赖于实例，而依赖与类 Class 本身。
+    // 3、成员内部类，静态内部类「嵌套类」，
+    // 静态内部类的创建的确不依赖与外部类的创建，因为static并不依赖于实例，而依赖与类Class本身。
     private static class InnerClass03 {
     }
 
     // 4、匿名内部类
+    private static abstract class AbstractClass {
+        abstract void test();
+    }
 
-    // 5、内部类的继承
+    // 5、内部类的继承和实现
+    private class InnerClassExt extends OuterClass.InnerClass01 implements OuterClass.Int {
+    }
+
+    interface Int {
+    }
 
     // 注意：静态方法中没有this
     public static void main(String[] args) {
         // 内部类的创建依赖外部类的实例对象，在没有外部类实例之前是无法创建内部类的。
+        // new InnerClass01();
+        new OuterClass().new InnerClass01();
         new OuterClass().new InnerClass01().innerTest();
-        //
+
+        // 静态内部类可以直接new
         new InnerClass03();
+
+        AbstractClass a = new AbstractClass() {
+            @Override
+            void test() {
+                System.out.println("匿名内部类");
+            }
+        };
+        a.test();
     }
 }

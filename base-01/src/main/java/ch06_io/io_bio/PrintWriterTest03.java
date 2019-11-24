@@ -14,13 +14,19 @@ import java.util.Date;
  */
 public class PrintWriterTest03 {
     public static void main(String[] args) {
-        String s = null;
+        // 一个管道放在标准输入上（键盘上，等待输入）
+        String s;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
-            FileWriter fw = new FileWriter(System.getProperty("user.dir"));
+            FileWriter fw = new FileWriter(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/use.txt", true);
             PrintWriter log = new PrintWriter(fw);
             while ((s = br.readLine()) != null) {
+                if (s.equals("exit")) {
+                    break;
+                }
                 log.println("-----------------------");
+                log.println(s);
+                log.flush();
             }
             log.println(new Date());
             log.flush();

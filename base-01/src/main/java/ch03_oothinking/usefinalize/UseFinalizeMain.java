@@ -11,6 +11,5 @@ package ch03_oothinking.usefinalize;
  */
 public class UseFinalizeMain {
     public static void main(String[] args) {
-
     }
 }

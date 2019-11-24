@@ -22,6 +22,7 @@ public class BufferedReaderTest {
                 writer.write(s);
                 writer.newLine();
             }
+            // 现有的数据操作
             writer.flush();
             while ((s = reader.readLine()) != null) {
                 System.out.println(s);

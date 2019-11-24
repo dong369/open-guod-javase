@@ -17,7 +17,7 @@ public class FileInputStreamTest01 {
         int b;
         InputStream in = null;
         try {
-            in = new FileInputStream(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/test01.txt"));
+            in = new FileInputStream(new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/FileInputStreamTest01.java"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(-1);

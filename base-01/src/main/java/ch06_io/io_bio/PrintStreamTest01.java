@@ -18,7 +18,7 @@ public class PrintStreamTest01 {
 		PrintStream ps = null;
 		try {
 			FileOutputStream fileOutputStream = new FileOutputStream(
-					System.getProperty("user.dir") + "/base-01/src/main/java/ch06/bio/print.txt");
+					System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/usePrint.txt");
 			ps = new PrintStream(fileOutputStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

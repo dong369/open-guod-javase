@@ -15,9 +15,8 @@ import java.io.IOException;
 public class FileWriterUnicodeTest {
     public static void main(String[] args) {
         FileWriter writer;
-
         try {
-            writer = new FileWriter(System.getProperty("user.dir") + "/base-01/src/main/java/ch07/unicode.dat");
+            writer = new FileWriter(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/unicode.dat");
             for (int i = 0; i <= 50000; i++) {
                 writer.write(i);
             }
@@ -26,8 +25,6 @@ public class FileWriterUnicodeTest {
             e.printStackTrace();
             System.out.println("文件写入错误");
             System.exit(-1);
-
         }
-
     }
 }

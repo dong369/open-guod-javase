@@ -17,13 +17,13 @@ public class FileTest02 {
         File file = new File(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/file/testFile.txt");
         // 判断是否有文件夹，如果没有创建
         if (!file.getParentFile().exists()) {
-            file.getParentFile().mkdirs();
+            boolean mkdirs = file.getParentFile().mkdirs();
         }
         // 判断是否有文件，如果没有创建
         if (file.exists()) {
-            file.delete();
+            boolean delete = file.delete();
         } else {
-            file.createNewFile();
+            boolean newFile = file.createNewFile();
         }
     }
 }

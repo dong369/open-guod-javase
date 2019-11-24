@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
         // 声明+初始化
         int[] arr = new int[10];
+
         // 赋值
         for (int i = 0; i < arr.length; i++)
             arr[i] = i;
@@ -22,6 +23,7 @@ public class Main {
         // 声明+初始化+赋值
         int[] scores = new int[]{1, 2, 3, 4};
         int[] data = {4, 3, 2, 1};
+
         // 遍历
         for (int score : scores) {
             System.out.print(score);

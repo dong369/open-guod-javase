@@ -20,10 +20,10 @@ public class FileTest01 {
         // 判断是否有文件，如果没有创建
         if (file.exists()) {
             // 删除文件
-            file.delete();
+            boolean delete = file.delete();
         } else {
             // 创建文件
-            file.createNewFile();
+            boolean newFile = file.createNewFile();
         }
     }
 }

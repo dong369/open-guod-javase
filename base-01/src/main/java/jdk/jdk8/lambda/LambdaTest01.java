@@ -1,5 +1,7 @@
 package jdk.jdk8.lambda;
 
+import org.junit.Test;
+
 /**
  * project -
  *
@@ -23,6 +25,17 @@ public class LambdaTest01 {
 
     private static void fun01(Movable01 movable01) {
         movable01.move();
+    }
+
+    @Test
+    public void runnable() {
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(this.getClass());
+            }
+        };
+        r.run();
     }
 }
 

@@ -16,5 +16,6 @@ public class ArraysMain {
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("a", "b", "c");
         // removeIf
+        strings.removeIf(e -> e.contains("a"));
     }
 }

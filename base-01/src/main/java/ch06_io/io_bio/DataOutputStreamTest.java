@@ -11,7 +11,7 @@ import java.io.IOException;
  * @version 3.0
  * @date 日期:2018/6/10 时间:15:19
  * @JDK 1.8
- * @Description 功能模块：数据流
+ * @Description 功能模块：数据流（把long类型的数写入到文件）
  */
 public class DataOutputStreamTest {
     public static void main(String[] args) {
@@ -20,8 +20,10 @@ public class DataOutputStreamTest {
         char[] chars = s.toCharArray();
         System.out.println(chars.length);
         try {
-            DataOutputStream dos = new DataOutputStream(new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/testData.txt"));
-            dos.writeLong(455L);
+            DataOutputStream dos = new DataOutputStream(
+                    new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/useData.txt")
+            );
+            dos.writeLong(455);
         } catch (IOException e) {
             e.printStackTrace();
         }

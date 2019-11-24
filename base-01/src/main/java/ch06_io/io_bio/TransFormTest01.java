@@ -1,8 +1,6 @@
 package ch06_io.io_bio;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 /**
  * project -
@@ -16,7 +14,12 @@ import java.io.OutputStreamWriter;
 public class TransFormTest01 {
     public static void main(String[] args) {
         try {
-            OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch07/test01.txt"));
+            OutputStreamWriter osw = new OutputStreamWriter(
+                    new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/test.txt", true)
+            );
+            InputStreamReader isr = new InputStreamReader(
+                    new FileInputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/test.txt")
+            );
             osw.write("java");
             System.out.println(osw.getEncoding());
             osw.close();
