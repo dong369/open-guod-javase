@@ -1,10 +1,11 @@
-package ch08_network.uri.url;
+package ch08_network.url;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 /**
  * project - 网络编程
@@ -20,7 +21,7 @@ public class UrlMainTest {
         // 获取输入流
         InputStream inputStream = new URL("http://www.baidu.com").openStream();
         // 转换流
-        InputStreamReader isr = new InputStreamReader(inputStream, "UTF-8");
+        InputStreamReader isr = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         // 缓冲流
         BufferedReader bufferedReader = new BufferedReader(isr);
         String n;

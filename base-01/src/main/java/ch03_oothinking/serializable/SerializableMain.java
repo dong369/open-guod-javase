@@ -1,5 +1,7 @@
 package ch03_oothinking.serializable;
 
+import org.apache.commons.lang3.SerializationUtils;
+
 /**
  * project -
  *
@@ -19,6 +21,9 @@ package ch03_oothinking.serializable;
  */
 public class SerializableMain {
     public static void main(String[] args) {
-
+        // 可以借助commons-lang3工具包里面的类实现对象的序列化及反序列化，你没有必要自己写。
+        byte[] serialize = SerializationUtils.serialize(new User());
+        User user = SerializationUtils.deserialize(serialize);
+        System.out.println(user.getName());
     }
 }

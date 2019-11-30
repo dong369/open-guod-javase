@@ -58,7 +58,13 @@
           "mapping": {
             "type": "text",
             "analyzer": "ik_max_word",
-            "search_analyzer": "ik_smart"
+            "search_analyzer": "ik_smart",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       },
@@ -88,6 +94,17 @@
           "match": "nested*",
           "mapping": {
             "type": "nested"
+          }
+        }
+      },
+      {
+        "strings-suggest": {
+          "match_mapping_type": "string",
+          "match": "suggest*",
+          "mapping": {
+            "type": "completion",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
           }
         }
       },

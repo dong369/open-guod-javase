@@ -20,7 +20,8 @@ public class StopThread {
             }
         }
         System.out.println("Thread main is over");
-        // t.stop();
+        // t.interrupt();
+        // t.stop();  已经废弃
         t6.shutDown();
     }
 }

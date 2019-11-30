@@ -9,11 +9,11 @@ package ch07_thread.thread;
  * @JDK 1.8
  * @Description 功能模块：synchronized锁定当前对象（this）当执行方法的过程中，当前对象被锁定+内存图分析
  */
-public class SynchronizedThread implements Runnable {
+public class SynchronizedThread02 implements Runnable {
     T10 t10 = new T10();
 
     public static void main(String[] args) {
-        SynchronizedThread mainThread = new SynchronizedThread();
+        SynchronizedThread02 mainThread = new SynchronizedThread02();
         Thread t01 = new Thread(mainThread);
         Thread t02 = new Thread(mainThread);
         t01.setName("线程01：");
@@ -33,12 +33,12 @@ class T10 {
     private static int num = 0;
 
     // 执行当前方法的时候锁定当前的对象this
-    public synchronized void add(String name) {
+    synchronized void add(String name) {
         // synchronized (this) {  // 锁定当前对象（）
         num++;
         try {
             // 原子性，中间不能被打断
-            Thread.sleep(1);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

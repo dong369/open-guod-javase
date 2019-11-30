@@ -19,7 +19,7 @@ public class YieldThread {
 }
 
 class T8 extends Thread {
-    public T8(String name) {
+    T8(String name) {
         super(name);
     }
 

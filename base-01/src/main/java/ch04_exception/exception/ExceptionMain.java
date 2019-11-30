@@ -10,7 +10,7 @@ package ch04_exception.exception;
  * @Description 功能模块：运行时异常、非运行时异常
  * 重写的方法，不能抛出比被重写方法不同的异常！
  */
-public class ExceptionMainTest {
+public class ExceptionMain {
     public static void main(String[] args) {
         System.out.println(test1());
         System.out.println(test2());

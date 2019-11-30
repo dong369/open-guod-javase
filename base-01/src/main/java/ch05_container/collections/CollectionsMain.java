@@ -1,5 +1,9 @@
 package ch05_container.collections;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Set;
+
 /**
  * project -
  *
@@ -11,6 +15,9 @@ package ch05_container.collections;
  */
 public class CollectionsMain {
     public static void main(String[] args) {
-
+        Set<Object> objects = Collections.newSetFromMap(new HashMap<>());
+        for (Object object : objects) {
+            System.out.println(object);
+        }
     }
 }

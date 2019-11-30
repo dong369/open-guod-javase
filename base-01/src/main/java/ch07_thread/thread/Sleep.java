@@ -24,7 +24,7 @@ class T5 implements Runnable {
         for (int i = 0; i < 300; i++) {
             if (i % 10 == 0 && i != 0) {
                 try {
-                    // 休息多少毫秒
+                    // 休息多少毫秒，必须try-catch，不能throws，因为重新的方法，不能抛出比被重新方法不同的异常
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

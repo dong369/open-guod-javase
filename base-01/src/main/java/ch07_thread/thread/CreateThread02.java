@@ -9,7 +9,7 @@ package ch07_thread.thread;
  * @JDK 1.8
  * @Description 功能模块：通过实现Runnable接口实现线程
  */
-public class CreateThreadTest02 {
+public class CreateThread02 {
     public static void main(String[] args) {
         T02 t02 = new T02();
         Thread t = new Thread(t02);

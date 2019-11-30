@@ -9,7 +9,7 @@ package ch07_thread.thread;
  * @JDK 1.8
  * @Description 功能模块：通过继承Thread类型实现线程
  */
-public class CreateThreadTest01 {
+public class CreateThread01 {
     public static void main(String[] args) {
         T01 t01 = new T01();
         // t01.run(); 该方法启动线程是方法的调用

@@ -21,7 +21,7 @@ import java.util.Map;
  */
 public class HashMapMain {
     public static void main(String[] args) {
-        // 遍历Map：
+        // 遍历Map
         Map<String, String> map = new HashMap<>();
         map.put("aa", "xx");
         map.put("bb", "yy");

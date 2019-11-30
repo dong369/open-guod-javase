@@ -1,5 +1,8 @@
 package ch05_container.collection;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * project -
  *
@@ -11,6 +14,6 @@ package ch05_container.collection;
  */
 public class CollectionMain {
     public static void main(String[] args) {
-
+        Collection collection = new ArrayList();
     }
 }

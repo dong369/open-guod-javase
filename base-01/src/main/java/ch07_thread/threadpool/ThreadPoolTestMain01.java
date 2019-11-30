@@ -21,7 +21,7 @@ public class ThreadPoolTestMain01 {
                 System.out.println(i);
             }
         });
-        List<Runnable> runnables = es.shutdownNow();
-        System.out.println(runnables.size());
+        List<Runnable> runnable = es.shutdownNow();
+        System.out.println(runnable.size());
     }
 }

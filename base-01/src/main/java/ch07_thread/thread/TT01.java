@@ -29,16 +29,16 @@ public class TT01 implements Runnable {
         }
     }
 
-    int b = 100;
+    private int b = 100;
 
-    public synchronized void m01() throws Exception {
+    private synchronized void m01() throws Exception {
         b = 1000;
         Thread.sleep(5000);
         System.out.println("b的值：" + b);
     }
 
     // 只是读取b的值而不是修改，不加synchronized
-    public void m02() {
+    private void m02() {
         System.out.println(b);
     }
 }

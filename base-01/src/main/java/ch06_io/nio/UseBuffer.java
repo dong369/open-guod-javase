@@ -45,8 +45,9 @@ public class UseBuffer {
 
     @Test
     public void test1() {
-        //分配直接缓冲区
+        // 分配直接缓冲区
         ByteBuffer buf = ByteBuffer.allocateDirect(1024);
+        buf.put("java".getBytes());
         System.out.println(buf.isDirect());
     }
 

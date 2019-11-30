@@ -12,6 +12,8 @@ package ch07_thread.thread;
  */
 public class DeadLock implements Runnable {
 
+    private int flag = 1;
+
     public static void main(String[] args) {
         DeadLock dt01 = new DeadLock();
         DeadLock dt02 = new DeadLock();
@@ -23,9 +25,9 @@ public class DeadLock implements Runnable {
         t02.start();
     }
 
-    private int flag = 1;
-    private static Object o1 = new Object();
-    private static Object o2 = new Object();
+
+    private static final Object o1 = new Object();
+    private static final Object o2 = new Object();
 
     @Override
     public void run() {

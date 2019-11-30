@@ -26,7 +26,7 @@ class T4 implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 30; i++) {
-            System.out.println("No." + i);
+            System.out.println(Thread.currentThread().getName() + "：=No." + i);
         }
     }
 }
