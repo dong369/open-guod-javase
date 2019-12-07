@@ -18,7 +18,7 @@ public class MainRegex05 {
         // 以什么结尾的
         System.out.println("hello world".matches(".*ld$"));
         System.out.println(" ".matches("."));
-        //
+        // \\b单词的边界
         System.out.println("hello world".matches("^h[a-z]{1,3}o\\b.*"));
         System.out.println("helloworld".matches("^h[a-z]{1,3}o\\b.*"));
     }

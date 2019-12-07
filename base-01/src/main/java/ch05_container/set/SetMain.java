@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * project -
+ * project - List是有序且重复的，Set是无序不重复的。
  *
  * @author guod
  * @version 1.0

@@ -18,8 +18,10 @@ public class MainRegex02 {
         // 匹配规则（Pattern是编译好的模式，用起来快点）
         Pattern pattern = Pattern.compile("[a-z]*");
         // 匹配某个字符串（Matcher是这个模式匹配后产生的结果集）
-        Matcher matcher = pattern.matcher("abb");
+        Matcher matcher1 = pattern.matcher("");
+        Matcher matcher2 = pattern.matcher("abc");
         // 打印匹配结果
-        System.out.println(matcher.matches());
+        System.out.println(matcher1.matches());
+        System.out.println(matcher2.matches());
     }
 }

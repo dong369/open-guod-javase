@@ -3,7 +3,7 @@ package ch01_time;
 import java.sql.*;
 
 /**
- * project - 
+ * project -
  *
  * @author guodd
  * @version 3.0
@@ -14,9 +14,9 @@ import java.sql.*;
 public class GetDateMain {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "123456");
+        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "passw0rd");
         Statement sta = con.createStatement();
-        ResultSet resultSet = sta.executeQuery("select * from boy");
+        ResultSet resultSet = sta.executeQuery("select * from test.boy");
         while (resultSet.next()) {
             System.out.println(resultSet.getString("hid"));
         }

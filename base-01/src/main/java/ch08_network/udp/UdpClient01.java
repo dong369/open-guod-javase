@@ -1,4 +1,4 @@
-package ch08_network.socket;
+package ch08_network.udp;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -14,7 +14,7 @@ import java.net.InetSocketAddress;
  * @JDK 1.8
  * @Description 功能模块：UDP 通信模型
  */
-public class UdpClientTest01 {
+public class UdpClient01 {
     public static void main(String[] args) throws IOException {
         byte[] buf = "hello udp".getBytes();
         DatagramPacket dp = new DatagramPacket(buf, buf.length,

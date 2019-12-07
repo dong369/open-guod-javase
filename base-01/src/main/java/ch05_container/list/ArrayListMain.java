@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 /**
- * project -
+ * project - List是有序且重复的，Set是无序不重复的。
  *
  * @author guod
  * @version 1.0

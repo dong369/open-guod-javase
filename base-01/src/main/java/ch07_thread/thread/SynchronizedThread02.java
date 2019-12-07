@@ -38,7 +38,7 @@ class T10 {
         num++;
         try {
             // 原子性，中间不能被打断
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

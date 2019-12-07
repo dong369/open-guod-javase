@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  */
 public class ReadURL {
     public static void main(String[] args) throws Exception {
-        URL url = new URL("https://blog.csdn.net/zzxian/article/details/6776548");
+        URL url = new URL("https://www.jianshu.com/p/e2c9cb70fb70");
         InputStream inputStream = url.openStream();
         InputStreamReader is = new InputStreamReader(inputStream);
         BufferedReader bf = new BufferedReader(is);
@@ -29,7 +29,7 @@ public class ReadURL {
     }
 
     private static void parse(String lin) {
-        Pattern pattern = Pattern.compile("^(https:\\/\\/)*\\w*");
+        Pattern pattern = Pattern.compile("\\w+@\\w+\\.(com|net|org|edu)");
         Matcher matcher = pattern.matcher(lin);
         if (matcher.find()) {
             System.out.println(matcher.group());

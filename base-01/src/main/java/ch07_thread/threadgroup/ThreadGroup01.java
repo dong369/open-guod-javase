@@ -9,7 +9,7 @@ package ch07_thread.threadgroup;
  * @JDK 1.8
  * @Description 功能模块：Dubbo的服务分组一样，Java 可以对相同性质的线程进行分组。
  */
-public class ThreadGroupTestMain01 {
+public class ThreadGroup01 {
     public static void main(String[] args) {
         Runnable runnable = () -> {
             System.out.println("Java技术栈线程线程组名称：" + Thread.currentThread().getThreadGroup());

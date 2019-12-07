@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class TestMain {
+public class ThreadPool {
     public static void main(String[] args) throws Exception {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 10, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
         executor.execute(new Task("0"));

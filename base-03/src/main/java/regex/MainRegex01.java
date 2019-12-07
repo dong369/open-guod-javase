@@ -22,9 +22,18 @@ public class MainRegex01 {
         System.out.println("\\\\");
         System.out.println("\n");
         System.out.println("\\a");
+        System.out.println("=====================");
+
         // 02、简单认识正则表达
         System.out.println("a".matches("."));
         System.out.println(".".matches("\\."));
         System.out.println("a258s4r".replaceAll("\\d", "a"));
+
+        // 3出现0次或1次
+        print("22".matches("223?"));
+    }
+
+    private static void print(Object o){
+        System.out.println(o);
     }
 }

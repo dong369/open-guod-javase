@@ -1,4 +1,4 @@
-package ch08_network.serversocket;
+package ch08_network.socket;
 
 import java.io.IOException;
 import java.io.PrintStream;

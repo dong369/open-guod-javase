@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -14,10 +16,26 @@ import java.nio.charset.StandardCharsets;
  * @version 1.0
  * @date 日期:2018/10/15 时间:16:22
  * @JDK 1.8
- * @Description 功能模块：URI的作用像身份证号一样，URL的作用像家庭住址一样
+ * @Description 功能模块：统一资源定位符，能够准确的定位资源的位置，包含了访问的方式和位置。
+ * 类似于人的家庭地址。同样，他也可以标示出一个独一无二的资源。
  */
 public class UrlMainTest {
     public static void main(String[] args) throws IOException {
+        // 方法一
+        URL url = new URL("http://www.sina.com.cn");
+        URLConnection urlcon1 = url.openConnection();
+        InputStream is1 = urlcon1.getInputStream();
+
+        // 方法二
+        URL url2 = new URL("http://www.yhfund.com.cn");
+        HttpURLConnection urlcon2 = (HttpURLConnection) url2.openConnection();
+        InputStream is2 = urlcon2.getInputStream();
+
+        //方法三
+        URL url3 = new URL("http://www.yhfund.com.cn");
+        InputStream is3 = url.openStream();
+
+
         // 获取输入流
         InputStream inputStream = new URL("http://www.baidu.com").openStream();
         // 转换流

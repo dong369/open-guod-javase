@@ -15,9 +15,9 @@ import java.util.regex.Pattern;
 public class MainRegex12 {
     public static void main(String[] args) {
         // 要验证的字符串
-        String str = "guodd@163.com";
+        String str = "18838177689@163.com";
         // 邮箱验证规则
-        String regEx = "[\\w[-.]]+@\\w+\\.\\w+";
+        String regEx = "([\\w[-.]]+)@(\\w+)\\.(\\w+)";
         // 用户名：^[A-Za-z][A-Za-z1-9_-]+$
         // 手机号码：^1[3|4|5|8][0-9]\d{8}$
         // 邮政编码：^[1-9]\d{5}$
@@ -31,7 +31,7 @@ public class MainRegex12 {
         // Pattern pat = Pattern.compile(regEx, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()) {
-            System.out.println(matcher.group());
+            System.out.println(matcher.group(1));
         }
         // 字符串是否与正则表达式相匹配
         boolean rs = matcher.matches();

@@ -12,6 +12,6 @@ package regex;
 public class MainRegex07 {
     public static void main(String[] args) {
         System.out.println("10079fsdfsd16121@qq.com".matches("[\\w0-9]+@qq\\.com"));
-        System.out.println("10079fsdfsd16121@qq.com".matches("[\\w[.-]]+@[\\w[.-]]+\\.[\\w]+"));
+        System.out.println("188@162.com".matches("[\\w[-.]]+@[\\w[-.]]+\\.[\\w]+"));
     }
 }

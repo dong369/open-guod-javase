@@ -14,7 +14,7 @@ import java.text.DecimalFormat;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class MoneyMainTest01 {
+public class MoneyMain01 {
     public static void main(String[] args) {
         // 01、BigInteger整数处理
         BigInteger bigInteger01 = new BigInteger("99");

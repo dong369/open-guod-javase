@@ -10,12 +10,12 @@ import java.lang.annotation.*;
  * @date 日期:2018/9/12 时间:9:24
  * @JDK 1.8
  * @Description 功能模块：元注解
- * 01@Target：指定注解使用的目标范围（类、方法、字段等），其参考值见类的定义：java.lang.annotation.ElementType
- * 02@Documented：指定被标注的注解会包含在javadoc中。
- * 03@Retention：指定注解的生命周期（源码、class文件、运行时），其参考值见类的定义：java.lang.annotation.RetentionPolicy
- * 04@Inherited：指定子类可以继承父类的注解，只能是类上的注解，方法和字段的注解不能继承。即如果父类上的注解是@Inherited修饰的就能被子类继承。
- * 05@Native：指定字段是一个常量，其值引用native code。
- * 06@Repeatable：注解上可以使用重复注解，即可以在一个地方可以重复使用同一个注解，像spring中的包扫描注解就使用了这个。
+ * 01、@Target：指定注解使用的目标范围（类、方法、字段等），其参考值见类的定义：java.lang.annotation.ElementType
+ * 02、@Documented：指定被标注的注解会包含在javadoc中。
+ * 03、@Retention：指定注解的生命周期（源码、class文件、运行时），其参考值见类的定义：java.lang.annotation.RetentionPolicy
+ * 04、@Inherited：指定子类可以继承父类的注解，只能是类上的注解，方法和字段的注解不能继承。即如果父类上的注解是@Inherited修饰的就能被子类继承。
+ * 05、@Native：指定字段是一个常量，其值引用native code。
+ * 06、@Repeatable：注解上可以使用重复注解，即可以在一个地方可以重复使用同一个注解，像spring中的包扫描注解就使用了这个。
  */
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Documented

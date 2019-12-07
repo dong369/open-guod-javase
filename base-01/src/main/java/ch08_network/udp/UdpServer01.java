@@ -1,6 +1,5 @@
-package ch08_network.serversocket;
+package ch08_network.udp;
 
-import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
@@ -13,8 +12,8 @@ import java.net.DatagramSocket;
  * @JDK 1.8
  * @Description 功能模块：UDP 通信模型
  */
-public class UdpServerTest01 {
-    public static void main(String[] args) throws IOException {
+public class UdpServer01 {
+    public static void main(String[] args) throws Exception {
         byte[] buf = new byte[1024];
         DatagramPacket dp = new DatagramPacket(buf, buf.length);
         DatagramSocket ds = new DatagramSocket(5858);

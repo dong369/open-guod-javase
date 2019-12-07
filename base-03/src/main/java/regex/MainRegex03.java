@@ -12,11 +12,14 @@ package regex;
 public class MainRegex03 {
     public static void main(String[] args) {
         // 匹配一个字符
-        print("a".matches("."));
-        print("aa".matches("aa"));
-        print("".matches("[a]*"));
-        print("aaa".matches("[a]*"));
-        print("aaa".matches("[a]+"));
+        print("a".matches(".")); // true
+        print("aa".matches("aa")); // true
+        print("".matches("[a]*")); // true
+        print("aaa".matches("[a]*")); // true
+        print("aaa".matches("[a]+")); // true
+
+        System.out.println("==五个都为true==");
+
         // 当该字符紧跟在任何一个其他限制符（*，+，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。
         print("aaa".matches("[a]?"));
         print("".matches("0?(13|14|15|17|18)[0-9]{9}"));

@@ -11,6 +11,7 @@ package ch07_thread.thread;
  * 一个方法同步了，另一个方法没有同步，别的线程可以自由访问不同步的方法，可能对同步方法造成影响
  */
 public class TT03 implements Runnable {
+
     int b = 100;
 
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package ch08_network.socket;
+package ch08_network.tcp;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -13,16 +13,16 @@ import java.util.Scanner;
  * @JDK 1.8
  * @Description 功能模块：TCP Socket通信模型
  */
-public class TcpClientSocketTest01 {
+public class TcpClient02 {
     public static void main(String[] args) throws IOException {
-        Socket client = new Socket("localhost", 9999);
-        Scanner scan = new Scanner(client.getInputStream());
+        Socket s = new Socket("localhost", 9999);
+        Scanner scan = new Scanner(s.getInputStream());
         scan.useDelimiter("\n");
         // 有数据
         if (scan.hasNext()) {
             System.out.println("服务器的回应数据：" + scan.next());
         }
         scan.close();
-        client.close();
+        s.close();
     }
 }

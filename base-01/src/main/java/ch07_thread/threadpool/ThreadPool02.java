@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class ThreadPoolTestMain01 {
+public class ThreadPool02 {
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(60);
         es.submit(() -> {

@@ -1,7 +1,6 @@
 package ch07_thread.countdownlatch;
 
 import java.util.Random;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * project -
@@ -17,9 +16,9 @@ import java.util.concurrent.CountDownLatch;
  * 对于CountDownLatch，其他线程为游戏玩家，比如英雄联盟，主线程为控制游戏开始的线程。
  * 在所有的玩家都准备好之前，主线程是处于等待状态的，也就是游戏不能开始。当所有的玩家准备好之后，下一步的动作实施者为主线程，即开始游戏。
  */
-public class CountDownLatchTest {
+public class CountDownLatch {
     public static void main(String[] args) throws InterruptedException {
-        CountDownLatch latch = new CountDownLatch(4);
+        java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(4);
         for (int i = 0; i < latch.getCount(); i++) {
             new Thread(new MyThread(latch), "player" + i).start();
         }
@@ -29,9 +28,9 @@ public class CountDownLatchTest {
     }
 
     private static class MyThread implements Runnable {
-        private CountDownLatch latch;
+        private java.util.concurrent.CountDownLatch latch;
 
-        MyThread(CountDownLatch latch) {
+        MyThread(java.util.concurrent.CountDownLatch latch) {
             this.latch = latch;
         }
 

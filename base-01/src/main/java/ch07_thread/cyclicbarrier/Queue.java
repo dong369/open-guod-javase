@@ -2,7 +2,6 @@ package ch07_thread.cyclicbarrier;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
@@ -14,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * 注意：多线程编程对实际环境和需求有很大的依赖，需要根据实际的需求情况对各个参数做调整。
  * 实际在使用中，需要尽量模拟生产环境的数据情况来进行测试，对服务器执行期间的并发数，CPU、内存、网络 IO、磁盘 IO 做好观察。并适当地调低并发数，以给服务器留有处理其他请求的余量。
  */
-public class QueueTest {
+public class Queue {
     private static List<String> data = Arrays.asList("a", "b", "c", "d", "e");
 
     private static final int OFFER_COUNT = 40; // 开启的线程数量
@@ -22,7 +21,7 @@ public class QueueTest {
     private static Semaphore semaphore = new Semaphore(20); // 同一时间执行的线程数量（大多用于控制API调用次数或数据库查询连接数）
 
     public static void main(String[] args) throws InterruptedException {
-        Queue<String> queue = new ConcurrentLinkedQueue<>(); // 处理队列，需要处理的数据，放置到此队列中
+        java.util.Queue<String> queue = new ConcurrentLinkedQueue<>(); // 处理队列，需要处理的数据，放置到此队列中
 
         CountDownLatch offerLatch = new CountDownLatch(OFFER_COUNT); // offer线程latch，每完成一个，latch减一，lacth的count为0时表示offer处理完毕
         CountDownLatch pollLatch = new CountDownLatch(1); // poll线程latch，latch的count为0时，表示poll处理完毕
