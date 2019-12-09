@@ -15,7 +15,7 @@ import java.util.List;
 public class StreamTestMain03 {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(-1, -2, 0, 4, 5);
-        long count = numbers.parallelStream().filter(i -> i > 5).count();
+        long count = numbers.parallelStream().filter(i -> i > 4).count();
         System.out.println(count);
     }
 }

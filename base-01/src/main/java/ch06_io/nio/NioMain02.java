@@ -6,7 +6,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * Project - Channel（通道）、Buffer（缓冲区）、Selector（选择器）
+ * Project - 同步非阻塞，一个线程处理多个请求，客户端请求会注册到多路复用器上，多路复用器轮询到连接有I/O请求就进行处理。
+ * Channel（通道）、Buffer（缓冲区）、Selector（选择器）
  *
  * @Create by guodd
  * @Version 1.0

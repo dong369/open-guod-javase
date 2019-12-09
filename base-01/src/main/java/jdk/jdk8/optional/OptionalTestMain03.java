@@ -13,10 +13,12 @@ import java.util.Optional;
  */
 public class OptionalTestMain03 {
     public static void main(String[] args) {
-        Optional.of(new User("java", 15)).filter(e -> e.getName().equals("java")).ifPresent(u ->
-        {
-            System.out.println(u.getName().toUpperCase());
-            System.out.println("java");
-        });
+        Optional.of(new User("java", 15))
+                .filter(e -> e.getName().equals("java"))
+                .ifPresent(u -> {
+                            System.out.println(u.getName().toUpperCase());
+                            System.out.println("java");
+                        }
+                );
     }
 }

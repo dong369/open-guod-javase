@@ -1,16 +1,24 @@
 -- 01查看安装数据库服务的编码
 select version();
+
 show databases;
+
 use test;
 show tables;
+
 show variables where variable_name like 'character\_set\_%' or variable_name like 'collation%';
+
 set character_set_server = utf8;
+
 set names utf8;
 
 -- 02创建数据库
 create database if not exists a charset = utf8;
+
 create database if not exists b charset = utf8mb4;
+
 show create database a;
+
 # 修改属性，但是不能修改数据库名称
 alter database a charset = gbk;
 drop database if exists a;
@@ -33,17 +41,18 @@ CREATE TABLE t_student
     update_time  datetime     DEFAULT NULL,
     PRIMARY KEY (id)
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 1000001
   DEFAULT CHARSET = utf8mb4;
 
 -- 04查看所有表及结构
 show tables;
 show create table a;
 # 查看表的属性状态：show table status \G;指端格式化
-Show table status;
+use test;
+show table status;
 desc user;
 # 表复制
 create table test_copy1 like girl;
+
 create table test_copy2 as (select *
                             from girl);
 # 清空表
@@ -75,11 +84,12 @@ where goods_name like '诺基亚%';
 
 # 日期时间，同义词
 select now(), curdate(), curtime(), current_date(), current_time();
+
 select date_add(curdate(), interval -3 day), date_add(curdate(), interval 0 day);
 
 select database();
 
-select database(),version(),user();
+select database(), version(), user();
 
 
 with cte1 as (select * from girl),
@@ -88,3 +98,6 @@ select *
 from cte1,
      cte2
 where cte1.hid = cte2.hid;
+
+
+select * from (select goods_name from goods) t

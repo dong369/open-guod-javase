@@ -11,7 +11,7 @@ package jdk.jdk8.functioninterface;
  */
 public class FunctionInterfaceMain {
 
-    private static String joinStr(FunctionInterfaceTest01 functionTest) {
+    private static String joinStr(FunctionInterface01 functionTest) {
         return functionTest.getInfo("你好");
     }
 
@@ -29,7 +29,7 @@ public class FunctionInterfaceMain {
          * 这种形式最为直观，lambda表达式，接收一个String类型的参数，返回一个String类型的结果。
          * 完全符合函数式接口FunctionInterfaceTest的定义
          */
-        FunctionInterfaceTest01 functionInterfaceTest1 = item -> item + 1;
+        FunctionInterface01 functionInterfaceTest1 = item -> item + 1;
         System.out.println(functionInterfaceTest1);
         /**
          * 2、方法引用
@@ -39,7 +39,7 @@ public class FunctionInterfaceMain {
          * 不同的是，函数式接口更偏重于[计算过程]，约束了一个计算过程的输入和输出。
          * 这种约束计算过程的输入和输出的形式的好处可以看一下joinStr方法。
          */
-        FunctionInterfaceTest01 functionInterfaceTest2 = FunctionInterfaceMain::getInstance;
+        FunctionInterface01 functionInterfaceTest2 = FunctionInterfaceMain::getInstance;
         /**
          * 3、构造方法引用
          * 构造函数的结构：接收输入参数，然后返回一个对象。这种约束跟函数式接口的约束很像。
@@ -48,7 +48,7 @@ public class FunctionInterfaceMain {
          * 这里存在一个类型推断的问题，JDK的编译器已经帮我们自动找到了只有一个参数，且是String类型的构造方法。
          * 这就是我们直接String::new，没有指定使用哪一个构造方法，却可以创建实例的原因
          */
-        FunctionInterfaceTest01 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
+        FunctionInterface01 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
 
         String msg1 = joinStr(functionInterfaceTest2);
         String msg2 = joinStr(functionInterfaceTest3);
@@ -63,7 +63,7 @@ public class FunctionInterfaceMain {
         System.out.println(msg4);
 
         //方法引用
-        FunctionInterfaceTest01 functionInterfaceTest4 = String::new;
+        FunctionInterface01 functionInterfaceTest4 = String::new;
         System.out.println(functionInterfaceTest4.getInfo("test"));
     }
 }
