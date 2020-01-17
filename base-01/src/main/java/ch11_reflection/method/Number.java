@@ -10,7 +10,7 @@ package ch11_reflection.method;
  * @Description 功能模块：
  */
 public class Number {
-    private static String num = "number start...";
+    private static final String num = "number start...";
 
     public void add(int a, int b) {
         System.out.println(a + b);

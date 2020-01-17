@@ -7,7 +7,7 @@ package ch00_design_principles.singleresponsibility.classsingle;
  * @version 1.0
  * @date 日期:2019/9/1 时间:21:03
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：Single Responsibility Principle，单一职责原则
  */
 public class MainTest {
     public static void main(String[] args) {

@@ -21,9 +21,11 @@ public class Queue {
     private static Semaphore semaphore = new Semaphore(20); // 同一时间执行的线程数量（大多用于控制API调用次数或数据库查询连接数）
 
     public static void main(String[] args) throws InterruptedException {
+
         java.util.Queue<String> queue = new ConcurrentLinkedQueue<>(); // 处理队列，需要处理的数据，放置到此队列中
 
         CountDownLatch offerLatch = new CountDownLatch(OFFER_COUNT); // offer线程latch，每完成一个，latch减一，lacth的count为0时表示offer处理完毕
+
         CountDownLatch pollLatch = new CountDownLatch(1); // poll线程latch，latch的count为0时，表示poll处理完毕
 
         Runnable offerRunnable = () -> {

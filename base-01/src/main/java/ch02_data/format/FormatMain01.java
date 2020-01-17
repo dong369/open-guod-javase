@@ -9,7 +9,7 @@ package ch02_data.format;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class FormatMainTest01 {
+public class FormatMain01 {
     public static void main(String[] args) {
         // 字符串格式
         String format = String.format("%.2f", 2.1495926);

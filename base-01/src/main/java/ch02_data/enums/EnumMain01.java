@@ -9,13 +9,13 @@ package ch02_data.enums;
  * @JDK 1.8
  * @Description 功能模块：用法一：常量
  */
-public enum EnumMainTest01 {
+public enum EnumMain01 {
     RED,
     GREEN,
     BLANK,
     YELLOW;
 
     public static void main(String[] args) {
-        System.out.println(EnumMainTest01.RED);
+        System.out.println(EnumMain01.RED);
     }
 }

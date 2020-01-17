@@ -1,5 +1,7 @@
 package ch02_money;
 
+import org.junit.Test;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
@@ -15,30 +17,45 @@ import java.text.DecimalFormat;
  * @Description 功能模块：
  */
 public class MoneyMain01 {
-    public static void main(String[] args) {
-        // 01、BigInteger整数处理
-        BigInteger bigInteger01 = new BigInteger("99");
-        BigInteger bigInteger02 = BigInteger.valueOf(2);
-        System.out.println(bigInteger01.add(bigInteger02));
-        System.out.println(bigInteger01.subtract(bigInteger02));
-        System.out.println(bigInteger01.multiply(bigInteger02));
-        System.out.println(bigInteger01.divide(bigInteger02));
+    // 01、BigInteger整数处理
+    @Test
+    public void bigInteger() {
+        BigInteger bigInteger1 = new BigInteger("12");
+        BigInteger bigInteger2 = BigInteger.valueOf(34);
+        // 加法
+        System.out.println(bigInteger1.add(bigInteger2));
+        // 减法
+        System.out.println(bigInteger1.subtract(bigInteger2));
+        // 乘法
+        System.out.println(bigInteger1.multiply(bigInteger2));
+        // 除法
+        System.out.println(bigInteger1.divide(bigInteger2));
+    }
 
-        // 02、BigDecimal
+    // 02、BigDecimal
+    @Test
+    public void bigDecimal() {
         BigDecimal bigDecimal01 = BigDecimal.valueOf(0.1);
         BigDecimal bigDecimal02 = BigDecimal.valueOf(0.03);
         System.out.println(bigDecimal01.add(bigDecimal02));
         System.out.println(bigDecimal01.subtract(bigDecimal02));
         System.out.println(bigDecimal01.multiply(bigDecimal02));
         System.out.println(bigDecimal01.divide(bigDecimal02, BigDecimal.ROUND_HALF_UP));
-
-        // 03、BigDecimal小数精度
-        double aa = 0.001;
+        double aa = 0.2341;
         // BigDecimal(double val)构造，但是这个构造不太靠谱；
         // 推荐使用静态方法valueOf(double)，这个方法跟new Decimal(Double.toString(double))效果
         System.out.println("BigDecimal(double val)构造会出现精度丢失问题：" + new BigDecimal(aa));
         System.out.println("BigDecimal.valueOf推荐使用：" + BigDecimal.valueOf(aa));
+    }
 
+    // 03、
+    @Test
+    public void decimalPrecision() {
+
+    }
+
+    public static void main(String[] args) {
+        double aa = 0.2341;
         // 浮点数
         BigDecimal bigDecimal = new BigDecimal("12.369");
         BigDecimal bigDecimalCompare = new BigDecimal("12.36");

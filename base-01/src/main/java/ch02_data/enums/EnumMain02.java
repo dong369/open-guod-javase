@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public enum EnumMainTest02 {
+public enum EnumMain02 {
     RED("红色", 1),
     GREEN("绿色", 2),
     BLANK("白色", 3),
@@ -27,7 +27,7 @@ public enum EnumMainTest02 {
     private int index;
 
     public static String getName(int index) {
-        for (EnumMainTest02 c : EnumMainTest02.values()) {
+        for (EnumMain02 c : EnumMain02.values()) {
             if (c.getIndex() == index) {
                 return c.name;
             }
@@ -36,9 +36,9 @@ public enum EnumMainTest02 {
     }
 
     public static void main(String[] args) {
-        System.out.println(EnumMainTest02.RED.getName());
-        System.out.println(EnumMainTest02.RED.getIndex());
-        System.out.println(EnumMainTest02.getName(1));
+        System.out.println(EnumMain02.RED.getName());
+        System.out.println(EnumMain02.RED.getIndex());
+        System.out.println(EnumMain02.getName(1));
     }
 
 }

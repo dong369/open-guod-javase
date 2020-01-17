@@ -1,7 +1,7 @@
 package ch02_data.callby;
 
 /**
- * java中的按值调用
+ * 引用调用
  * 1）student变量被初始化为user值的拷贝，这里是一个对象的引用。
  * 2）调用student变量的set方法作用在这个引用对象上，user和student同时引用的User对象内部值被修改。
  * 3）方法结束后，student变量不再使用，被释放，而user还是没有变，依然指向User对象。

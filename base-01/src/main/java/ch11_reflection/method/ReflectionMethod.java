@@ -20,7 +20,7 @@ public class ReflectionMethod {
 
     public static void reflectionMethod() throws Exception {
         // 1. 获取字节码文件
-        Class clazz = Number.class;
+        Class<?> clazz = Number.class;
         // 2. 获取类的对象
         Number number = (Number) clazz.newInstance();
         // 3. 获取方法
@@ -37,12 +37,12 @@ public class ReflectionMethod {
      */
     public static void reflectionField() throws Exception {
         // 1. 获取字节码文件
-        Class clazz = Number.class;
+        Class<?> clazz = Number.class;
         // 2. 获取类的对象
         Number number = (Number) clazz.newInstance();
         // 调用方法打印赋值前的成员变量的值
         System.out.print("修改前：");
-        number.printNum();
+        Number.printNum();
         // 3. 获取成员变量
         Field field = clazz.getDeclaredField("num");
         // 4. 设置成员变量的访问权限（暴力反射）
@@ -51,6 +51,6 @@ public class ReflectionMethod {
         field.set(number, "我是被修改后的Number值");
         // 调用方法打印赋值后的成员变量的值，看是否修改成功
         System.out.print("修改后：");
-        number.printNum();
+        Number.printNum();
     }
 }

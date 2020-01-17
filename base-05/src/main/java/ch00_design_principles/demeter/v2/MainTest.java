@@ -7,7 +7,7 @@ package ch00_design_principles.demeter.v2;
  * @version 1.0
  * @date 日期:2019/9/1 时间:21:45
  * @JDK 1.8
- * @Description 功能模块：
+ * @Description 功能模块：Law of Demeter，迪米特法则
  */
 public class MainTest {
     public static void main(String[] args) {

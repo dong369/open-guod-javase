@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class ClassTest01 {
+public class ClassMain01 {
     public static void main(String[] args) {
         try {
             String str = "ch10_classload.classload.T01";

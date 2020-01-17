@@ -11,13 +11,5 @@ package test;
  */
 public class Main01 {
     public static void main(String[] args) {
-        int i = 0;
-        i = i++ + ++i;
-        System.out.println(i);
     }
-
-    public static <T> T test(T t) {
-        return t;
-    }
-
 }

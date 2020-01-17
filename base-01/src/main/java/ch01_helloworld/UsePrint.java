@@ -9,7 +9,8 @@ package ch01_helloworld;
  * @JDK 1.8
  * @Description
  */
-public class HelloWord {
+public class UsePrint {
     public static void main(String[] args) {
+        System.out.println("hello world!");
     }
 }

@@ -9,11 +9,11 @@ package ch02_data.enums;
  * @JDK 1.8
  * @Description 功能模块：用法二：向枚举中添加新方法
  */
-public enum EnumMainTest03 {
+public enum EnumMain03 {
     SMS {
         @Override
         public String getParamNameOnValidate() {
-            return null;
+            return "手机卡";
         }
     };
 
