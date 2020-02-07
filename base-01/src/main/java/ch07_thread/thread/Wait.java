@@ -1,14 +1,15 @@
 package ch07_thread.thread;
 
 /**
- * project - wait
+ * wait主要的作用是线程通信。
+ * 让持有该对象锁的线程等待；wait方法则必须放在synchronized块里面；
+ * wait 还需要额外的方法 notify/notifyAll 进行唤醒，它们同样需要
+ * 放在synchronized块里面，且获取对象的锁。
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/27 时间:12:52
- * @JDK 1.8
- * @Description 功能模块：wait让持有该对象锁的线程等待；wait方法则必须放在synchronized块里面；
- * wait 还需要额外的方法 notify/notifyAll 进行唤醒，它们同样需要放在synchronized 块里面，且获取对象的锁。
+ * @since 1.8
  */
 public class Wait {
     public static void main(String[] args) {

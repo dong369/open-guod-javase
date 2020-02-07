@@ -1,16 +1,14 @@
 package ch07_thread.thread;
 
 /**
- * project -
- *
- * @author guod
- * @version 1.0
- * @date 日期:2018/6/22 时间:8:30
- * @JDK 1.8
- * @Description 功能模块：生产者--消费者问题
+ * 生产者--消费者问题
  * 1. 共享数据的不一致性/临界资源的保护
  * 2. Java对象锁的概念
  * 3. synchronized关键字/wait()及notify()/notifyAll()方法
+ *
+ * @author guod
+ * @date 日期:2018/6/22 时间:8:30
+ * @since 1.8
  */
 public class ProducerConsumer {
     public static void main(String[] args) {

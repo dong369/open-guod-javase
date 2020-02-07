@@ -1,13 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * yield高风亮节的让出一次CPU
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/22 时间:7:59
- * @JDK 1.8
- * @Description 功能模块：yield高风亮节的让出一次CPU
+ * @since 1.8
  */
 public class YieldThread {
     public static void main(String[] args) {

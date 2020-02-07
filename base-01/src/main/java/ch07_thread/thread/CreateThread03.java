@@ -4,13 +4,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 /**
- * project -
+ * 通过Callable接口实现多线程
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/11 时间:11:14
- * @JDK 1.8
- * @Description 功能模块：通过Callable接口实现多线程
+ * @since 1.8
  */
 public class CreateThread03 {
     public static void main(String[] args) throws Exception {

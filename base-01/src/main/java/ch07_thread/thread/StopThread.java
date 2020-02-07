@@ -1,13 +1,11 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * 线程的停止的方法
  *
  * @author guod
- * @version 1.0
  * @date 日期:2018/6/21 时间:13:57
- * @JDK 1.8
- * @Description 功能模块：线程的停止的方法
+ * @since 1.8
  */
 public class StopThread {
     public static void main(String[] args) {

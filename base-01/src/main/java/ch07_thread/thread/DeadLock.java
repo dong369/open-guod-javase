@@ -17,8 +17,10 @@ public class DeadLock implements Runnable {
     public static void main(String[] args) {
         DeadLock dt01 = new DeadLock();
         DeadLock dt02 = new DeadLock();
+
         dt01.flag = 1;
         dt02.flag = 0;
+
         Thread t01 = new Thread(dt01);
         Thread t02 = new Thread(dt02);
         t01.start();

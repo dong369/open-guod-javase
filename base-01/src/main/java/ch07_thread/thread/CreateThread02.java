@@ -1,13 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project - 多线程（一个程序的不同执行路径）
+ * 多线程（一个程序的不同执行路径）,通过实现Runnable接口实现线程
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/11 时间:11:09
- * @JDK 1.8
- * @Description 功能模块：通过实现Runnable接口实现线程
+ * @since 1.8
  */
 public class CreateThread02 {
     public static void main(String[] args) {

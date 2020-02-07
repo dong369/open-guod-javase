@@ -1,14 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * sleep(休眠)
+ * 在哪个线程中调用sleep方法，就让那个线程睡眠！
  *
  * @author guod
- * @version 1.0
  * @date 日期:2018/6/21 时间:13:52
- * @JDK 1.8
- * @Description 功能模块：sleep(休眠)
- * 在哪个线程中调用sleep方法，就让那个线程睡眠！
+ * @since 1.8
  */
 public class Sleep {
     public static void main(String[] args) {

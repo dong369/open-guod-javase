@@ -1,13 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * 线程的优先级的设置和查看：Priority
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/22 时间:8:08
- * @JDK 1.8
- * @Description 功能模块：线程的优先级的设置和查看：Priority
+ * @since 1.8
  */
 public class PriorityThread {
     public static void main(String[] args) {

@@ -14,6 +14,7 @@ import java.util.concurrent.RecursiveTask;
  * 并展示了通过不使用Fork/Join和使用时的时间损耗对比。
  */
 public class ForkJoinTask extends RecursiveTask<Long> {
+
     public static void main(String[] args) {
         System.out.println(doTest());
     }
@@ -27,7 +28,7 @@ public class ForkJoinTask extends RecursiveTask<Long> {
         }
         long l1 = System.currentTimeMillis();
         long endTime = System.nanoTime();
-        System.out.println(l1-l);
+        System.out.println(l1 - l);
         System.out.println((endTime - startTime) / 1000000000.0);
         return sum;
     }

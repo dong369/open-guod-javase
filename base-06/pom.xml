@@ -9,5 +9,6 @@
         <artifactId>open-guod-javase</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <!--《Effective Java》、《Java核心技术》、《Effective Java》、《Java编程思想》、《重构：改善既有代码质量》-->
     <artifactId>base-06</artifactId>
 </project>

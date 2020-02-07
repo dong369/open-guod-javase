@@ -1,13 +1,11 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * 同时启动多个线程
  *
  * @author guod
- * @version 1.0
  * @date 日期:2018/6/20 时间:14:03
- * @JDK 1.8
- * @Description 功能模块：同时启动多个线程
+ * @since 1.8
  */
 public class StartThreads {
     public static void main(String[] args) {

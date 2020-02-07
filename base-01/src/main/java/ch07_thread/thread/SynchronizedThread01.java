@@ -1,13 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * synchronized锁定当前对象（this）当执行方法的过程中，当前对象被锁定+内存图分析
  *
  * @author guod
- * @version 1.0
  * @date 日期:2018/6/22 时间:8:11
- * @JDK 1.8
- * @Description 功能模块：synchronized锁定当前对象（this）当执行方法的过程中，当前对象被锁定+内存图分析
+ * @since 1.8
+ * @
  */
 public class SynchronizedThread01 implements Runnable {
 
