@@ -8,8 +8,7 @@ import java.util.concurrent.*;
  * @author guod
  * @version 1.0
  * @date 日期:2018/10/31 时间:13:06
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class MainTest {
     public static void main(String[] args) {
@@ -20,6 +19,6 @@ public class MainTest {
                 TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(),
                 Executors.defaultThreadFactory());
-        executor.submit(new Thread(()-> System.out.println("java")));
+        executor.submit(new Thread(() -> System.out.println("java")));
     }
 }

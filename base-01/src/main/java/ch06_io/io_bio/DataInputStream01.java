@@ -3,13 +3,12 @@ package ch06_io.io_bio;
 import java.io.*;
 
 /**
- * project -
+ * 数据流
  *
  * @author guodd
  * @version 3.0
  * @date 日期:2018/6/10 时间:15:19
- * @JDK 1.8
- * @Description 功能模块：数据流
+ * @since 1.8
  */
 public class DataInputStream01 {
     public static void main(String[] args) {

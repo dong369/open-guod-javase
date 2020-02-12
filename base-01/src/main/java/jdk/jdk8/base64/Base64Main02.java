@@ -13,7 +13,7 @@ import java.util.Base64;
  * @JDK 1.8
  * @Description 功能模块：Java 8提供的Base64，要比sun.mis c套件提供的还要快至少11倍，比Apache Commons Codec提供的还要快至少3倍。
  */
-public class Base64Test02 {
+public class Base64Main02 {
     private static Base64.Encoder encoder = Base64.getEncoder();
     private static Base64.Decoder decoder = Base64.getDecoder();
 

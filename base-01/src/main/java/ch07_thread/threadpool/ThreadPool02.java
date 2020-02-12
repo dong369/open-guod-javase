@@ -5,17 +5,17 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * project -
+ * 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/12/2 时间:12:12
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class ThreadPool02 {
     public static void main(String[] args) {
         ExecutorService es = Executors.newFixedThreadPool(60);
+        // es.execute(() -> System.out.println("java"));
         es.submit(() -> {
             for (int i = 0; i < 10; i++) {
                 System.out.println(i);

@@ -12,7 +12,7 @@ import java.io.IOException;
  * @JDK 1.8
  * @Description 功能模块：文件操作
  */
-public class FileTest01 {
+public class File01 {
     public static void main(String[] args) throws IOException {
         System.out.println(File.pathSeparator);
         System.out.println(File.separator);

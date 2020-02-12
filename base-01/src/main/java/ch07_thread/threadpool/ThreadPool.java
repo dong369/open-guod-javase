@@ -10,12 +10,12 @@ import java.util.concurrent.TimeUnit;
  * @author guod
  * @version 1.0
  * @date 日期:2018/9/28 时间:14:08
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class ThreadPool {
     public static void main(String[] args) throws Exception {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 10, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1,
+                10, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
         executor.execute(new Task("0"));
         Thread.sleep(1);
         executor.shutdown();

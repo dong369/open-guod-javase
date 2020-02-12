@@ -1,20 +1,28 @@
 package jdk.jdk8.methodref;
 
+import java.util.Arrays;
+import java.util.function.Function;
+
 /**
- * project - lambda表达式
+ * 构造器引用：和方法引用类似，函数式接口的抽象方法的形参列表和构造器的形参列表一致，抽象方法返回的类型即为构造器类的类型。
+ * 数组引用：把数组当作一个特殊的类，则写法和构造引用一致。
+ * 语法格式：类 :: new
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:14:57
- * @JDK 1.8
- * @Description 功能模块：构造器引用
- * 语法格式：类名称::new（()->new ArrayList<>()）
+ * @since 1.8
  */
 public class LambdaMethod04 {
     public static void main(String[] args) {
         Method04<Book01> msg = Book01::new;
         Book01 book = msg.compare("java", 2.5);
         System.out.println(book);
+
+        Function<Integer, String[]> arr = String[]::new;
+        String[] apply = arr.apply(5);
+        System.out.println(Arrays.toString(apply));
+
     }
 }
 

@@ -7,17 +7,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * project - 反射
- *
- * @author guod
- * @version 1.0
- * @date 日期:2018/9/19 时间:8:03
- * @JDK 1.8
- * @Description 功能模块：JAVA反射机制是在运行状态中，
+ * JAVA反射机制是在运行状态中，
  * 对于任意一个类，都能够知道这个类的所有属性和方法；
  * 对于任意一个对象，都能够调用它的任意一个方法；
  * 这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。
  * 注意：反射可以调用没有暴露出来的API
+ *
+ * @author guod
+ * @version 1.0
+ * @date 日期:2018/9/19 时间:8:03
+ * @since 1.8
  */
 public class GetClass {
     // 获取类对象的三种方式

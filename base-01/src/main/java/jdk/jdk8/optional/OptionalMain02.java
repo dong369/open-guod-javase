@@ -8,10 +8,9 @@ import java.util.Optional;
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:13:08
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
-public class OptionalTestMain02 {
+public class OptionalMain02 {
     public static void main(String[] args) {
         System.out.println(getUserName(new User("guod", 22)));
         System.out.println(getUserNameOptional(null));

@@ -1,13 +1,13 @@
 package ch10_classload.jni;
 
 /**
- * project -
+ * 凡是一种语言，都希望是纯。比如解决某一个方案都喜欢就单单这个语言来写即可。
+ * Java平台有个用户和本地C代码进行互操作的API，称为Java Native Interface (Java本地接口)。
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2019/1/5 时间:12:53
- * @JDK 1.8
- * @Description 功能模块：凡是一种语言，都希望是纯。比如解决某一个方案都喜欢就单单这个语言来写即可。Java平台有个用户和本地C代码进行互操作的API，称为Java Native Interface (Java本地接口)。
+ * @since 1.8
  */
 public class JniMain01 {
     static {

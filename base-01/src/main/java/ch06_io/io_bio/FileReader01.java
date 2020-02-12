@@ -8,10 +8,9 @@ import java.io.*;
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/4 时间:13:40
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
-public class FileReaderTest {
+public class FileReader01 {
     public static void main(String[] args) {
         int c;
         Reader reader;

@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
  * @JDK 1.8
  * @Description 功能模块：早期作法会使用到JDK里sun.misc套件，Java11中已经废除了
  */
-public class Base64Test01 {
+public class Base64Main01 {
     private static final BASE64Encoder encoder = new BASE64Encoder();
     private static final BASE64Decoder decoder = new BASE64Decoder();
     private static final String text = "user";

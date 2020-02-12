@@ -11,7 +11,7 @@ import java.io.File;
  * @JDK 1.8
  * @Description 功能模块：文件的目录遍历
  */
-public class FileTest03 {
+public class File03 {
     public static void main(String[] args) {
         File file = new File(System.getProperty("user.dir") + "/base-01/");
         System.out.println(file.getName());

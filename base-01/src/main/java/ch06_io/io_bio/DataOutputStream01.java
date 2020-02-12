@@ -5,13 +5,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * project -
+ * 数据流（把long类型的数写入到文件）
  *
  * @author guodd
  * @version 3.0
  * @date 日期:2018/6/10 时间:15:19
- * @JDK 1.8
- * @Description 功能模块：数据流（把long类型的数写入到文件）
+ * @since 1.8
  */
 public class DataOutputStream01 {
     public static void main(String[] args) {

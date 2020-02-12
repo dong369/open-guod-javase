@@ -2,29 +2,38 @@ package jdk.jdk8.lambda;
 
 import org.junit.Test;
 
+import java.util.Comparator;
+
 /**
- * project - lambda表达式的本质是作为函数式接口的实例！！！
+ * 学习lambda表示式，先要熟悉匿名内部类。
+ * lambda表达式又称闭包或匿名函数。
+ * 如果想把“一块代码”赋给一个Java变量。
+ * 1、举例：Comparator<Integer> a = (c1, c2) -> Integer.compare(c1, c2);
+ * 2、格式：lambda操作符或箭头符号；左边时lambda形参列表（抽象方法参数列表）；右边是lambda体（抽象方法体）
+ * 3、lambda表达式的本质：是作为[函数式接口]的实例！！！
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:14:12
- * @JDK 1.8
- * @Description 功能模块：学习lambda表示式，先要熟悉匿名内部类。
- * lambda表达式又称闭包或匿名函数。
- * 如果想把“一块代码”赋给一个Java变量。
+ * @since 1.8
  */
 public class Lambda01 {
-    public static void main(String[] args) {
+    private static void fun01(Movable01 movable01) {
+        movable01.move();
+    }
+
+    interface Movable01 {
+        void move();
+    }
+
+    @Test
+    public void lambda() {
         Lambda01.fun01(new Movable01() {
             @Override
             public void move() {
-                System.out.println("熟悉匿名内部类");
+                System.out.println("熟悉匿名内部类...");
             }
         });
-    }
-
-    private static void fun01(Movable01 movable01) {
-        movable01.move();
     }
 
     @Test
@@ -32,7 +41,7 @@ public class Lambda01 {
         Runnable r = new Runnable() {
             @Override
             public void run() {
-                System.out.println(this.getClass());
+                System.out.println(Thread.currentThread().getName());
             }
         };
         r.run();
@@ -43,8 +52,18 @@ public class Lambda01 {
         Runnable r = () -> System.out.println(this.getClass());
         r.run();
     }
-}
 
-interface Movable01 {
-    void move();
+    @Test
+    public void comparable01() {
+        Comparator<Integer> a = (c1, c2) -> {
+            return Integer.compare(c1, c2);
+        };
+        a.compare(1, 2);
+    }
+
+    @Test
+    public void comparable02() {
+        Comparator<Integer> a = Integer::compare;
+        System.out.println(a.compare(1, 2));
+    }
 }

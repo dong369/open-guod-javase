@@ -3,13 +3,12 @@ package ch06_io.io_bio;
 import java.io.*;
 
 /**
- * project -
+ * 缓冲输入流
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/5 时间:14:15
- * @JDK 1.8
- * @Description 功能模块：缓冲输入流
+ * @see 1.8
  */
 public class BufferedReader01 {
     public static void main(String[] args) {

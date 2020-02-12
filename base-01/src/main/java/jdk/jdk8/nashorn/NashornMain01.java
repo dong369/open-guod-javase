@@ -10,10 +10,9 @@ import javax.script.ScriptException;
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:15:33
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
-public class NashornTestMain01 {
+public class NashornMain01 {
     public static void main(String[] args) throws ScriptException {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine javaScriptEngine = manager.getEngineByName("JavaScript");

@@ -3,15 +3,14 @@ package jdk.jdk8.optional;
 import java.util.Optional;
 
 /**
- * project - Optional对象
+ * 创建Optional对象的创建
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/7 时间:21:02
- * @JDK 1.8
- * @Description 功能模块：创建Optional对象的放
+ * @since 1.8
  */
-public class OptionalTestMain01 {
+public class OptionalMain01 {
     public static void main(String[] args) {
         // 1、创建一个包装对象值为空的Optional对象
         Optional<Object> empty = Optional.empty();
