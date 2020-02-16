@@ -3,17 +3,16 @@ package ch09_jdbc.jdbc;
 import java.sql.*;
 
 public class DataBaseConnectionMain {
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql:///test";
     private static final String USER = "root";
     private static final String PASSWORD = "passw0rd";
+    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String URL = "jdbc:mysql:///test";
     private Connection conn = null;
 
     /**
      * 功能：构造器主要目的是进行数据库连接
      */
     public DataBaseConnectionMain() {
-
         try {
             // 第一步：加载数据库驱动程序
             Class.forName(DRIVER);

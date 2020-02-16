@@ -1,13 +1,12 @@
 package ch02_data.generic.usewildcard;
 
 /**
- * project - 泛型
+ * project - 盘子里可以放一个泛型的“东西”
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/13 时间:21:31
- * @JDK 1.8
- * @Description 功能模块：盘子里可以放一个泛型的“东西”
+ * @since 1.8
  */
 public class Plate<T> {
     private T item;

@@ -2,6 +2,10 @@ package jdk.jdk8.stream;
 
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +27,7 @@ import java.util.stream.Stream;
  */
 public class StreamMain01 {
     @Test
-    public void type01() {
+    public void type01() throws Exception {
         // 方式一：通过集合
         List<Integer> asList = Arrays.asList(1, 6, 2, 4);
         // 顺序流
@@ -40,5 +44,8 @@ public class StreamMain01 {
         // 方式四：创建无限流（造数据）
         Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);
         Stream.generate(Math::random).limit(10).forEach(System.out::println);
+        // 方式五：通过缓冲流
+        BufferedReader br = new BufferedReader(new FileReader(new File("")));
+        Stream<String> lines = br.lines();
     }
 }

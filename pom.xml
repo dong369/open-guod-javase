@@ -141,5 +141,10 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.37.Final</version>
         </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>3.8.4</version>
+        </dependency>
     </dependencies>
 </project>
