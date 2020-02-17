@@ -25,7 +25,7 @@ public class Main01 {
         // 03 下界（一个能放水果以及一切是水果父类（基类）的盘子，下界<? super T>不影响往里存，但往外取只能放在Object对象里）
         Plate<? super Apple> a = new Plate<>(new Fruit());
         a.set(new Apple());
-        // Apple a = a.get(); //Error
+        // Apple a = a.get(); // Error
         Object object = a.get();
         System.out.println(object);
         // 04 PECS原则

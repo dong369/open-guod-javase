@@ -15,7 +15,7 @@ import java.util.Arrays;
  * @JDK 1.8
  * @Description
  */
-public class StringCompareTo {
+public class StringToString {
     public static void main(String[] args) {
         A a = new A();
         a.setName("guo");

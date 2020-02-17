@@ -15,14 +15,29 @@ import java.lang.reflect.Method;
  * @since 1.8
  */
 public class MethodTest {
-    // 调用对象方法
+    // 调用对象的非静态方法
     @Test
     public void invokeMethod() throws Exception {
         Class<PeopleMan> peopleManClass = PeopleMan.class;
         PeopleMan peopleMan = peopleManClass.newInstance();
+        // 获取指定的某个方法
         Method showNative = peopleManClass.getDeclaredMethod("showNative", String.class);
+        // 保证当前方法是可操作的
         showNative.setAccessible(true);
-        showNative.invoke(peopleMan,"中国");
+        // 方法调用
+        String invoke = (String) showNative.invoke(peopleMan, "中国");
+        System.out.println(invoke);
+    }
+
+    // 调用对象的静态方法
+    @Test
+    public void invokeMethodStatic() throws Exception {
+        Class<PeopleMan> peopleManClass = PeopleMan.class;
+        Method showStatic = peopleManClass.getDeclaredMethod("showStatic");
+        showStatic.setAccessible(true);
+        // 两种方式都可以
+        showStatic.invoke(null);
+        Object invoke = showStatic.invoke(PeopleMan.class);
     }
 
     // 获取对象的方法
@@ -52,5 +67,11 @@ public class MethodTest {
         for (Method declaredMethod : superDeclareMethod) {
             System.out.println(declaredMethod);
         }
+    }
+
+    // 获取方法的权限修饰符、返回值类型、方法名称、参数列表、异常
+    @Test
+    public void test() {
+
     }
 }

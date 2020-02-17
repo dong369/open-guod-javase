@@ -1,10 +1,7 @@
-package ch11_reflection.classobject;
+package ch11_reflection.base;
 
 import ch11_reflection.entity.User;
 import org.junit.Test;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 /**
  * JAVA反射机制是在运行状态中，
@@ -26,18 +23,18 @@ public class GetClass {
         // 动态加载：在运行时期加载的类，叫动态加载
         // 第一种：Class.forName（"类名"）
         System.out.println(User.class.getName());
-        Class<?> aClass1 = Class.forName("ch11_reflection.entity.Car");
+        Class<?> aClass1 = Class.forName("ch11_reflection.entity.User");
         System.out.println("Class.forName()方式 ：" + aClass1);
         // 第二种：对象.getClass()方法
-        User car = new User();
-        Class<? extends User> aClass2 = car.getClass();
+        User user = new User();
+        Class<? extends User> aClass2 = user.getClass();
         System.out.println("对象.getClass()方式 ：" + aClass2 + ", " + (aClass1 == aClass2));
         // 第三种：类名.class方法
         Class<User> aClass3 = User.class;
         System.out.println("类名.class方式 ：" + aClass3 + ", " + (aClass1 == aClass3));
         // 第四种：ClassLoader类加载器
         ClassLoader classLoader = GetClass.class.getClassLoader();
-        Class<?> aClass4 = classLoader.loadClass("ch11_reflection.entity.Car");
+        Class<?> aClass4 = classLoader.loadClass("ch11_reflection.entity.User");
         System.out.println(aClass1 == aClass4);
     }
 }

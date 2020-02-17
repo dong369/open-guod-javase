@@ -35,11 +35,11 @@ public class BaseMain {
     public void reflectionNew() throws Exception {
         // 1、通过反射创建对象
         Class<PeopleMan> clazz = PeopleMan.class;
-        Constructor<PeopleMan> constructor = clazz.getConstructor(String.class, Integer.class);
+        Constructor<PeopleMan> constructor = clazz.getDeclaredConstructor(String.class, Integer.class);
         PeopleMan p1 = constructor.newInstance("dong", 34);
 
         // 掉属性
-        Field age = clazz.getDeclaredField("age");
+        Field age = clazz.getDeclaredField("manAge");
         age.set(p1, 22);
         System.out.println(p1.toString());
 
@@ -54,13 +54,13 @@ public class BaseMain {
         System.out.println(p2);
 
         // 私有属性
-        Field name = clazz.getDeclaredField("name");
+        Field name = clazz.getDeclaredField("manName");
         name.setAccessible(true);
         name.set(p2, "dong");
         System.out.println(p2);
 
         // 私有方法
-        Method showNation = clazz.getDeclaredMethod("showNation", String.class);
+        Method showNation = clazz.getDeclaredMethod("showNative", String.class);
         showNation.setAccessible(true);
         showNation.invoke(p2, "中国");
     }

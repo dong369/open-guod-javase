@@ -1,4 +1,4 @@
-package ch11_reflection.classobject;
+package ch11_reflection.createobject;
 
 import ch11_reflection.entity.User;
 import org.junit.Test;
@@ -15,12 +15,12 @@ public class NewInstance {
     // 创建对象
     @Test
     public void createObj() throws Exception {
-        Class<?> aClass = Class.forName("ch11_reflection.entity.Car");
+        Class<?> aClass = Class.forName("ch11_reflection.entity.User");
         // 条件：无参构造器；权限要够
-        User car = (User) aClass.newInstance();
+        User user = (User) aClass.newInstance();
         boolean annotation = aClass.isAnnotation();
         System.out.println(annotation);
-        car.setAge(20);
-        System.out.println(car.getAge());
+        user.setAge(20);
+        System.out.println(user.getAge());
     }
 }
