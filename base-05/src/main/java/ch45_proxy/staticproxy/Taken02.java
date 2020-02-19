@@ -1,13 +1,12 @@
 package ch45_proxy.staticproxy;
 
 /**
- * project - 代理模式
+ * 聚合方式实现代理
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/9/11 时间:8:01
- * @JDK 1.8
- * @Description 功能模块：聚合方式实现代理
+ * @since 1.8
  */
 public class Taken02 implements Movable {
     Taken taken;

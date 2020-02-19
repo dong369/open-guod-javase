@@ -3,13 +3,12 @@ package ch45_proxy.staticproxy;
 import java.util.Random;
 
 /**
- * project - 代理模式
+ * 被代理的对象
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/9/11 时间:7:57
- * @JDK 1.8
- * @Description 功能模块：被代理的对象
+ * @since 1.8
  */
 public class Taken implements Movable {
     @Override

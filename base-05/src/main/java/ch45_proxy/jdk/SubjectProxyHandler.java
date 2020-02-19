@@ -12,8 +12,7 @@ import java.lang.reflect.Method;
  * @author guodd
  * @version 1.0
  * @date 日期:2019/8/17 时间:17:11
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class SubjectProxyHandler implements InvocationHandler {
     private static final Logger LOG = LoggerFactory.getLogger(SubjectProxyHandler.class);

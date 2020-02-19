@@ -1,13 +1,12 @@
 package ch45_proxy.staticproxy;
 
 /**
- * project - 代理模式
+ * 日志记录
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/9/11 时间:8:03
- * @JDK 1.8
- * @Description 功能模块：日志记录
+ * @since 1.8
  */
 public class TakenLogProxy implements Movable {
     Movable taken;
