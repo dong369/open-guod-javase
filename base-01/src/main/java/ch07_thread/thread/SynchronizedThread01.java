@@ -6,7 +6,6 @@ package ch07_thread.thread;
  * @author guod
  * @date 日期:2018/6/22 时间:8:11
  * @since 1.8
- * @
  */
 public class SynchronizedThread01 implements Runnable {
 
@@ -30,9 +29,10 @@ public class SynchronizedThread01 implements Runnable {
 
 class T100 {
 
-    private static int num = 0;
+    static int num = 0;
 
     void add(String name) {
+        // 此处实际是三步操作：获取、加一、赋值
         num++;
         try {
             // 原子性，中间不能被打断

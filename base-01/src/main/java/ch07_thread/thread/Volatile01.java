@@ -1,16 +1,16 @@
 package ch07_thread.thread;
 
 /**
- * project - volatile关键字
+ * volatile关键字
+ * volatile可以看成是synchronized的一种轻量级的实现
+ * 01、volatile有synchronized可见性的特性，但没有synchronized原子性的特性。
+ * 02、volatile还能确保变量不能被重排序，保证了有序性。
+ * 03、如果是读操作远多于写操作的情况可以建议使用volatile，它会有更好的性能。
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/27 时间:13:12
- * @JDK 1.8
- * @Description 功能模块：volatile可以看成是synchronized的一种轻量级的实现
- * 01volatile有synchronized可见性的特性，但没有synchronized原子性的特性。
- * 02volatile还能确保变量不能被重排序，保证了有序性。
- * 03如果是读操作远多于写操作的情况可以建议使用volatile，它会有更好的性能。
+ * @since 1.8
  */
 public class Volatile01 {
 

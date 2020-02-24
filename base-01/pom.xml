@@ -12,10 +12,16 @@
 
     <artifactId>base-01</artifactId>
     <dependencies>
+        <!-- 数据库连接 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!-- 对象布局 -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
+        </dependency>
     </dependencies>
-
 </project>

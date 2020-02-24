@@ -1,13 +1,12 @@
 package ch02_data.builder;
 
 /**
- * project -
+ * 多重构造器+JavaBean+构建器
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/6/7 时间:13:11
- * @JDK 1.8
- * @Description 功能模块：多重构造器+JavaBean+构建器
+ * @since 1.8
  */
 public class MainBuilder {
     public static void main(String[] args) {
