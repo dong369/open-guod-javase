@@ -1,7 +1,7 @@
 package ch01_helloworld;
 
 /**
- * project - 第一个hello world程序（硬件+软件+图灵+冯诺依曼体系结构）
+ * 第一个hello world程序（硬件+软件+图灵+冯诺依曼体系结构）
  * <p>
  * 创始人：Java之父——詹姆斯·高斯林出生于加拿大，是一位计算机编程天才。
  * 创建日期：1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。
@@ -42,12 +42,7 @@ package ch01_helloworld;
  * 思考/总结/笔记
  * <p>
  * 代码虐我百遍，我视代码如初恋。
- *
- * @author guod
- * @version 1.0
- * @date 日期:2018/9/19 时间:8:01
- * @JDK 1.8
- * @Description 功能模块：
+ * <p>
  * 编译命令：javac UseHelloWorld.java
  * 执行命令：java UseHelloWorld
  * <p>
@@ -67,6 +62,12 @@ package ch01_helloworld;
  * 三：区分：JDK/JRE/JVM
  * java -version
  * javac -version
+ * javap -c HelloWorld.class
+ *
+ * @author guod
+ * @version 1.0
+ * @date 日期:2018/9/19 时间:8:01
+ * @since 1.8
  */
 public class HelloWorld {
     public static void main(String[] args) {

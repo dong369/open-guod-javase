@@ -1,5 +1,6 @@
 package ch02_data.generic.method;
 
+import ch02_data.generic.entity.Apple;
 import org.junit.Test;
 
 import java.io.Serializable;
@@ -37,8 +38,8 @@ public class GenericMethod<T> {
     }
 
     // 该方法不是泛型方法，而是一个普通方法
-    // 该方法不能使用static关键字修饰，以为T的类型取决于创建类的类型。
-    // 为什么不能使用static关键字？因为这个地方用到了类的泛型
+    // 该方法不能使用static关键字修饰，以为T的类型取决于创建类的类型
+    // 为什么不能使用static关键字？因为这个地方用到了类的泛型，而泛型的确定是new出对象时确定的
     private void test01(T t) {
     }
 
