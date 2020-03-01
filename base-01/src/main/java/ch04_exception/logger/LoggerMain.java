@@ -12,5 +12,4 @@ package ch04_exception.logger;
 public class LoggerMain {
     public static void main(String[] args) {
     }
-
 }

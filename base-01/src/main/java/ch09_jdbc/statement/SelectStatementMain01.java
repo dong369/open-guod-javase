@@ -6,13 +6,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * project -
+ * Statement操作数据库
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/18 时间:14:10
- * @JDK 1.8
- * @Description 功能模块：Statement操作数据库
+ * @since 1.8
  */
 public class SelectStatementMain01 {
     public static void main(String[] args) throws Exception {

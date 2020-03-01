@@ -3,13 +3,12 @@ package ch06_io.file;
 import java.io.File;
 
 /**
- * project -
+ * 文件的目录遍历
  *
  * @author guodd
  * @version 3.0
  * @date 日期:2018/6/10 时间:17:18
- * @JDK 1.8
- * @Description 功能模块：文件的目录遍历
+ * @since 1.8
  */
 public class File03 {
     public static void main(String[] args) {

@@ -1,13 +1,12 @@
 package ch02_data.string;
 
 /**
- * project -
+ * String、StringBuffer、StringBuilder
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/2 时间:8:57
- * @JDK 1.8
- * @Description 功能模块：String、StringBuffer、StringBuilder
+ * @since 1.8
  */
 public class StringMain {
     public static void main(String[] args) {

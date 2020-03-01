@@ -8,16 +8,16 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 /**
- * project - List是有序且重复的，Set是无序不重复的。
+ * List是有序且重复的，Set是无序不重复的。
+ * 有序，可重复（顺序有两个概念：一是按添加的顺序排列，二是按自然顺序a-z排列。）
+ * ArrayList：数组实现,查找快,增删慢由于是数组实现,在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以直接按索引查找, 所以查找时较快。
+ * LinkedList：链表实现,增删快,查找慢由于链表实现, 增加时只要让前一个元素记住自己就可以, 删除时让前一个元素记住后一个元素, 后一个元素记住前一个元素. 这样的增删效率较高但查询时需要一个一个的遍历, 所以效率较低
+ * Vector：ArrayList原理相同,但线程安全,效率略低和ArrayList实现方式相同, 但考虑了线程安全问题, 所以效率略低
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/10/15 时间:16:24
- * @JDK 1.8
- * @Description 功能模块：有序，可重复（顺序有两个概念：一是按添加的顺序排列，二是按自然顺序a-z排列。）
- * ArrayList：数组实现,查找快,增删慢由于是数组实现,在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以直接按索引查找, 所以查找时较快。
- * LinkedList：链表实现,增删快,查找慢由于链表实现, 增加时只要让前一个元素记住自己就可以, 删除时让前一个元素记住后一个元素, 后一个元素记住前一个元素. 这样的增删效率较高但查询时需要一个一个的遍历, 所以效率较低
- * Vector：ArrayList原理相同,但线程安全,效率略低和ArrayList实现方式相同, 但考虑了线程安全问题, 所以效率略低
+ * @since 1.8
  */
 public class ArrayListMain {
     public static void main(String[] args) {

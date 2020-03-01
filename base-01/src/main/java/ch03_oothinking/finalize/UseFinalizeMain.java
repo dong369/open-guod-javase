@@ -1,7 +1,7 @@
 package ch03_oothinking.finalize;
 
 /**
- * finalize关键字（）
+ * finalize关键字
  *
  * @author guodd
  * @version 1.0

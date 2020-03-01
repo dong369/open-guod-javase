@@ -5,13 +5,12 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * project -
+ * TCP Socket通信模型
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019年1月6日 时间:上午11:58:21
- * @JDK 1.8
- * @Description 功能模块：TCP Socket通信模型
+ * @date 日期:2019年1月6日 时间:下午12:16:09
+ * @since 1.8
  */
 public class TcpClient02 {
     public static void main(String[] args) throws IOException {

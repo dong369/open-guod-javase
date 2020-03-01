@@ -4,13 +4,12 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 /**
- * Project -
+ * project -
  *
- * @Create by guodd
- * @Version 1.0
- * @Date 日期:2019/1/3 时间:14:50
- * @JDK 1.8
- * @Description
+ * @author guodd
+ * @version 1.0
+ * @date 日期:2019年1月6日 时间:下午12:16:09
+ * @since 1.8
  */
 public class TcpClient01 {
     public static void main(String[] args) throws Exception {

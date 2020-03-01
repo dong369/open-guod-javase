@@ -13,6 +13,7 @@ import org.junit.Test;
  * @since 1.8
  */
 public class StackMain {
+    // javap -c StackMain.class
     // 无监控，不调优，jMap命令监控、jConsole、jVisualVM
     // 编程中的变量名只是为了让大家更好知道语义，不参与底层使用，所以命名使用中文也可以
     @Test

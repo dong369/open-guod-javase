@@ -5,13 +5,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 /**
- * project -
+ * PreparedStatement操作数据库
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/11/18 时间:14:10
- * @JDK 1.8
- * @Description 功能模块：PreparedStatement操作数据库
+ * @since 1.8
  */
 public class InsertPreparedStatementMain01 {
     public static void main(String[] args) throws Exception {

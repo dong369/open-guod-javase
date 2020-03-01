@@ -1,13 +1,6 @@
 package ch03_oothinking.equals2hashcode;
 
 /**
- * project -
- *
- * @author guodd
- * @version 1.0
- * @date 日期:2019/1/13 时间:13:00
- * @JDK 1.8
- * @Description 功能模块：
  * 1、如果两个对象equals，Java运行时环境会认为他们的hashcode一定相等。
  * 2、如果两个对象不equals，他们的hashcode有可能相等。
  * 3、如果两个对象hashcode相等，他们不一定equals。
@@ -19,6 +12,11 @@ package ch03_oothinking.equals2hashcode;
  * HashCode被设计用来提高性能。equals()方法与hashCode()方法的区别在于：
  * 如果两个对象相等(equal)，那么他们一定有相同的哈希值。
  * 如果两个对象的哈希值相同，但他们未必相等(equal)。
+ *
+ * @author guodd
+ * @version 1.0
+ * @date 日期:2019/1/13 时间:13:00
+ * @since 1.8
  */
 public class UserEquals {
     @Override

@@ -1,7 +1,7 @@
 package ch10_classload.classload;
 
 /**
- * project - ClassLoader类加载（-verbose:class配置后可以查看对应的类加载过程）
+ * ClassLoader类加载（-verbose:class配置后可以查看对应的类加载过程）
  *
  * @author guodd
  * @version 1.0
@@ -10,11 +10,11 @@ package ch10_classload.classload;
  */
 public class JdkClassLoader {
     public static void main(String[] args) {
-        // 01Bootstrap
+        // 01、Bootstrap
         System.out.println(String.class.getClassLoader() + "Bootstrap");
-        // 02ExtClassLoader
+        // 02、ExtClassLoader
         System.out.println(com.sun.crypto.provider.AESKeyGenerator.class.getClassLoader().getClass().getName());
-        // 03AppClassLoader
+        // 03、AppClassLoader
         System.out.println(JdkClassLoader.class.getClassLoader().getClass().getName());
 
         System.out.println("===================================");

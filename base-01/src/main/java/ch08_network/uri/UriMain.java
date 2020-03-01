@@ -8,6 +8,11 @@ import java.net.URL;
 
 /**
  * URI：统一资源标识符，能够独一无二的表示一个资源，包含了访问的方式和位置还有该资源。类似于人的身份证号。
+ *
+ * @author guodd
+ * @version 1.0
+ * @date 日期:2019年1月6日 时间:上午11:58:21
+ * @since 1.8
  */
 public class UriMain {
     public static void main(String[] args) throws Exception {

@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
@@ -32,6 +31,7 @@ public class StreamMain01 {
         List<Integer> asList = Arrays.asList(1, 6, 2, 4);
         // 顺序流
         Stream<Integer> stream = asList.stream();
+        asList.stream().sorted(Integer::compareTo).forEach(System.out::println);
         // 并行流
         Stream<Integer> integerStream = asList.parallelStream();
         // 方式二：通过数组
@@ -39,7 +39,6 @@ public class StreamMain01 {
         IntStream stream1 = Arrays.stream(a);
         // 方式三：stream静态方法of()
         List<String> collect = Stream.of("java", "javascript").collect(Collectors.toList());
-        asList.stream().sorted(Integer::compareTo).forEach(System.out::println);
         collect.forEach(System.out::println);
         // 方式四：创建无限流（造数据）
         Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);

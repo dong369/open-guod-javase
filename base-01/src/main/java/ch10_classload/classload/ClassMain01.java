@@ -9,8 +9,7 @@ import java.lang.reflect.Method;
  * @author guodd
  * @version 1.0
  * @date 日期:2018/9/16 时间:19:57
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class ClassMain01 {
     public static void main(String[] args) {

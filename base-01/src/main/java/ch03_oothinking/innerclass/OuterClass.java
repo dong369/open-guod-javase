@@ -1,13 +1,7 @@
 package ch03_oothinking.innerclass;
 
 /**
- * project -
- *
- * @author guodd
- * @version 1.0
- * @date 日期:2019/3/12 时间:20:18
- * @JDK 1.8
- * @Description 功能模块：内部类是指在一个外部类的内部再定义一个类。类名不需要和文件夹相同。
+ * 内部类是指在一个外部类的内部再定义一个类。类名不需要和文件夹相同。
  * 内部类可以是静态static的，也可用public，default，protected和private修饰。
  * 外部顶级类即类名和文件名相同的只能使用public和default。
  * <p>
@@ -18,6 +12,11 @@ package ch03_oothinking.innerclass;
  * 内部类可以对同一包中的其他类隐藏起来
  * 内部类可以实现java单继承的缺陷
  * 当我们想要定义一个回调函数却不想写大量代码的时候我们可以选择使用匿名内部类来实现
+ *
+ * @author guodd
+ * @version 1.0
+ * @date 日期:2019/3/12 时间:20:18
+ * @since 1.8
  */
 public class OuterClass {
     private void bar() {
@@ -33,7 +32,7 @@ public class OuterClass {
         new InnerClass03();
     }
 
-    // 1、成员内部类，非静态内部类。
+    // 1、定义在类内部，成员位置上的非静态类，就是成员内部类。
     private class InnerClass01 {
         void innerTest() {
             foo();
@@ -41,27 +40,32 @@ public class OuterClass {
         }
     }
 
-    // 2、局部内部类，内部类定义在方法和作用域内。
+    // 2、定义在方法中的内部类，就是局部内部类。
     public void inner() {
         class Local {
         }
     }
 
-    // 3、成员内部类，静态内部类「嵌套类」，
+    // 3、定义在类内部的静态类，就是静态内部类。
     // 静态内部类的创建的确不依赖与外部类的创建，因为static并不依赖于实例，而依赖与类Class本身。
     private static class InnerClass03 {
     }
 
-    // 4、匿名内部类
+    // 4、匿名内部类就是没有名字的内部类，日常开发中使用的比较多。
     private static abstract class AbstractClass {
         abstract void test();
     }
 
     // 5、内部类的继承和实现
     private class InnerClassExt extends OuterClass.InnerClass01 implements OuterClass.Int {
+        @Override
+        public void test() {
+            System.out.println("test");
+        }
     }
 
     interface Int {
+        void test();
     }
 
     // 注意：静态方法中没有this
@@ -72,8 +76,10 @@ public class OuterClass {
         new OuterClass().new InnerClass01().innerTest();
 
         // 静态内部类可以直接new
+        new OuterClass.InnerClass03();
         new InnerClass03();
 
+        // 匿名内部类
         AbstractClass a = new AbstractClass() {
             @Override
             void test() {
@@ -81,5 +87,8 @@ public class OuterClass {
             }
         };
         a.test();
+
+        // 内部类实现继承接口
+        new OuterClass().new InnerClassExt().test();
     }
 }

@@ -11,13 +11,13 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * project - 网络编程
+ * 统一资源定位符，能够准确的定位资源的位置，包含了访问的方式和位置。
+ * 类似于人的家庭地址。同样，他也可以标示出一个独一无二的资源。
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/10/15 时间:16:22
- * @JDK 1.8
- * @Description 功能模块：统一资源定位符，能够准确的定位资源的位置，包含了访问的方式和位置。
- * 类似于人的家庭地址。同样，他也可以标示出一个独一无二的资源。
+ * @since 1.8
  */
 public class UrlMainTest {
     public static void main(String[] args) throws IOException {

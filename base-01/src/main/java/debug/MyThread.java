@@ -8,8 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @author guodd
  * @version 1.0
  * @date 日期:2019/4/12 时间:16:10
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class MyThread implements Runnable {
 

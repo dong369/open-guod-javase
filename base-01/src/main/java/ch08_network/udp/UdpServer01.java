@@ -4,13 +4,12 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
 /**
- * project -
+ * UDP 通信模型
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2019年1月6日 时间:上午11:56:55
- * @JDK 1.8
- * @Description 功能模块：UDP 通信模型
+ * @since 1.8
  */
 public class UdpServer01 {
     public static void main(String[] args) throws Exception {
