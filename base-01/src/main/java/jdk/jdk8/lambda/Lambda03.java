@@ -5,13 +5,13 @@ import org.junit.Test;
 import java.util.function.Consumer;
 
 /**
- * project - lambda表达式的本质是作为函数式接口的实例！！！
+ * lambda表达式的本质是作为函数式接口的实例！！！
+ * 需要一个参数，但是没有返回值
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:14:17
- * @JDK 1.8
- * @Description 功能模块：需要一个参数，但是没有返回值
+ * @since 1.8
  */
 public class Lambda03 {
     public static void main(String[] args) {

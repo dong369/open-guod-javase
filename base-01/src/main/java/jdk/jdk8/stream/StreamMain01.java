@@ -44,7 +44,8 @@ public class StreamMain01 {
         Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);
         Stream.generate(Math::random).limit(10).forEach(System.out::println);
         // 方式五：通过缓冲流
-        BufferedReader br = new BufferedReader(new FileReader(new File("")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("d:/test/test.txt")));
         Stream<String> lines = br.lines();
+        lines.forEach(System.out::println);
     }
 }

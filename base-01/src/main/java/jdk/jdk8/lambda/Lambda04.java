@@ -1,13 +1,12 @@
 package jdk.jdk8.lambda;
 
 /**
- * project -
+ * 数据类型可以省略，可以由编译器推动得出。
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/11/5 时间:14:21
- * @JDK 1.8
- * @Description 功能模块：数据类型可以省略，可以由编译器推动得出。
+ * @since 1.8
  */
 public class Lambda04 {
     public static void main(String[] args) {

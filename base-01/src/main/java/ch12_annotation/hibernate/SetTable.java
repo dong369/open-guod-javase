@@ -6,13 +6,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * project -
+ * 表的别名
  *
  * @author guodd
  * @version 1.0
  * @date 日期:2018/9/12 时间:21:36
- * @JDK 1.8
- * @Description 功能模块：表的别名
+ * @since 1.8
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

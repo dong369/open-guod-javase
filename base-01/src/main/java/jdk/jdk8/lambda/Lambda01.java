@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  * 学习lambda表示式，先要熟悉匿名内部类。
  * lambda表达式又称闭包或匿名函数。
- * 如果想把“一块代码”赋给一个Java变量。
+ * 如果想把一块代码赋给一个Java变量。
  * 1、举例：Comparator<Integer> a = (c1, c2) -> Integer.compare(c1, c2);
  * 2、格式：lambda操作符或箭头符号；左边时lambda形参列表（抽象方法参数列表）；右边是lambda体（抽象方法体）
  * 3、lambda表达式的本质：是作为[函数式接口]的实例！！！

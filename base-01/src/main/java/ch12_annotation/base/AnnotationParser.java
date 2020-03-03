@@ -9,8 +9,7 @@ import java.lang.reflect.Method;
  * @author guod
  * @version 1.0
  * @date 日期:2018/9/12 时间:11:56
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class AnnotationParser {
     public static void main(String[] args) throws Exception {
@@ -23,8 +22,8 @@ public class AnnotationParser {
                 MyAnnotation annotation = method.getAnnotation(MyAnnotation.class);
                 System.out.println("method: " + method);
                 System.out.println("name= " + annotation.name() +
-                        " , website= " + annotation.website()
-                        + " , revision= " + annotation.revision());
+                                   " , website= " + annotation.website()
+                                   + " , revision= " + annotation.revision());
             }
         }
 
@@ -33,8 +32,8 @@ public class AnnotationParser {
                 MyAnnotation annotation = field.getAnnotation(MyAnnotation.class);
                 System.out.println(field);
                 System.out.println("name= " + annotation.name() +
-                        " , website= " + annotation.website()
-                        + " , revision= " + annotation.revision());
+                                   " , website= " + annotation.website()
+                                   + " , revision= " + annotation.revision());
             }
         }
     }

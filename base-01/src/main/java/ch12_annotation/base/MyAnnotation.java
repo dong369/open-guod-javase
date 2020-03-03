@@ -21,6 +21,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface MyAnnotation {
+
     String name() default "";
 
     String website() default "hello";

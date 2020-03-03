@@ -1,20 +1,22 @@
 package ch14_dependency.base02;
 
+import org.junit.Test;
+
 import java.lang.reflect.Field;
 
 /**
- * project - 注解
+ * 注解的提取解析
  *
  * @author guod
  * @version 1.0
  * @date 日期:2018/10/31 时间:13:11
- * @JDK 1.8
- * @Description 功能模块：注解的提取解析
+ * @since 1.8
  */
-public class ParseAnnocation {
-    public static void parseAnnocation(Object object) throws Exception {
+public class ParseAnnotation {
+    @Test
+    public static void parseAnnotation(Object object) throws Exception {
         //1.获取字节码文件
-        Class c = object.getClass();
+        Class<?> c = object.getClass();
         //2.获取成员变量
         Field[] fields = c.getFields();
         //3.遍历成员变量

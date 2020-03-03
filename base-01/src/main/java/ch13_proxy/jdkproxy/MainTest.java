@@ -8,8 +8,7 @@ import java.lang.reflect.Proxy;
  * @author guod
  * @version 1.0
  * @date 日期:2018/10/31 时间:13:04
- * @JDK 1.8
- * @Description 功能模块：
+ * @since 1.8
  */
 public class MainTest {
     public static void main(String[] args) {

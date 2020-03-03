@@ -1,5 +1,7 @@
 package ch06_io.filecopy;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
 import java.io.*;
@@ -20,6 +22,7 @@ import java.time.Instant;
  */
 public class FileCopy {
 
+    // jdk基础拷贝
     @Test
     public void test() throws Exception {
         long time01 = Instant.now().toEpochMilli();
@@ -50,6 +53,31 @@ public class FileCopy {
         copyFileByChannelTransfer1("d:/test/test.txt", "d:/test/test1.txt");
         // copyFileByChannelTransfer2("d:/test/test.txt", "d:/test/test1.txt");
         System.out.println("通过 JAVA NIO 通道传输拷贝文件：" + (Instant.now().toEpochMilli() - time07) + "毫秒");
+    }
+
+    // 工具类拷贝文件
+    @Test
+    public void utilsCopy() throws Exception {
+        long time01 = Instant.now().toEpochMilli();
+        ioUtilsCopy("d:/test/test.txt", "d:/test/test1.txt");
+        System.out.println("apache commons IoUtils拷贝文件：" + (Instant.now().toEpochMilli() - time01) + "毫秒");
+
+        long time02 = Instant.now().toEpochMilli();
+        ioUtilsCopyLarge("d:/test/test.txt", "d:/test/test1.txt");
+        System.out.println("apache commons IoUtils大文件拷贝文件：" + (Instant.now().toEpochMilli() - time02) + "毫秒");
+
+        long time03 = Instant.now().toEpochMilli();
+        fileUtilsCopy("d:/test/test.txt", "d:/test/test1.txt");
+        System.out.println("apache commons IoUtils大文件拷贝文件：" + (Instant.now().toEpochMilli() - time03) + "毫秒");
+    }
+
+    // 文件夹拷贝
+    @Test
+    public void copyDir() throws Exception {
+        long time01 = Instant.now().toEpochMilli();
+        fileUtilsCopyDirectory("d:/test", "d:/test/aa");
+        System.out.println("apache commons IoUtils拷贝文件：" + (Instant.now().toEpochMilli() - time01) + "毫秒");
+
     }
 
     // 通过字节流实现文件的拷贝
@@ -204,6 +232,23 @@ public class FileCopy {
         isChannel.transferTo(0, isChannel.size(), osChannel);
         os.close();
         is.close();
+    }
+
+    public void ioUtilsCopy(String sourcePath, String targetPath) throws Exception {
+        IOUtils.copy(new FileInputStream(sourcePath), new FileOutputStream(targetPath));
+    }
+
+
+    public void ioUtilsCopyLarge(String sourcePath, String targetPath) throws Exception {
+        IOUtils.copyLarge(new FileInputStream(sourcePath), new FileOutputStream(targetPath));
+    }
+
+    public void fileUtilsCopy(String sourcePath, String targetPath) throws Exception {
+        FileUtils.copyFile(new File(sourcePath), new FileOutputStream(targetPath));
+    }
+
+    public void fileUtilsCopyDirectory(String sourcePath, String targetPath) throws Exception {
+        FileUtils.copyDirectory(new File(sourcePath), new File(targetPath));
     }
 
 }
