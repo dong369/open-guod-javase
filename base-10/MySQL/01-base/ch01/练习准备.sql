@@ -1,3 +1,4 @@
+use `base-sql`;
 create table goods
 (
     goods_id     mediumint(8) unsigned primary key auto_increment,

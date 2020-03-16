@@ -36,20 +36,6 @@ public class HeapMain {
     }
 
     @Test
-    public void string() {
-        // JVM 1.6之前可以看成是4个对象：str+ab+cd+abcd
-        // JVM 1.6之后可以看成是2个对象：str（引用对象）+abcd（字符串常量对象）
-        String str = "ab" + "cd";
-    }
-
-    @Test
-    public void str() {
-        String a = "a";
-        String b = "b";
-        String str = a + b;
-    }
-
-    @Test
     public void test() throws Exception {
         Thread.sleep(5000);
         List<HeapMain> heapMains = new ArrayList<>();

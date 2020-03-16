@@ -17,7 +17,7 @@ import java.lang.reflect.Constructor;
 public class ConstructorTest {
     // 调用运行时类中的构造器
     @Test
-    public void test() throws Exception {
+    public void constructorMethod() throws Exception {
         Class<PeopleMan> peopleManClass = PeopleMan.class;
         Constructor<PeopleMan> constructor = peopleManClass.getDeclaredConstructor(String.class);
         constructor.setAccessible(true);
@@ -27,7 +27,7 @@ public class ConstructorTest {
 
     // 获取构造器
     @Test
-    public void constructor() {
+    public void constructorAll() {
         Class<PeopleMan> peopleManClass = PeopleMan.class;
         Constructor<?>[] constructors = peopleManClass.getDeclaredConstructors();
         for (Constructor<?> constructor : constructors) {

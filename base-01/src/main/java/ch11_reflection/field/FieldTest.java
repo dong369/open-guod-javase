@@ -73,9 +73,9 @@ public class FieldTest {
         for (Field field : peopleManClass.getDeclaredFields()) {
             System.out.println(
                     field.getName() + ","
-                            + field.getModifiers() + ","
-                            + Modifier.toString(field.getModifiers()) + ","
-                            + field.getType()
+                    + field.getModifiers() + ","
+                    + Modifier.toString(field.getModifiers()) + ","
+                    + field.getType()
             );
         }
     }

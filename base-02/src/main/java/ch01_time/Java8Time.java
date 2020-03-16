@@ -64,9 +64,13 @@ public class Java8Time {
         System.out.println(milliSecond01.equals(milliSecond02 + 60));
         System.out.println(milliSecond01 + 60);
         System.out.println(milliSecond03);
+        Instant now = Instant.now();
+        System.out.println(Instant.now());
+        System.out.println(now.toEpochMilli()); // 毫秒
+        System.out.println(now.getEpochSecond()); // 秒
     }
 
-    // 当前天区间
+    // 获取当前天区间
     @Test
     public void getDay() {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -122,7 +126,7 @@ public class Java8Time {
         LocalDate today = LocalDate.now();
         LocalDate birthday = LocalDate.from(DateTimeFormatter.ofPattern("yyyy-MM-dd").parse("1994-02-08"));
         long between = ChronoUnit.YEARS.between(birthday, today);
-        System.out.println("you age is：" + between);
+        System.out.println("你的年龄：" + between);
     }
 
 
@@ -157,5 +161,22 @@ public class Java8Time {
         SimpleDateFormat simpleDateFormatDateToStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String formatStr = simpleDateFormatDateToStr.format(date);
         System.out.println("Date - String：" + formatStr);
+        // Date - zonedDateTime
+        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault());
+        System.out.println(zonedDateTime.getDayOfWeek());
+        System.out.println(zonedDateTime.getDayOfWeek().getValue());
+    }
+
+    // 时区 @{link {@link ZonedDateTime}}
+    @Test
+    public void zonedDateTime() {
+        // America/New_York  & Asia/Shanghai
+        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
+        System.out.println(now.getMonth().getValue());
+        System.out.println(now.getDayOfWeek().getValue());
+        System.out.println(System.currentTimeMillis());
+        System.out.println(Clock.systemUTC().instant());
+        System.out.println(Clock.systemUTC().millis());
+        System.out.println(LocalDateTime.now());
     }
 }

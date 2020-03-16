@@ -5,15 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * project -
+ * 转换流
  *
  * @author guodd
  * @version 3.0
  * @date 日期:2018/6/10 时间:15:20
- * @JDK 1.8
- * @Description 功能模块：转换流
+ * @since 1.8
  */
-public class TransFormTest02 {
+public class TransForm02 {
     public static void main(String[] args) {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);

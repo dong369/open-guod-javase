@@ -26,6 +26,7 @@ public class FileInputStream01 {
         // 02读取文件
         int b;
         try {
+            // 计数
             long num = 0;
             while ((b = in.read()) != -1) {
                 System.out.print((char) b);

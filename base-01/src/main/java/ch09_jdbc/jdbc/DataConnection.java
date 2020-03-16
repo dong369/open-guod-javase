@@ -2,7 +2,7 @@ package ch09_jdbc.jdbc;
 
 import java.sql.*;
 
-public class DataBaseConnectionMain {
+public class DataConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "passw0rd";
     private static final String DRIVER = "com.mysql.jdbc.Driver";
@@ -12,7 +12,7 @@ public class DataBaseConnectionMain {
     /**
      * 功能：构造器主要目的是进行数据库连接
      */
-    public DataBaseConnectionMain() {
+    public DataConnection() {
         try {
             // 第一步：加载数据库驱动程序
             Class.forName(DRIVER);
@@ -44,7 +44,7 @@ public class DataBaseConnectionMain {
     }
 
     public static void main(String[] args) throws Exception {
-        DataBaseConnectionMain dataBaseConnection = new DataBaseConnectionMain();
+        DataConnection dataBaseConnection = new DataConnection();
         Connection connection = dataBaseConnection.getConnection();
         // 第三步：进行数据表的CRUD操作，执行SQL
         // 增加的SQL语法：INSERT INTO 表名称 (字段,字段,..) VALUES (值,值,…)；

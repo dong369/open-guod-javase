@@ -8,5 +8,5 @@ package ch06_io.epoll;
  * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
-public class Main {
+public class EpollMain {
 }

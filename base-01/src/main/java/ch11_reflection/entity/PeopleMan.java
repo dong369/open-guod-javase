@@ -1,5 +1,8 @@
 package ch11_reflection.entity;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 /**
  * Project -
  *
@@ -8,11 +11,15 @@ package ch11_reflection.entity;
  * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
+@EqualsAndHashCode(callSuper = true)
+@Data
 @MyAnnotation("hi")
 public class PeopleMan extends People<String> implements MyInterface, Comparable<String> {
     /**
      * 属性描述：姓名
      */
+    @MyAnnotation("manName")
+    @MyAnnotation("name")
     public String manName;
 
     /**

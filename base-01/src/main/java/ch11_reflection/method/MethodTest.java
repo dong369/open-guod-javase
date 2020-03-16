@@ -36,8 +36,8 @@ public class MethodTest {
         Method showStatic = peopleManClass.getDeclaredMethod("showStatic");
         showStatic.setAccessible(true);
         // 两种方式都可以
-        showStatic.invoke(null);
-        Object invoke = showStatic.invoke(PeopleMan.class);
+        PeopleMan invoke1 = (PeopleMan) showStatic.invoke(null);
+        PeopleMan invoke2 = (PeopleMan) showStatic.invoke(PeopleMan.class);
     }
 
     // 获取对象的方法
@@ -72,6 +72,10 @@ public class MethodTest {
     // 获取方法的权限修饰符、返回值类型、方法名称、参数列表、异常
     @Test
     public void test() {
-
+        Class<PeopleMan> peopleManClass = PeopleMan.class;
+        Method[] methods = peopleManClass.getMethods();
+        for (Method method : methods) {
+            int modifiers = method.getModifiers();
+        }
     }
 }

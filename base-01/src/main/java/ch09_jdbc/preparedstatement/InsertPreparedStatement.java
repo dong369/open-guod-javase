@@ -12,7 +12,7 @@ import java.sql.PreparedStatement;
  * @date 日期:2018/11/18 时间:14:10
  * @since 1.8
  */
-public class InsertPreparedStatementMain01 {
+public class InsertPreparedStatement {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test", "root", "123456");

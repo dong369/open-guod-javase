@@ -13,5 +13,5 @@ package ch06_io.aio;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class MainTest {
+public class AioMain {
 }

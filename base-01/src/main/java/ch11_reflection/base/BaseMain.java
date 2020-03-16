@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * Project -
+ * 静态加载：在编译时期加载的类，叫静态加载；动态加载：在运行时期加载的类，叫动态加载
  *
  * @author guodd
  * @version 1.0

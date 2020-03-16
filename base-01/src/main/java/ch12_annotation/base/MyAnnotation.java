@@ -16,8 +16,8 @@ import java.lang.annotation.*;
  * @date 日期:2018/9/12 时间:9:24
  * @since 1.8
  */
-@Target({ElementType.METHOD, ElementType.FIELD})
 @Documented
+@Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface MyAnnotation {

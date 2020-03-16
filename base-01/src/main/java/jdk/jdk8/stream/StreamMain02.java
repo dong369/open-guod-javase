@@ -63,11 +63,23 @@ public class StreamMain02 {
         // flatMap映射，接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有所有的流串起来。
     }
 
-    // 排序
+    // 基础排序
     @Test
     public void sor() {
         List<Integer> integers = Arrays.asList(1, 3, 10, 1, 0, -1, 2, 34);
         integers.stream().sorted().forEach(System.out::println);
         createUser().stream().sorted(Comparator.comparing(User::getAge)).forEach(System.out::println);
+    }
+
+    @Test
+    public void listSort() {
+        List<User> users = createUser();
+        // 添加空的排序会报错
+        users.add(new User());
+        List<User> collect = users.stream()
+                // 查找stream.sorted源码看到有Comparator.nullsFirst和Comparator.nullsLast方法
+                .sorted(Comparator.comparing(User::getAge, Comparator.nullsFirst(Integer::compareTo)).reversed())
+                .collect(Collectors.toList());
+        System.out.println(collect);
     }
 }
