@@ -15,6 +15,21 @@ import java.lang.reflect.Constructor;
  * @since 1.8
  */
 public class ConstructorTest {
+    // 获取构造器
+    @Test
+    public void constructorAll() {
+        Class<PeopleMan> peopleManClass = PeopleMan.class;
+        Constructor<?>[] constructors1 = peopleManClass.getConstructors();
+        for (Constructor<?> constructor : constructors1) {
+            System.out.println(constructor);
+        }
+        System.out.println();
+        Constructor<?>[] constructors2 = peopleManClass.getDeclaredConstructors();
+        for (Constructor<?> constructor : constructors2) {
+            System.out.println(constructor);
+        }
+    }
+
     // 调用运行时类中的构造器
     @Test
     public void constructorMethod() throws Exception {
@@ -23,15 +38,5 @@ public class ConstructorTest {
         constructor.setAccessible(true);
         PeopleMan aa = constructor.newInstance("aa");
         System.out.println(ToStringBuilder.reflectionToString(aa));
-    }
-
-    // 获取构造器
-    @Test
-    public void constructorAll() {
-        Class<PeopleMan> peopleManClass = PeopleMan.class;
-        Constructor<?>[] constructors = peopleManClass.getDeclaredConstructors();
-        for (Constructor<?> constructor : constructors) {
-            System.out.println(constructor.getName());
-        }
     }
 }

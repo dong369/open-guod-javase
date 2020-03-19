@@ -1,5 +1,7 @@
 package ch11_reflection.entity;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -10,7 +12,13 @@ import java.io.Serializable;
  * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
+@Data
 public class People<T> implements Serializable {
+    /**
+     * 属性描述：id
+     */
+    private Integer id;
+
     /**
      * 属性描述：姓名
      */
@@ -25,11 +33,6 @@ public class People<T> implements Serializable {
      * 属性描述：性别
      */
     String sex;
-
-    /**
-     * 属性描述：id
-     */
-    private Integer id;
 
     private void breath() {
         System.out.println("呼气...");

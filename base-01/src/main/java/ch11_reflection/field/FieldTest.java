@@ -17,28 +17,6 @@ import java.lang.reflect.Modifier;
  * @since 1.8
  */
 public class FieldTest {
-    // 赋值属性
-    @Test
-    public void fieldValue() throws Exception {
-        // 获取[类对象]
-        Class<PeopleMan> peopleManClass = PeopleMan.class;
-        // 创建运行时对象
-        PeopleMan peopleMan = peopleManClass.newInstance();
-        // 获取指定的属性，非静态属性依托于对象
-        Field manId = peopleManClass.getDeclaredField("ManId");
-        // 保证当前属性是可操作的
-        manId.setAccessible(true);
-        // 赋值
-        manId.set(peopleMan, 1);
-        // 获取值
-        Integer o = (Integer) manId.get(peopleMan);
-        System.out.println(o);
-        System.out.println(ToStringBuilder.reflectionToString(peopleMan));
-    }
-
-    // 赋值静态属性
-
-
     // 获取对象的属性
     @Test
     public void field() {
@@ -79,4 +57,26 @@ public class FieldTest {
             );
         }
     }
+
+    // 赋值属性
+    @Test
+    public void fieldValue() throws Exception {
+        // 获取[类对象]
+        Class<PeopleMan> peopleManClass = PeopleMan.class;
+        // 创建运行时对象
+        PeopleMan peopleMan = peopleManClass.newInstance();
+        // 获取指定的属性，非静态属性依托于对象
+        Field manId = peopleManClass.getDeclaredField("ManId");
+        // 保证当前属性是可操作的
+        manId.setAccessible(true);
+        // 赋值
+        manId.set(peopleMan, 1);
+        // 获取值
+        Integer o = (Integer) manId.get(peopleMan);
+        System.out.println(o);
+        System.out.println(ToStringBuilder.reflectionToString(peopleMan));
+    }
+
+    // 赋值静态属性
+
 }

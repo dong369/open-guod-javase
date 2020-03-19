@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-@MyAnnotation("hi")
+@MyAnnotation(value = "hi")
 public class PeopleMan extends People<String> implements MyInterface, Comparable<String> {
     /**
      * 属性描述：姓名
@@ -53,6 +53,8 @@ public class PeopleMan extends People<String> implements MyInterface, Comparable
         System.out.println("show...");
     }
 
+    @MyAnnotation("manName")
+    @MyAnnotation("name")
     public String showNative(String name) {
         System.out.println(name);
         return name;

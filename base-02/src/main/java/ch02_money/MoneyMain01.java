@@ -48,13 +48,9 @@ public class MoneyMain01 {
         System.out.println("BigDecimal.valueOf推荐使用：" + BigDecimal.valueOf(aa));
     }
 
-    // 03、
+    // 03、格式化
     @Test
-    public void decimalPrecision() {
-
-    }
-
-    public static void main(String[] args) {
+    public void format() {
         double aa = 0.2341;
         // 浮点数
         BigDecimal bigDecimal = new BigDecimal("12.369");
@@ -81,7 +77,11 @@ public class MoneyMain01 {
         BigDecimal b = new BigDecimal(f);
         double f1 = b.setScale(4, RoundingMode.HALF_UP).doubleValue();
         System.out.println(f1);
+    }
 
+    // 04、金钱扣款
+    @Test
+    public void decimalPrecision() {
         // 数据库中的金钱使用Long类型存储，并且单位是分，
         long a = 100;
         BigDecimal bigDecimalFen = new BigDecimal(a);

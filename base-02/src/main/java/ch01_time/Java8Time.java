@@ -28,12 +28,12 @@ public class Java8Time {
         System.out.println(LocalDate.now());
         // java.time.LocalTime类表示ISO-8601日历系统中没有时区的时间，例如17:11:00.477。
         System.out.println(LocalTime.now());
+        System.out.println(Year.now());
+        System.out.println(YearMonth.now());
         // java.time.MonthDay类表示ISO-8601日历系统中的月和日，例如--01-17。
         System.out.println(MonthDay.now());
         // java.time.OffsetDateTime类表示ISO-8601日历系统中与UTC/Greenwich的偏移量的日期时间，例如2020-01-17T17:12:49.040+08:00。
         System.out.println(OffsetDateTime.now());
-        System.out.println(Year.now());
-        System.out.println(YearMonth.now());
     }
 
     // 今天
@@ -79,7 +79,7 @@ public class Java8Time {
         System.out.println(start + "=>" + end);
     }
 
-    // 前一天（年月日周）
+    // 前一天（年、月、日、周）
     @Test
     public void getBeforeDays() {
         String oldDay = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(LocalDateTime.now().plusDays(-1));
