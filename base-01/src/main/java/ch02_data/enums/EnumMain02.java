@@ -1,8 +1,6 @@
 package ch02_data.enums;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * project - 枚举类型
@@ -16,12 +14,13 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public enum EnumMain02 {
     RED("红色", 1),
     GREEN("绿色", 2),
     BLANK("白色", 3),
     YELLOW("黄色", 4);
-    
+
     // 成员变量
     private String name;
     private int index;
@@ -38,7 +37,7 @@ public enum EnumMain02 {
     public static void main(String[] args) {
         System.out.println(EnumMain02.RED.getName());
         System.out.println(EnumMain02.RED.getIndex());
-        System.out.println(EnumMain02.getName(1));
+        System.out.println(EnumMain02.getName(4));
     }
 
 }

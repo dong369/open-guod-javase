@@ -12,7 +12,6 @@ package ch02_data.parameter;
 public class Parameter {
     public static void main(String[] args) {
         test("你好：%s，你好：%s", "C");
-
     }
 
     public static void test(String s, Object... a) {

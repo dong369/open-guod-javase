@@ -54,9 +54,9 @@ public class GenericClass<T> {
     @Override
     public String toString() {
         return "GenericClass{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", t=" + t +
-                '}';
+               "name='" + name + '\'' +
+               ", age=" + age +
+               ", t=" + t +
+               '}';
     }
 }

@@ -1,5 +1,9 @@
 package ch02_data.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Setter;
+
 /**
  * project - 枚举类型
  *
@@ -11,6 +15,12 @@ package ch02_data.enums;
  */
 public enum EnumMain03 {
     SMS {
+        @Override
+        public String getParamNameOnValidate() {
+            return "手机卡";
+        }
+    },
+    CSS() {
         @Override
         public String getParamNameOnValidate() {
             return "手机卡";

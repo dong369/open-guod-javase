@@ -8,16 +8,15 @@ package ch02_data.callby;
  * 结论：当传递方法参数类型为引用数据类型时，一个方法将修改一个引用数据类型的参数所指向对象的值。
  */
 public class CallByReference {
-
-    private static void updateUser(User student) {
-        student.setName("sun");
-        student.setAge(18);
-    }
-
     public static void main(String[] args) {
         User user = new User("guo", 26);
         System.out.println("调用前user的值：" + user.toString());
         updateUser(user);
         System.out.println("调用后user的值：" + user.toString());
+    }
+
+    private static void updateUser(User student) {
+        student.setName("sun");
+        student.setAge(18);
     }
 }

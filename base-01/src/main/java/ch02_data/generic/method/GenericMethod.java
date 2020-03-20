@@ -1,6 +1,5 @@
 package ch02_data.generic.method;
 
-import ch02_data.generic.entity.Apple;
 import org.junit.Test;
 
 import java.io.Serializable;

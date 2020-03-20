@@ -19,7 +19,7 @@ public class PrintScanner {
         // 方式一
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.next());
-        // 方法2：通过 BufferedReader
+        // 方法2：通过BufferedReader
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         System.out.println(input.readLine());
         System.out.println(SecureUtil.md5("java"));

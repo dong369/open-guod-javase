@@ -10,14 +10,14 @@ package ch02_data.callby;
  */
 public class CallByValue {
     public static void main(String[] args) {
-        int a = 100;
-        System.out.println("调用前x的值：" + a);
-        add(a);
-        System.out.println("调用后x的值：" + a);
+        int x = 10;
+        System.out.println("调用前x的值：" + x);
+        add(x);
+        System.out.println("调用后x的值：" + x);
     }
 
     public static void add(int value) {
-        value = value + 1;
+        value = value * 3;
         System.out.println(value);
     }
 }

@@ -10,9 +10,6 @@ package ch02_data.method;
  * @Description 功能模块：五种方法类型的区分
  */
 public abstract class MethodMain01 {
-    public static void main(String[] args) {
-    }
-
     /**
      * Static Methods：静态方法
      */

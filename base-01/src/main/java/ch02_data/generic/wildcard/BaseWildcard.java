@@ -61,7 +61,6 @@ public class BaseWildcard {
         sup.add(new Fruit());
         sup.add(new Apple());
 
-
         // 读取数据
         Fruit fruit = ext.get(0);
         // Fruit object = sup.get(0);
