@@ -1,7 +1,7 @@
 package ch02_data.generic.useinterface;
 
 /**
- * project - 接口泛型
+ * 接口泛型
  *
  * @author guod
  * @version 1.0
