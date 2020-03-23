@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * Project -
+ * 键盘输入
  *
  * @author guodd
  * @version 1.0

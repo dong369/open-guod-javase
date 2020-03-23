@@ -1,5 +1,9 @@
 package jdk.jdk8.lambda;
 
+import org.junit.Test;
+
+import java.util.function.Function;
+
 /**
  * 数据类型可以省略，可以由编译器推动得出。
  *
@@ -9,12 +13,17 @@ package jdk.jdk8.lambda;
  * @since 1.8
  */
 public class Lambda04 {
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         int i = Lambda04.fun04((a, b) -> {
             b++;
             return a + b;
         }, 1, 3);
         System.out.println(i);
+    }
+
+    @Test
+    public void main1() {
     }
 
     private static int fun04(Movable04 movable04, int a, int b) {

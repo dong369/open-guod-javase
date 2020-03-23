@@ -46,5 +46,4 @@ class A {
      * 属性描述：age
      */
     private Integer age;
-
 }

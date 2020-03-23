@@ -28,8 +28,9 @@ public class FunctionInterfaceMain {
          * 这种形式最为直观，lambda表达式，接收一个String类型的参数，返回一个String类型的结果。
          * 完全符合函数式接口FunctionInterfaceTest的定义
          */
-        BaseFunctionInterface03 functionInterfaceTest1 = item -> item + 1;
-        System.out.println(functionInterfaceTest1);
+        BaseFunctionInterface03 functionInterfaceTest1 = (String item) -> item + 1;
+        System.out.println(functionInterfaceTest1.getInfo("java"));
+
         /*
          * 2、方法引用
          * Main方法当中的getInstance和getMessage方法接收一个参数，返回一个结果。符合函数式接口FunctionInterfaceTest*的定义。
@@ -39,6 +40,8 @@ public class FunctionInterfaceMain {
          * 这种约束计算过程的输入和输出的形式的好处可以看一下joinStr方法。
          */
         BaseFunctionInterface03 functionInterfaceTest2 = FunctionInterfaceMain::getInstance;
+        String msg1 = joinStr(functionInterfaceTest2);
+        System.out.println(msg1);
         /*
          * 3、构造方法引用
          * 构造函数的结构：接收输入参数，然后返回一个对象。这种约束跟函数式接口的约束很像。
@@ -48,14 +51,12 @@ public class FunctionInterfaceMain {
          * 这就是我们直接String::new，没有指定使用哪一个构造方法，却可以创建实例的原因
          */
         BaseFunctionInterface03 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
-
-        String msg1 = joinStr(functionInterfaceTest2);
         String msg2 = joinStr(functionInterfaceTest3);
-        System.out.println(msg1);
         System.out.println(msg2);
 
         //输出：你好！世界
         String msg3 = joinStr(item -> item + "！世界");
+
         //输出：世界，你好！
         String msg4 = joinStr(item -> "世界," + item + "!");
         System.out.println(msg3);

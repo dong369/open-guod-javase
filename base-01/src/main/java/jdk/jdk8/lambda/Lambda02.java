@@ -1,5 +1,7 @@
 package jdk.jdk8.lambda;
 
+import org.junit.Test;
+
 /**
  * 取代匿名内部类的方式lambda表达式，无参，无返回值。
  * lambda表达式的本质是作为函数式接口的实例！！！
@@ -10,7 +12,8 @@ package jdk.jdk8.lambda;
  * @since 1.8
  */
 public class Lambda02 {
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         Lambda02.fun(
                 () -> {
                     System.out.println("lambda表达式");

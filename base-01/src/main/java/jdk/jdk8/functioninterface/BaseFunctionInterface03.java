@@ -4,7 +4,7 @@ package jdk.jdk8.functioninterface;
  * 函数式接口的实例就是lambda表达式。
  * 1、被@FunctionalInterface注释的接口。
  * 2、满足@FunctionalInterface注释的约束。
- * 约束：①接口有且只能有个一个抽象方法，只有方法定义，没有方法体；②在接口中覆写Object类中的public方法，不算是函数式接口的方法。
+ * 约束：一、接口有且只能有个一个抽象方法，只有方法定义，没有方法体；二、在接口中覆写Object类中的public方法，不算是函数式接口的方法。
  *
  * @author guod
  * @version 1.0

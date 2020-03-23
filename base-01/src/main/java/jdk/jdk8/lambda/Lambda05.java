@@ -16,6 +16,7 @@ public class Lambda05 {
             System.out.println(s);
             return s;
         });
+
         System.out.println(fun);
 
         fun02(new UserAble() {
@@ -27,8 +28,7 @@ public class Lambda05 {
     }
 
     public static String fun(Images images) {
-        String print = images.print("hello world");
-        return print;
+        return images.print("hello world");
     }
 
     public static void fun02(UserAble userAble) {

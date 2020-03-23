@@ -1,5 +1,7 @@
 package jdk.jdk8.methodref;
 
+import java.util.function.Consumer;
+
 /**
  * 特定对象的实例方法引用
  * 语法格式：对象 :: 非静态方法
@@ -14,6 +16,11 @@ package jdk.jdk8.methodref;
  */
 public class LambdaMethod02 {
     public static void main(String[] args) {
+        Consumer<String> con01 = str -> System.out.println(str);
+        con01.accept("java");
+        Consumer<String> con02 = System.out::println;
+        con01.accept("c");
+
         String str = "Hello world";
         Method02<String> runnable = () -> str.toUpperCase();
         String upper = runnable.upper();

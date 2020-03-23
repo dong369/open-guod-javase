@@ -10,7 +10,6 @@ package ch02_data.string;
  */
 public class StringMain {
     public static void main(String[] args) {
-        String s = new String("45678");
         String str = "41011637230102099080";
         // 从0开始截取3位
         System.out.println(str.substring(0, 3));

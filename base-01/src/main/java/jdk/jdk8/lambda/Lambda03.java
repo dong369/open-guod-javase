@@ -14,7 +14,8 @@ import java.util.function.Consumer;
  * @since 1.8
  */
 public class Lambda03 {
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         Lambda03.fun03((e) -> {
             // 截取最后一位
             System.out.println(e.substring(0, e.length() - 1));
