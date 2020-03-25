@@ -18,6 +18,7 @@ public class SupplierTest {
     @Test
     public void supplier() {
         Supplier<Mask> a = Mask::new;
+        System.out.println(a.get().getType());
         Supplier<Random> randomSupplier = Random::new;
         System.out.println(randomSupplier.get().nextInt());
     }

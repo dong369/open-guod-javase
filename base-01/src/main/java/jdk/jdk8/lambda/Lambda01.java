@@ -27,6 +27,7 @@ public class Lambda01 {
 
     @Test
     public void lambda() {
+        // 接口是不能直接new对象的
         Lambda01.fun01(new Movable01() {
             @Override
             public void move() {
@@ -57,7 +58,7 @@ public class Lambda01 {
         Comparator<Integer> a = (c1, c2) -> {
             return Integer.compare(c1, c2);
         };
-        a.compare(1, 2);
+        System.out.println(a.compare(1, 2));
     }
 
     @Test

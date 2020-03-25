@@ -20,6 +20,8 @@ public class ConsumerTest {
         Consumer<Mask> brand = m -> m.setBrand("3M");
         Consumer<Mask> type = m -> m.setType("N95");
         Consumer<Mask> price = m -> m.setPrice(19.9);
+        // void println(Object x);
+        // void accept(T t);
         Consumer<Mask> print = System.out::println;
 
         brand.andThen(type)

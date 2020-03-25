@@ -13,4 +13,9 @@ package jdk.jdk8.functioninterface;
  */
 public interface BaseFunctionInterface02 {
     public abstract String getInfo(String input);
+
+    // 默认方法
+    default void def() {
+        System.out.println("我是默认方法");
+    }
 }

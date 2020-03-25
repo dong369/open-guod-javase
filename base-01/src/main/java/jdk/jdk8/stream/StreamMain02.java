@@ -68,9 +68,12 @@ public class StreamMain02 {
     public void sor() {
         List<Integer> integers = Arrays.asList(1, 3, 10, 1, 0, -1, 2, 34);
         integers.stream().sorted().forEach(System.out::println);
+
         createUser().stream().sorted(Comparator.comparing(User::getAge)).forEach(System.out::println);
+        List<User> collect = createUser().stream().sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
     }
 
+    // 排序字段有空的情况
     @Test
     public void listSort() {
         List<User> users = createUser();

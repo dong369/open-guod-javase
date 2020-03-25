@@ -22,16 +22,16 @@ public class Lambda03 {
         });
     }
 
-    private static void fun03(Movable03 movable03) {
-        movable03.move("hello world!");
-    }
-
     @Test
     public void consumer() {
         Consumer<String> consumer = (String s) -> {
             System.out.println(s);
         };
         consumer.accept("java");
+    }
+
+    private static void fun03(Movable03 movable03) {
+        movable03.move("hello world!");
     }
 }
 

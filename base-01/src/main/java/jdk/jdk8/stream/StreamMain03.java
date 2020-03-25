@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * 终止操作+规约
+ * 终止操作 + 规约
  *
  * @author guod
  * @version 1.0

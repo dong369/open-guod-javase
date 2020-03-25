@@ -1,11 +1,9 @@
 package jdk.jdk8.methodref;
 
-import io.vertx.core.Handler;
+import jdk.jdk8.lambdaapi.entity.Mask;
 import org.junit.Test;
 
 import java.util.Comparator;
-import java.util.Random;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
