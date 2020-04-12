@@ -12,9 +12,9 @@ import java.util.Optional;
  */
 public class OptionalMain02 {
     public static void main(String[] args) {
-        System.out.println(getUserName(new User("guod", 22)));
+        System.out.println(getUserName(new User("guo", 22)));
         System.out.println(getUserNameOptional(null));
-        System.out.println(getUserOptional(new User("guod", 24)).getName());
+        System.out.println(getUserOptional(new User("guo", 24)).getName());
     }
 
     /**

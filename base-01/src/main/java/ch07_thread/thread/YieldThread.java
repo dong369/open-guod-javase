@@ -5,7 +5,6 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:7:59
  * @since 1.8
  */
 public class YieldThread {
@@ -27,7 +26,7 @@ class T8 extends Thread {
         for (int i = 0; i < 100; i++) {
             System.out.println(getName() + i);
             if (i % 10 == 0) {
-                yield();
+                // yield();
             }
         }
 

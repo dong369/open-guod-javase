@@ -12,6 +12,7 @@ package ch12_adapter.lifeexample;
 public class MainTest {
     public static void main(String[] args) {
         DC5V dc5V = new PowerAdapter();
-        dc5V.outputDC5V();
+        int i = dc5V.outputDC5V();
+        System.out.println(i);
     }
 }

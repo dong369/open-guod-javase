@@ -42,7 +42,14 @@ public class GenericMethod<T> {
     private void test01(T t) {
     }
 
-    // <E>类型参数，E参数化类型
+    public <T> void test02() {
+
+    }
+
+    // <E>声明类型参数，也可以理解为声明方法为泛型方法
+    // E参数化类型，返回值类型
+    // E指明泛型的具体类型
+    // e泛型类的对象
     private static <E> E fun02(E e) {
         return e;
     }

@@ -9,7 +9,6 @@ package ch03_oothinking.relation;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/12/28 时间:9:00
  * @since 1.8
  */
 public class DependencyClass {

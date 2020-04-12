@@ -67,7 +67,6 @@ package ch01_helloworld;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/19 时间:8:01
  * @since 1.8
  */
 public class HelloWorld {
@@ -75,7 +74,7 @@ public class HelloWorld {
         for (String arg : args) {
             System.out.println(arg);
         }
-        System.out.println("Hello World!");
+        System.out.println("Hello World!你好世界");
         System.out.printf("%d", 34);
     }
 }

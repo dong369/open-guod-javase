@@ -11,7 +11,7 @@ import java.util.Optional;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class OptionalTestMain06 {
+public class OptionalMain06 {
     public static void main(String[] args) {
     }
 

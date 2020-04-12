@@ -21,7 +21,6 @@ import java.util.stream.Stream;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:15:26
  * @since 1.8
  */
 public class StreamMain01 {
@@ -47,7 +46,7 @@ public class StreamMain01 {
         // 方式四：创建无限流（造数据）
         Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);
         Stream.generate(Math::random).limit(10).forEach(System.out::println);
-        
+
         // 方式五：通过缓冲流
         BufferedReader br = new BufferedReader(new FileReader(new File("d:/test/test.txt")));
         Stream<String> lines = br.lines();

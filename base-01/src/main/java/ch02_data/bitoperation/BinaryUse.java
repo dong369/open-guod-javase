@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import javax.xml.bind.DatatypeConverter;
 
-//import javax.xml.bind.DatatypeConverter;
-
 /**
  * [二进制]、八进制、十进制、十六进制
  * 在Java语言中，二进制数使用补码表示，最高位为符号位，正数的符号位为0，负数为1。
@@ -15,7 +13,6 @@ import javax.xml.bind.DatatypeConverter;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/7 时间:12:52
  * @since 1.8
  */
 public class BinaryUse {

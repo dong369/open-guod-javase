@@ -13,9 +13,9 @@ import java.util.Optional;
  * @JDK 1.8
  * @Description 功能模块：
  */
-public class OptionalTestMain04 {
+public class OptionalMain04 {
     public static void main(String[] args) {
-        User user = new User("guod", 12);
+        User user = new User("guo", 12);
         Optional.of(user).ifPresent(u -> {
             System.out.println(u.getName());
         });

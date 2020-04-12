@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
  * @date 2020/2/24
  * @since 1.8
  */
-public class SyncTest {
+public class SyncMain {
     // JVM是一个标准规范
     // HotSpot是一个具体产品/实现；其它虚拟机J9、taoBaoVM
     // openJDK是一个项目/代码/C++开发的，就是HotSpot的开源部分，HotSpot是基于openJDK开发的

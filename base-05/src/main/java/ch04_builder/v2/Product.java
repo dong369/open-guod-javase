@@ -27,9 +27,9 @@ public class Product {
     private Double coursePrice;
 
     private Product(Builder builder) {
-        this.courseName=builder.getCourseName();
-        this.courseVideo=builder.getCourseVideo();
-        this.coursePrice=builder.getCoursePrice();
+//        this.courseName=builder.getCourseName();
+//        this.courseVideo=builder.getCourseVideo();
+//        this.coursePrice=builder.getCoursePrice();
     }
 
     @Data

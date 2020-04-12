@@ -16,7 +16,7 @@ import static java.lang.annotation.ElementType.LOCAL_VARIABLE;
 @Documented
 @Target({TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE})
 @Retention(RetentionPolicy.RUNTIME)
-@Inherited
+@Inherited  // 继承的
 public @interface MyAnnotations {
     MyAnnotation[] value();
 }

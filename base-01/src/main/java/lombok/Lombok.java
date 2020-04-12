@@ -7,7 +7,6 @@ import lombok.experimental.Accessors;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/23 时间:8:13
  * @since  1.8
  */
 @Setter
@@ -27,7 +26,7 @@ public class Lombok {
     private Integer age;
 
     public static void main(String[] args) {
-        Lombok lombok = Lombok.of("guo").setAge(22);
+        Lombok lombok = Lombok.of("guo").setAge(22).setName("");
         System.out.println(lombok.getName() + lombok.getAge());
         System.out.println(lombok);
     }

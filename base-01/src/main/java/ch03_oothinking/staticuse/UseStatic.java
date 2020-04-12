@@ -1,13 +1,10 @@
 package ch03_oothinking.staticuse;
 
 /**
- * project -
+ * static关键字（静态变量+全局常量、静态方法、静态内部类、静态代码块、静态导入）
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/3/2 时间:17:00
- * @JDK 1.8
- * @Description 功能模块：static关键字（静态变量+全局常量、静态方法、静态内部类、静态代码块、静态导入）
  */
 public class UseStatic {
     public static void main(String[] args) {

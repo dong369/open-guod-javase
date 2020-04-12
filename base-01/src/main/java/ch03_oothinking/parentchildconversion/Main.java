@@ -9,7 +9,6 @@ import ch03_oothinking.initorder.extendsclass.Parent;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/29 时间:8:14
  * @since 1.8
  */
 public class Main {

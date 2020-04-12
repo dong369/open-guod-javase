@@ -9,9 +9,6 @@ import lombok.NoArgsConstructor;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/9/2 时间:20:59
- * @JDK 1.8
- * @Description 功能模块：
  */
 @Data
 @NoArgsConstructor

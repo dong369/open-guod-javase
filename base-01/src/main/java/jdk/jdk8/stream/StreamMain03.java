@@ -64,4 +64,15 @@ public class StreamMain03 {
         Set<User> userSet = user.stream().filter(e -> e.getAge() > 8).collect(Collectors.toSet());
         userSet.forEach(System.out::println);
     }
+
+    // 分页
+    @Test
+    public void page() {
+        List<User> areaVo = StreamMain02.createUser().stream()
+                // pageable.getPageSize() * (pageable.getPageNumber() - 1)
+                .skip(10)
+                // pageable.getPageSize()
+                .limit(10).collect(Collectors.toList());
+        System.out.println(areaVo);
+    }
 }

@@ -15,8 +15,8 @@ public class OptionalMain01 {
         // 1、创建一个包装对象值为空的Optional对象
         Optional<Object> empty = Optional.empty();
         // 2、创建包装对象值非空的Optional对象
-        Optional<Object> o = Optional.of("optional");
+        Optional<String> of = Optional.of("optional");
         // 3、创建包装对象值允许为空的Optional对象
-        Optional<Object> o1 = Optional.ofNullable(null);
+        Optional<Object> ofNull = Optional.ofNullable(null);
     }
 }

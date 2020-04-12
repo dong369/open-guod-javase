@@ -7,9 +7,6 @@ import org.apache.commons.lang3.SerializationUtils;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/29 时间:8:36
- * @JDK 1.8
- * @Description 功能模块：
  * 序列化对象必须实现序列化接口。
  * 序列化对象里面的属性是对象的话也要实现序列化接口。
  * 类的对象序列化后，类的序列化ID不能轻易修改，不然反序列化会失败。

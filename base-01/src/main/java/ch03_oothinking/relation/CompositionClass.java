@@ -10,7 +10,6 @@ package ch03_oothinking.relation;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/12/28 时间:9:21
  * @since 1.8
  */
 public class CompositionClass {
@@ -18,13 +17,12 @@ public class CompositionClass {
         Room room = new Room();
         room.createRoom();
     }
-
 }
 
 class Room {
-    Room createRoom() {
+    void createRoom() {
         System.out.println("创建房间");
-        return new Room();
+        new Room();
     }
 }
 

@@ -10,12 +10,12 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2020/2/23
  * @since 1.8
  */
-public class LockInterruptTest {
+public class LockInterruptMain {
     static ReentrantLock lock = new ReentrantLock(true);
 
     public static void main(String[] args) throws InterruptedException {
-        Thread t1 = new Thread(LockInterruptTest::aa);
-        Thread t2 = new Thread(LockInterruptTest::aa);
+        Thread t1 = new Thread(LockInterruptMain::aa);
+        Thread t2 = new Thread(LockInterruptMain::aa);
         t1.setName("t1");
         t1.start();
         Thread.sleep(2000);

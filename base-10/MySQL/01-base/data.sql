@@ -3,6 +3,7 @@ select version();
 
 show databases;
 
+/*如果是关键字的或带特殊符合的名称*/
 use `base-sql`;
 
 show tables;
@@ -27,7 +28,7 @@ alter database aa charset = gbk;
 
 drop database if exists a;
 
--- 04创建表的两种方式（uuid、自增主键）
+-- 04创建表的两种方式（uuid、自增主键），推荐使用自增主键
 CREATE TABLE tb_book
 (
     id        varchar(36) NOT NULL,
@@ -56,7 +57,6 @@ use `base-sql`;
 show table status;
 desc tb_book;
 
-
 # 表复制
 create table test_copy1 like tb_book;
 
@@ -71,7 +71,7 @@ drop table if exists t_student,t_book;
 
 # 05、CURL常用操作
 insert into tb_book(id, book_name, book_desc)
-values (1,'java', '开发');
+values (1, 'java', '开发');
 
 delete
 from tb_book
@@ -84,7 +84,6 @@ where id = 2;
 select *
 from tb_book
 where 1;
-
 
 select goods_id, cat_id, goods_name, shop_price
 from goods
@@ -99,7 +98,6 @@ select database();
 
 select database(), version(), user();
 
-
 with cte1 as (select * from girl),
      cte2 as (select * from boy)
 select *
@@ -107,6 +105,5 @@ from cte1,
      cte2
 where cte1.hid = cte2.hid;
 
-
 select *
-from (select goods_name from goods) t
+from (select goods_name from goods) t;

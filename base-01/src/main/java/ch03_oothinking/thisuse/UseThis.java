@@ -11,8 +11,6 @@ package ch03_oothinking.thisuse;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/3/2 时间:17:02
- * @since 1.8
  */
 public class UseThis {
     /**

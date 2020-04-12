@@ -5,7 +5,6 @@ package ch02_data.bitoperation;
  *
  * @author guodd
  * @version 1.0
- * @date 2020/2/25
  * @since 1.8
  */
 public class OctalUse {

@@ -14,7 +14,7 @@ import java.lang.reflect.Constructor;
  * @date 2020/2/17
  * @since 1.8
  */
-public class ConstructorTest {
+public class ConstructorMain {
     // 获取构造器
     @Test
     public void constructorAll() {

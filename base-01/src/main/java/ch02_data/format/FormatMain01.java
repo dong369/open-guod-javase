@@ -5,8 +5,6 @@ package ch02_data.format;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/16 时间:22:37
- * @since 1.8
  */
 public class FormatMain01 {
     public static void main(String[] args) {
