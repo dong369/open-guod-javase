@@ -11,7 +11,6 @@ import org.junit.Test;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/19 时间:8:03
  * @since 1.8
  */
 public class GetClass {

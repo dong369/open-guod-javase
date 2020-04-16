@@ -10,7 +10,6 @@ import java.lang.annotation.Target;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/9/12 时间:21:36
  * @since 1.8
  */
 @Target(ElementType.TYPE)

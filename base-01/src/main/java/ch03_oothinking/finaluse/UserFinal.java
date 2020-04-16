@@ -5,11 +5,9 @@ package ch03_oothinking.finaluse;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/7/22 时间:16:12
  * @since 1.8
  */
-// 表示该类不能被继承
-public final class UserFinal {
+public final class UserFinal { // 表示该类不能被继承
     /**
      * 表示变量只能一次赋值以后值不能被修改（常量）。​
      */

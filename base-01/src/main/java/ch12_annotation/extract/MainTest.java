@@ -9,7 +9,6 @@ import java.lang.annotation.Annotation;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/12 时间:18:08
  * @since 1.8
  */
 public class MainTest {

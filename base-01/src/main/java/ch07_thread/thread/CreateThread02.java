@@ -5,7 +5,6 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/11 时间:11:09
  * @since 1.8
  */
 public class CreateThread02 {

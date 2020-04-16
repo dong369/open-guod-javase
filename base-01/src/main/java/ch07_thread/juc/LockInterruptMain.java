@@ -1,5 +1,7 @@
 package ch07_thread.juc;
 
+import org.junit.Test;
+
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -7,13 +9,14 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author guodd
  * @version 1.0
- * @date 2020/2/23
  * @since 1.8
  */
 public class LockInterruptMain {
+
     static ReentrantLock lock = new ReentrantLock(true);
 
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public void main() throws InterruptedException {
         Thread t1 = new Thread(LockInterruptMain::aa);
         Thread t2 = new Thread(LockInterruptMain::aa);
         t1.setName("t1");

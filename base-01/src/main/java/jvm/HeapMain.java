@@ -12,13 +12,12 @@ import java.util.List;
  *
  * @author guodd
  * @version 1.0
- * @date 2020/2/25
  * @since 1.8
  */
 public class HeapMain {
     // 减少full gc的次数频率/过程时间（停顿时间）
     // 1、system.gc；2、老年代满了
-    private byte[] bytes = new byte[1024 * 100];
+    byte[] bytes = new byte[1024 * 100];
 
     @Test
     public void throwsFinally() {

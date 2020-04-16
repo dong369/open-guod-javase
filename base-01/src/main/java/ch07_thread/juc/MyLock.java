@@ -2,8 +2,8 @@ package ch07_thread.juc;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.junit.Test;
 
-import javax.tools.JavaCompiler;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -11,7 +11,6 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
 @NoArgsConstructor
@@ -21,11 +20,11 @@ public class MyLock {
      * name : guo
      * age : 12
      */
-
     private String name;
     private int age;
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         MyLock myLock = new MyLock();
         myLock.setName("");
         myLock.setAge(0);

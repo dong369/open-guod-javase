@@ -1,0 +1,5 @@
+（1）前提条件是目前机器可以正常使用打印功能
+（2）其次将JACOB的DLL拷贝至 C:\Windows\System32 中
+（2）DCom Server Process Launcher（DcomLaunch）服务需要打开[services.msc]
+（3）需要安装Microsoft office 2003+
+打印属性参见 "http://msdn.microsoft.com/zh-cn/library/office/ff838253.aspx" target="PrintOut 方法 (Excel)

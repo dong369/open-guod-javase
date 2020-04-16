@@ -5,10 +5,11 @@ package ch03_oothinking.finalize;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/5/24 时间:13:26
  * @since 1.8
+ * {@link System} call gc时，由垃圾回收器调用finalize
  */
 public class UseFinalizeMain {
     public static void main(String[] args) {
+        System.gc();
     }
 }

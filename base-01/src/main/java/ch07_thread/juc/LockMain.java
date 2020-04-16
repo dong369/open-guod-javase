@@ -1,5 +1,7 @@
 package ch07_thread.juc;
 
+import org.junit.Test;
+
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -7,14 +9,14 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
 public class LockMain {
     // 公平锁（true）& 非公平锁
     static ReentrantLock reentrantLock = new ReentrantLock(true);
 
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         Thread thread01 = new Thread(LockMain::aa);
         Thread thread02 = new Thread(LockMain::aa);
 

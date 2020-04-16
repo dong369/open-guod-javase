@@ -4,11 +4,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * project -
- *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/12 时间:11:56
  * @since 1.8
  */
 public class AnnotationParser {
