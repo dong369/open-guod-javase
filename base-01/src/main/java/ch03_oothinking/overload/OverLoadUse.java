@@ -7,5 +7,6 @@ package ch03_oothinking.overload;
  * @version 1.0
  * @since 1.8
  */
-public class OverLoad {
+public class OverLoadUse {
+
 }

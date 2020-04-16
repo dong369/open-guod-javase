@@ -5,13 +5,22 @@ package ch03_oothinking.initorder;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/7 时间:14:27
  * @since 1.8
  */
 public class ClassInitOrder {
+    /**
+     * 属性描述：address
+     */
+    private static String address;
+
     static {
         System.out.println("静态代码块");
     }
+
+    /**
+     * 属性描述：name
+     */
+    private String name;
 
     {
         System.out.println("游离块");
@@ -22,7 +31,11 @@ public class ClassInitOrder {
     }
 
     public static void main(String[] args) {
+        System.out.println("====第一次创建对象====");
         new ClassInitOrder();
+        System.out.println("====第二次创建对象====");
+        new ClassInitOrder();
+        System.out.println("====第三次创建对象====");
         new ClassInitOrder();
     }
 }

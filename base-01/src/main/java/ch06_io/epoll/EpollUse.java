@@ -7,5 +7,6 @@ package ch06_io.epoll;
  * @version 1.0
  * @since JDK1.8
  */
-public class EpollMain {
+public class EpollUse {
+
 }

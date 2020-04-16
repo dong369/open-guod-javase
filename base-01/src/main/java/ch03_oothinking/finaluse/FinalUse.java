@@ -7,7 +7,7 @@ package ch03_oothinking.finaluse;
  * @version 1.0
  * @since 1.8
  */
-public final class UserFinal { // 表示该类不能被继承
+public final class FinalUse { // 表示该类不能被继承
     /**
      * 表示变量只能一次赋值以后值不能被修改（常量）。​
      */

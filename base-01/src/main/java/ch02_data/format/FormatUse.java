@@ -6,7 +6,7 @@ package ch02_data.format;
  * @author guodd
  * @version 1.0
  */
-public class FormatMain01 {
+public class FormatUse {
     public static void main(String[] args) {
         // 字符串格式
         String format = String.format("%.2f", 2.1495926);

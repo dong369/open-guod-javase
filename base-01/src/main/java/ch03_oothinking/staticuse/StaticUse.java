@@ -1,16 +1,16 @@
 package ch03_oothinking.staticuse;
 
 /**
- * static关键字（1、修饰成员变量 2、修饰成员方法 3、静态代码块 4、修饰类【只能修饰内部类也就是静态内部类】 5、静态导包）
+ * static关键字（1、修饰成员变量 2、修饰成员方法 3、静态代码块 4、修饰类[只能修饰内部类也就是静态内部类] 5、静态导包）
  * static变量值在类加载的时候分配空间，以后创建类对象的时候不会重新分配。赋值的话，是可以任意赋值的！
  * 被static修饰的变量或者方法是优先于对象存在的，也就是说当一个类加载完毕之后，即便没有创建对象，也可以去访问。
  *
  * @author guodd
  * @version 1.0
  */
-public class UseStatic {
+public class StaticUse {
     public static void main(String[] args) {
-        UseStatic.test01();
+        StaticUse.test01();
     }
 
     // 01、静态方法（构造器）是无法被重写。

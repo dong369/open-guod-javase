@@ -3,11 +3,8 @@ package ch07_thread.threadpool;
 import java.util.concurrent.*;
 
 /**
- * project -
- *
  * @author guod
  * @version 1.0
- * @date 日期:2018/10/31 时间:13:06
  * @since 1.8
  */
 public class MainTest {

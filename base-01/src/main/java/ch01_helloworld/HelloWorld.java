@@ -2,22 +2,24 @@ package ch01_helloworld;
 
 /**
  * 第一个hello world程序（硬件+软件+图灵+冯诺依曼体系结构）
- * 跨平台性，是指java语言编写的程序，一次编译后，可以在多个系统平台上运行。
+ * 跨平台性，是指Java语言编写的程序，一次编译后，可以在多个系统平台上运行，本质是JVM跨平台。
  * Java语言采用Unicode编码标准，Unicode（标准码），它为每个字符制订了一个唯一的数值，因此在任何的语言，平台，程序都可以放心的使用。
- * Java源代码->编译器->jvm可执行的Java字节码(即虚拟指令)->jvm->jvm中解释器->机器可执行的二进制机器码->程序运行。
+ * Java源代码->编译器->JVM可执行的Java字节码(即虚拟指令)->JVM->JVM中解释器->机器可执行的二进制机器码->程序运行。
+ * 字节码：Java源代码经过虚拟机编译器编译后产生的文件（即扩展为.class的文件），它不面向任何特定的处理器，只面向虚拟机。
  * <p>
  * 创始人：Java之父——詹姆斯·高斯林出生于加拿大，是一位计算机编程天才。
  * 创建日期：1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。
  * <p>
  * IT定律之计算机行业发展规律
  * 摩尔定律(Moore's Law)：意指集成电路上可容纳的元器件的数量每隔18至24个月就会增加一倍，性能也将提升一倍。
- * 安迪比尔定律(Andy and Bill's Law）：硬件提高的性能，很快被软件消耗掉了。
  * 反摩尔定律(Reverse Moore's law）：如果你反过来看摩尔定律，一个IT公司如果今天和18个月前卖掉同样多的、同样的产品，它的营业额就要降一半。
+ * 安迪比尔定律(Andy and Bill's Law）：硬件提高的性能，很快被软件消耗掉了。
  * <p>
  * CPU：运行时首先会去自身的缓存中寻找，如果没有再去内存中找。
- * 缓存：会记录一些常用的数据等信息，以免每次都要到内存中，节省了时间，提高了效率。
- * 内存：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
- * 硬盘：数据会先写入内存才能被CPU使用。
+ * 缓存（cache）：CPU的Cache，它中文名称是高速缓冲存储器，会记录一些常用的数据等信息，以免CPU每次都要到内存中，节省了时间，提高了效率，偏重读。
+ * 缓冲（buffer）：缓冲区(buffer)，它是内存空间的一部分，在内存空间中预留了一定的存储空间，偏重写。
+ * 内存（memory）：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
+ * 硬盘（disk）：数据会先写入内存才能被CPU使用。
  * 内存（memory）+缓存（cache）-> 内存储空间
  * 硬盘 -> 外存储空间
  * <p>
@@ -63,10 +65,17 @@ package ch01_helloworld;
  * CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
  * export PATH JAVA_HOME CLASSPATH
  * <p>
- * 三、区分：JDK/JRE/JVM
+ * 三、JVM、JRE和JDK的关系和区分？
+ * JVM：Java Virtual Machine 是 Java 虚拟机，Java 程序需要运行在虚拟机上，不同的平台有自己的虚拟机，因此 Java 语言可以实现跨平台。
+ * JRE：Java Runtime Environment包括Java虚拟机和Java程序所需的核心类库等。
+ * JDK：Java Development Kit是提供给Java开发人员使用的，其中包含了Java的开发工具，也包括了JRE。
  * javac -version
  * java -version
  * javap -c HelloWorld.class
+ *
+ * 四、什么是 Java 程序的主类？应用程序和小程序的主类有何不同？
+ * 一个程序中可以有多个类，但只能有一个类是主类。在 Java 应用程序中，这个主类是指包含 main() 方法的类。
+ * 在 Java 小程序中，这个主类是一个继承自系统类 JApplet 或 Applet 的子类。
  *
  * @author guod
  * @version 1.0

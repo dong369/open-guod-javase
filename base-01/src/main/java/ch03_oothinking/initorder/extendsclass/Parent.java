@@ -5,7 +5,6 @@ package ch03_oothinking.initorder.extendsclass;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/7 时间:14:31
  * @since 1.8
  */
 public class Parent {

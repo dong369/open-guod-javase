@@ -10,7 +10,7 @@ package ch03_oothinking.initorder.extendsclass;
  * @version 1.0
  * @since 1.8
  */
-public class MainTest {
+public class ExtendsClassOrder {
     public static void main(String[] args) {
         Child child = new Child();
         Parent parent = new Parent();

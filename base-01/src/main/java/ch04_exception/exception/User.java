@@ -1,11 +1,8 @@
 package ch04_exception.exception;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/29 时间:8:29
  * @since 1.8
  */
 public class User {

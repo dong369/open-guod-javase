@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.nio.ByteBuffer;
 
 /**
- * 一、缓冲区（UseBuffer）: 在 Java NIO 中负责数据的存取。缓冲区就是数组。用于存储不同数据类型的数据
+ *
  * <p>
  * 根据数据类型不同（boolean 除外） ， 提供看了相应类型的缓冲区：
  * ByteBuffer

@@ -1,9 +1,9 @@
 package ch03_oothinking.equals2hashcode;
 
-public class UseHashEquals {
+public class HashEqualsUse {
     @Override
     public boolean equals(Object o) {
-        System.out.println(o instanceof UseHashEquals);
+        System.out.println(o instanceof HashEqualsUse);
         System.out.println(o.getClass() == getClass());
         System.out.println(getClass());
         System.out.println(o.getClass());
@@ -18,7 +18,7 @@ public class UseHashEquals {
     }
 
     public static void main(String[] args) {
-        UseHashEquals hashEquals = new UseHashEquals();
-        System.out.println(hashEquals.equals(new UseHashEquals()));
+        HashEqualsUse hashEquals = new HashEqualsUse();
+        System.out.println(hashEquals.equals(new HashEqualsUse()));
     }
 }

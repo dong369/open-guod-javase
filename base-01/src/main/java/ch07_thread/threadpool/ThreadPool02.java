@@ -9,7 +9,6 @@ import java.util.concurrent.Executors;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/12/2 时间:12:12
  * @since 1.8
  */
 public class ThreadPool02 {

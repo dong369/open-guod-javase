@@ -6,13 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * project -
+ * 四类八种（整型、浮点型、字符型、布尔型）
+ * 原始类型: boolean，char，byte，short，int，long，float，double
+ * 包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/19 时间:8:02
- * @JDK 1.8
- * @Description 功能模块：四类八种（整型、浮点型、字符型、布尔型）
  */
 public class Data {
 

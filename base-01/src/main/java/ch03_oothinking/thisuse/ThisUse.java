@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * this是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。
+ * this是自身的一个对象，代表对象本身，可以理解为是指向对象本身的一个指针。
  * 关键字this、super都指的是对象。this关键字代表当前对象，super关键字代表父对象。
  * 1、this()和super()为构造方法，作用是在JVM堆中构建出一个对象。
  * 2、为了避免多次创建对象，同一个方法内只能调用一次this()或super()。
@@ -16,7 +16,7 @@ import lombok.Setter;
  * @author guodd
  * @version 1.0
  */
-public class UseThis {
+public class ThisUse {
     /**
      * 属性描述：name
      */
@@ -24,21 +24,25 @@ public class UseThis {
     @Setter
     private String name;
 
-    public UseThis() {
+    public void thisUse() {
+        System.out.println(name);
+    }
+
+    public ThisUse() {
         // 默认是省略的，调用Object无参构造器
         super();
     }
 
-    public UseThis(String name) {
+    public ThisUse(String name) {
         // 3、引用本类的构造函数，必须放在第一行
         this();
 
-        // 2、形参与成员名字重名，用 this 来区分
+        // 2、形参与成员名字重名，用this来区分
         this.name = name;
     }
 
     public void testThis() {
-        // 1、普通的直接引用，this 相当于是指向当前对象本身。
-        System.out.println(this.getName());
+        // 1、普通的直接引用，this相当于是指向当前对象本身。
+        this.thisUse();
     }
 }

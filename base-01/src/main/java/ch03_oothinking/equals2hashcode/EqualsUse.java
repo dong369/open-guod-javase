@@ -15,10 +15,9 @@ package ch03_oothinking.equals2hashcode;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/13 时间:13:00
  * @since 1.8
  */
-public class UserEquals {
+public class EqualsUse {
     @Override
     public boolean equals(Object o) {
         if (this == o) {

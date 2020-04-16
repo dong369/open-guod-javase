@@ -1,7 +1,5 @@
 package ch06_io.vertx;
 
-import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Context;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerResponse;
@@ -11,7 +9,6 @@ import io.vertx.core.http.HttpServerResponse;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
 public class VertxMain {

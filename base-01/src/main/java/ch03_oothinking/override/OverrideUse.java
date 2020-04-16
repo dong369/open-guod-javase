@@ -6,7 +6,7 @@ package ch03_oothinking.override;
  * @author guodd
  * @version 1.0
  */
-public class UseMain {
+public class OverrideUse {
     public static void main(String[] args) {
         Animal animal = new Dog();
         animal.call();

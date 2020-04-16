@@ -9,7 +9,7 @@ package ch03_oothinking.equals2hashcode;
  * @date 日期:2019/3/4 时间:14:45
  * @since 1.8
  */
-public class UseHashCode {
+public class HashCodeUse {
     @Override
     public int hashCode() {
         return 0;

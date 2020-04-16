@@ -16,7 +16,7 @@ import org.junit.Test;
  * @author guodd
  * @version 1.0
  */
-public class UseSuper {
+public class SuperUse {
     @Test
     public void superTest() {
         ChinaPerson chinaPerson1 = new ChinaPerson();

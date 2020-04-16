@@ -1,13 +1,10 @@
 package ch07_thread.threadgroup;
 
 /**
- * project - 线程组
+ * Dubbo的服务分组一样，Java 可以对相同性质的线程进行分组。
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/9 时间:9:37
- * @JDK 1.8
- * @Description 功能模块：Dubbo的服务分组一样，Java 可以对相同性质的线程进行分组。
  */
 public class ThreadGroup01 {
     public static void main(String[] args) {

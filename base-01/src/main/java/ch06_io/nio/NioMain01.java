@@ -12,7 +12,6 @@ import java.nio.channels.FileChannel;
  * 使用场景：NIO适合于连接数目较多且连接比较短的架构，比如聊天服务器、服务期间通信等，编程较复杂。JDK1.4新增。
  *
  * @author by guodd
- * @date 日期:2019/1/3 时间:14:50
  * @since 1.8
  */
 public class NioMain01 {
