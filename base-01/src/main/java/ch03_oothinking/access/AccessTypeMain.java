@@ -8,7 +8,6 @@ package ch03_oothinking.access;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/24 时间:10:29
  * @since 1.8
  */
 public class AccessTypeMain {

@@ -1,4 +1,4 @@
-package ch02_data.noifelse;
+package ch02_data.control.ifelse;
 
 /**
  * Project -

@@ -18,6 +18,7 @@ public class SyncMain {
     // JVM是一个标准规范
     // HotSpot是一个具体产品/实现；其它虚拟机J9、taoBaoVM
     // openJDK是一个项目/代码/C++开发的，就是HotSpot的开源部分，HotSpot是基于openJDK开发的
+    // Oracle JDK（hotspot）版本将每六个月发布一次，而OpenJDK版本每三个月发布一次；
     @Test
     public void vmInfo() {
         System.out.println(VM.current().details());

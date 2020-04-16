@@ -16,7 +16,7 @@ import java.nio.ByteBuffer;
  * FlotBuffer
  * DoubleBuffer
  * <p>
- * 上述缓冲区的管理方式几乎一致，通过allocate() 获取缓冲区
+ * 上述缓冲区的管理方式几乎一致，通过allocate()获取缓冲区
  * <p>
  * 二、缓冲区存取数据的两个核心方法：
  * put()：存入数据到缓冲区
@@ -33,13 +33,10 @@ import java.nio.ByteBuffer;
  * <p>
  * 四、直接缓冲区与非直接缓冲区：
  * 非直接缓冲区：通过 allocate() 方法分配缓冲区，将缓冲区建立在 JVM 的内存中
- * 直接缓冲区：通过allcateDirect() 方法分配直接缓冲区，将缓冲区建立在物理内存中。可以提高效率
+ * 直接缓冲区：通过allocateDirect() 方法分配直接缓冲区，将缓冲区建立在物理内存中。可以提高效率
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/10/31 时间:22:05
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class UseBuffer {
 
@@ -49,6 +46,7 @@ public class UseBuffer {
         ByteBuffer buf = ByteBuffer.allocateDirect(1024);
         buf.put("java".getBytes());
         System.out.println(buf.isDirect());
+        System.out.println(buf.get());
     }
 
     @Test

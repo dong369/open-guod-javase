@@ -1,13 +1,10 @@
 package ch03_oothinking.override;
 
 /**
- * project -
+ * 方法重写（override）实现的是运行时的多态性（也称为后绑定）
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/5/29 时间:13:17
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class UseMain {
     public static void main(String[] args) {

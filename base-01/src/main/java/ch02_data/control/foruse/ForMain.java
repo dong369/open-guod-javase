@@ -1,4 +1,4 @@
-package ch02_data.foruse;
+package ch02_data.control.foruse;
 
 import org.junit.Test;
 

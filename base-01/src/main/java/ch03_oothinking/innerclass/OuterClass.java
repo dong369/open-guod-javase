@@ -1,7 +1,8 @@
 package ch03_oothinking.innerclass;
 
 /**
- * 内部类是指在一个外部类的内部再定义一个类。类名不需要和文件夹相同。
+ * 内部类可以分为四种：成员内部类、局部内部类、匿名内部类和静态内部类。
+ * 在 Java 中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类。
  * 内部类可以是静态static的，也可用public，default，protected和private修饰。
  * 外部顶级类即类名和文件名相同的只能使用public和default。
  * <p>
@@ -15,7 +16,6 @@ package ch03_oothinking.innerclass;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/3/12 时间:20:18
  * @since 1.8
  */
 public class OuterClass {
@@ -40,8 +40,8 @@ public class OuterClass {
         }
     }
 
-    // 2、定义在方法中的内部类，就是局部内部类。
     public void inner() {
+        // 2、定义在方法中的内部类，就是局部内部类。
         class Local {
         }
     }
@@ -52,6 +52,10 @@ public class OuterClass {
     }
 
     // 4、匿名内部类就是没有名字的内部类，日常开发中使用的比较多。
+    // 匿名内部类必须继承一个抽象类或者实现一个接口
+    // 匿名内部类不能定义任何静态成员和静态方法
+    // 当所在的方法的形参需要被匿名内部类使用时，必须声明为 final
+    // 匿名内部类不能是抽象的，它必须要实现继承的类或者实现的接口的所有抽象方法
     private static abstract class AbstractClass {
         abstract void test();
     }

@@ -1,4 +1,4 @@
-package ch02_data.whileuse;
+package ch02_data.control.whileuse;
 
 /**
  * The class/interface

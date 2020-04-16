@@ -7,7 +7,9 @@ import com.jacob.com.Variant;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Administrator
+ * 调用局域网打印机，打印word文档
+ *
+ * @author guodd
  */
 @Slf4j
 public class PrintWord {

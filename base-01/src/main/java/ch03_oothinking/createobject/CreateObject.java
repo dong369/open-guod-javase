@@ -6,13 +6,12 @@ import org.springframework.util.SerializationUtils;
 import java.lang.reflect.Constructor;
 
 /**
- * project -
+ * 创建对象的方式
+ * 一个对象引用可以指向 0 个或 1 个对象（一根绳子可以不系气球，也可以系一个气球）;
+ * 一个对象可以有 n 个引用指向它（可以用 n 条绳子系住一个气球）
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/24 时间:10:09
- * @JDK 1.8
- * @Description 功能模块：创建对象的五种方式
  */
 public class CreateObject {
     public static void main(String[] args) throws Exception {

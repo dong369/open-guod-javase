@@ -1,13 +1,8 @@
 package ch02_data.parameter;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/7/22 时间:14:22
- * @JDK 1.8
- * @Description 功能模块：可变参数
  */
 public class Parameter {
     public static void main(String[] args) {
