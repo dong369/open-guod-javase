@@ -1,13 +1,10 @@
 package regex;
 
 /**
- * project - 正则表达式
+ * POSIX character classes (US-ASCII only)和边界匹配
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:17:49
- * @JDK 1.8
- * @Description 功能模块：POSIX character classes (US-ASCII only)和边界匹配
  */
 public class MainRegex05 {
     public static void main(String[] args) {

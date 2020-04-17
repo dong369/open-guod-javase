@@ -10,7 +10,6 @@ import java.util.function.Function;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:57
  * @since 1.8
  */
 public class LambdaMethod04 {

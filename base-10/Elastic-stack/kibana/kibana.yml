@@ -92,7 +92,7 @@
 # Specifies the path where Kibana creates the process ID file.
 #pid.file: /var/run/kibana.pid
 
-# Enables you specify a file where Kibana stores log output.
+# Enables you specify a file where Kibana stores ch04_exception.log output.
 #logging.dest: stdout
 
 # Set the value of this setting to true to suppress all logging output.
@@ -101,7 +101,7 @@
 # Set the value of this setting to true to suppress all logging output other than error messages.
 #logging.quiet: false
 
-# Set the value of this setting to true to log all events, including system usage information
+# Set the value of this setting to true to ch04_exception.log all events, including system usage information
 # and all requests.
 #logging.verbose: false
 

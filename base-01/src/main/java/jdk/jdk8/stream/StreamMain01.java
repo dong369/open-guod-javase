@@ -35,11 +35,12 @@ public class StreamMain01 {
         Stream<Integer> integerStream = asList.parallelStream();
         integerStream.sorted(Integer::compareTo).forEach(System.out::println);
 
-        // 方式二：通过数组
+        // 方式二：通过Arrays工具列
         int[] a = {1, 2, 3};
         IntStream stream1 = Arrays.stream(a);
 
         // 方式三：stream静态方法of()
+        Stream<String> java = Stream.of("java", "javascript");
         List<String> collect = Stream.of("java", "javascript").collect(Collectors.toList());
         collect.forEach(System.out::println);
 

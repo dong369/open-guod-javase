@@ -11,7 +11,6 @@ import java.util.function.Consumer;
  *
  * @author guodd
  * @version 1.0
- * @date 2020/3/22
  * @since 1.8
  */
 public class ConsumerTest {

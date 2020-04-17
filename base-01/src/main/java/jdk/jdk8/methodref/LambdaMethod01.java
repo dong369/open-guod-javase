@@ -1,6 +1,5 @@
 package jdk.jdk8.methodref;
 
-import jdk.jdk8.lambdaapi.entity.Mask;
 import org.junit.Test;
 
 import java.util.Comparator;
@@ -18,17 +17,19 @@ import java.util.function.Function;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:28
  * @since 1.8
  */
 public class LambdaMethod01 {
     @Test
     public void main() {
+        int compare = Integer.compare(1, 2);
+        System.out.println(compare);
         Comparator<Integer> comparable = Integer::compare;
         System.out.println(comparable.compare(1, 2));
 
         Function<Double, Long> function = d -> Math.round(d);
         Function<Double, Long> function1 = Math::round;
+        System.out.println(function1.apply(12.1));
 
         // 即将String.valueOf()方法转换成了Method01接口里面的convert方法
         Method01<Integer, String> msg01 = e -> String.valueOf(e);

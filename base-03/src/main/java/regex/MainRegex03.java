@@ -1,13 +1,11 @@
 package regex;
 
 /**
- * project - 正则表达式
+ * 初步认识.、*、+、？、[]只匹配一个字符
+ * 当该字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是非贪婪的。
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:17:29
- * @JDK 1.8
- * @Description 功能模块：初步认识.、*、+、？、[]只匹配一个字符
  */
 public class MainRegex03 {
     public static void main(String[] args) {

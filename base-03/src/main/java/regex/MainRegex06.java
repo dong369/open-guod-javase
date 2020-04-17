@@ -1,13 +1,10 @@
 package regex;
 
 /**
- * project - 正则表达式
+ * 空白行、^、$
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:21:08
- * @JDK 1.8
- * @Description 功能模块：空白行、^、$
  */
 public class MainRegex06 {
     public static void main(String[] args) {

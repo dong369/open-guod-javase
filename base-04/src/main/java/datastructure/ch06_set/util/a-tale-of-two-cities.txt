@@ -9452,7 +9452,7 @@ and stifled by the bunches of grass and straw that were thrust into his
 face by hundreds of hands; torn, bruised, panting, bleeding, yet always
 entreating and beseeching for mercy; now full of vehement agony of
 action, with a small clear space about him as the people drew one
-another back that they might see; now, a log of dead wood drawn through
+another back that they might see; now, a ch04_exception.log of dead wood drawn through
 a forest of legs; he was hauled to the nearest street corner where one
 of the fatal lamps swung, and there Madame Defarge let him go--as a cat
 might have done to a mouse--and silently and composedly looked at him
@@ -12499,7 +12499,7 @@ Lorry's, which was within a few minutes' walk. John Barsad, or Solomon
 Pross, walked at his side.
 
 Mr. Lorry had just finished his dinner, and was sitting before a cheery
-little log or two of fire--perhaps looking into their blaze for the
+little ch04_exception.log or two of fire--perhaps looking into their blaze for the
 picture of that younger elderly gentleman from Tellson's, who had looked
 into the red coals at the Royal George at Dover, now a good many years
 ago. He turned his head as they entered, and showed the surprise with
@@ -12979,7 +12979,7 @@ and top-boots, then in vogue, and the light of the fire touching their
 light surfaces made him look very pale, with his long brown hair,
 all untrimmed, hanging loose about him. His indifference to fire was
 sufficiently remarkable to elicit a word of remonstrance from Mr. Lorry;
-his boot was still upon the hot embers of the flaming log, when it had
+his boot was still upon the hot embers of the flaming ch04_exception.log, when it had
 broken under the weight of his foot.
 
 “I forgot it,” he said.

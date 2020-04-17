@@ -1,13 +1,16 @@
 package regex;
 
 /**
- * project - 正则表达式
+ * \：将下一个字符标记为一个特殊字符、或一个原义字符、或一个 向后引用、或一个八进制转义符。
+ * \s：匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]
+ * \S：匹配任何非空白字符。等价于[^ \f\n\r\t\v]
+ * \d：匹配一个数字字符。等价于[0-9]
+ * \D：匹配一个非数字字符。等价于[^0-9]
+ * \w：匹配字母、数字、下划线。等价于[A-Za-z0-9_]
+ * \W：匹配非字母、数字、下划线。等价于[^A-Za-z0-9_]
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:17:49
- * @JDK 1.8
- * @Description 功能模块：\s、\d、\w、\
  */
 public class MainRegex04 {
     public static void main(String[] args) {

@@ -80,8 +80,8 @@
 #
 # config.reload.interval: 3s
 #
-# Show fully compiled configuration as debug log message
-# NOTE: --log.level must be 'debug'
+# Show fully compiled configuration as debug ch04_exception.log message
+# NOTE: --ch04_exception.log.level must be 'debug'
 #
 # config.debug: false
 #
@@ -196,7 +196,7 @@
 #
 # ------------ Debugging Settings --------------
 #
-# Options for log.level:
+# Options for ch04_exception.log.level:
 #   * fatal
 #   * error
 #   * warn
@@ -204,7 +204,7 @@
 #   * debug
 #   * trace
 #
-# log.level: info
+# ch04_exception.log.level: info
 # path.logs:
 #
 # ------------ Other Settings --------------

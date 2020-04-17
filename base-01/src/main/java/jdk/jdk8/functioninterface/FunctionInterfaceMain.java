@@ -5,12 +5,11 @@ package jdk.jdk8.functioninterface;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/8 时间:19:48
  * @since 1.8
  */
 public class FunctionInterfaceMain {
 
-    private static String joinStr(BaseFunctionInterface03 functionTest) {
+    private static String joinStr(FunctionInterface01 functionTest) {
         return functionTest.getInfo("你好");
     }
 
@@ -23,13 +22,23 @@ public class FunctionInterfaceMain {
     }
 
     public static void main(String[] args) {
+        // 传统方式
+        FunctionInterface01 a = new FunctionInterface01() {
+            @Override
+            public String getInfo(String input) {
+                return input + "java";
+            }
+        };
+        String s = joinStr(a);
+        System.out.println(s);
         /*
          * 1、lambda表达式
          * 这种形式最为直观，lambda表达式，接收一个String类型的参数，返回一个String类型的结果。
          * 完全符合函数式接口FunctionInterfaceTest的定义
          */
-        BaseFunctionInterface03 functionInterfaceTest1 = (String item) -> item + 1;
-        System.out.println(functionInterfaceTest1.getInfo("java"));
+        FunctionInterface01 functionInterfaceTest1 = (String item) -> item + 1;
+
+        System.out.println(functionInterfaceTest1.getInfo("java=>"));
 
         /*
          * 2、方法引用
@@ -39,9 +48,10 @@ public class FunctionInterfaceMain {
          * 不同的是，函数式接口更偏重于[计算过程]，约束了一个计算过程的输入和输出。
          * 这种约束计算过程的输入和输出的形式的好处可以看一下joinStr方法。
          */
-        BaseFunctionInterface03 functionInterfaceTest2 = FunctionInterfaceMain::getInstance;
+        FunctionInterface01 functionInterfaceTest2 = FunctionInterfaceMain::getInstance;
         String msg1 = joinStr(functionInterfaceTest2);
         System.out.println(msg1);
+
         /*
          * 3、构造方法引用
          * 构造函数的结构：接收输入参数，然后返回一个对象。这种约束跟函数式接口的约束很像。
@@ -50,7 +60,7 @@ public class FunctionInterfaceMain {
          * 这里存在一个类型推断的问题，JDK的编译器已经帮我们自动找到了只有一个参数，且是String类型的构造方法。
          * 这就是我们直接String::new，没有指定使用哪一个构造方法，却可以创建实例的原因
          */
-        BaseFunctionInterface03 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
+        FunctionInterface01 functionInterfaceTest3 = FunctionInterfaceMain::getMessage;
         String msg2 = joinStr(functionInterfaceTest3);
         System.out.println(msg2);
 
@@ -63,7 +73,7 @@ public class FunctionInterfaceMain {
         System.out.println(msg4);
 
         //方法引用
-        BaseFunctionInterface03 functionInterfaceTest4 = String::new;
+        FunctionInterface03 functionInterfaceTest4 = String::new;
         System.out.println(functionInterfaceTest4.getInfo("test"));
     }
 }

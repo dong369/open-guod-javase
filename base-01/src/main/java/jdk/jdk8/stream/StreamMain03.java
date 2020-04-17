@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/8 时间:17:52
  * @since 1.8
  */
 public class StreamMain03 {

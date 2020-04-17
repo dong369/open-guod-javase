@@ -10,10 +10,13 @@ import java.util.function.Consumer;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:17
  * @since 1.8
  */
 public class Lambda03 {
+    private static void fun03(Movable03 movable03) {
+        movable03.move("hello world!");
+    }
+
     @Test
     public void main() {
         Lambda03.fun03((e) -> {
@@ -28,10 +31,6 @@ public class Lambda03 {
             System.out.println(s);
         };
         consumer.accept("java");
-    }
-
-    private static void fun03(Movable03 movable03) {
-        movable03.move("hello world!");
     }
 }
 

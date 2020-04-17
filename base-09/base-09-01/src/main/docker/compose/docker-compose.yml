@@ -11,5 +11,5 @@ web:
     - '10022:22'
   volumes:
     - '/opt/soft/gitlab/config:/etc/gitlab'
-    - '/opt/soft/gitlab/logs:/var/log/gitlab'
+    - '/opt/soft/gitlab/logs:/var/ch04_exception.log/gitlab'
     - '/opt/soft/gitlab/data:/var/opt/gitlab'

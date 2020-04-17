@@ -21,7 +21,7 @@ build/
 *.iws
 
 # temp ignore
-*.log
+*.ch04_exception.log
 *.cache
 *.diff
 *.patch

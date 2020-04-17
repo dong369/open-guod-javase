@@ -13,7 +13,6 @@ import java.util.Comparator;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:12
  * @since 1.8
  */
 public class Lambda01 {
@@ -34,23 +33,26 @@ public class Lambda01 {
                 System.out.println("熟悉匿名内部类...");
             }
         });
+        // lambda表达式
+        Movable01 movable01 = () -> System.out.println("");
     }
 
     @Test
     public void runnable1() {
+        // 接口的new其实是具体对象的实例化
         Runnable r = new Runnable() {
             @Override
             public void run() {
                 System.out.println(Thread.currentThread().getName());
             }
         };
-        r.run();
+        Runnable runnable = () -> System.out.println("java");
     }
 
     @Test
     public void runnable2() {
-        Runnable r = () -> System.out.println(this.getClass());
-        r.run();
+        Thread thread = new Thread(() -> System.out.println(this.getClass()));
+        thread.start();
     }
 
     @Test

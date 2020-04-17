@@ -7,7 +7,7 @@ floor(x)   返回小于x的最大整数值
 greatest(x1,x2,...,xn)返回集合中最大的值
 least(x1,x2,...,xn)      返回集合中最小的值
 ln(x)                    返回x的自然对数
-log(x,y)返回x的以y为底的对数
+ch04_exception.log(x,y)返回x的以y为底的对数
 mod(x,y)                 返回x/y的模（余数）
 pi()返回pi的值（圆周率）
 rand()返回０到１内的随机值,可以通过提供一个参数(种子)使rand()随机数生成器生成一个指定的值。
@@ -172,4 +172,4 @@ user()或system_user()  返回当前登陆用户名
 version()   返回mysql服务器的版本
 示例：
 select database(),version(),user();
-selectbenchmark(9999999,log(rand()*pi()));#该例中,mysql计算log(rand()*pi())表达式9999999次。
+selectbenchmark(9999999,ch04_exception.log(rand()*pi()));#该例中,mysql计算log(rand()*pi())表达式9999999次。

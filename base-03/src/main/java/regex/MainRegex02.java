@@ -1,20 +1,20 @@
 package regex;
 
 
+import org.junit.Test;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * project - 正则表达式
+ * 模式匹配正则表达式
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:17:05
- * @JDK 1.8
- * @Description 功能模块：Pattern、Matcher
  */
 public class MainRegex02 {
-    public static void main(String[] args) {
+    @Test
+    public void regex01() {
         // 匹配规则（Pattern是编译好的模式，用起来快点）
         Pattern pattern = Pattern.compile("[a-z]*");
         // 匹配某个字符串（Matcher是这个模式匹配后产生的结果集）
@@ -23,5 +23,12 @@ public class MainRegex02 {
         // 打印匹配结果
         System.out.println(matcher1.matches());
         System.out.println(matcher2.matches());
+    }
+
+    @Test
+    public void regex() {
+        Pattern pattern = Pattern.compile(".");
+        Matcher matcher = pattern.matcher("1");
+        System.out.println(pattern.matcher("/").matches());
     }
 }

@@ -8,10 +8,13 @@ import org.junit.Test;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:13:54
  * @since 1.8
  */
 public class Lambda02 {
+    private static void fun(Movable02 movable02) {
+        movable02.move();
+    }
+    
     @Test
     public void main() {
         Lambda02.fun(
@@ -20,12 +23,9 @@ public class Lambda02 {
                 }
         );
     }
-
-    private static void fun(Movable02 movable02) {
-        movable02.move();
-    }
 }
 
+@FunctionalInterface
 interface Movable02 {
     void move();
 }

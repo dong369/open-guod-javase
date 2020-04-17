@@ -15,7 +15,6 @@ import java.util.stream.Stream;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/7 时间:20:44
  * @since 1.8
  */
 public class StreamMain02 {
@@ -48,6 +47,7 @@ public class StreamMain02 {
         System.out.println("==========distinct去重==========");
         users.add(new User("user4", 4));
         users.stream().filter(e -> !e.getName().contains("2")).distinct().forEach(System.out::println);
+
     }
 
     // 映射

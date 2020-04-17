@@ -11,7 +11,6 @@ import java.util.function.Consumer;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:35
  * @since 1.8
  */
 public class LambdaMethod02 {

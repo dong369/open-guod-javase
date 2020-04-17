@@ -9,7 +9,6 @@ package jdk.jdk8.methodref;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:14:56
  * @since 1.8
  */
 public class LambdaMethod03 {

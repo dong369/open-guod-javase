@@ -7,9 +7,6 @@ import java.util.function.Function;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/9 时间:7:55
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class Lambda07 {
     public static void main(String[] args) {
