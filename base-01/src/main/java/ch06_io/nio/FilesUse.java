@@ -15,6 +15,8 @@ import java.nio.file.Paths;
 public class FilesUse {
     @Test
     public void file() throws IOException {
-        Files.delete(Paths.get("d:/test/java.txt"));
+        if (Files.exists(Paths.get("d:/test/java.txt"))) {
+            Files.delete(Paths.get("d:/test/java.txt"));
+        }
     }
 }

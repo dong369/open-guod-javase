@@ -1,13 +1,10 @@
 package algorithm.ch02_recursion.ch02_arrays_sum;
 
 /**
- * project -
+ * 对数组进行求和操作
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/7/2 时间:10:53
- * @JDK 1.8
- * @Description 功能模块：对数组进行求和操作
  */
 public class Sum {
     public static void main(String[] args) {

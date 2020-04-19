@@ -4,10 +4,9 @@ package ch07_thread.thread;
  * 同时启动多个线程
  *
  * @author guod
- * @date 日期:2018/6/20 时间:14:03
  * @since 1.8
  */
-public class StartThreads {
+public class Start {
     public static void main(String[] args) {
         // 声明线程
         T4 t4 = new T4();

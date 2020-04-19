@@ -11,7 +11,7 @@ package ch03_oothinking.abstractuse;
  * @version 1.0
  * @since 1.8
  * 抽象类是用来捕捉子类的通用特性的。
- * 抽象类能使用 final 修饰吗？
+ * 抽象类能使用final修饰吗？
  */
 public abstract class AbstractClass {
     public abstract void say();

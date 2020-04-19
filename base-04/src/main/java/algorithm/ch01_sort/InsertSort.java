@@ -3,13 +3,10 @@ package algorithm.ch01_sort;
 import java.util.Arrays;
 
 /**
- * project -
+ * 排序-插入排序
  *
  * @author guod
  * @version 3.0
- * @date 日期:2018/6/1 时间:12:37
- * @JDK 1.8
- * @Description 功能模块：排序-插入排序
  */
 public class InsertSort {
     public static void sort(long[] arr) {

@@ -8,7 +8,6 @@ import java.io.*;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/4 时间:13:20
  * @since 1.8
  */
 public class FileInputStream02 {
@@ -16,15 +15,16 @@ public class FileInputStream02 {
         // 01创建文件
         InputStream in = null;
         try {
-            in = new FileInputStream(new File(System.getProperty("user.dir")
-                    + "/base-01/src/main/java/ch06_io/io_bio/FileInputStream02.java"));
+            in = new FileInputStream(
+                    new File(System.getProperty("user.dir")
+                             + "/base-01/src/main/java/ch06_io/io_bio/FileInputStream02.java"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(-1);
         }
-        // 02读取文件
-        byte[] buffer = new byte[2048];
         try {
+            // 02读取文件
+            byte[] buffer = new byte[2048];
             long num = 0;
             while ((in.read(buffer)) > 0) {
                 System.out.print(new String(buffer));

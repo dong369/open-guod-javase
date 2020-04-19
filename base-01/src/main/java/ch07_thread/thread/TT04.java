@@ -1,13 +1,10 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * 线程的面试题
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:13:17
- * @JDK 1.8
- * @Description 功能模块：线程的面试题
  * 一个方法同步了，另一个方法没有同步，别的线程可以自由访问不同步的方法，可能对同步方法造成影响
  */
 public class TT04 implements Runnable {
@@ -42,5 +39,4 @@ public class TT04 implements Runnable {
         Thread.sleep(10000);
         b = 2000;
     }
-
 }

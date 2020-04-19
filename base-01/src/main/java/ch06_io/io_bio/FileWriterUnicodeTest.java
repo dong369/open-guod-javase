@@ -4,11 +4,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * project -
- *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/10 时间:14:45
  * @since 1.8
  */
 public class FileWriterUnicodeTest {

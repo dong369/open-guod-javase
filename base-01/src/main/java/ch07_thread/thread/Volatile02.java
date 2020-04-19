@@ -5,9 +5,6 @@ package ch07_thread.thread;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/27 时间:13:12
- * @JDK 1.8
- * @Description 功能模块：读多写少的情况
  */
 public class Volatile02 {
 

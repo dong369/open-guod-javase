@@ -1,5 +1,7 @@
 package ch07_thread.thread;
 
+import org.junit.Test;
+
 /**
  * 多线程（一个程序的不同执行路径）,通过实现Runnable接口实现线程
  *
@@ -8,7 +10,8 @@ package ch07_thread.thread;
  * @since 1.8
  */
 public class CreateThread02 {
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         T02 t02 = new T02();
         Thread t = new Thread(t02);
         t.start();

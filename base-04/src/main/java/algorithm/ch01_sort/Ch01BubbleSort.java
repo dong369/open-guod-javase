@@ -3,13 +3,10 @@ package algorithm.ch01_sort;
 import java.util.Arrays;
 
 /**
- * project -
+ * 排序-冒泡排序
  *
  * @author guod
  * @version 3.0
- * @date 日期:2018/6/1 时间:12:29
- * @JDK 1.8
- * @Description 功能模块：排序-冒泡排序
  */
 public class Ch01BubbleSort {
     private static int[] bubbleSort(int[] arr) {

@@ -9,7 +9,6 @@ import java.io.*;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/4 时间:13:20
  * @since 1.8
  */
 public class FileInputStream01 {
@@ -17,15 +16,16 @@ public class FileInputStream01 {
         // 01创建文件
         InputStream in = null;
         try {
-            in = new FileInputStream(new File(System.getProperty("user.dir")
+            in = new FileInputStream(new File(
+                    System.getProperty("user.dir")
                     + "/base-01/src/main/java/ch06_io/io_bio/FileInputStream01.java"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(-1);
         }
-        // 02读取文件
-        int b;
         try {
+            // 02读取文件
+            int b;
             // 计数
             long num = 0;
             while ((b = in.read()) != -1) {

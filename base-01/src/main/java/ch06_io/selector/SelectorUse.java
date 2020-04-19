@@ -7,5 +7,5 @@ package ch06_io.selector;
  * @version 1.0
  * @since JDK1.8
  */
-public class Main {
+public class SelectorUse {
 }

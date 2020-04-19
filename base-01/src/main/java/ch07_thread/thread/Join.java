@@ -1,15 +1,12 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * Fork/Join是什么？join线程合并，类似方法调用，线程执行完毕后，再执行主线程。
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/21 时间:14:06
- * @JDK 1.8
- * @Description 功能模块：Fork/Join是什么？join线程合并，类似方法调用，线程执行完毕后，再执行主线程。
  */
-public class JoinThread {
+public class Join {
     public static void main(String[] args) {
         T7 t7 = new T7();
         Thread t = new Thread(t7);

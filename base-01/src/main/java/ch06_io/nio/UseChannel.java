@@ -11,7 +11,7 @@ import java.util.Set;
  * 一、通道 (Channel): 同于源节点与目标节点的连接。在java NIO  中负责缓冲区中数据的传输。Channel 本身不存储数据，因此需要配合缓冲区进行传输
  * <p>
  * 二、通道的主要实现类
- * java.nio.channels.Channel 接口：
+ * java.nio.channels.Channel接口：
  * |--FileChannel
  * |--SocketChannel
  * |--ServerSocketChannel
@@ -40,14 +40,11 @@ import java.util.Set;
  * 聚集写入 (Gathering Writes) : 将多个缓冲区的数据聚集到通道中
  * <p>
  * 六、字符集：Charset
- * 编码：字符串 -->字节数组
- * 解码：字节数组 -->字符串
+ * 编码：字符串-->字节数组
+ * 解码：字节数组-->字符串
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/4/9 时间:11:57
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class UseChannel {
     //获取字符集

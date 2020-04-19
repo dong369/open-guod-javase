@@ -1,17 +1,15 @@
 package ch07_thread.thread;
 
 /**
- * project -
+ * 线程的面试题
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:13:17
- * @JDK 1.8
- * @Description 功能模块：线程的面试题
  * 一个方法同步了，另一个方法没有同步，别的线程可以自由访问不同步的方法，可能对同步方法造成影响
  */
 public class TT02 implements Runnable {
-    public static void main(String[] args) throws InterruptedException {
+
+    public static void main(String[] args) throws Exception {
         TT02 tt = new TT02();
         Thread t = new Thread(tt);
         t.start();
@@ -36,7 +34,7 @@ public class TT02 implements Runnable {
         System.out.println("b的值：" + b);
     }
 
-    public void m02() throws InterruptedException {
+    public void m02() throws Exception {
         Thread.sleep(2500);
         b = 2000;
     }

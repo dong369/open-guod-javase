@@ -3,13 +3,10 @@ package ch04_builder.v2;
 import lombok.Data;
 
 /**
- * project -
+ * 产品角色
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/9/1 时间:8:59
- * @JDK 1.8
- * @Description 功能模块：产品角色
  */
 @Data
 public class Product {

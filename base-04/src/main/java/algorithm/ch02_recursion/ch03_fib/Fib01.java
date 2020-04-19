@@ -1,14 +1,11 @@
 package algorithm.ch02_recursion.ch03_fib;
 
 /**
- * project -
+ * Fibonacci数列（非递归应用）1,1,2,3,5,8
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/1 时间:13:12
- * @JDK 1.8
- * @Description 功能模块：Fibonacci数列（非递归应用）1,1,2,3,5,8 
- * 01确定参数 
+ * 01确定参数
  * 02确定返回值
  */
 public class Fib01 {

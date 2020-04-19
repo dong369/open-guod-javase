@@ -9,7 +9,6 @@ import java.io.IOException;
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/10 时间:15:19
  * @since 1.8
  */
 public class DataOutputStream01 {

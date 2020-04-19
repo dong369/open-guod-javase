@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  */
 public class MainTest {
     public static void main(String[] args) {
-        //核心线程数；最大线程数；线程空闲时间存活时间；存活时间的单位；任务队列；线程产生的工厂
+        // 核心线程数；最大线程数；线程空闲时间存活时间；存活时间的单位；任务队列；线程产生的工厂
         ThreadPoolExecutor executor = new ThreadPoolExecutor(3,
                 5,
                 5,

@@ -8,8 +8,6 @@ import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 
 /**
- * Project -
- *
  * @author guodd
  * @version 1.0
  * @since 1.8

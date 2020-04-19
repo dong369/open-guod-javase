@@ -1,15 +1,14 @@
 package ch07_thread.thread;
 
-import sun.misc.Unsafe;
-
 import java.util.concurrent.locks.LockSupport;
 
 /**
  * park使线程阻塞
+ * {@link sun.misc.Unsafe}，只是封装了park，并不是提供park的类
+ * {@link LockSupport}，才是真正park的提供者
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/3 时间:14:50
  * @since JDK1.8
  */
 public class Park {

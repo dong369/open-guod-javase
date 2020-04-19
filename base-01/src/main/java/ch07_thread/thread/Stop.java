@@ -4,10 +4,9 @@ package ch07_thread.thread;
  * 线程的停止的方法
  *
  * @author guod
- * @date 日期:2018/6/21 时间:13:57
  * @since 1.8
  */
-public class StopThread {
+public class Stop {
     public static void main(String[] args) {
         T6 t6 = new T6();
         Thread t = new Thread(t6);

@@ -1,5 +1,7 @@
 package ch07_thread.thread;
 
+import org.junit.Test;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
@@ -11,7 +13,8 @@ import java.util.concurrent.FutureTask;
  * @since 1.8
  */
 public class CreateThread03 {
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void main() throws Exception {
         Callable<String> callable = new T03();
         FutureTask<String> task = new FutureTask<>(callable);
         new Thread(task).start();

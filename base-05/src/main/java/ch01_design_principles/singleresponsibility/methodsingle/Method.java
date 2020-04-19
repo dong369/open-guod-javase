@@ -1,11 +1,10 @@
 package ch01_design_principles.singleresponsibility.methodsingle;
 
 /**
- * project -
+ * 方法的单一职责
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/9/5 时间:20:25
  * @since 1.8
  */
 public class Method {

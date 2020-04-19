@@ -19,7 +19,8 @@ public class PathUse {
     // NIO.2中则引入接口Path代表与平台无关的路径，文件和目录都用Path对象表示
     @Test
     public void path() throws IOException {
-        Path path = Paths.get(System.getProperty("user.dir") + "/src/main/java/ch06_io/nio/nmb.doc");
+        Path path = Paths.get(System.getProperty("user.dir")
+                              + "/src/main/java/ch06_io/nio/nmb.doc");
         if (!Files.isExecutable(path)) {
             Files.createFile(path);
         }

@@ -5,10 +5,9 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:8:08
  * @since 1.8
  */
-public class PriorityThread {
+public class Priority {
     public static void main(String[] args) {
         // 主线程默认是5（范围1-10）
         System.out.println(Thread.currentThread().getPriority());
@@ -19,7 +18,7 @@ public class PriorityThread {
 
         T901 t901 = new T901();
         Thread t01 = new Thread(t901);
-        t01.setPriority(Thread.NORM_PRIORITY + 4);
+        t01.setPriority(Thread.NORM_PRIORITY + 5);
 
         T902 t902 = new T902();
         Thread t02 = new Thread(t902);

@@ -4,13 +4,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/3/29 时间:15:59
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class Emperor {
     //定义最多能产生的实例数量

@@ -7,7 +7,6 @@ import java.io.*;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/5 时间:14:15
  * @since 1.8
  */
 public class BufferedStream01 {

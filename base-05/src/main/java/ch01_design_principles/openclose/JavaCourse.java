@@ -1,15 +1,10 @@
 package ch01_design_principles.openclose;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/8/29 时间:13:02
- * @JDK 1.8
- * @Description 功能模块：
  */
-public class JavaCourse implements Course {
+public class JavaCourse implements ICourse {
     private Integer id;
     private String name;
     private Double Price;
@@ -17,6 +12,18 @@ public class JavaCourse implements Course {
     JavaCourse(Integer id, String name, Double price) {
         this.id = id;
         this.name = name;
+        Price = price;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Double price) {
         Price = price;
     }
 

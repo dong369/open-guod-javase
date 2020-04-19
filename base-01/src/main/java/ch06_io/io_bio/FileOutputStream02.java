@@ -8,14 +8,14 @@ import java.io.*;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/4 时间:13:20
  * @since 1.8
  */
 public class FileOutputStream02 {
     public static void main(String[] args) {
         try {
             int b;
-            FileInputStream fin = new FileInputStream(new File(System.getProperty("user.dir")
+            FileInputStream fin = new FileInputStream(new File(
+                    System.getProperty("user.dir")
                     + "/base-01/src/main/java/ch06_io/io_bio/FileOutputStream02.java"));
             InputStreamReader inputStreamReader = new InputStreamReader(fin);
             BufferedInputStream reader = new BufferedInputStream(fin);

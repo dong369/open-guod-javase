@@ -9,7 +9,6 @@ import java.io.*;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/4 时间:13:20
  * @since 1.8
  */
 public class FileOutputStream01 {
@@ -18,8 +17,12 @@ public class FileOutputStream01 {
         InputStream in;
         OutputStream out;
         try {
-            in = new FileInputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test01.txt");
-            out = new FileOutputStream(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_ios/io_bio/test02.txt");
+            in = new FileInputStream(
+                    System.getProperty("user.dir")
+                    + "/base-01/src/main/java/ch06_ios/io_bio/test01.txt");
+            out = new FileOutputStream(
+                    System.getProperty("user.dir")
+                    + "/base-01/src/main/java/ch06_ios/io_bio/test02.txt");
             while ((b = in.read()) != -1) {
                 out.write(b);
             }

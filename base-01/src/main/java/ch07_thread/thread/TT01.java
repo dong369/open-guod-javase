@@ -5,11 +5,11 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:13:17
  * @since 1.8
  */
 public class TT01 implements Runnable {
-    public static void main(String[] args) throws InterruptedException {
+
+    public static void main(String[] args) throws Exception {
         TT01 tt = new TT01();
         Thread t = new Thread(tt);
         t.start();

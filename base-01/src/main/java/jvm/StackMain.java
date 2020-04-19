@@ -9,7 +9,6 @@ import org.junit.Test;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/5/23 时间:12:50
  * @since 1.8
  */
 public class StackMain {

@@ -5,14 +5,13 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/22 时间:8:11
  * @since 1.8
  */
-public class SynchronizedThread02 implements Runnable {
+public class Synchronized02 implements Runnable {
     T10 t10 = new T10();
 
     public static void main(String[] args) {
-        SynchronizedThread02 mainThread = new SynchronizedThread02();
+        Synchronized02 mainThread = new Synchronized02();
         Thread t01 = new Thread(mainThread);
         Thread t02 = new Thread(mainThread);
         t01.setName("线程01：");

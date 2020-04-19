@@ -13,7 +13,7 @@ import java.nio.ByteBuffer;
  * ShortBuffer
  * IntBuffer
  * LongBuffer
- * FlotBuffer
+ * FloatBuffer
  * DoubleBuffer
  * <p>
  * 上述缓冲区的管理方式几乎一致，通过allocate()获取缓冲区

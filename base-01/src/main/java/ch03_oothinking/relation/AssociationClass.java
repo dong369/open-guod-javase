@@ -1,7 +1,7 @@
 package ch03_oothinking.relation;
 
 /**
- * 关联(Association)
+ * 关联关系（Association）
  * 举例：客户知道订单信息。通常含有“知道”,“了解”的含义，关联可以是双向的，也可以是单向的。
  * 体现：在Java和C++中，关联关系是通过[成员变量]来实现的
  * UML：实线 + 箭头（Person—>Boat）

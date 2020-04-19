@@ -9,7 +9,6 @@ package ch07_thread.thread;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/27 时间:13:12
  * @since 1.8
  */
 public class Volatile01 {
@@ -29,6 +28,7 @@ public class Volatile01 {
         while (!isStop) {
             System.out.println("执行中....");
         }
+
         System.out.println("stop");
     }
 

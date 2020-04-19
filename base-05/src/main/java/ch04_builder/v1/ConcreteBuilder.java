@@ -7,7 +7,7 @@ package ch04_builder.v1;
  * @version 1.0
  */
 public class ConcreteBuilder extends Builder {
-    private Product product = new Product();
+    private final Product product = new Product();
 
 
     @Override

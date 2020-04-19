@@ -8,10 +8,9 @@ import java.io.RandomAccessFile;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/7/20 时间:22:33
  * @since 1.8
  */
-public class Random01 {
+public class RandomIo01 {
     public static void main(String[] args) {
         try {
             RandomAccessFile rf = new RandomAccessFile("", "rwx");
