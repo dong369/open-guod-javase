@@ -5,6 +5,8 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,6 +40,7 @@ public class StreamMain01 {
         // 方式二：通过Arrays工具列
         int[] a = {1, 2, 3};
         IntStream stream1 = Arrays.stream(a);
+        stream1.forEach(System.out::println);
 
         // 方式三：stream静态方法of()
         Stream<String> java = Stream.of("java", "javascript");
@@ -52,5 +55,9 @@ public class StreamMain01 {
         BufferedReader br = new BufferedReader(new FileReader(new File("d:/test/test.txt")));
         Stream<String> lines = br.lines();
         lines.forEach(System.out::println);
+
+        // 方式六：NIO
+        Stream<String> linesStr = Files.lines(Paths.get("d:/test/test.txt"));
+        linesStr.forEach(System.out::println);
     }
 }

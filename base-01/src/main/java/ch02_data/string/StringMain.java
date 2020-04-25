@@ -14,6 +14,7 @@ public class StringMain {
         // 从0开始截取3位
         System.out.println(str.substring(0, 3));
         // 从0开始截取后两位
+        String[] split = str.split("0");
         System.out.println(str.substring(0, str.length() - 2));
         // 字符串是否包含
         int i = str.indexOf("163");
@@ -29,6 +30,7 @@ public class StringMain {
         // 从内部池获取
         String a = "aaa";
         String intern = a.intern();
+        System.out.println(a == intern);
         System.out.println(a.equals(intern));
         System.out.println('a' - 'B');
 

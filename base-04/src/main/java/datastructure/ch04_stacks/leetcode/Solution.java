@@ -1,17 +1,19 @@
-package datastructure.ch04_stacks.ch04_stack_problem_in_leetcode;
+package datastructure.ch04_stacks.leetcode;
 
 import java.util.Stack;
 
 /**
- * project -
+ * 案例匹配成对的括号（undo操作/程序调用系统栈/括号匹配）
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/25 时间:8:47
- * @JDK 1.8
- * @Description 功能模块：案例匹配成对的括号（undo操作/程序调用系统栈/括号匹配）
  */
 public class Solution {
+    public static void main(String[] args) {
+        System.out.println(new Solution().isValid("{()}"));
+        System.out.println(new Solution().isValid("{)"));
+    }
+
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
@@ -32,10 +34,5 @@ public class Solution {
             }
         }
         return stack.isEmpty();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new Solution().isValid("{()}"));
-        System.out.println(new Solution().isValid("{)"));
     }
 }

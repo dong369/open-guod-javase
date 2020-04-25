@@ -6,8 +6,6 @@ import lombok.Setter;
 import java.io.Serializable;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
  */

@@ -22,4 +22,5 @@ package ch03_oothinking.classuse;
  * 主要作用是完成对类对象的初始化工作。可以执行。因为一个类即使没有声明构造方法也会有默认的不带参数的构造方法。
  */
 public class ClassUse {
+    // TODO: 2020/4/21 属性、方法
 }

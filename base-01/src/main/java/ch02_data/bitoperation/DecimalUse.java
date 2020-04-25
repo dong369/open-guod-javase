@@ -8,4 +8,6 @@ package ch02_data.bitoperation;
  * @since 1.8
  */
 public class DecimalUse {
+    public static void main(String[] args) {
+    }
 }

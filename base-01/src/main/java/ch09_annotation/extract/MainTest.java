@@ -27,7 +27,7 @@ public class MainTest {
                 System.out.println(aClass1);
                 MyAnnotation annotation2 = aClass1.getAnnotation(MyAnnotation.class);
                 System.out.println(annotation2);
-                System.out.println(annotation2.value());
+                // System.out.println(annotation2.value());
             }
         }
     }

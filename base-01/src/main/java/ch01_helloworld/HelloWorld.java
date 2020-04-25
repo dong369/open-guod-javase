@@ -2,9 +2,9 @@ package ch01_helloworld;
 
 /**
  * 第一个hello world程序（硬件+软件+图灵+冯诺依曼体系结构）
- * 跨平台性，是指Java语言编写的程序，一次编译后，可以在多个系统平台上运行，本质是JVM跨平台。
- * Java语言采用Unicode编码标准，Unicode（标准码），它为每个字符制订了一个唯一的数值，因此在任何的语言，平台，程序都可以放心的使用。
- * Java源代码->编译器->JVM可执行的Java字节码(即虚拟指令)->JVM->JVM中解释器->机器可执行的二进制机器码->程序运行。
+ * 跨平台性：是指Java语言编写的程序，一次编译后，可以在多个系统平台上运行，本质是JVM跨平台。
+ * 编码标准：Java语言采用Unicode编码标准，Unicode（标准码），它为每个字符制订了一个唯一的数值，因此在任何的语言、平台、程序都可以放心的使用。
+ * 运行步骤：Java源代码->编译器->JVM可执行的Java字节码(即虚拟指令)->JVM->JVM中解释器->机器可执行的二进制机器码->程序运行。
  * 字节码：Java源代码经过虚拟机编译器编译后产生的文件（即扩展为.class的文件），它不面向任何特定的处理器，只面向虚拟机。
  * <p>
  * 创始人：Java之父——詹姆斯·高斯林出生于加拿大，是一位计算机编程天才。
@@ -72,7 +72,7 @@ package ch01_helloworld;
  * javac -version
  * java -version
  * javap -c HelloWorld.class
- *
+ * <p>
  * 四、什么是 Java 程序的主类？应用程序和小程序的主类有何不同？
  * 一个程序中可以有多个类，但只能有一个类是主类。在 Java 应用程序中，这个主类是指包含 main() 方法的类。
  * 在 Java 小程序中，这个主类是一个继承自系统类 JApplet 或 Applet 的子类。
@@ -83,6 +83,9 @@ package ch01_helloworld;
  */
 public class HelloWorld {
     public static void main(String[] args) {
+        float a = 1.2F;
+        double b = 1.2D;
+        System.out.println(b - a);
         for (String arg : args) {
             System.out.println(arg);
         }

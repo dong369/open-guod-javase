@@ -35,19 +35,36 @@ public class StreamMain02 {
         List<User> users = createUser();
         // filter(Predicate p)接收lambda表达式，从流中过滤某些元素。
         Stream<User> stream = users.stream();
+
         System.out.println("==========filter过滤==========");
         stream.filter(e -> e.getName().contains("2")).forEach(System.out::println);
+
         System.out.println("==========limit是阶段流==========");
         // limit是阶段流，使其元素不超过给定的数量。
         users.stream().filter(e -> !e.getName().contains("2")).limit(3).forEach(System.out::println);
-        // skip跳过元素，
+
         System.out.println("==========skip跳过元素==========");
+        // skip跳过前三个元素
         users.stream().filter(e -> !e.getName().contains("2")).skip(3).forEach(System.out::println);
-        // distinct筛选，通过流所产生元素的hashCode()和equals()去除重复数据。
+
         System.out.println("==========distinct去重==========");
         users.add(new User("user4", 4));
+        // distinct筛选，通过流所产生元素的hashCode()和equals()去除重复数据。
         users.stream().filter(e -> !e.getName().contains("2")).distinct().forEach(System.out::println);
 
+    }
+
+    // 分页
+    @Test
+    public void skipPage() {
+        List<User> areaVo = StreamMain02.createUser().stream()
+                // 2 10 (2-1)*10
+                // (pageable.getPageNumber() - 1) * pageable.getPageSize()
+                .skip(10)
+                // pageable.getPageSize()
+                .limit(10)
+                .collect(Collectors.toList());
+        System.out.println(areaVo);
     }
 
     // 映射
@@ -61,11 +78,14 @@ public class StreamMain02 {
         createUser().stream().map(User::getName).filter(e -> e.length() > 6).forEach(System.out::println);
         System.out.println(collect);
         // flatMap映射，接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有所有的流串起来。
+        System.out.println("==========flatMap映射==========");
+        List<User> user = createUser();
+        Stream<User> stream = user.stream();
     }
 
     // 基础排序
     @Test
-    public void sor() {
+    public void sorted() {
         List<Integer> integers = Arrays.asList(1, 3, 10, 1, 0, -1, 2, 34);
         integers.stream().sorted().forEach(System.out::println);
 
@@ -84,5 +104,12 @@ public class StreamMain02 {
                 .sorted(Comparator.comparing(User::getAge, Comparator.nullsFirst(Integer::compareTo)).reversed())
                 .collect(Collectors.toList());
         System.out.println(collect);
+    }
+
+    // 流不变，但会把每个元素传入fun执行，可以用作调试
+    @Test
+    public void peek() {
+        List<User> user = createUser();
+        Stream<User> stream = user.stream();
     }
 }

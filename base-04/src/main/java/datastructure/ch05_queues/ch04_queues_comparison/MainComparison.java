@@ -8,13 +8,10 @@ import datastructure.ch05_queues.ch03_loop_queue.LoopQueue;
 import java.util.Random;
 
 /**
- * project -
+ * 数组队列和循环队列比较
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/25 时间:9:02
- * @JDK 1.8
- * @Description 功能模块：数组队列和循环队列比较
  */
 public class MainComparison {
     public static void main(String[] args) {

@@ -3,8 +3,6 @@ package ch03_oothinking.serializable;
 import org.apache.commons.lang3.SerializationUtils;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
  * 序列化对象必须实现序列化接口。

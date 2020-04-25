@@ -6,7 +6,7 @@ package ch09_annotation.hibernate;
  */
 @SetTable(value = "tb_user")
 public class UserEntity {
-    @SetProperty(name = "guod", length = 1)
+    @SetProperty(name = "guo", length = 1)
     private String name;
     private String address;
     private Integer age;

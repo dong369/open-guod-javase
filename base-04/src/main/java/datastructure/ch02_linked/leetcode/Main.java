@@ -1,4 +1,4 @@
-package datastructure.ch02_linked.ch09_leetcode_203_linked;
+package datastructure.ch02_linked.leetcode;
 
 public class Main {
     public static void main(String[] args) {

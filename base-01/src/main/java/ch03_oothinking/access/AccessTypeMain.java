@@ -1,5 +1,7 @@
 package ch03_oothinking.access;
 
+import lombok.Data;
+
 /**
  * public：当前类、同包、子类、其他包
  * protected：当前类、同包、子类
@@ -10,41 +12,10 @@ package ch03_oothinking.access;
  * @version 1.0
  * @since 1.8
  */
+@Data
 public class AccessTypeMain {
     public int a;
     protected int b;
     int c;
     private int d;
-
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public int getB() {
-        return b;
-    }
-
-    public void setB(int b) {
-        this.b = b;
-    }
-
-    public int getC() {
-        return c;
-    }
-
-    public void setC(int c) {
-        this.c = c;
-    }
-
-    public int getD() {
-        return d;
-    }
-
-    public void setD(int d) {
-        this.d = d;
-    }
 }

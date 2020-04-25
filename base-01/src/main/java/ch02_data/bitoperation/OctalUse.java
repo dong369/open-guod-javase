@@ -8,4 +8,7 @@ package ch02_data.bitoperation;
  * @since 1.8
  */
 public class OctalUse {
+    public static void main(String[] args) {
+
+    }
 }

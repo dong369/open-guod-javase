@@ -5,11 +5,10 @@ import java.util.Arrays;
 import java.util.Base64;
 
 /**
- * Java 8提供的Base64，要比sun.mis c套件提供的还要快至少11倍，比Apache Commons Codec提供的还要快至少3倍。
+ * Java 8提供的Base64，要比sun.misc套件提供的还要快至少11倍，比Apache Commons Codec提供的还要快至少3倍。
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:15:50
  * @since 1.8
  */
 public class Base64Main02 {

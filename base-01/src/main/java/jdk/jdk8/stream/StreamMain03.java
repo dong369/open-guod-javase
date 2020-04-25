@@ -33,7 +33,6 @@ public class StreamMain03 {
         System.out.println(StreamMain02.createUser().stream().findAny());
         System.out.println(StreamMain02.createUser().parallelStream().findAny());
 
-
         // count返回元素总数
         System.out.println(StreamMain02.createUser().stream().filter(e -> e.getAge() > 5).count());
         // max返回最大值
@@ -62,16 +61,5 @@ public class StreamMain03 {
         userList.forEach(System.out::println);
         Set<User> userSet = user.stream().filter(e -> e.getAge() > 8).collect(Collectors.toSet());
         userSet.forEach(System.out::println);
-    }
-
-    // 分页
-    @Test
-    public void page() {
-        List<User> areaVo = StreamMain02.createUser().stream()
-                // pageable.getPageSize() * (pageable.getPageNumber() - 1)
-                .skip(10)
-                // pageable.getPageSize()
-                .limit(10).collect(Collectors.toList());
-        System.out.println(areaVo);
     }
 }
