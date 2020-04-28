@@ -23,9 +23,13 @@ public class MainTest {
 
             // 返回此元素上存在的所有注解，包括从父类继承的
             for (Annotation annotation1 : aClass.getAnnotations()) {
-                Class<? extends Annotation> aClass1 = annotation1.annotationType();
-                System.out.println(aClass1);
-                MyAnnotation annotation2 = aClass1.getAnnotation(MyAnnotation.class);
+                MyAnnotation customAnnotation = (MyAnnotation) annotation1;
+                System.out.println(customAnnotation.value());
+                System.out.println(annotation1.annotationType().getSimpleName());
+                Class<? extends Annotation> annotationType = annotation1.annotationType();
+                System.out.println(annotationType);
+                // 错误写法
+                MyAnnotation annotation2 = annotationType.getAnnotation(MyAnnotation.class);
                 System.out.println(annotation2);
                 // System.out.println(annotation2.value());
             }

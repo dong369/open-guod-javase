@@ -25,6 +25,7 @@ public class MethodTest {
             System.out.println(method);
         }
         System.out.println();
+
         // 返回类或接口声明的所有方法，包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。
         Method[] declaredMethods = aClass.getDeclaredMethods();
         for (Method method : declaredMethods) {
@@ -38,6 +39,7 @@ public class MethodTest {
             System.out.println(method);
         }
         System.out.println();
+
         // 全部的方法（包含父类的）
         Method[] superDeclareMethod = aClass.getSuperclass().getDeclaredMethods();
         for (Method declaredMethod : superDeclareMethod) {

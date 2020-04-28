@@ -11,7 +11,6 @@ import java.lang.reflect.Constructor;
  *
  * @author by guodd
  * @version 1.0
- * @date 2020/2/17
  * @since 1.8
  */
 public class ConstructorMain {
@@ -24,10 +23,20 @@ public class ConstructorMain {
             System.out.println(constructor);
         }
         System.out.println();
+
         Constructor<?>[] constructors2 = peopleManClass.getDeclaredConstructors();
         for (Constructor<?> constructor : constructors2) {
             System.out.println(constructor);
         }
+    }
+
+    // 调用无参构造器
+    @Test
+    public void nullConstructor() throws Exception {
+        Class<PeopleMan> peopleManClass = PeopleMan.class;
+        Constructor<PeopleMan> constructor = peopleManClass.getConstructor();
+        PeopleMan peopleMan = constructor.newInstance();
+        System.out.println(ToStringBuilder.reflectionToString(peopleMan));
     }
 
     // 调用运行时类中的构造器

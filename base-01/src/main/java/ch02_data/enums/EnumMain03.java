@@ -21,4 +21,8 @@ public enum EnumMain03 {
     };
 
     public abstract String getParamNameOnValidate();
+
+    public static void main(String[] args) {
+        System.out.println(EnumMain03.valueOf("SMS").getParamNameOnValidate());
+    }
 }

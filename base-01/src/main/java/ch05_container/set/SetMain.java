@@ -23,12 +23,15 @@ public class SetMain {
         set.add("s1");
         set.add("s3");
         set.add("s5");
-        // 1，增强的for循环
+//        for (int i = 0; i < set.size(); i++) {
+//            System.out.println(set.get(i));
+//        }
+        // 1、增强的for循环
         for (String elt : set) {
             System.out.println(elt);
         }
         System.out.println("==================");
-        // 2，迭代器
+        // 2、迭代器
         for (Iterator<String> iterator = set.iterator(); iterator.hasNext(); ) {
             String elt = iterator.next();
             System.out.println(elt);

@@ -1,7 +1,5 @@
 package ch02_data.enums;
 
-import org.junit.Test;
-
 /**
  * 枚举类型，用法一：常量
  *
@@ -14,8 +12,7 @@ public enum EnumMain01 {
     BLANK,
     YELLOW;
 
-    @Test
-    public void main() {
+    public static void main(String[] args) {
         System.out.println(EnumMain01.RED);
     }
 }

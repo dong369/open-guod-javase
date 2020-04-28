@@ -8,8 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * The class/interface
- * Java文件IO操作应该抛弃File拥抱Paths和Files
+ * The class/interface Java文件IO操作应该抛弃File拥抱Paths和Files
  *
  * @author guodd
  * @version 1.0 use jdk 1.8

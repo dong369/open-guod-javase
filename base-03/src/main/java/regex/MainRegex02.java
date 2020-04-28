@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * 模式匹配正则表达式
  *
  * @author guodd
- * @version 3.0
+ * @version 1.0
  */
 public class MainRegex02 {
     @Test

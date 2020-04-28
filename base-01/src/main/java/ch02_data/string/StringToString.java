@@ -2,16 +2,14 @@ package ch02_data.string;
 
 import com.google.common.base.MoreObjects;
 import org.apache.commons.lang.builder.ToStringBuilder;
-import org.junit.Test;
 
 import java.util.Arrays;
 
 /**
- * Project -
+ * 对象打印
  *
  * @author guodd
  * @version 1.0
- * @date 2020/2/29
  * @since 1.8
  */
 public class StringToString {

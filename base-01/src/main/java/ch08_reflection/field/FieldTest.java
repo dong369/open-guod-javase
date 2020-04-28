@@ -25,17 +25,20 @@ public class FieldTest {
             System.out.println(field);
         }
         System.out.println();
+
         // getDeclaredFields()，获取当前运行实例的所有属性，不考虑权限修饰符，不包含父类
         Field[] declaredFields = aClass.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             System.out.println(declaredField);
         }
         System.out.println();
+
         Field[] superField = aClass.getSuperclass().getFields();
         for (Field field : superField) {
             System.out.println(field);
         }
         System.out.println();
+
         Field[] superDeclaredFields = aClass.getSuperclass().getDeclaredFields();
         for (Field superDeclaredField : superDeclaredFields) {
             System.out.println(superDeclaredField);

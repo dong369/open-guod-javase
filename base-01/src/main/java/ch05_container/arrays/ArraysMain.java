@@ -5,11 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/8 时间:8:02
  * @since 1.8
  */
 public class ArraysMain {

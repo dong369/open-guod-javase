@@ -5,7 +5,7 @@ package regex;
  * 当该字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是非贪婪的。
  *
  * @author guodd
- * @version 3.0
+ * @version 1.0
  */
 public class MainRegex03 {
     public static void main(String[] args) {

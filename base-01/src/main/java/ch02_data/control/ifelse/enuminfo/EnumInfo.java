@@ -12,12 +12,14 @@ public enum EnumInfo {
         public void apply() {
             System.out.println("aa");
         }
-    }, bb {
+    },
+    bb {
         @Override
         public void apply() {
             System.out.println("bb");
         }
-    }, cc {
+    },
+    cc {
         @Override
         public void apply() {
             System.out.println("cc");

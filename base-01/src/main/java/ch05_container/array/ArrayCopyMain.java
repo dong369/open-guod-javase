@@ -7,7 +7,6 @@ import java.util.Arrays;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/12/8 时间:20:00
  * @since 1.8
  */
 public class ArrayCopyMain {

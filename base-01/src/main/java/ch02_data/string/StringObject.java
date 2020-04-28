@@ -7,10 +7,9 @@ import org.junit.Test;
  *
  * @author guodd
  * @version 1.0
- * @date 2020/3/6
  * @since 1.8
  */
-public class StringObjectTest {
+public class StringObject {
     @Test
     public void string() {
         // JVM 1.6之前可以看成是4个对象：str+ab+cd+abcd

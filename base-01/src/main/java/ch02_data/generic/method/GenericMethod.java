@@ -9,7 +9,6 @@ import java.io.Serializable;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/6 时间:12:51
  * @since 1.8
  */
 public class GenericMethod<T> {
@@ -25,7 +24,7 @@ public class GenericMethod<T> {
         // 03泛型方式
         fun03("java", "c", 1);
         GenericMethod<String> methodMain01 = new GenericMethod<>();
-        // methodMain01.test01(11);
+        methodMain01.test02(11);
         // 泛型类中的类型参数与泛型方法中的类型参数是没有相应的联系的，泛型方法始终以自己定义的类型参数为准。
         // 泛型类的类型时String，而泛型方法传入的是Integer
         GenericMethod.fun02("A");
@@ -42,8 +41,7 @@ public class GenericMethod<T> {
     private void test01(T t) {
     }
 
-    public <T> void test02() {
-
+    public static <T> void test02(T e) {
     }
 
     // <E>声明类型参数，也可以理解为声明方法为泛型方法
