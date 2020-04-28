@@ -7,7 +7,7 @@ import java.nio.FloatBuffer;
 
 /**
  * The class/interface NIO：Non IO同步非阻塞IO，是传统IO的升级，客户端和服务器端通过Channel（通道）通讯，实现了多路复用。
- * <p>
+ * 一、数据类型
  * 根据数据类型不同（boolean 除外） ， 提供看了相应类型的缓冲区：
  * ByteBuffer
  * CharBuffer
@@ -16,7 +16,6 @@ import java.nio.FloatBuffer;
  * LongBuffer
  * FloatBuffer
  * DoubleBuffer
- * <p>
  * 上述缓冲区的管理方式几乎一致，通过allocate()获取缓冲区
  * <p>
  * 二、缓冲区存取数据的两个核心方法：
