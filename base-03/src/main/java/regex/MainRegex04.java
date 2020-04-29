@@ -28,6 +28,7 @@ public class MainRegex04 {
         System.out.println("d".matches("[a-zA-Z]"));
         System.out.println("D".matches("[a-z]|[A-Z]]"));
         System.out.println("dD".matches("[a-z][A-Z]]"));
+
         // 并交差
         System.out.println("e".matches("[a-z[A-Z]]"));
         System.out.println("f".matches("[a-z&&[efg]]"));

@@ -13,6 +13,9 @@ import java.util.regex.Pattern;
  * @version 1.0
  */
 public class MainRegex02 {
+    /**
+     * []：匹配一个字符
+     */
     @Test
     public void regex01() {
         // 匹配规则（Pattern是编译好的模式，用起来快点）
@@ -29,6 +32,7 @@ public class MainRegex02 {
     public void regex() {
         Pattern pattern = Pattern.compile(".");
         Matcher matcher = pattern.matcher("1");
+        System.out.println(matcher.matches());
         System.out.println(pattern.matcher("/").matches());
     }
 }

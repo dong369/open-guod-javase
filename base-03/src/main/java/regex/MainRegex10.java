@@ -4,13 +4,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * project - 正则表达式
+ * 字符串的替换
  *
  * @author guodd
  * @version 3.0
- * @date 日期:2018/6/16 时间:21:45
- * @JDK 1.8
- * @Description 功能模块：字符串的替换
  */
 public class MainRegex10 {
     public static void main(String[] args) {

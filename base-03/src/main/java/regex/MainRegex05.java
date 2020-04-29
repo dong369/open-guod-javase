@@ -8,7 +8,7 @@ package regex;
  */
 public class MainRegex05 {
     public static void main(String[] args) {
-        // POSIX character classes
+        // POSIX character classes，时Unix标准
         System.out.println("a".matches("\\p{Lower}"));
         // 以什么开头的
         System.out.println("hello world".matches("^h.*"));
