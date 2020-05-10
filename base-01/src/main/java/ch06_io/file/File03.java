@@ -1,5 +1,7 @@
 package ch06_io.file;
 
+import org.springframework.util.Assert;
+
 import java.io.File;
 
 /**
@@ -22,6 +24,7 @@ public class File03 {
             preStr.append("---");
         }
         File[] files = file.listFiles();
+        Assert.notNull(files, "文件是空！");
         for (File file1 : files) {
             System.out.println(preStr + file1.getName());
             if (file1.isDirectory()) {

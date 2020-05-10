@@ -125,6 +125,3 @@ xpack.security.sessionTimeout: 600000
 
 elasticsearch.username: "elastic"
 elasticsearch.password: "password"
-
-
-

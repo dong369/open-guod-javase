@@ -11,7 +11,6 @@ echo '$ETT' | awk '{print $0}'
 # 指定分割条件
 echo "${b}" | awk -F ':' '{print $1}'
 
-
 # 当变量后面连接有其他字符的时候，必须给变量加上大括号{}
 dbName=hello
 echo ${dbName}_world

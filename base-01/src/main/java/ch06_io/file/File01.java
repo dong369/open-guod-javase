@@ -17,7 +17,8 @@ public class File01 {
     public void base() throws IOException {
         System.out.println(File.pathSeparator);
         System.out.println(File.separator);
-        File file = new File(System.getProperty("user.dir") + "/src/main/java/ch06_io/file/aa/bb/testFile.txt");
+        File file = new File(System.getProperty("user.dir")
+                             + "/src/main/java/ch06_io/file/aa/bb/testFile.txt");
         // 判断是否有文件，如果没有创建
         if (file.exists()) {
             // 删除文件

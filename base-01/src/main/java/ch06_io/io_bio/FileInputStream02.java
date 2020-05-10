@@ -22,10 +22,11 @@ public class FileInputStream02 {
             e.printStackTrace();
             System.exit(-1);
         }
+        // 02读取文件
         try {
-            // 02读取文件
-            byte[] buffer = new byte[2048];
             long num = 0;
+            // 通过缓冲区的方式
+            byte[] buffer = new byte[1024];
             while ((in.read(buffer)) > 0) {
                 System.out.print(new String(buffer));
                 num++;

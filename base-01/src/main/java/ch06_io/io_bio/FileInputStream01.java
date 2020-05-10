@@ -13,7 +13,7 @@ import java.io.*;
  */
 public class FileInputStream01 {
     public static void main(String[] args) {
-        // 01创建文件
+        // 01、创建文件
         InputStream in = null;
         try {
             in = new FileInputStream(new File(
@@ -23,18 +23,21 @@ public class FileInputStream01 {
             e.printStackTrace();
             System.exit(-1);
         }
+        // 02、读取文件
         try {
-            // 02读取文件
+            // 字节数
             int b;
             // 计数
             long num = 0;
-            while ((b = in.read()) != -1) {
-                System.out.print((char) b);
+            byte[] buffer = new byte[1024];
+            int available = in.available();
+            while ((b = in.read(buffer)) != -1) {
+                // System.out.print((char) b);
+                System.out.println(new String(buffer));
                 num++;
             }
-            in.close();
-            System.out.println();
             System.out.println("共读取了 " + num + " 个字节");
+            in.close();
         } catch (IOException e1) {
             System.out.println("文件读取错误");
             System.exit(-1);

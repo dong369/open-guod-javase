@@ -11,4 +11,7 @@
     </parent>
     <artifactId>base-10</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>base-10-05</module>
+    </modules>
 </project>
