@@ -21,7 +21,8 @@ public class PrintWriter01 {
         String s;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
-            FileWriter fw = new FileWriter(System.getProperty("user.dir") + "/base-01/src/main/java/ch06_io/io_bio/use.txt", true);
+            FileWriter fw = new FileWriter(System.getProperty("user.dir")
+                                           + "/base-01/src/main/java/ch06_io/io_bio/use.txt", true);
             PrintWriter log = new PrintWriter(fw);
             while ((s = br.readLine()) != null) {
                 if (s.equals("exit")) {

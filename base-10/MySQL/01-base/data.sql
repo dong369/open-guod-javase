@@ -3,8 +3,11 @@ select version();
 
 show databases;
 
+# 创建数据库，采用编码utf8mb4，如果数据库名称包括特殊字符使用`base-user`
+create database test charset = utf8mb4;
+
 /*如果是关键字的或带特殊符合的名称*/
-use `base-sql`;
+use `test`;
 
 show tables;
 

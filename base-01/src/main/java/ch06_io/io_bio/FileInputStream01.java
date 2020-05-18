@@ -32,8 +32,8 @@ public class FileInputStream01 {
             byte[] buffer = new byte[1024];
             int available = in.available();
             while ((b = in.read(buffer)) != -1) {
-                // System.out.print((char) b);
-                System.out.println(new String(buffer));
+                System.out.print((char) b);
+                System.out.println(new String(buffer, 0, b));
                 num++;
             }
             System.out.println("共读取了 " + num + " 个字节");

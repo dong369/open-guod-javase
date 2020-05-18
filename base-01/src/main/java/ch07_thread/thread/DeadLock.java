@@ -8,9 +8,6 @@ package ch07_thread.thread;
  * @version 1.0
  */
 public class DeadLock implements Runnable {
-
-    private int flag = 1;
-
     public static void main(String[] args) {
         DeadLock dt01 = new DeadLock();
         dt01.flag = 1;
@@ -24,6 +21,9 @@ public class DeadLock implements Runnable {
         t02.start();
     }
 
+    private int flag = 1;
+
+    // 两个锁旗帜
     private static final Object o1 = new Object();
     private static final Object o2 = new Object();
 
@@ -33,6 +33,7 @@ public class DeadLock implements Runnable {
         if (flag == 1) {
             synchronized (o1) {
                 try {
+                    // millis毫秒数
                     Thread.sleep(500);
                 } catch (Exception e) {
                     e.printStackTrace();

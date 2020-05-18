@@ -27,11 +27,18 @@ public class Synchronized02 implements Runnable {
 }
 
 class T10 {
-
     private static int num = 0;
+    // 锁标识，这个里面的锁会产生不是一把锁的现象，需要static或者传入同一把锁
+    // 对象中涉及到new的一定要考虑是不是一个对象
+    static final Object lock = new Object();
 
     // 执行当前方法的时候锁定当前的对象this
+    // static方法也可以加synchronize关键字，锁定当前类
     synchronized void add(String name) {
+        synchronized (lock) {
+        }
+        // 同步代码块
+        // 票池
         // synchronized (this) {  // 锁定当前对象（）
         num++;
         try {

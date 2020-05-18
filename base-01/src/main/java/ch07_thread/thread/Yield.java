@@ -1,7 +1,7 @@
 package ch07_thread.thread;
 
 /**
- * yield高风亮节的让出一次CPU
+ * yield高风亮节的让出一次CPU，当i/10取余让出CPU
  *
  * @author guod
  * @version 1.0

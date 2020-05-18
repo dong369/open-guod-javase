@@ -5,6 +5,7 @@ package ch07_thread.thread;
  * 让持有该对象锁的线程等待；wait方法则必须放在synchronized块里面；
  * wait还需要额外的方法 notify/notifyAll 进行唤醒，它们同样需要
  * 放在synchronized块里面，且获取对象的锁。
+ * 释放CPU的抢用权，同时释放锁
  *
  * @author guodd
  * @version 1.0
@@ -36,6 +37,7 @@ public class Wait {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                // lock.notify();
                 lock.notifyAll();
                 System.out.println("notify/notifyAll进行唤醒");
             }

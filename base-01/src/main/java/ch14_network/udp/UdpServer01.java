@@ -8,7 +8,6 @@ import java.net.DatagramSocket;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019年1月6日 时间:上午11:56:55
  * @since 1.8
  */
 public class UdpServer01 {

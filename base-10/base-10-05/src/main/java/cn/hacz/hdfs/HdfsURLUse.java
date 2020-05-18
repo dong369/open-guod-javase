@@ -1,4 +1,4 @@
-package cn.hacz;
+package cn.hacz.hdfs;
 
 import org.apache.hadoop.fs.FsUrlStreamHandlerFactory;
 import org.junit.Test;

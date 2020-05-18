@@ -24,12 +24,13 @@ public class FileInputStream02 {
         }
         // 02读取文件
         try {
+            int b;
             long num = 0;
             // 通过缓冲区的方式
             byte[] buffer = new byte[1024];
-            while ((in.read(buffer)) > 0) {
-                System.out.print(new String(buffer));
-                num++;
+            while ((b = in.read(buffer)) != -1) {
+                System.out.print(new String(buffer, 0, b));
+                num += b;
             }
             in.close();
             System.out.println();

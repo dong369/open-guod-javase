@@ -11,9 +11,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadPool {
     public static void main(String[] args) throws Exception {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1,
-                10, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
-        executor.execute(new Task("0"));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                10,
+                10,
+                10,
+                TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>()
+        );
+        executor.execute(new Task("user"));
         Thread.sleep(1);
         executor.shutdown();
         System.out.println("executor has been shutdown");

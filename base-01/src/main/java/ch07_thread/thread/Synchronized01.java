@@ -31,12 +31,11 @@ public class Synchronized01 implements Runnable {
 }
 
 class T100 {
-
-    static int num = 0;
+    private static int num = 0;
 
     void add(String name) {
-        // 此处实际是三步操作：获取、加一、赋值，并不是原子性操作
-        num++;
+        // ++num、num++此处实际是三步操作：栈中取出num、num自增1、将i存到栈，并不是原子性操作
+        ++num;
         try {
             // 原子性，中间不能被打断
             Thread.sleep(1);

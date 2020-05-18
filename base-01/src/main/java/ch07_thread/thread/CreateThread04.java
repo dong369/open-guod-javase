@@ -25,9 +25,7 @@ public class CreateThread04 {
      */
     @Test
     public void createThreadPool() throws ExecutionException, InterruptedException {
-        Callable<Object> callable = Executors.callable(() -> {
-            System.out.println("java");
-        }, String.class);
+        Callable<Object> callable = Executors.callable(() -> System.out.println("java"), String.class);
 
         System.out.println(callable);
 

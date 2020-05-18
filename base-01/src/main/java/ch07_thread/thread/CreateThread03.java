@@ -30,7 +30,7 @@ class T03 implements Callable<String> {
     public String call() {
         // Thread.sleep(5000);
         for (int i = 0; i < 1000; i++) {
-            System.out.println("线程：" + i);
+            System.out.println("副线程：" + i);
         }
         return "有返回值的线程";
     }

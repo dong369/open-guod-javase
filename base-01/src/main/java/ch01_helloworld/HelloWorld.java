@@ -18,7 +18,7 @@ package ch01_helloworld;
  * 反摩尔定律(Reverse Moore's law）：如果你反过来看摩尔定律，一个IT公司如果今天和18个月前卖掉同样多的、同样的产品，它的营业额就要降一半。
  * 安迪比尔定律(Andy and Bill's Law）：硬件提高的性能，很快被软件消耗掉了。
  * <p>
- * CPU：运行时首先会去自身的缓存中寻找，如果没有再去内存中找。
+ * CPU：运行时首先会去自身的[缓存]中寻找，如果没有再去内存中找。
  * 缓存（cache）：CPU的Cache，它中文名称是高速缓冲存储器，会记录一些常用的数据等信息，以免CPU每次都要到内存中，节省了时间，提高了效率，偏重读。
  * 缓冲（buffer）：缓冲区(buffer)，它是内存空间的一部分，在内存空间中预留了一定的存储空间，偏重写。
  * 内存（memory）：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
@@ -27,8 +27,7 @@ package ch01_helloworld;
  * 硬盘 -> 外存储空间
  * <p>
  * 8比特（bit）=1字节（byte）
- * 比特：是计算机最小的存储单位
- * 字节：计算机最基本的存储单位
+ * 比特是计算机最小的存储单位；字节是计算机最基本的存储单位。
  * <p>
  * Byte、KB、MB、GB、TB、PB、EB、ZB、YB、DB、NB
  * 1 Byte = 8 Bit
@@ -69,7 +68,7 @@ package ch01_helloworld;
  * export PATH JAVA_HOME CLASSPATH
  * <p>
  * 三、JVM、JRE和JDK的关系和区分？
- * JVM：Java Virtual Machine 是 Java 虚拟机，Java 程序需要运行在虚拟机上，不同的平台有自己的虚拟机，因此 Java 语言可以实现跨平台。
+ * JVM：Java Virtual Machine 是Java虚拟机，Java程序需要运行在虚拟机上，不同的平台有自己的虚拟机，因此Java语言可以实现跨平台。
  * JRE：Java Runtime Environment包括Java虚拟机和Java程序所需的核心类库等。
  * JDK：Java Development Kit是提供给Java开发人员使用的，其中包含了Java的开发工具，也包括了JRE。
  * javac -version

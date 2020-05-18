@@ -3,9 +3,9 @@ package ch07_thread.thread;
 /**
  * sleep(休眠)
  * 在哪个线程中调用sleep方法，就让那个线程睡眠！
+ * 释放CPU的抢用权，但是不释放锁
  *
  * @author guod
- * @date 日期:2018/6/21 时间:13:52
  * @since 1.8
  */
 public class Sleep {

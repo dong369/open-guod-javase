@@ -1,4 +1,4 @@
-package cn.hacz;
+package cn.hacz.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
@@ -6,6 +6,7 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.FileOutputStream;
@@ -18,6 +19,14 @@ import java.io.IOException;
  * @version 1.0 use jdk 1.8
  */
 public class FileSystemUse {
+    private Configuration configuration;
+
+    @Before
+    public void before() {
+        configuration = new Configuration();
+        configuration.set("fs.defaultFS", "hdfs://s10:8020/");
+    }
+
     /**
      * 向Hdfs写数据
      *
@@ -25,9 +34,8 @@ public class FileSystemUse {
      */
     @Test
     public void writeToHdfs() throws IOException {
-        Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(configuration);
-        Path path = new Path("hdfs://s11:8020/user/guodd/data/test.txt");
+        Path path = new Path("hdfs://s10:8020/user/guodd/data/test.txt");
         // 数据输出流，可以指定副本数
         FSDataOutputStream fos = fs.create(path, (short) 2);
         fos.write("hello word".getBytes());
@@ -42,7 +50,6 @@ public class FileSystemUse {
     @Test
     public void read2Hdfs() throws Exception {
         Path path = new Path("/user/guodd/data/test.txt");
-        Configuration configuration = new Configuration();
         FileSystem fs = FileSystem.get(configuration);
         FSDataInputStream fis = fs.open(path);
         FileOutputStream fos = new FileOutputStream("d:/test/ab.txt");

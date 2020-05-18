@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 
 /**
- * 随机流
+ * 随机访问文件类 随机访问流
  *
  * @author guodd
  * @version 1.0
