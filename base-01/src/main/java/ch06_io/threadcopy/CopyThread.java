@@ -46,14 +46,15 @@ public class CopyThread implements Runnable {
 
             // 缓冲区
             byte[] buffers = new byte[1024];
-            // 计算复制量
-            int amount = end - start + 1;
-            // 剩余数
-            int remain = amount % buffers.length;
+
             // 直接写数据
             int len;
             while ((len = src.read(buffers)) != -1) {
+                System.out.println(Thread.currentThread().getName() + "：" + len);
                 dest.write(buffers, 0, len);
+                if (src.getFilePointer() >= end) {
+                    break;
+                }
             }
             System.out.println(Thread.currentThread().getName() + "：区间" + start + "-" + end);
             src.close();

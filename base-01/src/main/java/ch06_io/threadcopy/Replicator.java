@@ -37,11 +37,12 @@ public class Replicator {
         RandomAccessFile r = new RandomAccessFile(srcFile, "r");
         int fileLength = (int) r.length();
         System.out.println("文件总长度：" + fileLength);
+        // 10 / 3 = 3
         int block = fileLength / count;
-        for (int i = 0; i < count; i++) {
-            start = i * block;
-            if (i != (count - 1)) {
-                end = (i + 1) * block - 1;
+        for (int i = 1; i <= count; i++) {
+            start = (i - 1) * block;
+            if (i != count) {
+                end = i * block - 1;
             } else {
                 end = fileLength - 1;
             }

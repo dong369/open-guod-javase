@@ -8,7 +8,7 @@ package ch06_io.threadcopy;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        Replicator replicator = new Replicator("d:/test/test.txt", "d:/test/test1.txt", 2);
+        Replicator replicator = new Replicator("d:/test/test.txt", "d:/test/test1.txt", 3);
         replicator.startCopy();
     }
 }
