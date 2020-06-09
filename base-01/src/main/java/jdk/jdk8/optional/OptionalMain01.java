@@ -1,5 +1,7 @@
 package jdk.jdk8.optional;
 
+import org.junit.Test;
+
 import java.util.Optional;
 
 /**
@@ -17,5 +19,12 @@ public class OptionalMain01 {
         Optional<String> of = Optional.of("optional");
         // 3、创建包装对象值允许为空的Optional对象
         Optional<Object> ofNull = Optional.ofNullable(null);
+    }
+
+    @Test
+    public void test() {
+        Optional<String> empty = Optional.empty();
+        String aNull = empty.orElse("aa");
+        System.out.println(aNull);
     }
 }

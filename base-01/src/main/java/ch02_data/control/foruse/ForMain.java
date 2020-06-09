@@ -12,6 +12,7 @@ public class ForMain {
     @Test
     public void forUse() {
         int i = 0;
+        // 死循环的语法
         for (; ; ) {
             i++;
             System.out.println("java");

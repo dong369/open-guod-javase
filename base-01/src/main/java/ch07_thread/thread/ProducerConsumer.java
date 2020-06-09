@@ -8,6 +8,7 @@ package ch07_thread.thread;
  *
  * @author guod
  * @since 1.8
+ * 应用场景：Java实现生产者消费者的方式。
  */
 public class ProducerConsumer {
     public static void main(String[] args) {

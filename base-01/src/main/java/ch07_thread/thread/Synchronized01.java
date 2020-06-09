@@ -11,7 +11,7 @@ package ch07_thread.thread;
  */
 public class Synchronized01 implements Runnable {
 
-    private final T100 t10 = new T100();
+    private final T t10 = new T();
 
     public static void main(String[] args) {
         Synchronized01 mainThread = new Synchronized01();
@@ -28,20 +28,22 @@ public class Synchronized01 implements Runnable {
     public void run() {
         t10.add(Thread.currentThread().getName());
     }
-}
 
-class T100 {
-    private static int num = 0;
+    static class T {
+        private static int num = 0;
 
-    void add(String name) {
-        // ++num、num++此处实际是三步操作：栈中取出num、num自增1、将i存到栈，并不是原子性操作
-        ++num;
-        try {
-            // 原子性，中间不能被打断
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        void add(String name) {
+            // ++num、num++此处实际是三步操作：栈中取出num、num自增1、将i存到栈，并不是原子性操作
+            ++num;
+            try {
+                // 原子性，中间不能被打断
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(name + ", 你是第" + num + "个使用timer的线程");
         }
-        System.out.println(name + ", 你是第" + num + "个使用timer的线程");
     }
 }
+
+

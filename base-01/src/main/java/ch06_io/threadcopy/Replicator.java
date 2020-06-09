@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.RandomAccessFile;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * The class/interface 复制器
@@ -31,13 +32,13 @@ public class Replicator {
      */
     private Integer count;
 
-    public void startCopy() throws Exception {
+    public void startCopy(CountDownLatch latch) throws Exception {
         int start;
         int end;
         RandomAccessFile r = new RandomAccessFile(srcFile, "r");
         int fileLength = (int) r.length();
-        System.out.println("文件总长度：" + fileLength);
-        // 10 / 3 = 3
+        // System.out.println("文件总长度：" + fileLength);
+        // 10 / 3 = 3，每个线程下载的块数
         int block = fileLength / count;
         for (int i = 1; i <= count; i++) {
             start = (i - 1) * block;
@@ -46,7 +47,7 @@ public class Replicator {
             } else {
                 end = fileLength - 1;
             }
-            new Thread(new CopyThread(srcFile, destFile, start, end)).start();
+            new Thread(new CopyThread(latch, srcFile, destFile, start, end)).start();
         }
         r.close();
     }

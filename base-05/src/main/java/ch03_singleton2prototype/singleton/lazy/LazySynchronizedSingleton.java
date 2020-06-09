@@ -1,15 +1,14 @@
-package ch03_singleton2prototype.singleton;
+package ch03_singleton2prototype.singleton.lazy;
+
+import java.io.Serializable;
 
 /**
- * project -
+ * 懒汉式单例，synchronized实现线程安全。
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/2 时间:15:50
- * @JDK 1.8
- * @Description 功能模块：懒汉式单例，synchronized实现线程安全。
  */
-class LazySynchronizedSingleton {
+class LazySynchronizedSingleton implements Serializable {
 
     // 01静态属性对象
     private static LazySynchronizedSingleton car = null;

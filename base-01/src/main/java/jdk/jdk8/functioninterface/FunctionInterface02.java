@@ -9,6 +9,7 @@ package jdk.jdk8.functioninterface;
  * @version 1.0
  * @since 1.8
  */
+// 可以省略
 public interface FunctionInterface02 {
     String getInfo(String input);
 

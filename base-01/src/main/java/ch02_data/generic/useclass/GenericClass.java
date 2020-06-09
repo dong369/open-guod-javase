@@ -1,11 +1,10 @@
 package ch02_data.generic.useclass;
 
 /**
- * 语法格式：访问控制  修饰符 类名称<泛型标识：可以随便写任意标识号（T、E、K、V） , 标识指定的泛型的类型> { 程序控制语句 }
+ * 语法格式：访问控制 修饰符 类名称<泛型标识：可以随便写任意标识号（T、E、K、V） , 标识指定的泛型的类型> { 程序控制语句 }
  *
  * @author by guodd
  * @version 1.0
- * @date 2020/2/17
  * @since 1.8
  */
 public class GenericClass<T> {

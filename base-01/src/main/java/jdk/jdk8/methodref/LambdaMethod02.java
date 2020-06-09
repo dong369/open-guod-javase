@@ -14,6 +14,13 @@ import java.util.function.Consumer;
  * @since 1.8
  */
 public class LambdaMethod02 {
+    /**
+     * @param <R>引用方法的返回类型
+     */
+    interface Method02<R> {
+        R upper();
+    }
+
     public static void main(String[] args) {
         Consumer<String> con01 = str -> System.out.println(str);
         con01.accept("java");
@@ -30,11 +37,4 @@ public class LambdaMethod02 {
         String s = msg.upper();
         System.out.println(s);
     }
-}
-
-/**
- * @param <R>引用方法的返回类型
- */
-interface Method02<R> {
-    R upper();
 }

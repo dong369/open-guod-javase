@@ -8,7 +8,6 @@ package ch02_oo.oothinking;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/8/4 时间:12:36
  * @since 1.8
  */
 public class MainTest {

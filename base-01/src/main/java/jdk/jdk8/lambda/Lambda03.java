@@ -13,6 +13,11 @@ import java.util.function.Consumer;
  * @since 1.8
  */
 public class Lambda03 {
+
+    interface Movable03 {
+        void move(String str);
+    }
+
     private static void fun03(Movable03 movable03) {
         movable03.move("hello world!");
     }
@@ -32,8 +37,4 @@ public class Lambda03 {
         };
         consumer.accept("java");
     }
-}
-
-interface Movable03 {
-    void move(String str);
 }

@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * @version 1.0 use jdk 1.8
  */
 @Slf4j
-public class VolatileUse {
+public class Volatile03 {
     public static void main(String[] args) {
         MyData myData = new MyData();
 

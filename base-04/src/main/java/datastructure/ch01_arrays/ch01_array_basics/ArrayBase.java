@@ -3,13 +3,8 @@ package datastructure.ch01_arrays.ch01_array_basics;
 import java.util.Arrays;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019年1月6日 时间:下午5:36:15
- * @JDK 1.8
- * @Description 功能模块：基本数组操作
  */
 public class ArrayBase {
 
@@ -22,7 +17,7 @@ public class ArrayBase {
         int dst = 4;
         // 创建一个新数组，长度是原数组+1
         int[] newArray = new int[arr.length + 1];
-        // 拷贝数组
+        // 拷贝数组，可以使用工具类
         for (int i = 0; i < arr.length; i++) {
             newArray[i] = arr[i];
         }

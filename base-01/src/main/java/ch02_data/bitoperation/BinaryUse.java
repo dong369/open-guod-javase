@@ -28,7 +28,7 @@ public class BinaryUse {
         // 打印字节数组
         byte[] bytes = new byte[1];
         System.out.println(DatatypeConverter.printHexBinary(bytes));
-        Long i = 1111111111111111111L;
+        Long i = 1L;
         System.out.println("1".toCharArray().length);
     }
 }

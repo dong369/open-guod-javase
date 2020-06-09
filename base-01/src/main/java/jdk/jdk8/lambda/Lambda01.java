@@ -16,12 +16,13 @@ import java.util.Comparator;
  * @since 1.8
  */
 public class Lambda01 {
-    private static void fun01(Movable01 movable01) {
-        movable01.move();
-    }
 
     interface Movable01 {
         void move();
+    }
+
+    private static void fun01(Movable01 movable01) {
+        movable01.move();
     }
 
     @Test
@@ -34,7 +35,8 @@ public class Lambda01 {
             }
         });
         // lambda表达式
-        Movable01 movable01 = () -> System.out.println("");
+        Movable01 movable01 = () -> System.out.println("Lambda...");
+        movable01.move();
     }
 
     @Test
@@ -46,6 +48,8 @@ public class Lambda01 {
                 System.out.println(Thread.currentThread().getName());
             }
         };
+        Thread t = new Thread(r);
+        t.start();
         Runnable runnable = () -> System.out.println("java");
     }
 

@@ -10,6 +10,8 @@ package ch07_thread.thread;
  * @author guodd
  * @version 1.0
  * @since 1.8
+ * 1、对变量的写操作不依赖当前变量的值；
+ * 2、该变量没有包含在其他变量的不变式中。
  */
 public class Volatile01 {
 

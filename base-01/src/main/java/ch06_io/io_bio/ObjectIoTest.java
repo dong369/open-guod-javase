@@ -31,15 +31,15 @@ public class ObjectIoTest {
             e.printStackTrace();
         }
     }
-}
 
-// Serializable标记型接口
-class T implements Serializable {
-    int i = 10;
-    int j = 9;
-    double d = 2.3;
-    /**
-     * 属性不会被序列化：transient
-     */
-    transient int k = 25;
+    // Serializable标记型接口
+    static class T implements Serializable {
+        int i = 10;
+        int j = 9;
+        double d = 2.3;
+        /**
+         * 属性不会被序列化：transient
+         */
+        transient int k = 25;
+    }
 }

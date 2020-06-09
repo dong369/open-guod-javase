@@ -1,13 +1,10 @@
 package datastructure.ch01_arrays.ch01_array_basics;
 
 /**
- * project -
+ * 有序数组，插入的时候进行判断
  *
  * @author guod
  * @version 3.0
- * @date 日期:2018/5/31 时间:12:37
- * @JDK 1.8
- * @Description 功能模块：有序数组，插入的时候进行判断
  */
 public class MyArrayOrder {
     /**

@@ -6,10 +6,11 @@ package ch07_thread.thread;
  *
  * @author guod
  * @version 1.0
+ * 应用场景：当一个线程必须等待另一个线程执行完毕才能执行时可以使用join方法。
  */
 public class Join {
     public static void main(String[] args) {
-        T7 t7 = new T7();
+        T t7 = new T();
         Thread t = new Thread(t7);
         t.start();
         try {
@@ -22,15 +23,16 @@ public class Join {
             System.out.println("主线程:" + i);
         }
     }
-}
 
-class T7 implements Runnable {
-    @Override
-    public void run() {
-        // 拿到当前线程
-        System.out.println(Thread.currentThread().isAlive());
-        for (int i = 0; i < 100; i++) {
-            System.out.println("SubThread: " + i);
+    static class T implements Runnable {
+        @Override
+        public void run() {
+            // 拿到当前线程
+            System.out.println(Thread.currentThread().isAlive());
+            for (int i = 0; i < 100; i++) {
+                System.out.println("SubThread: " + i);
+            }
         }
     }
 }
+

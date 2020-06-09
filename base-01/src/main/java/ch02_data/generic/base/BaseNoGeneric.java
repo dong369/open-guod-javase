@@ -11,6 +11,7 @@ public class BaseNoGeneric {
     @Test
     public void createObject() {
         BaseObject baseObject = new BaseObject();
+        // 泛型可以理解是一个守门员，不加泛型就没有守门员可以随便放
         baseObject.setO(1);
         baseObject.setO("java");
         String t = (String) baseObject.getO();

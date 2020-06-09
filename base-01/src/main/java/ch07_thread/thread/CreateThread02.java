@@ -12,21 +12,20 @@ import org.junit.Test;
 public class CreateThread02 {
     @Test
     public void main() {
-        T02 t02 = new T02();
+        T t02 = new T();
         Thread t = new Thread(t02);
         t.start();
         for (int i = 0; i < 1000; i++) {
             System.out.println("主线程：" + i);
         }
     }
-}
 
-class T02 implements Runnable {
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            System.out.println("副线程：" + i);
+    static class T implements Runnable {
+        @Override
+        public void run() {
+            for (int i = 0; i < 1000; i++) {
+                System.out.println("副线程：" + i);
+            }
         }
     }
 }

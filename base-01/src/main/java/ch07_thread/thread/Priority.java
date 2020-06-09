@@ -25,22 +25,23 @@ public class Priority {
         t01.start();
         t02.start();
     }
-}
 
-class T901 implements Runnable {
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            System.out.println("T1：" + i);
+    static class T901 implements Runnable {
+        @Override
+        public void run() {
+            for (int i = 0; i < 1000; i++) {
+                System.out.println("T1：" + i);
+            }
+        }
+    }
+
+    static class T902 implements Runnable {
+        @Override
+        public void run() {
+            for (int i = 0; i < 1000; i++) {
+                System.out.println("--------------T2：" + i);
+            }
         }
     }
 }
 
-class T902 implements Runnable {
-    @Override
-    public void run() {
-        for (int i = 0; i < 1000; i++) {
-            System.out.println("--------------T2：" + i);
-        }
-    }
-}

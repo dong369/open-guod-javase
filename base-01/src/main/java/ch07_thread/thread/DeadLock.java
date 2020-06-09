@@ -1,7 +1,7 @@
 package ch07_thread.thread;
 
 /**
- * 线程死锁案例+内存图
+ * 线程死锁案例 +内存图
  * 解决死锁的方法：加粗锁的粒度
  *
  * @author guod

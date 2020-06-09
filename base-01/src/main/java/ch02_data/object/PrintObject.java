@@ -27,20 +27,20 @@ public class PrintObject {
         System.out.println(as);
         System.out.println(Arrays.toString(new List[]{as}));
     }
-}
 
-@Data
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
-class A {
-    /**
-     * 属性描述：name
-     */
-    private String name;
+    @Data
+    @ToString
+    @NoArgsConstructor
+    @AllArgsConstructor
+    static class A {
+        /**
+         * 属性描述：name
+         */
+        private String name;
 
-    /**
-     * 属性描述：age
-     */
-    private Integer age;
+        /**
+         * 属性描述：age
+         */
+        private Integer age;
+    }
 }

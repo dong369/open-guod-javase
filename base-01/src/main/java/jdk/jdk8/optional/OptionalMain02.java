@@ -1,5 +1,7 @@
 package jdk.jdk8.optional;
 
+import org.springframework.util.StringUtils;
+
 import java.util.Optional;
 
 /**
@@ -7,7 +9,6 @@ import java.util.Optional;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/5 时间:13:08
  * @since 1.8
  */
 public class OptionalMain02 {
@@ -19,21 +20,15 @@ public class OptionalMain02 {
 
     /**
      * 功能描述：传统写法
-     *
-     * @param u
-     * @return
      */
     public static String getUserName(User u) {
-        if (u == null)
+        if (StringUtils.isEmpty(u))
             return "属性null错误！";
         return u.getName();
     }
 
     /**
      * 功能描述：java8写法，不优雅
-     *
-     * @param u
-     * @return
      */
     public static String getName(User u) {
         Optional<User> user = Optional.ofNullable(u);
@@ -44,9 +39,6 @@ public class OptionalMain02 {
 
     /**
      * 功能描述：java8写法，链式调用
-     *
-     * @param u
-     * @return
      */
     public static String getUserNameOptional(User u) {
         return Optional.ofNullable(u)
@@ -57,9 +49,6 @@ public class OptionalMain02 {
 
     /**
      * 功能描述：直接返回對象
-     *
-     * @param u
-     * @return
      */
     public static User getUserOptional(User u) {
         return Optional.ofNullable(u).orElse(null);

@@ -1,13 +1,11 @@
-package ch03_singleton2prototype.singleton;
+package ch03_singleton2prototype.singleton.thread;
+
+
+import ch03_singleton2prototype.singleton.lazy.LazySingleton;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/9/1 时间:10:15
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class ThreadRun implements Runnable {
     @Override

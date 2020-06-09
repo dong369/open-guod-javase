@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 并发控制倒计时器 - CountDownLatch
+ *
  * @author guodd
  * @version 1.0
  * 两个类都含有这一个意思：对应的线程都完成工作之后再进行下一步动作，也就是大家都准备好之后再进行下一步。
@@ -13,13 +15,13 @@ import java.util.concurrent.CountDownLatch;
  * 对于CountDownLatch，其他线程为游戏玩家，比如英雄联盟，主线程为控制游戏开始的线程。
  * 在所有的玩家都准备好之前，主线程是处于等待状态的，也就是游戏不能开始。当所有的玩家准备好之后，下一步的动作实施者为主线程，即开始游戏。
  */
-public class CountDownLatchMain {
+public class CountDownLatchTest {
     public static void main(String[] args) throws Exception {
         CountDownLatch latch = new CountDownLatch(4);
+        System.out.println("等待所有玩家准备...");
         for (int i = 0; i < latch.getCount(); i++) {
             new Thread(new MyThread(latch), "player" + i).start();
         }
-        System.out.println("等待所有玩家准备...");
         latch.await();
         System.out.println("开始游戏");
     }

@@ -5,7 +5,6 @@ package ch10_classload.classload;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/9/16 时间:18:57
  * @since 1.8
  */
 public class JdkClassLoader {

@@ -7,4 +7,12 @@ package ch02_data.control.continueuse;
  * @version 1.0 use jdk 1.8
  */
 public class ContinueUse {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            System.out.println(i + "java");
+        }
+    }
 }

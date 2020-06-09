@@ -1,6 +1,7 @@
 package ch02_data.number;
 
 import cn.hutool.core.convert.Convert;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,14 @@ import java.util.Map;
  * @version 1.0
  */
 public class Data {
+
+    @Test
+    public void intData() {
+        System.out.println(Integer.MIN_VALUE + "，" + Integer.MAX_VALUE);
+        System.out.println(Long.MIN_VALUE + "，" + Long.MAX_VALUE);
+        String str = "1.0";
+        System.out.println(str.substring(0, str.length() - 2));
+    }
 
     public static void main(String[] args) {
         // 1byte=8bits

@@ -8,7 +8,7 @@ package ch07_thread.thread;
  * @since 1.8
  */
 public class Synchronized02 implements Runnable {
-    T10 t10 = new T10();
+    T t10 = new T();
 
     public static void main(String[] args) {
         Synchronized02 mainThread = new Synchronized02();
@@ -24,30 +24,31 @@ public class Synchronized02 implements Runnable {
     public void run() {
         t10.add(Thread.currentThread().getName());
     }
-}
 
-class T10 {
-    private static int num = 0;
-    // 锁标识，这个里面的锁会产生不是一把锁的现象，需要static或者传入同一把锁
-    // 对象中涉及到new的一定要考虑是不是一个对象
-    static final Object lock = new Object();
+    static class T {
+        private static int num = 0;
+        // 锁标识，这个里面的锁会产生不是一把锁的现象，需要static或者传入同一把锁
+        // 对象中涉及到new的一定要考虑是不是一个对象
+        static final Object lock = new Object();
 
-    // 执行当前方法的时候锁定当前的对象this
-    // static方法也可以加synchronize关键字，锁定当前类
-    synchronized void add(String name) {
-        synchronized (lock) {
+        // 执行当前方法的时候锁定当前的对象this
+        // static方法也可以加synchronize关键字，锁定当前类
+        synchronized void add(String name) {
+            synchronized (lock) {
+            }
+            // 同步代码块
+            // 票池
+            // synchronized (this) {  // 锁定当前对象（）
+            num++;
+            try {
+                // 原子性，中间不能被打断
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(name + ", 你是第" + num + "个使用timer的线程");
+            //}
         }
-        // 同步代码块
-        // 票池
-        // synchronized (this) {  // 锁定当前对象（）
-        num++;
-        try {
-            // 原子性，中间不能被打断
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(name + ", 你是第" + num + "个使用timer的线程");
-        //}
     }
 }
+

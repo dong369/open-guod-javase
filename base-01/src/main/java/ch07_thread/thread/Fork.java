@@ -1,9 +1,10 @@
 package ch07_thread.thread;
 
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * Fork/Join框架实战
+ * Fork / Join框架实战
  *
  * @author guodd
  * @version 1.0
@@ -11,32 +12,57 @@ import java.util.concurrent.RecursiveTask;
  * 并展示了通过不使用Fork/Join和使用时的时间损耗对比。
  */
 public class Fork extends RecursiveTask<Long> {
+    private static final long MAX = 1000000000L;
+    private static final long THRESHOLD = 1000L;
+    long start;
+    long end;
+
+    public Fork(long start, long end) {
+        this.start = start;
+        this.end = end;
+    }
 
     public static void main(String[] args) {
         System.out.println(doTest());
+        System.out.println("===");
+        System.out.println(doFork());
     }
 
     private static long doTest() {
-        long l = System.currentTimeMillis();
         long startTime = System.nanoTime();
         long sum = 0;
         for (long i = 1; i <= MAX; i++) {
             sum += i;
         }
-        long l1 = System.currentTimeMillis();
         long endTime = System.nanoTime();
-        System.out.println(l1 - l);
         System.out.println((endTime - startTime) / 1000000000.0);
         return sum;
     }
 
-    private static final long MAX = 100000000000L;
-    private static final long THRESHOLD = 1000L;
-    private long start;
-    private long end;
+    public static long doFork() {
+        long startTime = System.nanoTime();
+        ForkJoinPool fork = new ForkJoinPool();
+        Long invoke = fork.invoke(new Fork(0, MAX));
+        long endTime = System.nanoTime();
+        System.out.println((endTime - startTime) / 1000000000.0);
+        return invoke;
+    }
 
     @Override
     protected Long compute() {
-        return null;
+        long sum = 0;
+        if (end - start <= THRESHOLD) {
+            for (long i = start; i <= end; i++) {
+                sum += i;
+            }
+            return sum;
+        } else {
+            long mid = (start + end) / 2;
+            Fork fork1 = new Fork(start, mid);
+            fork1.fork();
+            Fork fork2 = new Fork(mid + 1, end);
+            fork2.fork();
+            return fork1.join() + fork2.join();
+        }
     }
 }

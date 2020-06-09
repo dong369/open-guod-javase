@@ -9,6 +9,5 @@ package ch02_data.bitoperation;
  */
 public class HexUse {
     public static void main(String[] args) {
-
     }
 }

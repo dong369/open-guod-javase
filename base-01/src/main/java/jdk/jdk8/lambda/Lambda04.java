@@ -10,6 +10,10 @@ import org.junit.Test;
  * @since 1.8
  */
 public class Lambda04 {
+    interface Movable04 {
+        int move(int a, int b);
+    }
+
     private static int fun04(Movable04 movable04, int a, int b) {
         return movable04.move(a, b);
     }
@@ -24,6 +28,4 @@ public class Lambda04 {
     }
 }
 
-interface Movable04 {
-    int move(int a, int b);
-}
+

@@ -7,4 +7,12 @@ package ch02_data.control.returnuse;
  * @version 1.0 use jdk 1.8
  */
 public class ReturnUse {
+    public static void main(String[] args) {
+        String test = test();
+        System.out.println(test);
+    }
+
+    private static String test() {
+        return null;
+    }
 }

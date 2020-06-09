@@ -1,5 +1,7 @@
 package ch06_io.threadcopy;
 
+import java.util.concurrent.CountDownLatch;
+
 /**
  * The class/interface
  *
@@ -8,7 +10,13 @@ package ch06_io.threadcopy;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        Replicator replicator = new Replicator("d:/test/test.txt", "d:/test/test1.txt", 3);
-        replicator.startCopy();
+        int count = 20;
+        CountDownLatch latch = new CountDownLatch(count);
+        Replicator replicator = new Replicator("d:/test/test.txt", "d:/test/test1.txt", count);
+        long start = System.currentTimeMillis();
+        replicator.startCopy(latch);
+        latch.await();
+        long end = System.currentTimeMillis();
+        System.out.println("下载完毕：" + (end - start));
     }
 }

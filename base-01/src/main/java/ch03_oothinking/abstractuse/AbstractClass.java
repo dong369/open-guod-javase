@@ -42,6 +42,7 @@ public abstract class AbstractClass {
         Abstract01 abstract01 = new Abstract01();
         abstract01.test();
         abstract01.test(new Abstract02());
+        // 不能使用lambda表达式
         abstract01.test(new AbstractClass() {
             @Override
             public void say() {

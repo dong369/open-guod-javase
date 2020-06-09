@@ -68,11 +68,11 @@ public class HBaseTest {
             ColumnFamilyDescriptorBuilder column = ColumnFamilyDescriptorBuilder.newBuilder(Bytes.toBytes("user"));
             // 列
             ColumnFamilyDescriptor cfd = column.build();
-            //添加列族
+            // 添加列族
             tableDescriptor.setColumnFamily(cfd);
             // 获得表描述器
             TableDescriptor td = tableDescriptor.build();
-            //创建表
+            // 创建表
             admin.createTable(td);
         } else {
             System.out.println("已经存在");

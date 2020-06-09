@@ -25,5 +25,4 @@ public class User {
      * 属性描述：age
      */
     private Integer age;
-
 }

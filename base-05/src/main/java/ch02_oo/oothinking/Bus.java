@@ -5,7 +5,6 @@ package ch02_oo.oothinking;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/9/23 时间:13:06
  * @since 1.8
  */
 public class Bus extends Traffic {

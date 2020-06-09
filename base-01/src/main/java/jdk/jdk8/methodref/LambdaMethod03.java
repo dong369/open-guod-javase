@@ -12,6 +12,13 @@ package jdk.jdk8.methodref;
  * @since 1.8
  */
 public class LambdaMethod03 {
+    /**
+     * @param <P>引用方法的返回类型
+     */
+    interface Method03<P> {
+        int compare(P p1, P p2);
+    }
+
     public static void main(String[] args) {
         Method03<Integer> sum = (a, b) -> a + b;
         int compare = sum.compare(1, 2);
@@ -19,11 +26,4 @@ public class LambdaMethod03 {
         Method03<String> msg = String::compareTo;
         System.out.println(msg.compare("A", "B"));
     }
-}
-
-/**
- * @param <P>引用方法的返回类型
- */
-interface Method03<P> {
-    int compare(P p1, P p2);
 }

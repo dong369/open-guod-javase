@@ -24,7 +24,6 @@ public class PrintWord {
         Dispatch.put(word, "Visible", new Variant(false));
         Dispatch docs = word.getProperty("Documents").toDispatch();
         doc = Dispatch.call(docs, "Open", path).toDispatch();
-
         try {
             Dispatch.call(doc, "PrintOut");
         } catch (Exception e) {

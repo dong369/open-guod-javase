@@ -15,7 +15,7 @@ import java.util.concurrent.FutureTask;
 public class CreateThread03 {
     @Test
     public void main() throws Exception {
-        Callable<String> callable = new T03();
+        Callable<String> callable = new T();
         FutureTask<String> task = new FutureTask<>(callable);
         new Thread(task).start();
         for (int i = 0; i < 1000; i++) {
@@ -23,15 +23,17 @@ public class CreateThread03 {
         }
         System.out.println(task.get());
     }
-}
 
-class T03 implements Callable<String> {
-    @Override
-    public String call() {
-        // Thread.sleep(5000);
-        for (int i = 0; i < 1000; i++) {
-            System.out.println("副线程：" + i);
+    static class T implements Callable<String> {
+        @Override
+        public String call() {
+            // Thread.sleep(5000);
+            for (int i = 0; i < 1000; i++) {
+                System.out.println("副线程：" + i);
+            }
+            return "有返回值的线程";
         }
-        return "有返回值的线程";
     }
 }
+
+

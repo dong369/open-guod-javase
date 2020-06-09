@@ -11,10 +11,15 @@ import org.junit.Test;
  * @since 1.8
  */
 public class Lambda02 {
+    @FunctionalInterface
+    interface Movable02 {
+        void move();
+    }
+
     private static void fun(Movable02 movable02) {
         movable02.move();
     }
-    
+
     @Test
     public void main() {
         Lambda02.fun(
@@ -23,9 +28,4 @@ public class Lambda02 {
                 }
         );
     }
-}
-
-@FunctionalInterface
-interface Movable02 {
-    void move();
 }

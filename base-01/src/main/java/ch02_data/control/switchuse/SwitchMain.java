@@ -19,5 +19,6 @@ public class SwitchMain {
             default:
                 System.out.println("ss");
         }
+        System.out.println("");
     }
 }

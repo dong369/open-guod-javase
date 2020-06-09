@@ -10,6 +10,19 @@ package jdk.jdk8.lambda;
  * @Description 功能模块：
  */
 public class Lambda05 {
+    @FunctionalInterface
+    interface Images {
+        String print(String s);
+    }
+
+    abstract static class UserAble {
+        abstract void user();
+
+        void user02() {
+            System.out.println("java");
+        }
+    }
+
     public static void main(String[] args) {
         String fun = fun((s1) -> {
             String s = s1.toUpperCase();
@@ -34,18 +47,5 @@ public class Lambda05 {
     public static void fun02(UserAble userAble) {
         userAble.user();
         userAble.user02();
-    }
-}
-
-@FunctionalInterface
-interface Images {
-    String print(String s);
-}
-
-abstract class UserAble {
-    abstract void user();
-
-    void user02() {
-        System.out.println("java");
     }
 }

@@ -25,4 +25,18 @@ public class StringObject {
         String str = a + b;
         System.out.println(str);
     }
+
+    @Test
+    public void te() {
+        float a = 6f;
+        String str = String.valueOf(a);
+        System.out.println("");
+        System.out.println(str);
+        int idx = str.lastIndexOf(".");
+        System.out.println(idx);
+        String strNum = str.substring(0, idx);
+        System.out.println(strNum);
+        int num = Integer.parseInt(strNum);
+        System.out.println(num);
+    }
 }

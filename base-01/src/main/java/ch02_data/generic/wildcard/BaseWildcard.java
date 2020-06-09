@@ -6,15 +6,13 @@ import ch02_data.generic.entity.Plate;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
- * Project -
+ * 通配符
  *
  * @author by guodd
  * @version 1.0
- * @date 2020/2/18
  * @since 1.8
  */
 public class BaseWildcard {
@@ -40,13 +38,13 @@ public class BaseWildcard {
     @Test
     public void test02() {
         // 小于等于
-        List<? extends Fruit> ext = null;
+        List<? extends Fruit> ext;
         // 大于等于
-        List<? super Fruit> sup = null;
+        List<? super Fruit> sup;
 
+        List<Object> c = new ArrayList<>();
         List<Fruit> a = new ArrayList<>();
         List<Apple> b = new ArrayList<>();
-        List<Object> c = new ArrayList<>();
 
         ext = a;
         ext = b;

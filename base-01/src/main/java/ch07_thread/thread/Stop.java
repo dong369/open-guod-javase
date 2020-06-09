@@ -21,20 +21,20 @@ public class Stop {
         // t.stop();  已经废弃
         t6.shutDown();
     }
-}
 
-class T6 implements Runnable {
-    private boolean flag = true;
+    static class T6 implements Runnable {
+        private boolean flag = true;
 
-    @Override
-    public void run() {
-        int i = 0;
-        while (flag) {
-            System.out.print(" " + i++);
+        @Override
+        public void run() {
+            int i = 0;
+            while (flag) {
+                System.out.print(" " + i++);
+            }
         }
-    }
 
-    public void shutDown() {
-        flag = false;
+        public void shutDown() {
+            flag = false;
+        }
     }
 }
