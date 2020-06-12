@@ -7,11 +7,8 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019年1月6日 时间:下午12:14:41
  * @since 1.8
  */
 public class EchoServer01 {

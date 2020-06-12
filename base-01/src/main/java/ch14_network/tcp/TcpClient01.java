@@ -8,7 +8,6 @@ import java.net.Socket;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019年1月6日 时间:下午12:16:09
  * @since 1.8
  */
 public class TcpClient01 {

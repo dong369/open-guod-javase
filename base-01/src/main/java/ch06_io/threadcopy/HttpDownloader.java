@@ -37,8 +37,8 @@ public class HttpDownloader {
     private final int MIN_SIZE = 2 << 20;
 
     public static void main(String[] args) throws IOException {
-        String url = "https://github.com/alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz";
-        new HttpDownloader(url, "D:/canal.deployer-1.1.4.tar.gz", 5, 5000).get();
+        String url = "https://hg.openjdk.java.net/jdk/jdk12/archive/06222165c35f.zip";
+        new HttpDownloader(url, "D:/06222165c35f.zip", 5, 5000).get();
     }
 
     public HttpDownloader(String Url, String localPath) throws MalformedURLException {
