@@ -27,7 +27,7 @@ public class GenericMethod<T> {
         methodMain01.test02(11);
         // 泛型类中的类型参数与泛型方法中的类型参数是没有相应的联系的，泛型方法始终以自己定义的类型参数为准。
         // 泛型类的类型时String，而泛型方法传入的是Integer
-        GenericMethod.fun02("A");
+        Integer integer = GenericMethod.fun02(22);
     }
 
     // 传统方式
@@ -41,7 +41,7 @@ public class GenericMethod<T> {
     private void test01(T t) {
     }
 
-    public static <T> void test02(T e) {
+    public <G> void test02(G e) {
     }
 
     // <E>声明类型参数，也可以理解为声明方法为泛型方法

@@ -13,16 +13,16 @@ public enum EnumMain03 {
             return "手机卡";
         }
     },
-    CSS() {
+    CSS {
         @Override
         public String getParamNameOnValidate() {
-            return "手机卡";
+            return "电话卡";
         }
     };
 
     public abstract String getParamNameOnValidate();
 
     public static void main(String[] args) {
-        System.out.println(EnumMain03.valueOf("SMS").getParamNameOnValidate());
+        System.out.println(EnumMain03.valueOf("CSS").getParamNameOnValidate());
     }
 }

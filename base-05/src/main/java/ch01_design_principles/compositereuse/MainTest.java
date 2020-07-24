@@ -9,6 +9,5 @@ package ch01_design_principles.compositereuse;
  */
 public class MainTest {
     public static void main(String[] args) {
-
     }
 }

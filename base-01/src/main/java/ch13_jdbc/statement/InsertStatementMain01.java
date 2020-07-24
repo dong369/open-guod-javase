@@ -9,7 +9,6 @@ import java.sql.Statement;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/18 时间:14:10
  * @since 1.8
  */
 public class InsertStatementMain01 {

@@ -15,7 +15,7 @@ public class StudentProxyHandler implements InvocationHandler {
     /**
      * 委托类对象
      */
-    private Object targetObj;
+    Object targetObj;
 
     public StudentProxyHandler(Object targetObj) {
         this.targetObj = targetObj;
@@ -31,7 +31,6 @@ public class StudentProxyHandler implements InvocationHandler {
         // 代理类可以增强方法，必须在执行方法前打印Log信息
         System.out.println("====打印了一条log，代理类有方法被执行了 ==========");
         // 执行委托类的对应方法
-        Object result = method.invoke(targetObj, args);
-        return result;
+        return method.invoke(targetObj, args);
     }
 }

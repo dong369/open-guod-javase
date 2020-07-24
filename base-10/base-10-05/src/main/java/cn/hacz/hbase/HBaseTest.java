@@ -151,6 +151,7 @@ public class HBaseTest {
 
         List<Put> puts = new ArrayList<>();
         Table table = connection.getTable(TableName.valueOf("test2"));
+        connection.getTable(TableName.valueOf(""));
         if (listMap.size() > 0) {
             for (Map<String, Object> map : listMap) {
                 Put put = new Put(Bytes.toBytes("rowKey"));

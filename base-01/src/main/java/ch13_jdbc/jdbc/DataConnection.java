@@ -55,6 +55,7 @@ public class DataConnection {
         while (resultSet01.next()) {
             System.out.println(resultSet01.getInt("uid"));
         }
+
         PreparedStatement preparedStatement = connection.prepareStatement(" select * from user ");
         ResultSet resultSet02 = preparedStatement.executeQuery();
         while (resultSet02.next()) {

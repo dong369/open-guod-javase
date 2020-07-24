@@ -13,6 +13,7 @@ public class BreakUse {
     public void main() {
         test();
     }
+
     public void test() {
         ok:
         for (int i = 0; i < 10; i++) {

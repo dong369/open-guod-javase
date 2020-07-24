@@ -36,5 +36,4 @@ public enum EnumMain02 {
         System.out.println(EnumMain02.RED.getIndex());
         System.out.println(EnumMain02.getName(4));
     }
-
 }
