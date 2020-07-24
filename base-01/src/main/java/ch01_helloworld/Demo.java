@@ -15,6 +15,7 @@ public class Demo {
     // 定义线程个数
     public static int threadCount = 5;
 
+
     public static void main(String[] args) throws Exception {
         // 1、连接到服务器,获取一个文件,获取文件的大小跟服务器的文件一样的临时文件
         String path = "https://github.com/alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz";

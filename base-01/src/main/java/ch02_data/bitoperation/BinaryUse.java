@@ -2,7 +2,6 @@ package ch02_data.bitoperation;
 
 import org.junit.Test;
 
-import javax.xml.bind.DatatypeConverter;
 
 /**
  * [二进制]、八进制、十进制、十六进制
@@ -27,7 +26,7 @@ public class BinaryUse {
         System.out.println(8 >>> 2);
         // 打印字节数组
         byte[] bytes = new byte[1];
-        System.out.println(DatatypeConverter.printHexBinary(bytes));
+//        System.out.println(DatatypeConverter.printHexBinary(bytes));
         Long i = 1L;
         System.out.println("1".toCharArray().length);
     }
