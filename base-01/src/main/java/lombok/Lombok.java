@@ -26,8 +26,8 @@ public class Lombok {
     private Integer age;
 
     public static void main(String[] args) {
-        Lombok lombok = Lombok.of("guo").setAge(22).setName("");
-        System.out.println(lombok.getName() + lombok.getAge());
-        System.out.println(lombok);
+//        Lombok lombok = Lombok.of("guo").setAge(22).setName("");
+//        System.out.println(lombok.getName() + lombok.getAge());
+//        System.out.println(lombok);
     }
 }

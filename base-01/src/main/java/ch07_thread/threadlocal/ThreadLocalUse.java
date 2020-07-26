@@ -13,7 +13,7 @@ package ch07_thread.threadlocal;
  * 使用场景：数据库连接管理；Session管理
  */
 public class ThreadLocalUse {
-    private static final ThreadLocal<User> tl1 = new ThreadLocal<>();
+   /* private static final ThreadLocal<User> tl1 = new ThreadLocal<>();
 
     private static final ThreadLocal<User> tl2 = new ThreadLocal<User>() {
     };
@@ -44,5 +44,5 @@ public class ThreadLocalUse {
                 System.out.println(users.get());
             }
         }
-    }
+    }*/
 }

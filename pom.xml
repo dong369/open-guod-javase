@@ -128,10 +128,11 @@
             <artifactId>hutool-all</artifactId>
             <version>4.6.3</version>
         </dependency>
-        <!-- 代码简洁 -->
+        <!-- 代码简洁，lombok版本太低，不支持java10以上（com.sun.tools.javac.code.TypeTags） -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
             <scope>provided</scope>
         </dependency>
         <!-- 单元测试工具类 -->

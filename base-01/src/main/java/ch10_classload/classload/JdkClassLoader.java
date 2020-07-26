@@ -12,7 +12,7 @@ public class JdkClassLoader {
         // 01、Bootstrap
         System.out.println(String.class.getClassLoader() + "Bootstrap");
         // 02、ExtClassLoader
-        System.out.println(com.sun.crypto.provider.AESKeyGenerator.class.getClassLoader().getClass().getName());
+//        System.out.println(com.sun.crypto.provider.AESKeyGenerator.class.getClassLoader().getClass().getName());
         // 03、AppClassLoader
         System.out.println(JdkClassLoader.class.getClassLoader().getClass().getName());
 

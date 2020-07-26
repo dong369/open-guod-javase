@@ -12,8 +12,8 @@ import java.util.Base64;
  * @since 1.8
  */
 public class Base64Main02 {
-    private static Base64.Encoder encoder = Base64.getEncoder();
-    private static Base64.Decoder decoder = Base64.getDecoder();
+    private final static Base64.Encoder encoder = Base64.getEncoder();
+    private final static Base64.Decoder decoder = Base64.getDecoder();
 
     public static void main(String[] args) throws Exception {
         // 编码

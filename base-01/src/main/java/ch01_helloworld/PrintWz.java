@@ -50,17 +50,17 @@ public class PrintWz {
      * @throws Exception
      */
     public static void defaultPrintPDF(String filePath) throws Exception{
-        log.info("打印工具类入參：filePath==================="+filePath);
+//        log.info("打印工具类入參：filePath==================="+filePath);
         File file = new File(filePath); // 获取选择的文件
         // 构建打印请求属性集
         HashPrintRequestAttributeSet pras = new HashPrintRequestAttributeSet();
         // 设置打印格式，因为未确定类型，所以选择autosense
         DocFlavor flavor = DocFlavor.INPUT_STREAM.PDF;
-        log.info("打印文件类型为：==================="+flavor);
+//        log.info("打印文件类型为：==================="+flavor);
         // 定位默认的打印服务
         PrintService defaultService = PrintServiceLookup
                 .lookupDefaultPrintService();
-        log.info("打印工具选择打印机为：==================="+defaultService);
+//        log.info("打印工具选择打印机为：==================="+defaultService);
         try {
             DocPrintJob job = defaultService.createPrintJob(); // 创建打印作业
             FileInputStream fis = new FileInputStream(file); // 构造待打印的文件流
@@ -69,7 +69,7 @@ public class PrintWz {
             job.print(doc, pras);
         } catch (Exception e) {
             e.printStackTrace();
-            log.info("打印异常",e);
+//            log.info("打印异常",e);
             throw new Exception();
         }
     }

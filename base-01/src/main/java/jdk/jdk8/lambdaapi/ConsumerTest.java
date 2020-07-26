@@ -16,16 +16,16 @@ import java.util.function.Consumer;
 public class ConsumerTest {
     @Test
     public void consumer() {
-        Consumer<Mask> brand = m -> m.setBrand("3M");
-        Consumer<Mask> type = m -> m.setType("N95");
-        Consumer<Mask> price = m -> m.setPrice(19.9);
+//        Consumer<Mask> brand = m -> m.setBrand("3M");
+//        Consumer<Mask> type = m -> m.setType("N95");
+//        Consumer<Mask> price = m -> m.setPrice(19.9);
         // void println(Object x);
         // void accept(T t);
         Consumer<Mask> print = System.out::println;
 
-        brand.andThen(type)
+        /*brand.andThen(type)
                 .andThen(price)
                 .andThen(print)
-                .accept(new Mask());
+                .accept(new Mask());*/
     }
 }

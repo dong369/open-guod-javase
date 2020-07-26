@@ -1,6 +1,6 @@
 package datastructure.ch15_hash_table.ch02_seperate_chaining;
 
-import javax.xml.bind.DatatypeConverter;
+//import javax.xml.bind.DatatypeConverter;
 
 /**
  * project -
@@ -16,6 +16,6 @@ import javax.xml.bind.DatatypeConverter;
 public class HashCodeSeperate {
     public static void main(String[] args) {
         byte[] bytes = new byte[0x7fffffff];
-        System.out.println(DatatypeConverter.printHexBinary(bytes));
+//        System.out.println(DatatypeConverter.printHexBinary(bytes));
     }
 }

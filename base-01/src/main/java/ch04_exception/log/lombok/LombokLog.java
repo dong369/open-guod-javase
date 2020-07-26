@@ -13,6 +13,6 @@ import org.junit.Test;
 public class LombokLog {
     @Test
     public void lombokLog() {
-        log.info("lombok ch04_exception.log info");
+//        log.info("lombok ch04_exception.log info");
     }
 }
