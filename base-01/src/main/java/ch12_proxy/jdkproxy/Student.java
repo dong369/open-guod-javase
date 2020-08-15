@@ -5,7 +5,6 @@ package ch12_proxy.jdkproxy;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/10/31 时间:13:01
  * @since 1.8
  */
 public class Student implements StudentInterface {
