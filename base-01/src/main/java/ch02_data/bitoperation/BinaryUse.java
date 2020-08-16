@@ -2,6 +2,8 @@ package ch02_data.bitoperation;
 
 import org.junit.Test;
 
+import javax.xml.bind.DatatypeConverter;
+
 
 /**
  * [二进制]、八进制、十进制、十六进制
@@ -25,8 +27,13 @@ public class BinaryUse {
         // 无符号右移，忽略符号位，空位都以0补齐
         System.out.println(8 >>> 2);
         // 打印字节数组
-        byte[] bytes = new byte[1];
-//        System.out.println(DatatypeConverter.printHexBinary(bytes));
+        byte[] bytes = new byte[1024];
+        System.out.println(DatatypeConverter.printHexBinary(bytes));
+        String str = "12";
+        byte[] decode = DatatypeConverter.parseHexBinary(str);
+        for (byte b : decode) {
+            System.out.print(b + " ");
+        }
         Long i = 1L;
         System.out.println("1".toCharArray().length);
     }

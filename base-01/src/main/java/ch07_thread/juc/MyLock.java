@@ -26,7 +26,7 @@ public class MyLock {
     @Test
     public void main() {
         MyLock myLock = new MyLock();
-//        myLock.setName("");
-//        myLock.setAge(0);
+        myLock.setName("");
+        myLock.setAge(0);
     }
 }

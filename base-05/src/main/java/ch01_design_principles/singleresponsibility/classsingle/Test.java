@@ -6,7 +6,7 @@ package ch01_design_principles.singleresponsibility.classsingle;
  * @author guodd
  * @version 1.0
  */
-public class MainTest {
+public class Test {
     public static void main(String[] args) {
         FlyMove bird = new FlyMove();
         bird.move("大雁");

@@ -7,7 +7,7 @@ package ch01_design_principles.openclose;
  * @author guodd
  * @version 1.0
  */
-public class TestMain {
+public class Test {
     public static void main(String[] args) {
         JavaDiscountCourse course = new JavaDiscountCourse(1, "java", 23D);
         System.out.println(course.getName() + "," + course.getId() + "," + course.getPrice() + "," + course.getOriginPrice());

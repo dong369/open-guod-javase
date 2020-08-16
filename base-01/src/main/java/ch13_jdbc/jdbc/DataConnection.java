@@ -5,7 +5,7 @@ import java.sql.*;
 public class DataConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "passw0rd";
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql:///test";
     private Connection conn = null;
 
@@ -56,7 +56,7 @@ public class DataConnection {
             System.out.println(resultSet01.getInt("uid"));
         }
 
-        PreparedStatement preparedStatement = connection.prepareStatement(" select * from user ");
+        PreparedStatement preparedStatement = connection.prepareStatement(" select * from goods ");
         ResultSet resultSet02 = preparedStatement.executeQuery();
         while (resultSet02.next()) {
             System.out.println(resultSet02.getInt("uid"));

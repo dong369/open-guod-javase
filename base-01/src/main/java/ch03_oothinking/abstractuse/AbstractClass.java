@@ -14,6 +14,20 @@ package ch03_oothinking.abstractuse;
  * 抽象类能使用final修饰吗？
  */
 public abstract class AbstractClass {
+
+    public static void main(String[] args) {
+        Abstract01 abstract01 = new Abstract01();
+        abstract01.test();
+        abstract01.test(new Abstract02());
+        // 不能使用lambda表达式
+        abstract01.test(new AbstractClass() {
+            @Override
+            public void say() {
+                System.out.println("n");
+            }
+        });
+    }
+
     public abstract void say();
 
     void test() {
@@ -38,16 +52,4 @@ public abstract class AbstractClass {
         }
     }
 
-    public static void main(String[] args) {
-        Abstract01 abstract01 = new Abstract01();
-        abstract01.test();
-        abstract01.test(new Abstract02());
-        // 不能使用lambda表达式
-        abstract01.test(new AbstractClass() {
-            @Override
-            public void say() {
-                System.out.println("n");
-            }
-        });
-    }
 }

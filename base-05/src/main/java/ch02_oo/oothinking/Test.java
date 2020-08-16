@@ -2,7 +2,8 @@ package ch02_oo.oothinking;
 
 /**
  * 面向对象思想
- * 初步认识面向对象思想，例子：老张开车去东北；按照决策能力高低或者重要性划分，老张属于上层模块，其他属于底层模块。
+ * 例子：老张开车去东北
+ * 初步认识面向对象思想，按照决策能力高低或者重要性划分，老张属于上层模块，其他属于底层模块。
  * 依赖倒置原则：01上层模块不应该依赖底层模块，它们应该依赖于抽象；02抽象不应该依赖于细节，细节应该依赖于抽象。
  * 依赖倒置是面向对象设计领域的一种软件设计原则。
  *
@@ -10,7 +11,7 @@ package ch02_oo.oothinking;
  * @version 1.0
  * @since 1.8
  */
-public class MainTest {
+public class Test {
     public static void main(String[] args) {
         // 思想是战略高度的东西；工具是战术高度的东西！
         Driver driver = new Driver();

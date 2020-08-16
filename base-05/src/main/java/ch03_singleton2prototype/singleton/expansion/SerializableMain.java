@@ -1,8 +1,8 @@
 package ch03_singleton2prototype.singleton.expansion;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+import ch03_singleton2prototype.singleton.hungry.HungrySingleton;
+
+import java.io.*;
 
 /**
  * 序列号破坏
@@ -12,6 +12,13 @@ import java.io.ObjectOutputStream;
  */
 public class SerializableMain {
     public static void main(String[] args) throws Exception {
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("")));
+        HungrySingleton instance = HungrySingleton.getInstance();
+        System.out.println(System.getProperty("user.dir"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("test")));
+        oos.writeObject(instance);
+
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("test")));
+        HungrySingleton serializableObj = (HungrySingleton) ois.readObject();
+        System.out.println(serializableObj == instance);
     }
 }

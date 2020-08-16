@@ -6,6 +6,7 @@ package ch03_singleton2prototype.singleton.hungry;
  *
  * @author guod
  * @version 1.0
+ * @see Runtime（getRuntime方法）
  */
 public class MainSingletonTest {
     public static void main(String[] args) {

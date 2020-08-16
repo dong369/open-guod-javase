@@ -27,7 +27,7 @@ public class ThreadPool01 {
     @Test
     public void fixedThreadPool() {
         ExecutorService es = Executors.newFixedThreadPool(60);
-        // es.execute(() -> System.out.println("java"));
+        es.execute(() -> System.out.println("java"));
         es.submit(() -> {
             for (int i = 0; i < 10; i++) {
                 System.out.println(i);

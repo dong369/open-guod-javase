@@ -5,8 +5,6 @@ package ch06_proxy.staticproxy;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/11 时间:8:03
- * @since 1.8
  */
 public class TakenLogProxy implements Movable {
     Movable taken;

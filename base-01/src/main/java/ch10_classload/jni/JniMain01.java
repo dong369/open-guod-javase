@@ -6,7 +6,6 @@ package ch10_classload.jni;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/5 时间:12:53
  * @since 1.8
  */
 public class JniMain01 {

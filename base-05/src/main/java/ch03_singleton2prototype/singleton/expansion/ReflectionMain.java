@@ -16,13 +16,17 @@ public class ReflectionMain {
         Class<HungrySingleton> hungrySingletonClass = HungrySingleton.class;
         Constructor<HungrySingleton> declaredConstructor = hungrySingletonClass.getDeclaredConstructor();
         declaredConstructor.setAccessible(true);
+
         // 注意顺序
         HungrySingleton instance = HungrySingleton.getInstance();
         Field flag = instance.getClass().getDeclaredField("flag");
+
         flag.setAccessible(true);
         flag.set(instance, true);
         HungrySingleton reflectionObject = declaredConstructor.newInstance();
+
         System.out.println(instance);
         System.out.println(reflectionObject);
+        System.out.println(instance == reflectionObject);
     }
 }

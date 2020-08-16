@@ -24,9 +24,9 @@ public class Product {
     private Double coursePrice;
 
     private Product(Builder builder) {
-//        this.courseName=builder.getCourseName();
-//        this.courseVideo=builder.getCourseVideo();
-//        this.coursePrice=builder.getCoursePrice();
+        this.courseName = builder.getCourseName();
+        this.courseVideo = builder.getCourseVideo();
+        this.coursePrice = builder.getCoursePrice();
     }
 
     @Data
@@ -39,16 +39,18 @@ public class Product {
             this.courseName = courseName;
             return this;
         }
+
         public Builder courseVideo(String courseVideo) {
             this.courseVideo = courseVideo;
             return this;
         }
+
         Builder coursePrice(Double coursePrice) {
             this.coursePrice = coursePrice;
             return this;
         }
 
-        Product build(){
+        Product build() {
             return new Product(this);
         }
     }

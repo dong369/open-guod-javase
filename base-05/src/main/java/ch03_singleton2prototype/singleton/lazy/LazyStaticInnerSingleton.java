@@ -12,11 +12,11 @@ public class LazyStaticInnerSingleton implements Serializable {
     private LazyStaticInnerSingleton() {
     }
 
-    static class InnerClass {
-        static LazyStaticInnerSingleton lazyStaticInnerSingleton = new LazyStaticInnerSingleton();
-    }
-
     public static LazyStaticInnerSingleton getInstance() {
         return InnerClass.lazyStaticInnerSingleton;
+    }
+
+    private static class InnerClass {
+        static LazyStaticInnerSingleton lazyStaticInnerSingleton = new LazyStaticInnerSingleton();
     }
 }

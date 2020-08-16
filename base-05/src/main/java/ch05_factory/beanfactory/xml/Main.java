@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
  */
@@ -25,13 +23,13 @@ public class Main {
         List<Bean> b = new ArrayList<>();
         Bean bean = new Bean();
         bean.setId("1");
-        bean.setClassPath("/usr");
+        bean.setClassPath("user");
         b.add(bean);
         beans.setSize(b.size());
         beans.setBeans(b);
         String s = xmlMapper.writeValueAsString(beans);
         System.out.println(s);
-        Beans beanObject = xmlMapper.readValue(new File(System.getProperty("user.dir") + "/base-05/src/main/java/ch03_factory/beanfactory/applicationContext.xml"), Beans.class);
+        Beans beanObject = xmlMapper.readValue(new File(System.getProperty("user.dir") + "/base-05/src/main/java/ch05_factory/beanfactory/applicationContext.xml"), Beans.class);
         for (int i = 0; i < beanObject.getBeans().size(); i++) {
             System.out.println(beanObject.getBeans().get(i).getClassPath());
         }

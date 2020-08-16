@@ -14,5 +14,9 @@ import java.util.Collection;
 public class CollectionMain {
     public static void main(String[] args) {
         Collection<String> collection = new ArrayList<>();
+        collection.add("java");
+        for (String s : collection) {
+            System.out.println(s);
+        }
     }
 }

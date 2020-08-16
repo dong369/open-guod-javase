@@ -10,10 +10,10 @@ import java.util.Map;
  *
  * @author guod
  * @version 1.0
- * HashMap：底层就是一个数组结构（叫做Entry Table），数组中的每一项又是一个链表（叫做Bucket,用于解决hash冲突而设计的）。
- * TreeMap：基于红黑树数据结构的实现，查看“键”或“键值对”时，它们会被排序（次序由Comparable或Comparator决定）。TreeMap的特点在于，你得到的结果是经过排序的。TreeMap是唯一的带有subMap()方法的Map，它可以返回一个子树。
- * Hashtable：Hashtable与HashMap类似，Hashtable继承自Dictionary类，实现了Map接口，不同的是它不允许记录的键或者值为空；和HashMap相比，Hashtable是线程同步的，即任一时刻只有一个线程能写Hashtable，因此也导致了 Hashtable在写入时会比较慢。而且Hashtable可以通过Enumeration去遍历。
- * LinkedHashMap：
+ * HashMap：JDK1.8之前HashMap由数组+链表组成的，数组是HashMap的主体，链表则是主要为了解决哈希冲突而存在的（“拉链法”解决冲突）.JDK1.8以后在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为8）时，将链表转化为红黑树，以减少搜索时间。
+ * LinkedHashMap：LinkedHashMap继承自HashMap，所以它的底层仍然是基于拉链式散列结构即由数组和链表或红黑树组成。另外，LinkedHashMap 在上面结构的基础上，增加了一条双向链表，使得上面的结构可以保持键值对的插入顺序。同时通过对链表进行相应的操作，实现了访问顺序相关逻辑。
+ * TreeMap：红黑树（自平衡的排序二叉树），查看“键”或“键值对”时，它们会被排序（次序由Comparable或Comparator决定）。TreeMap的特点在于，你得到的结果是经过排序的。TreeMap是唯一的带有subMap()方法的Map，它可以返回一个子树。
+ * Hashtable：数组+链表组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的。
  * ConcurrentHashMap：
  * WeakHashMap：弱键(weak key)Map，Map中使用的对象也被允许释放: 这是为解决特殊问题设计的。如果没有map之外的引用指向某个“键”，则此“键”可以被垃圾收集器回收。
  * IdentifyHashMap：使用==代替equals()对“键”作比较的hash map，专为解决特殊问题而设计。

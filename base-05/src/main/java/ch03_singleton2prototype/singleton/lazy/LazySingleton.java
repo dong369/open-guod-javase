@@ -9,12 +9,12 @@ import java.io.Serializable;
  * @version 1.0
  */
 public class LazySingleton implements Serializable {
+    // 02静态属性对象
+    private static LazySingleton car = null;
+
     // 01构造器私有
     private LazySingleton() {
     }
-
-    // 02静态属性对象
-    private static LazySingleton car = null;
 
     // 03通过方法返回02的对象（静态工厂方法）
     public static LazySingleton getInstance() {

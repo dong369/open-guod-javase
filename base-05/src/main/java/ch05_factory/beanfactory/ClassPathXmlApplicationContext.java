@@ -12,14 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
  */
 public class ClassPathXmlApplicationContext implements BeanFactory {
     // 容器
-    private Map<String, Object> container = new HashMap<>();
+    private static final Map<String, Object> container = new HashMap<>();
 
     public ClassPathXmlApplicationContext(String fileName) {
         XmlMapper xmlMapper = new XmlMapper();

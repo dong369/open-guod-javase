@@ -9,7 +9,6 @@ import java.io.Serializable;
  * @version 1.0
  */
 class LazySynchronizedSingleton implements Serializable {
-
     // 01静态属性对象
     private static LazySynchronizedSingleton car = null;
 
@@ -18,7 +17,8 @@ class LazySynchronizedSingleton implements Serializable {
     }
 
     // 03通过方法返回02的对象（静态工厂方法）
-    static synchronized LazySynchronizedSingleton getInstance() {
+    // synchronized如果加在static方法上锁的是类的class文件，如果没有static则锁的是堆内存中的对象
+    synchronized static LazySynchronizedSingleton getInstance() {
         if (car == null) {
             car = new LazySynchronizedSingleton();
             // 01分配内存给对象

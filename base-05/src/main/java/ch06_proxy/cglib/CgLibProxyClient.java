@@ -10,8 +10,6 @@ import org.springframework.cglib.proxy.MethodInterceptor;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/8/17 时间:17:59
- * @since 1.8
  */
 public class CgLibProxyClient {
     public static void main(String[] args) {

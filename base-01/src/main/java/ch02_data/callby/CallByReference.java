@@ -9,18 +9,18 @@ package ch02_data.callby;
  */
 public class CallByReference {
     public static void main(String[] args) {
-//        User user = new User("guo", 26);
-//        System.out.println("调用前user的值：" + user.toString());
-//        User u = updateUser(user);
-//        System.out.println("调用后user的值：" + user.toString());
-//        System.out.println(user);
-//        // 堆中的User是不变的
-//        System.out.println(u == user);
+        User user = new User("guo", 26);
+        System.out.println("调用前user的值：" + user.toString());
+        User u = updateUser(user);
+        System.out.println("调用后user的值：" + user.toString());
+        System.out.println(user);
+        // 堆中的User是不变的
+        System.out.println(u == user);
     }
 
-//    private static User updateUser(User student) {
-//        student.setName("sun");
-//        student.setAge(18);
-//        return student;
-//    }
+    private static User updateUser(User student) {
+        student.setName("sun");
+        student.setAge(18);
+        return student;
+    }
 }

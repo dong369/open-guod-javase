@@ -8,8 +8,8 @@ package ch02_data.domain;
  */
 public class DomainUse {
     public static void main(String[] args) {
-//        UserMapper instance = UserMapper.INSTANCE;
-//        UserVO userVO = instance.po2vo(UserPO.builder().name("java").age(13).build());
-//        System.out.println(userVO.getStudentAge());
+        UserMapper instance = UserMapper.INSTANCE;
+        UserVO userVO = instance.po2vo(UserPO.builder().name("java").age(13).build());
+        System.out.println(userVO.getStudentAge());
     }
 }

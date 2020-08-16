@@ -9,8 +9,10 @@ import lombok.*;
  * @version 1.0
  */
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public enum EnumMain02 {
-    /*RED("红色", 1),
+    RED("红色", 1),
     GREEN("绿色", 2),
     BLANK("白色", 3),
     YELLOW("黄色", 4);
@@ -32,5 +34,5 @@ public enum EnumMain02 {
         System.out.println(EnumMain02.RED.getName());
         System.out.println(EnumMain02.RED.getIndex());
         System.out.println(EnumMain02.getName(4));
-    }*/
+    }
 }

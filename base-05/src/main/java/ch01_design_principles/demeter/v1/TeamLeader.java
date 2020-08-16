@@ -3,6 +3,8 @@ package ch01_design_principles.demeter.v1;
 import java.util.List;
 
 /**
+ * 朋友
+ *
  * @author guodd
  * @version 1.0
  */

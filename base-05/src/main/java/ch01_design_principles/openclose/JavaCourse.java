@@ -1,9 +1,12 @@
 package ch01_design_principles.openclose;
 
+import lombok.Data;
+
 /**
  * @author guodd
  * @version 1.0
  */
+@Data
 public class JavaCourse implements ICourse {
     private Integer id;
     private String name;
@@ -12,18 +15,6 @@ public class JavaCourse implements ICourse {
     JavaCourse(Integer id, String name, Double price) {
         this.id = id;
         this.name = name;
-        Price = price;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(Double price) {
         Price = price;
     }
 

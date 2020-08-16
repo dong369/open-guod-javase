@@ -6,13 +6,12 @@ package ch05_factory.simplefactory;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/11/3 时间:8:39
- * @JDK 1.8
- * @Description 功能模块：
+ * @see java.sql.DriverManager（getConnection方法）
+ * @see java.util.Calendar（getInstance方法）
+ * @see org.slf4j.LoggerFactory（getLogger方法）
  */
-public class MainTest {
+public class Test {
     public static void main(String[] args) {
-        System.out.println(User.getInstance() == User.getInstance());
         CourseI instance = SimpleFactory.getInstance(CourseJavaImpl.class);
         instance.content();
     }
