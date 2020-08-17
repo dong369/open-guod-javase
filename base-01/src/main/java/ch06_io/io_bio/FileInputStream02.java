@@ -28,6 +28,7 @@ public class FileInputStream02 {
             long num = 0;
             // 通过缓冲区的方式
             byte[] buffer = new byte[1024];
+            int available = in.available();
             while ((b = in.read(buffer)) != -1) {
                 System.out.print(new String(buffer, 0, b));
                 num += b;

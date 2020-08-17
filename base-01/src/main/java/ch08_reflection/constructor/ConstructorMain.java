@@ -22,6 +22,7 @@ public class ConstructorMain {
         for (Constructor<?> constructor : constructors1) {
             System.out.println(constructor);
         }
+
         System.out.println();
 
         Constructor<?>[] constructors2 = peopleManClass.getDeclaredConstructors();

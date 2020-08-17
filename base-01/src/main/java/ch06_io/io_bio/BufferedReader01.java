@@ -11,10 +11,12 @@ import java.io.*;
  */
 public class BufferedReader01 {
     public static void main(String[] args) throws Exception {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(System.getProperty("user.dir")
-                                                                  + "/base-01/src/main/java/ch06_ios/io_bio/test03.txt"));
-        BufferedReader reader = new BufferedReader(new FileReader(System.getProperty("user.dir")
-                                                                  + "/base-01/src/main/java/ch06_ios/io_bio/test03.txt"));
+        BufferedWriter writer = new BufferedWriter(
+                new FileWriter(System.getProperty("user.dir")
+                               + "/base-01/src/main/java/ch06_ios/io_bio/test03.txt"));
+        BufferedReader reader = new BufferedReader(
+                new FileReader(System.getProperty("user.dir")
+                               + "/base-01/src/main/java/ch06_ios/io_bio/test03.txt"));
         String s;
         for (int i = 0; i < 100; i++) {
             s = String.valueOf(Math.random());

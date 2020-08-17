@@ -19,12 +19,12 @@ public class PeopleMan extends People<String> implements MyInterface, Comparable
      */
     @MyAnnotation("manName")
     @MyAnnotation("name")
-    public String manName;
+    private String manName;
 
     /**
      * 属性描述：年龄
      */
-    protected Integer manAge;
+    public Integer manAge;
 
     /**
      * 属性描述：性别
@@ -43,7 +43,7 @@ public class PeopleMan extends People<String> implements MyInterface, Comparable
         this.manName = manName;
     }
 
-    PeopleMan(String manName, Integer manAge) {
+    public PeopleMan(String manName, Integer manAge) {
         this.manName = manName;
         this.manAge = manAge;
     }
@@ -54,7 +54,7 @@ public class PeopleMan extends People<String> implements MyInterface, Comparable
 
     @MyAnnotation("manName")
     @MyAnnotation("name")
-    public String showNative(String name) {
+    private String showNative(String name) {
         System.out.println(name);
         return name;
     }

@@ -1,5 +1,7 @@
 package ch02_data.format;
 
+import java.text.MessageFormat;
+
 /**
  * project -
  *
@@ -14,5 +16,6 @@ public class FormatUse {
         String format1 = String.format("%08d", 12);
         System.out.println(format1);
         System.out.println(String.format("java %s", "world"));
+        System.out.println(MessageFormat.format("hello {0}", "world"));
     }
 }

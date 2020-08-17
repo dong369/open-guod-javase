@@ -15,8 +15,8 @@ public class MoneyMain01 {
     // 01、BigInteger整数处理
     @Test
     public void bigInteger() {
-        BigInteger bigInteger1 = new BigInteger("12");
-        BigInteger bigInteger2 = BigInteger.valueOf(34);
+        BigInteger bigInteger1 = new BigInteger("10");
+        BigInteger bigInteger2 = BigInteger.valueOf(3);
         // 加法
         System.out.println(bigInteger1.add(bigInteger2));
         // 减法
@@ -35,7 +35,8 @@ public class MoneyMain01 {
         System.out.println(bigDecimal01.add(bigDecimal02));
         System.out.println(bigDecimal01.subtract(bigDecimal02));
         System.out.println(bigDecimal01.multiply(bigDecimal02));
-        System.out.println(bigDecimal01.divide(bigDecimal02, BigDecimal.ROUND_HALF_UP));
+        // BigDecimal.ROUND_HALF_UP废弃了jdk9
+        System.out.println(bigDecimal01.divide(bigDecimal02, RoundingMode.HALF_UP));
         double aa = 0.2341;
         // BigDecimal(double val)构造，但是这个构造不太靠谱；
         // 推荐使用静态方法valueOf(double)，这个方法跟new Decimal(Double.toString(double))效果
@@ -69,9 +70,9 @@ public class MoneyMain01 {
         System.out.println(decimalFormat.format(goodPriceDetail));
         // 方式03（推荐使用）
         double f = 111231.5585;
-        BigDecimal b = new BigDecimal(f);
-        double f1 = b.setScale(4, RoundingMode.HALF_UP).doubleValue();
-        System.out.println(f1);
+        BigDecimal b = new BigDecimal(f).setScale(4,RoundingMode.HALF_UP);
+        // double f1 = b.setScale(2, RoundingMode.HALF_UP).doubleValue();
+        System.out.println(b.doubleValue());
     }
 
     // 04、金钱扣款

@@ -1,6 +1,7 @@
 package ch08_reflection.base;
 
 import ch08_reflection.entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 /**
@@ -13,6 +14,7 @@ import org.junit.Test;
  * @version 1.0
  * @since 1.8
  */
+@Slf4j
 public class GetClass {
     // 获取类对象的四种方式
     @Test
@@ -20,13 +22,16 @@ public class GetClass {
         // 第一种：Class.forName（"类名全路径"）
         Class<?> aClass1 = Class.forName("ch08_reflection.entity.User");
         System.out.println("Class.forName()方式 ：" + aClass1);
+
         // 第二种：对象.getClass()方法
         User user = new User();
         Class<? extends User> aClass2 = user.getClass();
         System.out.println("对象.getClass()方式 ：" + aClass2 + ", " + (aClass1 == aClass2));
+
         // 第三种：类名.class方法
         Class<User> aClass3 = User.class;
         System.out.println("类名.class方式 ：" + aClass3 + ", " + (aClass1 == aClass3));
+
         // 第四种：ClassLoader类加载器
         ClassLoader classLoader = GetClass.class.getClassLoader();
         Class<?> aClass4 = classLoader.loadClass("ch08_reflection.entity.User");

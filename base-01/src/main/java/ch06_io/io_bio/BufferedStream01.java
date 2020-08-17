@@ -14,13 +14,15 @@ public class BufferedStream01 {
         try {
             // 输入缓冲流
             BufferedInputStream inputStream = new BufferedInputStream(
-                    new FileInputStream(System.getProperty("user.dir")
-                                        + "/base-01/src/main/java/ch06/bio/BufferedStreamTest01.java")
+                    new FileInputStream(
+                            System.getProperty("user.dir")
+                            + "/base-01/src/main/java/ch06/bio/BufferedStreamTest01.java")
             );
             // 输出缓冲流
             BufferedOutputStream outputStream = new BufferedOutputStream(
-                    new FileOutputStream(System.getProperty("user.dir")
-                                         + "/base-01/src/main/java/ch06/bio/BufferedStreamTest.java")
+                    new FileOutputStream(
+                            System.getProperty("user.dir")
+                            + "/base-01/src/main/java/ch06/bio/BufferedStreamTest.java")
             );
             System.out.println(inputStream.read());
             int c;

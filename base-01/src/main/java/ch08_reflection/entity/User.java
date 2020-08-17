@@ -21,13 +21,13 @@ public class User {
     public User() {
     }
 
-    private User(String name) {
-        this.name = name;
-    }
-
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;
+    }
+
+    private User(String name) {
+        this.name = name;
     }
 
     public Integer getAge() {

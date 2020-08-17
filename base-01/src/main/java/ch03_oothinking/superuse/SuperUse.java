@@ -50,14 +50,14 @@ public class SuperUse {
             // 3、引用父类构造方法，必须放在第一行
             super(name);
             // 2、子类中的成员变量或方法与父类中的成员变量或方法同名时，用super进行区分
-//            super.setName(name);
-//            this.setName(name);
+            super.setName(name);
+            this.setName(name);
             System.out.println(name);
         }
 
         // 1、普通的直接引用方式
         void doThing() {
-//            System.out.println(super.getName());
+            System.out.println(super.getName());
         }
     }
 }

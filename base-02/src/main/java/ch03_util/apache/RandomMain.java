@@ -1,4 +1,4 @@
-package ch05_util.apache;
+package ch03_util.apache;
 
 import cn.hutool.core.util.IdUtil;
 import jodd.util.RandomStringUtil;

@@ -34,7 +34,6 @@ public class BinaryUse {
         for (byte b : decode) {
             System.out.print(b + " ");
         }
-        Long i = 1L;
         System.out.println("1".toCharArray().length);
     }
 }

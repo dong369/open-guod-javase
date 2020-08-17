@@ -1,4 +1,4 @@
-package ch05_util.hutool.setting;
+package ch03_util.hutool.setting;
 
 import cn.hutool.setting.Setting;
 

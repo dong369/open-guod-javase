@@ -17,9 +17,14 @@ public class Main {
     }
 
     private static void info(Animal animal) {
+        // 对象 instanceof 类
+        // 一个对象是否为一个类的实例
+        // A instanceof  B 判断A对象是否为B类或接口的实例或者子类或子接口的实例
         if (animal instanceof Cat) {
             Cat cat = (Cat) animal;
             cat.go();
         }
+        // A isAssignableFrom B Class类的一个native方法 A类对象所代表的类或者接口是否为B类对象所代表的类或者接口
+        System.out.println(Animal.class.isAssignableFrom(Cat.class));
     }
 }

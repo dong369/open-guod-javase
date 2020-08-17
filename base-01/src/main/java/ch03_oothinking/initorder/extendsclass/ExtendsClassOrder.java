@@ -18,6 +18,6 @@ public class ExtendsClassOrder {
         // object instanceof Class：是从实例继承的角度去判断，是否是一个类或接口的或其子类子接口的实例。
         System.out.println(Parent.class.isAssignableFrom(child.getClass()));
         System.out.println(Parent.class.isAssignableFrom(Child.class));
-        System.out.println(child instanceof Object);
+        System.out.println(child instanceof Parent);
     }
 }

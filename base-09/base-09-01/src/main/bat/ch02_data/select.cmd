@@ -1,5 +1,4 @@
 @echo off
-chcp 65001
 set a=6
 set b=6
 if %a%==%b% (echo OK) else (echo NO)

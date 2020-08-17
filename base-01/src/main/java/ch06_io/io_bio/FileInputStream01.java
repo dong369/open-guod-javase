@@ -29,12 +29,9 @@ public class FileInputStream01 {
             int b;
             // 计数
             long num = 0;
-            byte[] buffer = new byte[1024];
-            int available = in.available();
-            while ((b = in.read(buffer)) != -1) {
+            while ((b = in.read()) != -1) {
                 System.out.print((char) b);
-                System.out.println(new String(buffer, 0, b));
-                num++;
+                num += 1;
             }
             System.out.println("共读取了 " + num + " 个字节");
             in.close();

@@ -15,6 +15,7 @@ import java.util.Date;
  * @version 1.0
  */
 public class Java8Time {
+    // Java8基础时间类
     @Test
     public void getTime() {
         // java.time.LocalDateTime类表示ISO-8601日历系统中没有时区的日期时间，例如2020-01-17T17:11:00.476。

@@ -24,6 +24,7 @@ public class FieldTest {
         for (Field field : fields) {
             System.out.println(field);
         }
+
         System.out.println();
 
         // getDeclaredFields()，获取当前运行实例的所有属性，不考虑权限修饰符，不包含父类

@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
  * @since JDK1.8
  */
 public class BaseMain {
-    // 传统方式
+    // 反射之前，传统方式
     @Test
     public void oldNew() {
         // 1、通过构造器创建对象
@@ -28,6 +28,7 @@ public class BaseMain {
         // 2、调用public方法
         person.show();
         // 3、在Person类的外部不可通过Person类和对象调用其内部的私有结构（构造器、属性，方法）。
+        // person.showNation();
     }
 
     // 反射方式
@@ -45,6 +46,7 @@ public class BaseMain {
 
         // 掉方法
         Method show = clazz.getDeclaredMethod("show");
+        show.setAccessible(true);
         show.invoke(p1);
 
         // 私有构造器

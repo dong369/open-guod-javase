@@ -12,8 +12,9 @@ public class FileReader01 {
         int c;
         Reader reader;
         try {
-            reader = new FileReader(new File(System.getProperty("user.dir")
-                                             + "/base-01/src/main/java/ch06_io/io_bio/FileReaderTest.java"));
+            reader = new FileReader(
+                    new File(System.getProperty("user.dir")
+                             + "/base-01/src/main/java/ch06_io/io_bio/FileReaderTest.java"));
             while ((c = reader.read()) != -1) {
                 System.out.print((char) c);
             }

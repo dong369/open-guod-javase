@@ -89,6 +89,7 @@ public class Data {
         Map<String, Object> map = new HashMap<>();
         map.put("a", "2");
         map.put("b", 2);
+
         // Integer a3 = (Integer) map.get("a");
         // String b2 = (String) map.get("b"); 错误写法
         Integer a1 = Integer.valueOf((String) map.get("a"));

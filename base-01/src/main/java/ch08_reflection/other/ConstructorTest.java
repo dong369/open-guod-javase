@@ -14,7 +14,6 @@ import java.lang.reflect.Type;
  *
  * @author by guodd
  * @version 1.0
- * @date 2020/2/17
  * @since 1.8
  */
 public class ConstructorTest {
