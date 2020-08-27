@@ -5,7 +5,7 @@ import cn.hutool.crypto.SecureUtil;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-
+import javax.annotation.PostConstruct;
 /**
  * 键盘输入
  *

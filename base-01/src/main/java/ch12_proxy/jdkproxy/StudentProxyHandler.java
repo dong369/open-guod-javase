@@ -25,7 +25,7 @@ public class StudentProxyHandler implements InvocationHandler {
         // 代理类可以过滤方法，必须我们控制play方法不被执行
         if (method.getName().equals("play")) {
             System.out.println("====StudentProxy 拦截了 play方法 ==========");
-            return null;
+            return method.invoke(targetObj, args);
         }
         // 代理类可以增强方法，必须在执行方法前打印Log信息
         System.out.println("====打印了一条log，代理类有方法被执行了 ==========");

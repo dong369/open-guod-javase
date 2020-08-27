@@ -1,13 +1,10 @@
 package datastructure.ch02_linked.ch02_linked_list_base;
 
 /**
- * project -
+ * project - 链表
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/30 时间:9:34
- * @JDK 1.8
- * @Description 功能模块：链表
  * 01、线性表
  * 02、递归结构
  */

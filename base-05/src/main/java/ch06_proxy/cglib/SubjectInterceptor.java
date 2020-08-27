@@ -1,7 +1,6 @@
 package ch06_proxy.cglib;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
@@ -13,8 +12,8 @@ import java.lang.reflect.Method;
  * @author guodd
  * @version 1.0
  */
+@Slf4j
 public class SubjectInterceptor implements MethodInterceptor {
-    private static final Logger LOG = LoggerFactory.getLogger(SubjectInterceptor.class);
 
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
@@ -25,10 +24,10 @@ public class SubjectInterceptor implements MethodInterceptor {
     }
 
     private void preAction() {
-        LOG.info("SubjectProxyHandler.preAction()");
+        log.info("SubjectProxyHandler.preAction()");
     }
 
     private void postAction() {
-        LOG.info("SubjectProxyHandler.postAction()");
+        log.info("SubjectProxyHandler.postAction()");
     }
 }

@@ -7,9 +7,6 @@ import java.util.Arrays;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/8/10 时间:13:43
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class JdkMain {
     public static void main(String[] args) {

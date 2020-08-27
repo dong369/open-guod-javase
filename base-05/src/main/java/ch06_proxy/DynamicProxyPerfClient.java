@@ -9,25 +9,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
 /**
- * project -
+ * project - 各种代理实现的性能比较
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/8/17 时间:18:00
- * @JDK 1.8
- * @Description 功能模块：各种代理实现的性能比较
  */
 public class DynamicProxyPerfClient {
     private static final Logger LOG = LoggerFactory.getLogger(DynamicProxyPerfClient.class);
-    private static int creation = 100000000;
-    private static int execution = 1000000000;
+    private static final int creation = 100000000;
+    private static final int execution = 1000000000;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         testJDKDynamicCreation();
         testJDKDynamicExecution();
         testCglibCreation();

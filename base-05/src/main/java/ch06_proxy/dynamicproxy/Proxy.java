@@ -15,9 +15,7 @@ import java.net.URLClassLoader;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2018/9/11 时间:21:50
- * @JDK 1.8
- * @Description 功能模块：如何动态编译：jdk1.6 compiler API；CGLib；ASM
+ * 功能模块：如何动态编译：jdk1.6 compiler API；CGLib；ASM
  */
 public class Proxy {
     public static Object newProxyInstance(Class inter) throws Exception {

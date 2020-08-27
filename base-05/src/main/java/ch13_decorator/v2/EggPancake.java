@@ -1,15 +1,15 @@
 package ch13_decorator.v2;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/9/2 时间:22:29
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class EggPancake extends AbstractDecorator {
+    @Override
+    public void doSomething() {
+        System.out.println("做鸡蛋特有的...");
+    }
+
     public EggPancake(AbstractPancake abstractPancake) {
         super(abstractPancake);
     }

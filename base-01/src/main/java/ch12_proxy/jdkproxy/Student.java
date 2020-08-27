@@ -10,16 +10,16 @@ package ch12_proxy.jdkproxy;
 public class Student implements StudentInterface {
     @Override
     public void study() {
-
+        System.out.println("study...");
     }
 
     @Override
     public void play() {
-
+        System.out.println("play...");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("sleep...");
     }
 }

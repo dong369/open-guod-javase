@@ -1,13 +1,10 @@
 package datastructure.ch05_queues.ch01_queue_base;
 
 /**
- * project -
+ * project - 数据结构-循环队列
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/6/1 时间:12:46
- * @JDK 1.8
- * @Description 功能模块：数据结构-循环队列
  */
 public class MyCycleQueue {
     /**

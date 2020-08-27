@@ -7,9 +7,7 @@ import java.lang.annotation.*;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/8/11 时间:12:06
- * @JDK 1.8
- * @Description 功能模块：
+ * 用在了两个地方，一个是20多家银行的对接，一个是硬件，多个厂商，协议不同的对接。
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

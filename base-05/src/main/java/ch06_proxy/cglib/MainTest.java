@@ -6,12 +6,10 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
  */
-public class CgLibProxyClient {
+public class MainTest {
     public static void main(String[] args) {
         MethodInterceptor methodInterceptor = new SubjectInterceptor();
         Enhancer enhancer = new Enhancer();

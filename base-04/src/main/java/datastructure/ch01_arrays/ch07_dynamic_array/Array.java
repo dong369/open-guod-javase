@@ -5,10 +5,9 @@ package datastructure.ch01_arrays.ch07_dynamic_array;
  *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/1/23 时间:9:13
- * @JDK 1.8
- * @Description 功能模块：自动扩容数组
+ * 功能模块：自动扩容数组
  */
+@SuppressWarnings("unchecked")
 public class Array<E> {
     // 数据
     private E[] data;
@@ -92,7 +91,7 @@ public class Array<E> {
         // 10==10*（40/4）
         // if (size == data.length / 2)
         // 考虑容积是data.length / 2为0的情况
-        if (size == getCapacity() / 4 && getCapacity() / 2 != 0)
+        if (size == getCapacity() / 4 && data.length / 2 != 0)
             reSize(data.length / 2);
         return ret;
     }

@@ -1,13 +1,9 @@
 package datastructure.ch02_linked.ch01_link_base.ch01;
 
 /**
- * project -
- *
  * @author guod
  * @version 3.0
- * @date 日期:2018/5/31 时间:12:40
- * @JDK 1.8
- * @Description 功能模块：链节点，相当于火车的车厢
+ * 链节点，相当于火车的车厢
  */
 public class Node {
     /**

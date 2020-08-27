@@ -1,13 +1,8 @@
 package datastructure.ch02_linked.leetcode;
 
 /**
- * project -
- *
  * @author guodd
  * @version 1.0
- * @date 日期:2019/6/23 时间:10:07
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class Solution02 {
     public ListNode removeElements(ListNode head, int val) {

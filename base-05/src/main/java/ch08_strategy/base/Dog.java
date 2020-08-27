@@ -4,10 +4,6 @@ package ch08_strategy.base;
  * project -
  *
  * @author guodd
- * @date 日期:2019年1月12日 时间:下午5:30:32
- * @JDK 1.8
- * @version 1.0
- * @Description 功能模块：
  */
 public class Dog implements Comparable {
 	private int food;

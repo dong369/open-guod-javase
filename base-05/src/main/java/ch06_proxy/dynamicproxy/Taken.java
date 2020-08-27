@@ -7,9 +7,6 @@ import java.util.Random;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/9/11 时间:7:57
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class Taken implements Movable {
     @Override

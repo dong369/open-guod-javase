@@ -8,11 +8,11 @@ package ch10_classload.classload;
  * @since 1.8
  */
 public class JdkClassLoader {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // 01、Bootstrap
         System.out.println(String.class.getClassLoader() + "Bootstrap");
-        // 02、ExtClassLoader
-//        System.out.println(com.sun.crypto.provider.AESKeyGenerator.class.getClassLoader().getClass().getName());
+        // 02、ExtClassLoader/PlatformClassLoader
+        System.out.println(JdkClassLoader.class.getClassLoader().getClass().getName());
         // 03、AppClassLoader
         System.out.println(JdkClassLoader.class.getClassLoader().getClass().getName());
 

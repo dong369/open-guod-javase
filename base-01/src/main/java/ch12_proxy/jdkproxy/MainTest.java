@@ -16,7 +16,9 @@ public class MainTest {
         // 生成代理类对象Proxy.newProxyInstance();
         StudentInterface proxyInstance = (StudentInterface) Proxy.newProxyInstance(
                 StudentInterface.class.getClassLoader(),
-                new Class[]{StudentInterface.class}, new StudentProxyHandler(student));
+                new Class[]{StudentInterface.class},
+                new StudentProxyHandler(student)
+        );
         // 调用代理类的方法
         proxyInstance.study();
         proxyInstance.sleep();

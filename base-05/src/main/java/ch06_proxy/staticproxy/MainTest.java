@@ -5,9 +5,8 @@ package ch06_proxy.staticproxy;
  *
  * @author guodd
  * @version 1.0
- * 功能模块：代理模式
  */
-public class ClientMain {
+public class MainTest {
     public static void main(String[] args) throws InterruptedException {
         Taken taken = new Taken();
         TakenTimeProxy ttp = new TakenTimeProxy(taken);

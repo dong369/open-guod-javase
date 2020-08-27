@@ -1,13 +1,9 @@
 package datastructure.ch02_linked.ch01_link_base.ch01;
 
 /**
- * project -
- *
  * @author guod
  * @version 3.0
- * @date 日期:2018/5/31 时间:12:41
- * @JDK 1.8
- * @Description 功能模块：链节点，相当于火车，只关心火车的头部
+ * 链节点，相当于火车，只关心火车的头部
  */
 public class LinkList {
     private Node first;

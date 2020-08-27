@@ -10,12 +10,7 @@ public class ThreadLocalSingleton {
     private ThreadLocalSingleton() {
     }
 
-    private static ThreadLocal<ThreadLocalSingleton> threadLocal = new ThreadLocal<>() {
-        @Override
-        protected ThreadLocalSingleton initialValue() {
-            return new ThreadLocalSingleton();
-        }
-    };
+    private static final ThreadLocal<ThreadLocalSingleton> threadLocal = ThreadLocal.withInitial(ThreadLocalSingleton::new);
 
     public ThreadLocalSingleton getInstance() {
         return threadLocal.get();
