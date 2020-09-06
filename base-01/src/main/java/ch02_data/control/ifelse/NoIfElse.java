@@ -35,11 +35,5 @@ public class NoIfElse {
 
     // switch
     public static void switchUse(String str) {
-        switch (str) {
-            case "aa" -> System.out.println("aa");
-            case "bb" -> System.out.println("bb");
-            case "cc" -> System.out.println("cc");
-            default -> System.out.println("other");
-        }
     }
 }

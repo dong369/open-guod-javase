@@ -74,6 +74,7 @@ package ch01_helloworld;
  * javac -version
  * java -version
  * javap -c HelloWorld.class  生产字节码指令文件
+ * javah -d d:/ ch10_classload.jni.JniMain01 生成native的头文件
  * <p>
  * 四、什么是Java程序的主类？应用程序和小程序的主类有何不同？
  * 一个程序中可以有多个类，但只能有一个类是主类。在 Java 应用程序中，这个主类是指包含 main() 方法的类。

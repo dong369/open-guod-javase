@@ -9,7 +9,7 @@ import java.util.Set;
  * 无序，不可重复（顺序有两个概念：一是按添加的顺序排列，二是按自然顺序a-z排列。）
  * HashSet：保证元素无序的顺序，基于HashMap实现，不允许出现重复元素，不保证和政集合中元素的顺序。
  * LinkedHashSet：继承与HashSet，保证元素添加的顺序，基于内链表实现。
- * TreeSet：保证元素自然的顺序，基于红黑树实现的。
+ * TreeSet：保证元素自然的顺序，基于红黑树（）实现的。
  *
  * @author guod
  * @version 1.0

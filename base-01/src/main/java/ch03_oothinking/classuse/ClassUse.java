@@ -1,5 +1,7 @@
 package ch03_oothinking.classuse;
 
+import lombok.Data;
+
 /**
  * The class/interface 面向对象思想
  * 面向过程：
@@ -21,6 +23,22 @@ package ch03_oothinking.classuse;
  * 一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？
  * 主要作用是完成对类对象的初始化工作。可以执行。因为一个类即使没有声明构造方法也会有默认的不带参数的构造方法。
  */
+@Data
 public class ClassUse {
-    // TODO: 2020/4/21 属性、方法
+    // 作用域、存储位置、生命周期、初始值四个方面分析考虑属性
+    /**
+     * 属性描述：name
+     */
+    private String name;
+
+    public String init() {
+        String age = "";
+        return age;
+    }
+
+    public static void main(String[] args) {
+        ClassUse classUse = new ClassUse();
+        System.out.println(classUse.name);
+        classUse.init();
+    }
 }

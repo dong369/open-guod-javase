@@ -94,7 +94,6 @@ public class OuterClass {
         AbstractClass a = new AbstractClass() {
             // 内部类不能有静态声明
             // static int a = 1;
-
             @Override
             void test() {
                 System.out.println("匿名内部类");

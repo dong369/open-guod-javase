@@ -7,8 +7,6 @@ import org.junit.Test;
 import java.lang.reflect.Constructor;
 
 /**
- * Project -
- *
  * @author by guodd
  * @version 1.0
  * @since 1.8
