@@ -3,7 +3,7 @@ select version();
 
 show databases;
 
-# 创建数据库，采用编码utf8mb4，如果数据库名称包括特殊字符使用`base-user`
+-- 创建数据库，采用编码utf8mb4，如果数据库名称包括特殊字符使用`base-user`
 create database test charset = utf8mb4;
 
 /*如果是关键字的或带特殊符合的名称*/
@@ -26,7 +26,7 @@ create database if not exists `base-sql` charset utf8mb4;
 
 show create database aa;
 
-# 03修改属性，但是不能修改数据库名称
+-- 03修改属性，但是不能修改数据库名称
 alter database aa charset = gbk;
 
 drop database if exists a;
@@ -55,7 +55,7 @@ CREATE TABLE tb_student
 show tables;
 show create table tb_book;
 
-# 查看表的属性状态：show table status \G;指端格式化
+-- 查看表的属性状态：show table status \G;指端格式化
 use `base-sql`;
 show table status;
 desc tb_book;
@@ -66,13 +66,13 @@ create table test_copy1 like tb_book;
 create table test_copy2 as (select *
                             from tb_book);
 
-# 清空表
+-- 清空表
 truncate tb_book;
 
-# 删除表
+-- 删除表
 drop table if exists t_student,t_book;
 
-# 05、CURL常用操作
+-- 05、CURL常用操作
 insert into tb_book(id, book_name, book_desc)
 values (1, 'java', '开发');
 
@@ -92,7 +92,7 @@ select goods_id, cat_id, goods_name, shop_price
 from goods
 where goods_name like '诺基亚%';
 
-# 日期时间，同义词
+-- 日期时间，同义词
 select now(), curdate(), curtime(), current_date(), current_time();
 
 select date_add(curdate(), interval -3 day), date_add(curdate(), interval 0 day);

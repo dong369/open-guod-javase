@@ -1,4 +1,4 @@
-package ch03_oothinking.equals2hashcode;
+package ch03_oothinking.equals;
 
 /**
  * 1、如果两个对象equals，Java运行时环境会认为他们的hashcode一定相等。

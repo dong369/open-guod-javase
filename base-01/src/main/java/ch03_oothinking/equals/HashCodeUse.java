@@ -1,4 +1,4 @@
-package ch03_oothinking.equals2hashcode;
+package ch03_oothinking.equals;
 
 /**
  * HashCode被设计用来[提高性能]。

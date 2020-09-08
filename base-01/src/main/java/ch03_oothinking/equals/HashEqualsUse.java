@@ -1,4 +1,4 @@
-package ch03_oothinking.equals2hashcode;
+package ch03_oothinking.equals;
 
 public class HashEqualsUse {
     public static void main(String[] args) {

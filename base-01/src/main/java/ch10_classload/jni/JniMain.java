@@ -11,6 +11,8 @@ package ch10_classload.jni;
 public class JniMain {
     static {
         System.load("D:\\dev\\code\\idea-workspace\\GitHub\\open-guod-javase\\base-01\\src\\main\\java\\ch10_classload\\jni\\libmyjni.dll");
+        // 方式二：需要配置到环境变量里面
+        // System.loadLibrary("libmyjni.dll");
         System.out.println("native...static...");
     }
 
@@ -19,6 +21,8 @@ public class JniMain {
     // native是与C++联合开发的时候用的！java自己开发不用的
     // 特别注意：需要在src/main/java下执行javah -d d:/ ch10_classload.jni.JniMain01
     // 类比：.h文件就是接口；cpp文件是实现；dll是jar包
+    // 扩展Linux：g++ -fPIC -I /user/local/jdk/include -I /user/local/jdk/include/linux -C JniMain.cpp
+    // 生成共享库文件：g++ -shared MyJin.o -o libMyJni.so
     public static native int say(int a, int b);
 
     public static void main(String[] args) {
