@@ -17,6 +17,7 @@ public class NewInstance {
         Class<?> aClass = Class.forName("ch08_reflection.entity.User");
         // 条件：无参构造器；权限要够
         // User user = (User) aClass.newInstance();
+        Object o = aClass.getConstructor().newInstance();
         User user = (User) aClass.getDeclaredConstructor().newInstance();
         boolean annotation = aClass.isAnnotation();
         System.out.println(annotation);

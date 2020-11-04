@@ -110,3 +110,6 @@ where cte1.hid = cte2.hid;
 
 select *
 from (select goods_name from goods) t;
+
+
+select a.*,s.sname from (select sno,sum(score),count(cno) from score group by sno) a ,student s where a.sno=s.sno;

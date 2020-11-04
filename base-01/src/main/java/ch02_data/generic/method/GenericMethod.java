@@ -41,7 +41,7 @@ public class GenericMethod<T> {
     private void test01(T t) {
     }
 
-    public static  <G> void test02(G e) {
+    public static <G> void test02(G e) {
     }
 
     // <E>声明类型参数，也可以理解为声明方法为泛型方法

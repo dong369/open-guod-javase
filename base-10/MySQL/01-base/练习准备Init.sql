@@ -1,4 +1,11 @@
+-- 初始化
+drop database test;
+create database if not exists test charset = utf8mb4;
+
+-- 选择目标库
 use `test`;
+
+-- 创建表
 create table goods
 (
     goods_id     mediumint(8) unsigned primary key auto_increment,
@@ -56,11 +63,11 @@ create table category
   charset utf8;
 
 
-INSERT INTO `category`
-VALUES (1, '手机类型', 0),
-       (2, 'CDMA手机', 1),
-       (3, 'GSM手机', 1),
-       (4, '3G手机', 1),
+insert into `category`
+values (1, '手机类型', 0),
+       (2, 'cdma手机', 1),
+       (3, 'gsm手机', 1),
+       (4, '3g手机', 1),
        (5, '双模手机', 1),
        (6, '手机配件', 0),
        (7, '充电器', 6),
@@ -73,13 +80,13 @@ VALUES (1, '手机类型', 0),
        (15, '联通手机充值卡', 12);
 
 
-CREATE TABLE `result`
+create table `result`
 (
-    `name`    varchar(20) DEFAULT NULL,
-    `subject` varchar(20) DEFAULT NULL,
-    `score`   tinyint(4)  DEFAULT NULL
-) ENGINE = MyISAM
-  DEFAULT CHARSET = utf8;
+    `name`    varchar(20) default null,
+    `subject` varchar(20) default null,
+    `score`   tinyint(4)  default null
+) engine = myisam
+  default charset = utf8;
 
 
 
@@ -180,9 +187,9 @@ create table boy
 
 
 insert into boy (bname, hid)
-values ('屌丝', 'A'),
-       ('杨过', 'B'),
-       ('陈冠希', 'C');
+values ('屌丝', 'a'),
+       ('杨过', 'b'),
+       ('陈冠希', 'c');
 
 
 create table girl
@@ -194,117 +201,19 @@ create table girl
 
 
 insert into girl(gname, hid)
-values ('小龙女', 'B'),
-       ('张柏芝', 'C'),
-       ('死宅女', 'D');
-
-
-DROP TABLE IF EXISTS `kc`;
-CREATE TABLE `kc`
-(
-    `课程号`  char(3)    NOT NULL,
-    `课程名`  char(16)   NOT NULL,
-    `开课学期` tinyint(1) NOT NULL,
-    `学时`   tinyint(1) NOT NULL,
-    `学分`   tinyint(1) DEFAULT NULL,
-    PRIMARY KEY (`课程号`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
-
--- ----------------------------
--- Records of kc
--- ----------------------------
-INSERT INTO `kc`
-VALUES ('102', '程序设计与语言', '2', '68', '4');
-INSERT INTO `kc`
-VALUES ('206', '离散数学', '4', '68', '4');
-INSERT INTO `kc`
-VALUES ('209', '操作系统', '6', '68', '4');
-INSERT INTO `kc`
-VALUES ('212', '数据库原理', '7', '68', '4');
-INSERT INTO `kc`
-VALUES ('302', '软件工程', '7', '51', '3');
-
--- ----------------------------
--- Table structure for `xs`
--- ----------------------------
-DROP TABLE IF EXISTS `xs`;
-CREATE TABLE `xs`
-(
-    `学号`   char(6)    NOT NULL,
-    `姓名`   char(8)    NOT NULL,
-    `专业名`  char(10)   DEFAULT NULL,
-    `性别`   tinyint(1) NOT NULL,
-    `出生日期` date       NOT NULL,
-    `总学分`  tinyint(1) DEFAULT NULL,
-    `照片`   blob,
-    `备注`   text,
-    PRIMARY KEY (`学号`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
-
--- ----------------------------
--- Records of xs
--- ----------------------------
-INSERT INTO `xs`
-VALUES ('081101', '王林', '计算机', '1', '1990-02-10', '50', null, null);
-INSERT INTO `xs`
-VALUES ('081102', '程明', '计算机', '1', '1991-02-01', '50', null, null);
-INSERT INTO `xs`
-VALUES ('081103', '王燕', '计算机', '0', '1989-10-06', '50', null, null);
-INSERT INTO `xs`
-VALUES ('081201', '王敏', '通信工程', '1', '1989-06-10', '50', null, null);
-INSERT INTO `xs`
-VALUES ('081202', '王林', '通信工程', '1', '1989-01-29', '40', null, null);
-INSERT INTO `xs`
-VALUES ('081204', '马琳琳', '通信工程', '0', '1989-01-29', '40', null, null);
-INSERT INTO `xs`
-VALUES ('081206', '李济', '通信工程', '1', '1989-01-29', '40', null, null);
-
--- ----------------------------
--- Table structure for `xs_kc`
--- ----------------------------
-DROP TABLE IF EXISTS `xs_kc`;
-CREATE TABLE `xs_kc`
-(
-    `学号`  char(6) NOT NULL,
-    `课程号` char(3) NOT NULL,
-    `成绩`  tinyint(1) DEFAULT NULL,
-    `学分`  tinyint(1) DEFAULT NULL,
-    PRIMARY KEY (`学号`, `课程号`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
-
--- ----------------------------
--- Records of xs_kc
--- ----------------------------
-INSERT INTO `xs_kc`
-VALUES ('081101', '101', '80', null);
-INSERT INTO `xs_kc`
-VALUES ('081102', '102', '78', null);
-INSERT INTO `xs_kc`
-VALUES ('081102', '206', '78', null);
-INSERT INTO `xs_kc`
-VALUES ('081103', '102', '70', null);
-INSERT INTO `xs_kc`
-VALUES ('081103', '206', '81', null);
-INSERT INTO `xs_kc`
-VALUES ('081104', '102', '84', null);
-INSERT INTO `xs_kc`
-VALUES ('081104', '206', '65', null);
-INSERT INTO `xs_kc`
-VALUES ('081106', '101', '65', null);
-INSERT INTO `xs_kc`
-VALUES ('081106', '102', '78', null);
+values ('小龙女', 'b'),
+       ('张柏芝', 'c'),
+       ('死宅女', 'd');
 
 -- 学生信息
 create table student
 (
-    sno   varchar(10) primary key,
-    sname varchar(20),
-    sage  int,
-    ssex  varchar(5)
-);
+    sno   varchar(10) primary key comment '学生主键',
+    sname varchar(20) comment '学生姓名',
+    sage  int comment '学生年龄',
+    ssex  varchar(5) comment '学生性别'
+) engine = innodb
+  default charset = utf8mb4 comment '学生信息';
 insert into student
 values ('s001', '张三', 23, '男');
 insert into student
@@ -330,9 +239,10 @@ values ('s010', '陈美', 22, '女');
 -- 教师信息
 create table teacher
 (
-    tno   varchar(10) primary key,
-    tname varchar(20)
-);
+    tno   varchar(10) primary key comment '教师编号',
+    tname varchar(20) comment '教师名称'
+) engine innodb
+  default charset = utf8mb4 comment '教师信息';
 insert into teacher
 values ('t001', '刘阳');
 insert into teacher
@@ -343,40 +253,42 @@ values ('t003', '胡明星');
 -- 科目信息
 create table course
 (
-    cno   varchar(10),
-    cname varchar(20),
-    tno   varchar(20),
+    cno   varchar(10) comment '科目编号',
+    cname varchar(20) comment '科目名称',
+    tno   varchar(20) comment '教师编号',
     constraint pk_course primary key (cno, tno)
-);
+) engine = innodb
+  default charset = utf8mb4 comment '科目信息';
 insert into course
-values ('c001', 'J2SE', 't002');
+values ('c001', 'j2se', 't002');
 insert into course
-values ('c002', 'Java Web', 't002');
+values ('c002', 'java web', 't002');
 insert into course
-values ('c003', 'SSH', 't001');
+values ('c003', 'ssh', 't001');
 insert into course
-values ('c004', 'Oracle', 't001');
+values ('c004', 'oracle', 't001');
 insert into course
-values ('c005', 'SQL SERVER 2005', 't003');
+values ('c005', 'sql server 2005', 't003');
 insert into course
-values ('c006', 'C#', 't003');
+values ('c006', 'c#', 't003');
 insert into course
-values ('c007', 'JavaScript', 't002');
+values ('c007', 'javascript', 't002');
 insert into course
-values ('c008', 'DIV+CSS', 't001');
+values ('c008', 'div+css', 't001');
 insert into course
-values ('c009', 'PHP', 't003');
+values ('c009', 'php', 't003');
 insert into course
-values ('c010', 'EJB3.0', 't002');
+values ('c010', 'ejb3.0', 't002');
 
 -- 成绩信息
 create table score
 (
-    sno   varchar(10),
-    cno   varchar(10),
-    score int,
+    sno   varchar(10) comment '成绩编号',
+    cno   varchar(10) comment '课程编号',
+    score int comment '分数',
     constraint pk_sc primary key (sno, cno)
-);
+) engine = innodb
+  default charset = utf8mb4 comment '成绩信息';
 insert into score
 values ('s001', 'c001', 78.9);
 insert into score

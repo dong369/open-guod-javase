@@ -11,7 +11,6 @@
     </parent>
 
     <artifactId>base-10-05</artifactId>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -35,11 +34,6 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
             <version>3.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hive</groupId>
-            <artifactId>hive-jdbc</artifactId>
-            <version>3.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
