@@ -1,7 +1,10 @@
 package jdk.jdk8.methodref;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * 构造器引用：和方法引用类似，函数式接口的抽象方法的形参列表和构造器的形参列表一致，抽象方法返回的类型即为构造器类的类型。
@@ -14,6 +17,7 @@ import java.util.function.Function;
  */
 public class LambdaMethod04 {
     public static void main(String[] args) {
+        Supplier<List<String>> supplier = ArrayList<String>::new;
         Method04<Book01> msg = Book01::new;
         Book01 book = msg.compare("java", 2.5);
         System.out.println(book);

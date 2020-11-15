@@ -7,9 +7,6 @@ import java.util.Objects;
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/6 时间:9:45
- * @JDK 1.8
- * @Description 功能模块：
  */
 public class User {
     /**
@@ -22,6 +19,10 @@ public class User {
     private Integer age;
 
     public User() {
+    }
+
+    public User(String name) {
+        this.name = name;
     }
 
     public User(String name, Integer age) {
