@@ -14,4 +14,5 @@ public class DecimalUse {
     public static void main(String[] args) {
         System.out.println(DatatypeConverter.printDecimal(BigDecimal.valueOf(1010)));
     }
+
 }

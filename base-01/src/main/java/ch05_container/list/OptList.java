@@ -21,7 +21,7 @@ import static java.util.stream.Collectors.toList;
  * @version 1.0
  * @since 1.8
  */
-public class ArrayListMain {
+public class OptList {
     @Test
     public void set2list() {
         Set<String> stringSet = new HashSet<>();

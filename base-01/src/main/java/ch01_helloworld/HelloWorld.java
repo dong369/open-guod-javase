@@ -1,7 +1,5 @@
 package ch01_helloworld;
 
-import java.io.File;
-
 /**
  * Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有[功能强大]和[简单易用]两个特征。
  * 编程是为了[解决某个问题]而使用某种程序设计语言编写程序代码，并最终得到预期结果。
@@ -25,7 +23,7 @@ import java.io.File;
  * 缓冲（buffer）：缓冲区(buffer)，它是内存空间的一部分，在内存空间中预留了一定的存储空间，偏重写。
  * 内存（memory）：作为与CPU直接进行沟通的部件，所有的程序都是在内存中运行的。
  * 硬盘（disk）：数据会先写入内存才能被CPU使用。
- * 内存（memory）+缓存（cache）-> 内存储空间
+ * 内存（memory） + 缓存（cache）-> 内存储空间
  * 硬盘 -> 外存储空间
  * <p>
  * 1 字节（byte）= 8 比特（bit）
@@ -81,8 +79,8 @@ import java.io.File;
  * javah -d d:/ ch10_classload.jni.JniMain01 生成native的头文件
  * <p>
  * 四、什么是Java程序的主类？应用程序和小程序的主类有何不同？
- * 一个程序中可以有多个类，但只能有一个类是主类。在 Java 应用程序中，这个主类是指包含 main() 方法的类。
- * 在 Java 小程序中，这个主类是一个继承自系统类 JApplet 或 Applet 的子类。
+ * 一个程序中可以有多个类，但只能有一个类是主类。在Java应用程序中，这个主类是指包含main()方法的类。
+ * 在Java小程序中，这个主类是一个继承自系统类JApplet或Applet 的子类。
  *
  * @author guod
  * @version 1.0

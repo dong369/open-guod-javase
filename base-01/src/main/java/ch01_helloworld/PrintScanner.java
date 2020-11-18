@@ -5,7 +5,7 @@ import cn.hutool.crypto.SecureUtil;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-import javax.annotation.PostConstruct;
+
 /**
  * 键盘输入
  *
@@ -18,6 +18,7 @@ public class PrintScanner {
         // 方式一
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.next());
+
         // 方法2：通过BufferedReader
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         System.out.println(input.readLine());

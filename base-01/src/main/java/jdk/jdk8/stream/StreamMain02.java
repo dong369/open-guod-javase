@@ -3,10 +3,7 @@ package jdk.jdk8.stream;
 import jdk.jdk8.optional.User;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -36,8 +33,12 @@ public class StreamMain02 {
         // filter(Predicate p)接收lambda表达式，从流中过滤某些元素。
         Stream<User> stream = users.stream();
 
+        System.out.println("==========排序==========");
+        Map<Integer, List<User>> collect = stream.sorted(Comparator.comparing(User::getAge)).collect(Collectors.groupingBy(User::getAge));
+        System.out.println(collect);
+
         System.out.println("==========filter过滤==========");
-        stream.filter(e -> e.getName().contains("2")).forEach(System.out::println);
+        users.stream().filter(e -> e.getName().contains("2")).forEach(System.out::println);
 
         System.out.println("==========limit是阶段流==========");
         // limit是阶段流，使其元素不超过给定的数量。

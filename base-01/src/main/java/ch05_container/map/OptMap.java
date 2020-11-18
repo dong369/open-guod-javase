@@ -1,10 +1,12 @@
 package ch05_container.map;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Map是一个键值对集合，存储键、值和之间的映射。 Key无序，唯一；value 不要求有序，允许重复。
+ * Map是一个键值对集合，存储键、值和之间的映射。Key无序，唯一；value不要求有序，允许重复。
  * Map没有继承于Collection接口，从Map集合中检索元素时，只要给出键对象，就会返回对应的值对象。
  * Map 的常用实现类：HashMap、TreeMap、HashTable、LinkedHashMap、ConcurrentHashMap
  *
@@ -18,8 +20,9 @@ import java.util.Map;
  * WeakHashMap：弱键(weak key)Map，Map中使用的对象也被允许释放: 这是为解决特殊问题设计的。如果没有map之外的引用指向某个“键”，则此“键”可以被垃圾收集器回收。
  * IdentifyHashMap：使用==代替equals()对“键”作比较的hash map，专为解决特殊问题而设计。
  */
-public class HashMapMain {
-    public static void main(String[] args) {
+public class OptMap {
+    @Test
+    public  void mapInit() {
         // 遍历Map
         Map<String, String> map = new HashMap<>();
         map.put("aa", "xx");
@@ -40,5 +43,9 @@ public class HashMapMain {
         for (String value : map.values()) {
             System.out.println(value);
         }
+    }
+
+    @Test
+    public void sorted() {
     }
 }
