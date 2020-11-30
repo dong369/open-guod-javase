@@ -1,16 +1,12 @@
-package ch02_data.generic.useclass;
+package ch02_data.generics.useclass;
 
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * project - 使用泛型类，创建对象的时候需要指定具体的类型
  *
  * @author guod
  * @version 1.0
- * @date 日期:2018/11/6 时间:13:01
  * @since 1.8
  */
 public class MainTest<T> {
@@ -29,9 +25,9 @@ public class MainTest<T> {
 
 
     // A是类B的父类，G<A> 是 G<B>的父类
-
     @Test
     public void test() {
-        List<String> list = new ArrayList<>();
+        Sub01 sub01 = new Sub01(1);
+        Sub02<Integer> sub02 = new Sub02<>(2);
     }
 }

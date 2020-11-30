@@ -1,4 +1,4 @@
-package ch02_data.generic.entity;
+package ch02_data.generics.wildcard.entity;
 
 /**
  * 盘子里可以放一个泛型的东西

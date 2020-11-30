@@ -1,4 +1,4 @@
-package ch02_data.generic.entity;
+package ch02_data.generics.wildcard.entity;
 
 /**
  * project - 水果类

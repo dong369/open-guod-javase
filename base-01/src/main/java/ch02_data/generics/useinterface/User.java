@@ -1,4 +1,4 @@
-package ch02_data.generic.useinterface;
+package ch02_data.generics.useinterface;
 
 /**
  * project -

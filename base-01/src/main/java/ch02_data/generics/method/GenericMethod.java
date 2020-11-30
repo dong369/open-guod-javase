@@ -1,4 +1,4 @@
-package ch02_data.generic.method;
+package ch02_data.generics.method;
 
 import org.junit.Test;
 

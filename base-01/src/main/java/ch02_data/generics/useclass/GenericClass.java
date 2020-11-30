@@ -1,4 +1,4 @@
-package ch02_data.generic.useclass;
+package ch02_data.generics.useclass;
 
 /**
  * 语法格式：访问修饰符 非访问修饰符 类名称<泛型标识：可以随便写任意标识号（T、E、K、V） , 标识指定的泛型的类型> { 程序控制语句 }

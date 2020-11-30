@@ -1,4 +1,4 @@
-package ch02_data.number;
+package ch02_data.datetype;
 
 import cn.hutool.core.convert.Convert;
 import org.junit.Test;
@@ -10,21 +10,15 @@ import java.util.Map;
  * 四类八种（整型、浮点型、字符型、布尔型）
  * 原始类型: boolean，char，byte，short，int，long，float，double
  * 包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double
+ * 引用类型：枚举、类、接口
  *
  * @author guod
  * @version 1.0
  */
-public class Data {
+public class DataType {
 
     @Test
-    public void intData() {
-        System.out.println(Integer.MIN_VALUE + "，" + Integer.MAX_VALUE);
-        System.out.println(Long.MIN_VALUE + "，" + Long.MAX_VALUE);
-        String str = "1.0";
-        System.out.println(str.substring(0, str.length() - 2));
-    }
-
-    public static void main(String[] args) {
+    public void baseInfo(){
         // 1byte=8bits
         byte a = 1;
         Byte aa = 1;
@@ -84,7 +78,19 @@ public class Data {
             System.out.println("no");
         }
         System.out.println(0.2 + 400.03);
+    }
 
+    // 取值范围
+    @Test
+    public void intData() {
+        System.out.println(Integer.MIN_VALUE + "，" + Integer.MAX_VALUE);
+        System.out.println(Long.MIN_VALUE + "，" + Long.MAX_VALUE);
+        String str = "1.0";
+        System.out.println(str.substring(0, str.length() - 2));
+    }
+
+    @Test
+    public void getValue() {
         // map中的字符串不能直接强制转成Integer类型，需要借助静态方法处理
         Map<String, Object> map = new HashMap<>();
         map.put("a", "2");

@@ -1,4 +1,4 @@
-package ch02_data.generic.base;
+package ch02_data.generics.old;
 
 import lombok.Data;
 

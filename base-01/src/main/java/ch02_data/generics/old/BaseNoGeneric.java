@@ -1,6 +1,8 @@
-package ch02_data.generic.base;
+package ch02_data.generics.old;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 /**
  * @author by guodd
@@ -16,5 +18,14 @@ public class BaseNoGeneric {
         baseObject.setO("java");
         String t = (String) baseObject.getO();
         System.out.println(t);
+    }
+
+    @Test
+    public void listInfo(){
+        ArrayList<Integer> objects = new ArrayList<>();
+        objects.add(1);
+        objects.add(2);
+        // objects.add("");
+        System.out.println(objects);
     }
 }
