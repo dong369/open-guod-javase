@@ -1,15 +1,15 @@
 package ch03_oothinking.superuse;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.junit.Test;
 
 /**
- * super可以理解为是指向自己超（父）类对象的一个指针，而这个超类指的是离自己最近的一个父类。
- * 关键字this、super都指的是对象。this关键字代表当前对象，super关键字代表父对象。
+ * super可以理解为是指向自己超（父）类对象的一个指针，而这个超类指的是[离自己最近]的一个父类。
+ * 关键字this、super都指的是对象。this关键字代表当[前对象]，super关键字代表[父对象]。
  * 1、this()和super()为构造方法，作用是在JVM堆中构建出一个对象。
  * 2、为了避免多次创建对象，同一个方法内只能调用一次this()或super()。
- * 3、均不可以在static环境中使用，如static变量，static方法，static语句块。
+ * 3、均不可以在static环境中使用，因为this、supper都是指向对象，而static是面向类的，如static变量，static方法，static语句块。
  * 4、this和super不能同时出现在一个构造函数里面，调用构造器语句必须是构造器里面语句的第一条。
  * 5、避免操作对象时对象还未构建成功。
  *
@@ -19,14 +19,17 @@ import org.junit.Test;
 public class SuperUse {
     @Test
     public void superTest() {
-        ChinaPerson chinaPerson1 = new ChinaPerson();
-        ChinaPerson chinaPerson2 = new ChinaPerson("Java");
+        // Person person = new Person();
+        // ChinaPerson chinaPerson1 = new ChinaPerson();
+        // ChinaPerson chinaPerson2 = new ChinaPerson("Java");
+        ChinaPerson chinaPerson = new ChinaPerson(22);
     }
 
+    @Data
     static class Person {
-        @Getter
-        @Setter
         private String name;
+
+        private Integer age;
 
         Person() {
             System.out.println("Person Structure");
@@ -37,13 +40,20 @@ public class SuperUse {
         }
     }
 
+    @EqualsAndHashCode(callSuper = true)
+    @Data
     static class ChinaPerson extends Person {
-        @Getter
-        @Setter
         private String name;
 
         ChinaPerson() {
-            this("no parameters");
+            // 默认是省略的，调用Object无参构造器
+            super();
+            this.name = "aa";
+            // this("no parameters");
+        }
+
+        ChinaPerson(Integer age) {
+            this();
         }
 
         ChinaPerson(String name) {
@@ -55,7 +65,7 @@ public class SuperUse {
             System.out.println(name);
         }
 
-        // 1、普通的直接引用方式
+        // 1、普通的直接引用父类信息方式
         void doThing() {
             System.out.println(super.getName());
         }

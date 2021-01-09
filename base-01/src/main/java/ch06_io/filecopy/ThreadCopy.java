@@ -16,7 +16,7 @@ public class ThreadCopy {
     static int i = 0;
 
     public static void main(String[] args) throws Exception {
-        File srcFile = new File("E:\\01-系统配置\\02_系统安装\\03_镜像系统\\cn_windows_10_business_editions_version_1909_updated_jan_2020_x64_dvd_b3e1f3a6.iso");
+        File srcFile = new File("D:\\01-系统配置\\02_系统安装\\03_镜像系统\\cn_windows_10_business_editions_version_1909_updated_jan_2020_x64_dvd_b3e1f3a6.iso");
         // 文件长度大小
         int srcLength = (int) srcFile.length();
         System.out.println(srcLength - 1);

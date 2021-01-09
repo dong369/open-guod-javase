@@ -1,7 +1,6 @@
 package ch03_oothinking.thisuse;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * this是自身的一个对象，代表对象本身，可以理解为是指向对象本身的一个指针。
@@ -16,12 +15,15 @@ import lombok.Setter;
  * @author guodd
  * @version 1.0
  */
+@Data
 public class ThisUse {
+    public static void main(String[] args) {
+        ThisUse thisUse = new ThisUse();
+    }
+
     /**
      * 属性描述：name
      */
-    @Getter
-    @Setter
     private String name;
 
     public void thisUse() {

@@ -21,6 +21,7 @@ public class OuterClass {
     private void bar() {
         // 非静态方法可以直接调用静态成员
         foo();
+        inner();
         new InnerClass01();
         new InnerClass03();
     }
@@ -31,16 +32,6 @@ public class OuterClass {
         new InnerClass03();
     }
 
-    // 1、定义在类内部，成员位置上的非静态类，就是成员内部类。
-    class InnerClass01 {
-        // static int a = 1;
-
-        void innerTest() {
-            foo();
-            bar();
-        }
-    }
-
     public void inner() {
         final int a = 1;
         // 2、定义在方法中的内部类，就是局部内部类。
@@ -49,6 +40,15 @@ public class OuterClass {
             void method() {
                 System.out.println(a);
             }
+        }
+    }
+
+    // 1、定义在类内部，成员位置上的非静态类，就是成员内部类。
+    class InnerClass01 {
+        // static int a = 1;
+        void innerTest() {
+            foo();
+            bar();
         }
     }
 

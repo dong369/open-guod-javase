@@ -19,7 +19,8 @@ public class Main {
     private static void info(Animal animal) {
         // 对象 instanceof 类
         // 一个对象是否为一个类的实例
-        // A instanceof  B 判断A对象是否为B类或接口的实例或者子类或子接口的实例
+        // A instanceof B，判断A对象是否为B[类或接口]的实例
+        // 子类或子接口的实例
         if (animal instanceof Cat) {
             Cat cat = (Cat) animal;
             cat.go();

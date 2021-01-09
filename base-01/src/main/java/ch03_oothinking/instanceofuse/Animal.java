@@ -1,7 +1,7 @@
 package ch03_oothinking.instanceofuse;
 
 /**
- * @author guodd
+ * @author guodd 父类动物
  */
 public class Animal {
     protected String name;

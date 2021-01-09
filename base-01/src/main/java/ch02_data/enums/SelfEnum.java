@@ -36,9 +36,9 @@ public class SelfEnum {
     @Override
     public String toString() {
         return "SelfEnum{" +
-               "seasonName='" + seasonName + '\'' +
-               ", seasonDesc='" + seasonDesc + '\'' +
-               '}';
+                "seasonName='" + seasonName + '\'' +
+                ", seasonDesc='" + seasonDesc + '\'' +
+                '}';
     }
 
     // 测试

@@ -10,6 +10,6 @@ import org.junit.Test;
  */
 public class StreamNew {
     @Test
-    public void test(){
+    public void test() {
     }
 }

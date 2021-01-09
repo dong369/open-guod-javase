@@ -11,18 +11,18 @@ import java.io.File;
  * @version 3.0
  * @since 1.8
  */
-public class File03 {
+public class FileTree {
     public static void main(String[] args) {
-        File file = new File(System.getProperty("user.dir") + "/base-01/");
+        File file = new File(System.getProperty("user.dir")
+                + "src/main/");
         System.out.println(file.getName());
         tree(file, 1);
     }
 
     private static void tree(File file, int level) {
         StringBuilder preStr = new StringBuilder();
-        for (int i = 0; i < level; i++) {
-            preStr.append("---");
-        }
+        // 11新写法
+        preStr.append("---".repeat(Math.max(0, level)));
         File[] files = file.listFiles();
         Assert.notNull(files, "文件是空！");
         for (File file1 : files) {
