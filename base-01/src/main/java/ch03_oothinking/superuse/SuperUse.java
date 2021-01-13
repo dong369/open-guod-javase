@@ -36,7 +36,7 @@ public class SuperUse {
         }
 
         Person(String name) {
-            System.out.println(name);
+            System.out.println("parent " + name);
         }
     }
 
@@ -47,7 +47,8 @@ public class SuperUse {
 
         ChinaPerson() {
             // 默认是省略的，调用Object无参构造器
-            super();
+            this("name");
+            // super();
             this.name = "aa";
             // this("no parameters");
         }

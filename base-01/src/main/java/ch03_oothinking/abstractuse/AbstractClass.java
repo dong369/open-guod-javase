@@ -1,7 +1,5 @@
 package ch03_oothinking.abstractuse;
 
-import java.io.File;
-
 /**
  * 抽象的意义：对代码的维护和重用。
  * 抽象类定义了是什么？接口类定义了具有什么能力？

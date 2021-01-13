@@ -15,6 +15,6 @@ import java.io.Serializable;
  * 4）不管有没有transient修饰，静态变量都不能被序列化；
  */
 @Data
-public class Transient implements Serializable {
+public class TransientUse implements Serializable {
     private final transient int a = 1;
 }

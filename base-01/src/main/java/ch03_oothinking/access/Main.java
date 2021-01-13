@@ -7,7 +7,7 @@ package ch03_oothinking.access;
  */
 public class Main {
     public static void main(String[] args) {
-        AccessTypeMain accessTypeMain = new AccessTypeMain();
+        AccessUse accessTypeMain = new AccessUse();
         System.out.println(accessTypeMain);
     }
 }

@@ -3,9 +3,9 @@ package ch03_oothinking.thisuse;
 import lombok.Data;
 
 /**
- * this是自身的一个对象，代表对象本身，可以理解为是指向对象本身的一个指针。
+ * this是自身的一个对象，代表[对象本身]，可以理解为是指向对象本身的一个[指针]。
  * 关键字this、super都指的是对象。this关键字代表当前对象，super关键字代表父对象。
- * 1、this()和super()为构造方法，作用是在JVM堆中构建出一个对象。
+ * 1、this()和super()为[构造方法]，作用是在JVM堆中构建出一个对象。
  * 2、为了避免多次创建对象，同一个方法内只能调用一次this()或super()。
  * 3、均不可以在static环境中使用，如static变量，static方法，static语句块。
  * 4、this和super不能同时出现在一个构造函数里面，调用构造器语句必须是构造器里面语句的第一条。
@@ -31,8 +31,9 @@ public class ThisUse {
     }
 
     public ThisUse() {
-        // 默认是省略的，调用Object无参构造器
+        // 特别注意：无参构造器，默认是省略的，调用Object无参构造器
         super();
+        System.out.println("call construct function...");
     }
 
     public ThisUse(String name) {

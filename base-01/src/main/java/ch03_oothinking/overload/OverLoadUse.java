@@ -8,5 +8,18 @@ package ch03_oothinking.overload;
  * @since 1.8
  */
 public class OverLoadUse {
+    /**
+     * 属性描述：数字
+     */
+    private Integer number;
 
+    public OverLoadUse() {
+    }
+
+    public OverLoadUse(Integer number) {
+    }
+
+    public static void main(String[] args) {
+        
+    }
 }

@@ -73,8 +73,8 @@ package ch01_helloworld;
  * JVM：Java Virtual Machine 是Java虚拟机，Java程序需要运行在虚拟机上，不同的平台有自己的虚拟机，因此Java语言可以实现跨平台。
  * JRE：Java Runtime Environment包括Java虚拟机和Java程序所需的核心类库等。
  * JDK：Java Development Kit是提供给Java开发人员使用的，其中包含了Java的开发工具，也包括了JRE。
- * javac -version
- * java -version
+ * javac -version 编译生成字节码
+ * java -version 运行Java程序
  * javap -c HelloWorld.class  生产字节码指令文件
  * javah -d d:/ ch10_classload.jni.JniMain01 生成native的头文件
  * <p>

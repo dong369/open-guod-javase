@@ -1,6 +1,6 @@
 package ch03_oothinking.access.pack;
 
-import ch03_oothinking.access.AccessTypeMain;
+import ch03_oothinking.access.AccessUse;
 
 /**
  * @author guodd
@@ -9,7 +9,7 @@ import ch03_oothinking.access.AccessTypeMain;
  */
 public class Main {
     public static void main(String[] args) {
-        AccessTypeMain accessTypeMain = new AccessTypeMain();
+        AccessUse accessTypeMain = new AccessUse();
         System.out.println(accessTypeMain.a);
     }
 }

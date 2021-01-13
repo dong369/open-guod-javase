@@ -13,7 +13,7 @@ import lombok.Data;
  * @since 1.8
  */
 @Data
-public class AccessTypeMain {
+public class AccessUse {
     public int a;
     protected int b;
     int c;

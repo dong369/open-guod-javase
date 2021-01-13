@@ -11,18 +11,20 @@ public class ClassInitOrder {
     /**
      * 属性描述：address
      */
-    private static String address;
-
-    static {
-        System.out.println("静态代码块");
-    }
+    private static final String address = "河南";
 
     /**
      * 属性描述：name
      */
     private String name;
 
+    static {
+        System.out.println(address);
+        System.out.println("静态代码块");
+    }
+
     {
+        System.out.println(address);
         System.out.println("游离块");
     }
 
