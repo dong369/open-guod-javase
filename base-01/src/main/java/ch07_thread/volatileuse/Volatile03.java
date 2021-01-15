@@ -1,4 +1,4 @@
-package ch07_thread.thread;
+package ch07_thread.volatileuse;
 
 import lombok.extern.slf4j.Slf4j;
 

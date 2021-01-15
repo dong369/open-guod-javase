@@ -10,7 +10,7 @@ package ch07_thread.thread;
  * 1ms = 1000μs
  * 1μs = 1000ns
  * <p>
- * 并行、串行（单核、多核）
+ * 并发：两队一个窗口；并行：两队两个窗口、串行：一队一个窗口（单核、多核）
  * 指定单核执行：start /affinity 0x1 java CreateThread01
  *
  * @author guod

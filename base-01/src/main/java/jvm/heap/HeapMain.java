@@ -1,4 +1,4 @@
-package jvm;
+package jvm.heap;
 
 import org.junit.Test;
 
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * JVM内存结构：Java虚拟机的运行时区域有关，描述的是线程运行所设计的内存空间。
- * Java内存模型：描述的是多线程允许的行为和Java的并发编程有关。
  * Java对象模型：Java对象在虚拟机中的表现形式有关。
+ * Java内存模型：描述的是多线程允许的行为和Java的并发编程有关。
+ * JVM内存结构：Java虚拟机的运行时区域有关，描述的是线程运行所设计的内存空间。
  *
  * @author guodd
  * @version 1.0

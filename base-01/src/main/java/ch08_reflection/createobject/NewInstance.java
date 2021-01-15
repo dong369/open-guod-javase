@@ -16,10 +16,13 @@ public class NewInstance {
     public void createObj() throws Exception {
         Class<?> aClass = Class.forName("ch08_reflection.entity.User");
         // 条件：无参构造器；权限要够
-        // User user = (User) aClass.newInstance();
+        User user1 = (User) aClass.newInstance();
         Object o1 = aClass.newInstance();
+
+        // 进行对象创建
         Object o = aClass.getConstructor().newInstance();
         User user = (User) aClass.getDeclaredConstructor().newInstance();
+
         boolean annotation = aClass.isAnnotation();
         System.out.println(annotation);
         user.setAge(20);

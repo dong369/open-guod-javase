@@ -1,4 +1,4 @@
-package ch07_thread.thread;
+package ch07_thread.volatileuse;
 
 /**
  * volatile关键字

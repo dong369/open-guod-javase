@@ -3,6 +3,15 @@ package ch07_thread.thread;
 /**
  * The class/interface 程序有几条执行路径
  * 并发压力测试工具：jMeter（界面方式推荐使用）、apache ap（命令方式）
+ * 同步（synchronous）：一旦调用需要等待方法执行完成
+ * 异步（asynchronous）：
+ * <p>
+ * 并发：
+ * 并行：
+ * 串行：
+ * <p>
+ * 阻塞：
+ * 非阻塞：
  *
  * @author guodd
  * @version 1.0 use jdk 1.8

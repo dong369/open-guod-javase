@@ -34,7 +34,7 @@ public class BaseMain {
     // 反射方式
     @Test
     public void reflectionNew() throws Exception {
-        // 1、通过反射创建对象
+        // 1、通过反射创建对象Java栈、方法栈、Java堆、方法区、寄存器
         Class<PeopleMan> clazz = PeopleMan.class;
         Constructor<PeopleMan> constructor = clazz.getDeclaredConstructor(String.class, Integer.class);
         PeopleMan p1 = constructor.newInstance("dong", 34);

@@ -1,4 +1,4 @@
-package ch07_thread.juc;
+package ch07_thread.atomuse;
 
 /**
  * The class/interface

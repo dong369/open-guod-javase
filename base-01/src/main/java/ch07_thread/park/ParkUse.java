@@ -1,4 +1,4 @@
-package ch07_thread.thread;
+package ch07_thread.park;
 
 import java.util.concurrent.locks.LockSupport;
 
@@ -11,9 +11,9 @@ import java.util.concurrent.locks.LockSupport;
  * @version 1.0
  * @since JDK1.8
  */
-public class Park {
+public class ParkUse {
     public static void main(String[] args) throws InterruptedException {
-        Thread t1 = new Thread(Park::testPark);
+        Thread t1 = new Thread(ParkUse::testPark);
         t1.start();
         Thread.sleep(10000);
         System.out.println("main...");
