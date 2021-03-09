@@ -5,6 +5,7 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 并发控制倒计时器 - CountDownLatch
+ * 机制是只要提供的多个(具体数量等于初始化CountDownLatch时count的值)线程都达到了预期状态或者完成了预期工作时触发事件，其他线程可以等待这个事件来触发自己后续的工作。
  *
  * @author guodd
  * @version 1.0
