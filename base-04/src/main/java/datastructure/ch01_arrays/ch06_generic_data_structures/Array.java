@@ -8,7 +8,8 @@ package datastructure.ch01_arrays.ch06_generic_data_structures;
  * 泛型（任意数据类型，但不能是基本数据类型）数组
  */
 @SuppressWarnings("unchecked")
-public class Array<E> {
+public class
+Array<E> {
     // 数据
     private final E[] data;
     // 元素个数
