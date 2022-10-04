@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>2.5.0</version>
+            <version>3.16.3</version>
         </dependency>
         <!-- JAXB API是java EE 的API，因此在java SE 9.0 中不再包含这个 Jar 包 -->
         <dependency>
